@@ -1,0 +1,36 @@
+[
+{
+	"uri": "/vi/",
+	"title": "AWS Single Sign-On",
+	"tags": [],
+	"description": "",
+	"content": "AWS Single Sign-On cho Organization Chúng ta có thể cấp cho người dùng trong danh mục của mình quyền truy cập SSO vào một hoặc nhiều bảng điều khiển AWS cho các tài khoản AWS cụ thể trong organization trên AWS. Sau đó, người dùng chỉ thấy biểu tượng tài khoản AWS (VD: Development) mà họ đã được chỉ định từ trong cổng thông tin người dùng của họ. Khi họ nhấp vào biểu tượng, họ có thể chọn IAM Role nào họ muốn sử dụng khi đăng nhập vào Bảng điều khiển AWS cho tài khoản AWS đó.\n"
+},
+{
+	"uri": "/vi/1-prerequisite/",
+	"title": "Các bước chuẩn bị",
+	"tags": [],
+	"description": "",
+	"content": " Bài thực hành này là một phần của bài thực hành Landing Zone. Trước đó, chúng ta sẽ phải tạo một AWS Organizations, với 4 Organization Units nhằm phân nhóm các tài khoản. Tạo các Tài khoản AWS (AWS Account) với tên: Security, Shared Services, Logging và Application và thêm các Tài khoản vào từng OU tương ứng.   Kế đến, chúng ta thiết lập môi trường bảo mật đa tài khoản với thông số như sau:  Tài khoản Logging: Là nơi tập trung cho Amazon VPC Flow Logs, CloudTrail logs, Config logs. Tài khoản Security: Tập hợp AWS Config, Amazon GuardDuty master, và các cảnh báo. Tài khoản Network/Shared Services: Chia sẻ chung một VPC dành cho các kết nối từ xa đến các tài khoản khác. AWS Direct Connect chính được cài đặt với AWS Transit Gateway nhằm giao tiếp với các VPC ở các tài khoản khác. Tài khoản dành cho Business Unit: tài khoản cho Analytics-Prod, và Analytics-non-prod.    "
+},
+{
+	"uri": "/vi/2-setup-aws-sso/",
+	"title": "Thiết lập AWS Single Sign-On",
+	"tags": [],
+	"description": "",
+	"content": "Trong bước này, chúng ta có thể cấp cho User trong danh mục của mình quyền truy cập SSO vào một hoặc nhiều AWS Console cho các tài khoản AWS cụ thể trong Organization trên AWS. Sau đó, User chỉ thấy biểu tượng tài khoản AWS (VD: Development) mà họ đã được chỉ định từ trong cổng thông tin User của họ. Khi họ nhấp vào biểu tượng, họ có thể chọn IAM Role nào họ muốn sử dụng khi đăng nhập vào AWS Console cho tài khoản AWS đó.\nNội dung:\n 1. Enable AWS SSO 2. Thêm Users and Groups 3. Permission Set 4. To assign access to users or groups  1. Enable AWS SSO  Đăng nhập vào AWS Management Console bằng thông tin đăng nhập tài khoản master của AWS Organization. Mở AWS SSO Console Chọn Enable AWS SSO.  Chọn nguồn nhận dạng để xác định nơi AWS SSO tìm kiếm User và Group khi cần truy cập SSO. Theo mặc định, chúng ta có một kho AWS SSO để quản lý User nhanh chóng và dễ dàng.  Đăng nhập một lần trên AWS (AWS SSO) cung cấp cho bạn một kho lưu trữ mặc định nơi ta có thể lưu trữ User và Group của mình. Nếu ta chọn lưu trữ chúng trong AWS SSO, tất cả những gì bạn cần làm là:\n Tạo User và Group. Thêm User làm thành viên Group. Chỉ định các Group với mức truy cập mong muốn vào các tài khoản và ứng dụng AWS.  \rUser và Group bạn tạo trong kho lưu trữ AWS SSO của bạn chỉ có sẵn trong AWS SSO. Sử dụng quy trình sau để thêm User vào kho lưu trữ AWS SSO.  2. Thêm Users and Groups  Mở AWS SSO Console. Chọn User.  Chọn Thêm User và cung cấp các thông tin cần thiết sau:  Username - Tên User này sẽ được yêu cầu để đăng nhập vào cổng thông tin User và không thể thay đổi sau này. Password - Chọn một trong các lựa chọn sau để gửi mật khẩu của User.  Send an email to the user with password setup instructions - Tùy chọn này tự động gửi cho User một email được gửi từ Amazon Web Services. Email mời User truy cập vào cổng thông tin User AWS SSO. Generate a one-time password that you can share with the user - Tùy chọn này cung cấp một URL đến cổng thông tin User và mật khẩu để ta có thể tự gửi cho User từ địa chỉ email của mình. Email address Confirm email address Để rõ ràng, hãy sử dụng tiền tố của User logon name làm First name và hậu tố làm Last name. VD: đối với Super-User, Super sẽ là First name, trong khi User sẽ là Last name Display name     Chọn Next: Groups.  Chọn một hoặc nhiều Group để thêm User là thành viên vào. Sau đó chọn Add user.  Chúng ta cần tạo những User và Group sau:     User logon name Group     Super-User AWS-Shared-Services-Admin; AWS-Shared-Services-Read-Only; AWS-Security-Admin; AWS-Security-Read-Only; AWS-Logging-Admin; AWS-Logging-Read-Only;   Security-User AWS-Security-Read-Only    3. Permission Set Permission Set xác định khả năng truy cập mà User và Group có đối với tài khoản AWS. Các bộ quyền được lưu trữ trong AWS SSO và được cung cấp cho tài khoản AWS dưới dạng IAM roles. Ta có thể gán nhiều quyền cho một User\n Mở AWS SSO Console. Chọn AWS accounts. Chọn trang Permission sets.  Chọn Create permission set.  Trên trang Create new permission set, chọn một trong các tùy chọn sau, rồi làm theo hướng dẫn được cung cấp trong tùy chọn đó:  Chọn Use an existing job function policy. Trong phần Select job function policy, chọn một trong các chính sách chức năng công việc IAM mặc định trong danh sách. Để biết thêm thông tin, xem Chính sách được quản lý bởi AWS cho các Chức năng công việc. Chọn AdministratorAccess để cung cấp quyền truy cập đầy đủ vào các tài nguyên và dịch vụ AWS. Chọn Create. Chọn SecurityAudit để cung cấp quyền truy cập Chỉ đọc vào các dịch vụ và tài nguyên AWS. Chọn Create.    4. To assign access to users or groups  Mở AWS SSO Console. Chọn AWS accounts.  Trong trang AWS organization, trong danh sách tài khoản AWS, chọn một hoặc nhiều tài khoản mà ta muốn chỉ định quyền truy cập. Trên trang chi tiết tài khoản AWS, chọn Assign users.  Trên trang Select users or groups, nhập tên User hoặc tên Group và chọn Search connected directory. Khi bạn đã chọn tất cả các tài khoản mà bạn muốn gán quyền truy cập, hãy chọn Next: Permission sets. Ở đây có thể chỉ định nhiều User hoặc Group bằng cách chọn các tài khoản áp dụng khi chúng xuất hiện trong kết quả tìm kiếm.  Trên trang Select permission sets, chọn bộ các quyền mà bạn muốn áp dụng cho User hoặc Group từ bảng. Sau đó chọn Finish. Chọn Finish để bắt đầu quá trình cấu hình tài khoản AWS.  Các tài khoản và chính sách chức năng công việc như sau:     Accounts Groups Job function policy     Master Account, shared-services, logging,security AWS-Shared-Services-Admin AWS-Security-Admin AWS-Logging-Admin AdministratorAccess   Master Account, shared-services, logging, security AWS-Shared-Services-Read-Only AWS-Security-Read-Only AWS-Logging-Read-Only SecurityAudit    "
+},
+{
+	"uri": "/vi/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/vi/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

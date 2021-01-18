@@ -1,0 +1,36 @@
+[
+{
+	"uri": "/",
+	"title": "AWS Single Sign-On",
+	"tags": [],
+	"description": "",
+	"content": "AWS Single Sign-On for Organization You can grant users in your directory with SSO access to one or more AWS consoles for specific AWS accounts in your AWS organization.\nAfterward, users see only the AWS account icon (for example, Development) that they\u0026rsquo;ve been assigned from within their user portal. When they click the icon, they can then choose which IAM role they want to use when signing in to the AWS Management Console for that AWS account.\n"
+},
+{
+	"uri": "/1-prerequisite/",
+	"title": "Prerequiste",
+	"tags": [],
+	"description": "",
+	"content": " This Lab is part of the Landing Zone Lab. At the beginning, we will need to create the AWS Organization with 4 Organizational Units under them for specific logical grouping. Create specific AWS accounts for Security, Shared Services, Logging and Application accounts and map them under appropriate OU’s.   Next, we customized the secure multi-account environment with the following:  Logging account: Centralized location for Amazon VPC Flow Logs, CloudTrail logs, Config logs Security account: AWS Config aggregator, Amazon GuardDuty master, and alerts. Network account /Shared Services account: Shared virtual private cloud (VPC) for remote connectivity to other accounts. Primary AWS Direct Connect setup with an AWS Transit Gateway setup to communicate with VPCs from other accounts. Business Unit accounts: Analytics-Prod, and Analytics-non-prod accounts.    "
+},
+{
+	"uri": "/2-setup-aws-sso/",
+	"title": "Setting Up AWS SSO",
+	"tags": [],
+	"description": "",
+	"content": "In this step, you can grant users in your directory with SSO access to one or more AWS consoles for specific AWS accounts in your AWS organization. Afterward, users see only the AWS account icon (for example, Development) that they\u0026rsquo;ve been assigned from within their user portal. When they click the icon, they can then choose which IAM role they want to use when signing in to the AWS Management Console for that AWS account.\nContents\n 1. Enable AWS SSO 2. Add Users and Groups 3. Permission Sets 4. To assign access to users or groups  1. Enable AWS SSO  Sign in to the AWS Management Console with your AWS Organizations master account credentials. Open the AWS SSO console. Choose Enable AWS SSO.  Choosing an identity source determines where AWS SSO looks for users and groups that need SSO access. By default, you get an AWS SSO store for quick and easy user management.  AWS Single Sign-On provides you with a default store where you can store your users and groups. If you choose to store them in AWS SSO, all you need to do is the following:\n Create your users and groups. Add your users as members to the groups. Assign the groups with the desired level of access to your AWS accounts and applications.  \rUsers and groups that you create in your AWS SSO store are available in AWS SSO only. Use the following procedure to add users to your AWS SSO store.  2. Add Users and Groups  Open the AWS SSO console. Choose Users.  Choose Add user and provide the following required information:  Username – This user name will be required to sign in to the user portal and cannot be changed later. Password – Choose from one of the following choices to send the user\u0026rsquo;s password.  Send an email to the user with password setup instructions – This option automatically sends the user an email addressed from Amazon Web Services. The email invites the user on behalf of your company to access the AWS SSO user portal. Generate a one-time password that you can share with the user – This option provides you with the user portal URL and password details that you can manually send to the user from your email address.   Email address Confirm email address For clarity, use prefix of User logon name as the First name and suffix as the Last name, e.g. for Super-User, Super will be the First name, while User will be the Last name Display name   Choose Next: Groups.  Select one or more groups that you want the user to be a member of. Then choose Add user.  We need to create the following users and groups:     User logon name Group     Super-User AWS-Shared-Services-Admin; AWS-Shared-Services-Read-Only; AWS-Security-Admin; AWS-Security-Read-Only; AWS-Logging-Admin; AWS-Logging-Read-Only;   Security-User AWS-Security-Read-Only    3. Permission Sets Permission sets define the level of access that users and groups have to an AWS account. Permission sets are stored in AWS SSO and provisioned to the AWS account as IAM roles. You can assign more than one permission set to a user\n Open the AWS SSO console Choose AWS accounts.  Select the Permission sets tab. Choose Create permission set.  On the Create new permission set page, choose from one of the following options, and then follow the instructions provided under that option:  Use an existing job function policy. Under Select job function policy, select one of the default IAM job function policies in the list. For more information, see AWS Managed Policies for Job Functions. Choose AdministratorAccess to provides full access to AWS services and resources. Choose Create. Choose SecurityAudit to Provides Read-Only access to AWS services and resources. Choose Create.    4. To assign access to users or groups  Open the AWS SSO console Choose AWS accounts.  Under the AWS organization tab, in the list of AWS accounts, choose one or more accounts to which you want to assign access. On the AWS account details page, choose Assign users.  On the Select users or groups page, type a user or group name and choose Search connected directory. Once you have selected all the accounts that you want to assign access to, choose Next: Permission sets. You can specify multiple users or groups by selecting the applicable accounts as they appear in search results.  On the Select permission sets page, select the permission sets that you want to apply to the user or group from the table. Then choose Finish. Choose Finish to begin the process of configuring your AWS account.  The accounts and job function policy as follows:     Accounts Groups Job function policy     Master Account, shared-services, logging,security AWS-Shared-Services-Admin AWS-Security-Admin AWS-Logging-Admin AdministratorAccess   Master Account, shared-services, logging, security AWS-Shared-Services-Read-Only AWS-Security-Read-Only AWS-Logging-Read-Only SecurityAudit    "
+},
+{
+	"uri": "/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
