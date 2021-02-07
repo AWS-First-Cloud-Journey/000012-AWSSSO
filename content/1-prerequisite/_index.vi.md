@@ -9,7 +9,7 @@ pre = "<b>1. </b>"
 + Bài thực hành này là một phần của bài thực hành Landing Zone.
 + Trước đó, chúng ta sẽ phải tạo một AWS Organizations, với 4 Organization Units nhằm phân nhóm các tài khoản. Tạo các Tài khoản AWS (AWS Account) với tên: Security, Shared Services, Logging và Application và thêm các Tài khoản vào từng OU tương ứng.
 
-![Lab Diagram](/images/1/1.png?width=60pc)
+![Lab Diagram](/images/1/1.png?width=70pc)
 
 + Kế đến, chúng ta thiết lập môi trường bảo mật đa tài khoản với thông số như sau:
 	* **Tài khoản Logging:** Là nơi tập trung cho Amazon VPC Flow Logs, CloudTrail logs, Config logs.

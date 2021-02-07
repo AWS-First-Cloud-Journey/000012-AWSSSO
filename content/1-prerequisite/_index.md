@@ -9,7 +9,7 @@ pre = "<b>1. </b>"
 + This Lab is part of the Landing Zone Lab.
 + At the beginning, we will need to create the AWS Organization with 4 Organizational Units under them for specific logical grouping. Create specific AWS accounts for Security, Shared Services, Logging and Application accounts and map them under appropriate OU’s.
 
-![Lab Diagram](../../../images/1/1.png?width=60pc)
+![Lab Diagram](../../../images/1/1.png?width=70pc)
 
 + Next, we customized the secure multi-account environment with the following:
 	* **Logging account**: Centralized location for Amazon VPC Flow Logs, CloudTrail logs, Config logs

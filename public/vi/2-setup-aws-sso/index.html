@@ -12,21 +12,21 @@
     <title>Thiết lập AWS Single Sign-On :: AWS Single Sign-On cho Organization</title>
 
     
-    <link href="/css/nucleus.css?1610978158" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1610978158" rel="stylesheet">
-    <link href="/css/hybrid.css?1610978158" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1610978158" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1610978158" rel="stylesheet">
-    <link href="/css/auto-complete.css?1610978158" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1610978158" rel="stylesheet">
-    <link href="/css/theme.css?1610978158" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1610978158" rel="stylesheet">
+    <link href="/css/nucleus.css?1612672910" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1612672910" rel="stylesheet">
+    <link href="/css/hybrid.css?1612672910" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1612672910" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1612672910" rel="stylesheet">
+    <link href="/css/auto-complete.css?1612672910" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1612672910" rel="stylesheet">
+    <link href="/css/theme.css?1612672910" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1612672910" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1610978158" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1612672910" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1610978158"></script>
+    <script src="/js/jquery-3.3.1.min.js?1612672910"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1610978158"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1610978158"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1612672910"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1612672910"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1610978158"></script>
+<script type="text/javascript" src="/js/search.js?1612672910"></script>
 
     
   </div>
@@ -307,11 +307,11 @@
 <li>Mở <strong>AWS SSO Console</strong></li>
 <li>Chọn <strong>Enable AWS SSO</strong>.</li>
 </ol>
-<p><img src="../../../images/2/1.png?width=50pc" alt="Enable AWS SSO"></p>
+<p><img src="../../../images/2/1.png?width=90pc" alt="Enable AWS SSO"></p>
 <ol start="4">
 <li>Chọn nguồn nhận dạng để xác định nơi AWS SSO tìm kiếm User và Group khi cần truy cập SSO. Theo mặc định, chúng ta có một kho AWS SSO để quản lý User nhanh chóng và dễ dàng.</li>
 </ol>
-<p><img src="../../../images/2/2.png?width=50pc" alt="Enable AWS SSO"></p>
+<p><img src="../../../images/2/2.png?width=90pc" alt="Enable AWS SSO"></p>
 
 <div class="notices info" ><p>Đăng nhập một lần trên AWS (AWS SSO) cung cấp cho bạn một kho lưu trữ mặc định nơi ta có thể lưu trữ User và Group của mình. Nếu ta chọn lưu trữ chúng trong AWS SSO, tất cả những gì bạn cần làm là:</p>
 <ul>
@@ -328,7 +328,7 @@
 <ol>
 <li>Mở <strong>AWS SSO Console</strong>. Chọn <strong>User</strong>.</li>
 </ol>
-<p><img src="../../../images/2/3.png?width=50pc" alt="Add Users and Groups"></p>
+<p><img src="../../../images/2/3.png?width=90pc" alt="Add Users and Groups"></p>
 <ol start="2">
 <li>Chọn Thêm User và cung cấp các thông tin cần thiết sau:
 <ul>
@@ -346,11 +346,11 @@
 </li>
 <li>Chọn <strong>Next: Groups</strong>.</li>
 </ol>
-<p><img src="../../../images/2/4.png?width=50pc" alt="Add Users and Groups"></p>
+<p><img src="../../../images/2/4.png?width=90pc" alt="Add Users and Groups"></p>
 <ol start="4">
 <li>Chọn một hoặc nhiều Group để thêm User là thành viên vào. Sau đó chọn <strong>Add user</strong>.</li>
 </ol>
-<p><img src="../../../images/2/5.png?width=50pc" alt="Add Users and Groups"></p>
+<p><img src="../../../images/2/5.png?width=90pc" alt="Add Users and Groups"></p>
 <ol start="5">
 <li>Chúng ta cần tạo những User và Group sau:</li>
 </ol>
@@ -372,18 +372,18 @@
 </tr>
 </tbody>
 </table>
-<p><img src="../../../images/2/6.png?width=50pc" alt="Add Users and Groups"></p>
+<p><img src="../../../images/2/6.png?width=90pc" alt="Add Users and Groups"></p>
 <h4 id="3-permission-set">3. Permission Set</h4>
 <p>Permission Set xác định khả năng truy cập mà User và Group có đối với tài khoản AWS. Các bộ quyền được lưu trữ trong AWS SSO và được cung cấp cho tài khoản AWS dưới dạng IAM roles. Ta có thể gán nhiều quyền cho một User</p>
 <ol>
 <li>Mở <strong>AWS SSO Console</strong>. Chọn <strong>AWS accounts</strong>.</li>
 <li>Chọn trang <strong>Permission sets</strong>.</li>
 </ol>
-<p><img src="../../../images/2/7.png?width=50pc" alt="Permission Sets"></p>
+<p><img src="../../../images/2/7.png?width=90pc" alt="Permission Sets"></p>
 <ol start="3">
 <li>Chọn <strong>Create permission set</strong>.</li>
 </ol>
-<p><img src="../../../images/2/8.png?width=50pc" alt="Permission Sets"></p>
+<p><img src="../../../images/2/8.png?width=90pc" alt="Permission Sets"></p>
 <ol start="4">
 <li>Trên trang <strong>Create new permission set</strong>, chọn một trong các tùy chọn sau, rồi làm theo hướng dẫn được cung cấp trong tùy chọn đó:
 <ul>
@@ -393,29 +393,29 @@
 </ul>
 </li>
 </ol>
-<p><img src="../../../images/2/9.png?width=50pc" alt="Permission Sets"></p>
-<p><img src="../../../images/2/10.png?width=50pc" alt="Permission Sets"></p>
+<p><img src="../../../images/2/9.png?width=90pc" alt="Permission Sets"></p>
+<p><img src="../../../images/2/10.png?width=90pc" alt="Permission Sets"></p>
 <h4 id="4-to-assign-access-to-users-or-groups">4. To assign access to users or groups</h4>
 <ol>
 <li>Mở <strong>AWS SSO Console</strong>. Chọn <strong>AWS accounts</strong>.</li>
 </ol>
-<p><img src="../../../images/2/11.png?width=50pc" alt="Assign access to users or groups"></p>
+<p><img src="../../../images/2/11.png?width=90pc" alt="Assign access to users or groups"></p>
 <ol start="2">
 <li>Trong trang <strong>AWS organization</strong>, trong danh sách tài khoản AWS, chọn một hoặc nhiều tài khoản mà ta muốn chỉ định quyền truy cập.</li>
 <li>Trên trang chi tiết tài khoản AWS, chọn <strong>Assign users</strong>.</li>
 </ol>
-<p><img src="../../../images/2/12.png?width=50pc" alt="Assign access to users or groups"></p>
+<p><img src="../../../images/2/12.png?width=90pc" alt="Assign access to users or groups"></p>
 <ol start="4">
 <li>Trên trang <strong>Select users or groups</strong>, nhập tên User hoặc tên Group và chọn <strong>Search connected directory</strong>.</li>
 <li>Khi bạn đã chọn tất cả các tài khoản mà bạn muốn gán quyền truy cập, hãy chọn <strong>Next: Permission sets</strong>. Ở đây có thể chỉ định nhiều User hoặc Group bằng cách chọn các tài khoản áp dụng khi chúng xuất hiện trong kết quả tìm kiếm.</li>
 </ol>
-<p><img src="../../../images/2/13.png?width=50pc" alt="Assign access to users or groups"></p>
+<p><img src="../../../images/2/13.png?width=90pc" alt="Assign access to users or groups"></p>
 <ol start="6">
 <li>Trên trang <strong>Select permission sets</strong>, chọn bộ các quyền mà bạn muốn áp dụng cho User hoặc Group từ bảng. Sau đó chọn <strong>Finish</strong>.</li>
 <li>Chọn <strong>Finish</strong> để bắt đầu quá trình cấu hình tài khoản AWS.</li>
 </ol>
-<p><img src="../../../images/2/14.png?width=50pc" alt="Assign access to users or groups"></p>
-<p><img src="../../../images/2/15.png?width=50pc" alt="Assign access to users or groups"></p>
+<p><img src="../../../images/2/14.png?width=90pc" alt="Assign access to users or groups"></p>
+<p><img src="../../../images/2/15.png?width=90pc" alt="Assign access to users or groups"></p>
 <ol start="8">
 <li>Các tài khoản và chính sách chức năng công việc như sau:</li>
 </ol>
@@ -440,7 +440,7 @@
 </tr>
 </tbody>
 </table>
-<p><img src="../../../images/2/16.png?width=50pc" alt="Assign access to users or groups"></p>
+<p><img src="../../../images/2/16.png?width=90pc" alt="Assign access to users or groups"></p>
 
 
 
@@ -534,19 +534,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1610978158"></script>
-    <script src="/js/perfect-scrollbar.min.js?1610978158"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1610978158"></script>
-    <script src="/js/jquery.sticky.js?1610978158"></script>
-    <script src="/js/featherlight.min.js?1610978158"></script>
-    <script src="/js/highlight.pack.js?1610978158"></script>
+    <script src="/js/clipboard.min.js?1612672910"></script>
+    <script src="/js/perfect-scrollbar.min.js?1612672910"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1612672910"></script>
+    <script src="/js/jquery.sticky.js?1612672910"></script>
+    <script src="/js/featherlight.min.js?1612672910"></script>
+    <script src="/js/highlight.pack.js?1612672910"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1610978158"></script>
-    <script src="/js/learn.js?1610978158"></script>
-    <script src="/js/hugo-learn.js?1610978158"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1612672910"></script>
+    <script src="/js/learn.js?1612672910"></script>
+    <script src="/js/hugo-learn.js?1612672910"></script>
 
-    <link href="/mermaid/mermaid.css?1610978158" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1610978158"></script>
+    <link href="/mermaid/mermaid.css?1612672910" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1612672910"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
