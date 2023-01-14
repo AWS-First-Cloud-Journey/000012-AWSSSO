@@ -1,44 +1,42 @@
 +++
-title = "Dọn dẹp tài nguyên"
+title = "Clean up resources"
 date = 2021-06-14T22:33:19+07:00
 weight = 4
 chapter = false
 pre = "<b>4. </b>"
 +++
 
-#### Dọn dẹp tài nguyên
+#### Clean up resources
 
-1. Truy cập vào **AWS SSO Mangement Console**
-2. **Xóa Groups**:
-    - Chọn **Groups**, tick vào các group liên quan tới bài lab này, và chọn **Delete groups**.
-    - Tại prompt **Delete groups**, gõ DELETE vào ô, và chọn **Delete groups**
-3. **Xóa Users**: 
-    - Chọn **Users**, tick vào các user liên quan tới bài lab này, và chọn **Delete users**.
-    - Tại prompt **Delete users**, gõ DELETE vào ô, và chọn **Delete users**
-4. **Xóa quyền truy cập** tại các tài khoản AWS:
-    - Chọn **AWS Accounts** và nhấp vào tên của một tài khoản AWS.
-    - Remove access với tất cả các quyền truy cập của tài khoản.
-    - Lặp lại với các tài khoản đang được gán quyền truy cập cần xóa.
+1. Access to **AWS SSO Mangement Console**
+2. **Delete Groups**:
+    - Select **Groups**, tick the groups related to this lab, and select **Delete groups**.
+    - At the prompt **Delete groups**, type DELETE in the box, and select **Delete groups**
+3. **Delete Users**:
+    - Select **Users**, tick the users related to this lab, and select **Delete users**.
+    - At the **Delete users** prompt, type DELETE in the box, and select **Delete users**
+4. **Remove Access** at AWS Accounts:
+    - Select **AWS Accounts** and click the name of an AWS account.
+    - Remove access with all account access rights.
+    - Repeat with the accounts that are assigned access rights to delete.
     ![RemoveAccess](../../../images/3/3_RemoveAccess.png?width=90pc)
-5. **Xóa các Permission Sets**
-    - Chọn **AWS accounts**, chọn tab **Permission sets**, và chọn các permission sets liên quan
-    - Nhấn **Delete**. Tại prompt, gõ tên của permission set vào ô trống và nhấn **Delete**.
+5. **Delete Permission Sets**
+    - Select **AWS accounts**, select the **Permission sets** tab, and select the relevant permission sets
+    - Press **Delete**. At the prompt, type the name of the permission set in the box and click **Delete**.
 
 {{% notice note %}}
-Lưu ý: Hãy sao lưu các dữ liệu trong các tài khoản này nếu bạn cần chúng trong tương lai vì xóa tài khoản đồng nghĩa với việc mọi tài nguyên và dữ liệu thuộc tài khoản ấy sẽ bị xóa vĩnh viễn
+Note: Back up the data in these accounts if you need them in the future because deleting an account means that all resources and data belonging to that account will be permanently deleted.
 {{% /notice %}}
 
-6. **Xóa các tải khoản AWS**. Tuy nhiên, Bạn có thể giữ các tài khoản này cho các phần lab tiếp theo.
-    - Để xóa một tài khoản AWS, bạn cần đăng nhập vào tài khoản bằng root user
-        - Truy cập vào trang đăng nhập vào bảng điều khiển AWS tại https://console.aws.amazon.com/
-        - Khi trang **Sign in** hiện lên, chọn đăng nhập bằng **Root user** và nhập email của tài khoản bạn muốn xóa. (Ví dụ: example+lab12Logging@amazon.com.vn)
-        - Vượt qua Security Check và chọn **Forgot Password?**
+6. **Delete AWS Accounts**. However, you can keep these accounts for future labs.
+    - To delete an AWS account, you need to log in to the account as root user
+        - Visit the AWS console login page at https://console.aws.amazon.com/
+        - When the **Sign in** page appears, choose to log in with **Root user** and enter the email of the account you want to delete. (Example: example+lab12Logging@amazon.com.vn)
+        - Pass Security Check and select **Forgot Password?**
         ![ForgotPassword](../../../images/3/3_ForgotPassword.png?width=90pc)
-        - AWS sẽ gửi email xác nhận quên mật khẩu vào email được đăng ký (ví dụ: nếu email của bạn là example+lab12Logging@amazon.com.vn, thì email của AWS sẽ được gửi về example@amazon.com.vn). Bạn hãy đổi mật khẩu mới qua email đó và đăng nhập vào tài khoản AWS.
-    - Sau khi đăng nhập bằng root user, chọn vào tên tài khoản ở góc trên bên phải, chọn **My Account**, cuộn xuống cuối trang để thấy mục **Close Account**. Tick hết vào các ô và chọn **Close Account**
+        - AWS will send forgot password confirmation email to registered email (for example, if your email is example+lab12Logging@amazon.com.vn, AWS email will be sent to example@amazon.com.vn) . Please change your new password via that email and sign in to your AWS account.
+    - After logging in as root user, select the account name in the upper right corner, select **My Account**, scroll down to the bottom of the page to see the item **Close Account**. Tick ​​all the boxes and select **Close Account**
 
 {{% notice info %}}
-Khi bạn tạo mới một tài khoản AWS trong AWS Organization, AWS Organization đã tự động tạo một mật khẩu ngẫu nhiên cho root user của tài khoản ấy, và bạn không thể tiếp cận được với chúng. Do đó, bạn sẽ truy cập vào root user của tài khoản ấy bằng cách lấy lại mật khẩu đã quên (*forgot password*)
+When you create a new AWS account in the AWS Organization, the AWS Organization automatically generates a random password for the root user of that account, and you cannot access them. Therefore, you will access the root user of that account by recovering the forgotten password (*forgot password*)
 {{% /notice %}}
-
-

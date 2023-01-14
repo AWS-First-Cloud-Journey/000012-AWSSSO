@@ -1,31 +1,47 @@
 +++
-title = "Tạo AWS Account trong AWS Organizations"
+title = "Create AWS Account in AWS Organizations"
 date = 2020
 weight = 1
 chapter = false
 pre = "<b>1.1 </b>"
 +++
 
-Ở bước này, bạn sẽ thực hành tạo các tài khoản AWS (**Security**, **Shared Services**, **Logging** và **Application**) bên trong dịch vụ AWS Organization. Các tải khoản AWS được tạo bên trong AWS Organization chỉ có thể dược truy cập bằng IAM Role hoặc thông tin của root user.
+In this step, you will practice creating AWS accounts (**Security**, **Shared Services**, **Logging**, and **Application**) inside the AWS Organization service. AWS accounts created within the AWS Organization can only be accessed using the IAM Role or root user information.
 
-**Nội dung**
-1. [Tạo AWS Account trong AWS Organizations](#tạo-aws-account-trong-aws-organization)
+**Content**
+- [Create AWS Account in AWS Organization](#create-aws-account-in-aws-organization)
 
-#### Tạo AWS Account trong AWS Organization
-1. Truy cập vào **AWS Management Comsole** và tìm dịch vụ **AWS Organizations** trong thanh tìm kiếm.
-2. Tại **AWS Organizations Console**, chọn **Add an AWS account**
+#### Create AWS Account in AWS Organization
 
-![1.1_AddAWSAccount](../../../images/1/1.1_AddAWSAccount.png?width=90pc)
+1. Go to **AWS Management Comsole** and find the **AWS Organizations** service in the search bar.
 
-3. Chọn **Create an AWS account** và nhập các thông số dưới đây:
+![AWS Account](/images/1/0001.png?featherlight=false&width=90pc)
+
+![AWS Account](/images/1/0002.png?featherlight=false&width=90pc)
+
+2. At **AWS Organizations Console**, select **Add an AWS account**
+
+![AWS Account](/images/1/0003.png?featherlight=false&width=90pc)
+
+3. Select **Create an AWS account** and enter the following parameters:
     - **AWS account name**: Logging
     - **Email address of the account's owner**: example+lab12Logging@amazon.com.vn
+
+![AWS Account](/images/4/0002.png?featherlight=false&width=90pc)
+
 {{% notice note %}}
-Để tạo nhiều tài khoản AWS với cùng một email, bạn có thể lấy phần tên email của bạn, thêm dấu **"+"**, và thêm miêu tả phía sau.
+To create multiple AWS accounts with the same email, you can take your email name, add a **"+"**, and add a description after it.
 {{% /notice %}}
-    - **IAM role name**: giữ mặc định là **OrganizationAccountAccessRole**. Đây sẽ là role name mà bạn sẽ dùng để truy cập vào tải khoản AWS thành viên qua phương pháp [chuyển đổi role](https://000002.awsstudygroup.com/3-switch-roles/).
 
-4. Kiếm tra thông tin và chọn **Create AWS account**
-![1.1_CompleteCreate](../../../images/1/1.1_CompleteCreate.png?width=90pc)
-5. Lặp lại các bước trên với các tài khoản **Security**, **Shared Services**,và **Application**
+- **IAM role name**: keep default as **OrganizationAccountAccessRole**. This will be the role name that you will use to access your AWS member account via the [role switch] method.
 
+![AWS Account](/images/4/0002.png?featherlight=false&width=90pc)
+
+
+4. Check the information and select **Create AWS account**
+
+
+![AWS Account](/images/4/0002.png?featherlight=false&width=90pc)
+
+
+5. Repeat the above steps for **Security**, **Shared Services**, and **Application** accounts, depending on each individual or business account, you can create as many accounts as you want. limit.

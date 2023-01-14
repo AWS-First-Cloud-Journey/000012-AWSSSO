@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Kiểm tra  on AWS Single Sign-On for Organization</title>
+    <title>Test on AWS Single Sign-On for Organization</title>
     <link>/3-test-permission/</link>
-    <description>Recent content in Kiểm tra  on AWS Single Sign-On for Organization</description>
+    <description>Recent content in Test on AWS Single Sign-On for Organization</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 14 Jun 2021 22:33:19 +0700</lastBuildDate>
-    
-	<atom:link href="/3-test-permission/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 14 Jun 2021 22:33:19 +0700</lastBuildDate><atom:link href="/3-test-permission/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

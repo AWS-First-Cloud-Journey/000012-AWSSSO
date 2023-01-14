@@ -1,5 +1,5 @@
 +++
-title = "Thêm Users và Groups"
+title = "Add Users and Groups"
 date = 2021
 weight = 2
 chapter = false
@@ -7,36 +7,82 @@ pre = "<b>2.2 </b>"
 +++
 
 
-#### Thêm Users và Groups
+#### Add Users and Groups
 
-Bạn cần tạo những User và Group như bảng dưới. Trong đó, User ở cột **User logon name** sẽ thuộc các Group ở cột **Group**.
+You need to create Users and Groups as shown in the table below. In which, User in column **User logon name** will belong to Groups in column **Group**.
+
 
 | User logon name |                  Group           |
 |:---------------:|:--------------------------------:|
 | Super-User      | AWS-Shared-Services-Admin; AWS-Shared-Services-Read-Only; AWS-Security-Admin; AWS-Security-Read-Only; AWS-Logging-Admin; AWS-Logging-Read-Only; |
 | Security-User   | AWS-Security-Read-Only           |
 
-1. Mở **AWS SSO Console**. Chọn **Users** ở thanh bên trái
-2. Chọn **Add user** và cung cấp các thông tin cần thiết sau:
-   - **Username** - Tên User này sẽ được yêu cầu để đăng nhập vào cổng thông tin User và không thể thay đổi sau này. (Ví dụ: Super-User)
-   - **Password** - Chọn một trong các lựa chọn sau để gửi mật khẩu của User.
-     - **Send an email to the user with password setup instructions** - Với tùy chọn này, Amazon Web Services sẽ tự động gửi cho User một email mời User truy cập vào cổng thông tin User AWS SSO.
-     - **Generate a one-time password that you can share with the user** - Tùy chọn này cung cấp một URL đến cổng thông tin User và mật khẩu để bạn có thể tự gửi cho User. **Bạn sẽ chọn tùy chọn này trong bài thực hành này**.
-     - **Email address**: nhập email của User
-     - **Confirm email address**: nhập lại email của USer
-     - Để rõ ràng, hãy sử dụng **tiền tố** của **User logon name** làm **First name** và **hậu tố** làm **Last name**. VD: đối với Super-User, Super sẽ là First name, trong khi User sẽ là Last name Display name
-3. Chọn **Next: Groups**. 
-![AddUserDetails](../../../images/2/2_AddUserDetails.png?width=90pc)
-4. Hiện tại, bạn vẫn chưa có group nào. Chọn **Create group** để tạo các group được nêu ở bảng phía trên
-   - Ở prompt tạo group, bạn nhập tên các group và mô tả của các group rồi nhấn **Create**
-   - Lặp lại bước này cho các group còn lại
-   ![Add Users and Groups](../../../images/2/2_CreateGroupPrompt.png?width=90pc)
-5. Chọn một hoặc nhiều group để thêm User là thành viên vào. Sau đó chọn **Add user**. (Ví dụ: Super-User sẽ có quyền truy cập vào tất cả các group)
-![AddUserGroups](../../../images/2/2_AddUserGroups.png?width=90pc)
-6. Tại trang kết quả của **Add user**, bạn sẽ thấy được các thông số:
-   - **User portal URL**: đây là đường link mà người dùng có thể dùng để đăng nhập vào AWS SSO User vừa được tạo. 
-   - **Username**: tên tài khoản của User
-   - **One-time password**: mật khẩu đăng nhập dùng một lần. Người dùng sẽ phải thay đổi mật khẩu này khi họ đăng nhập vào User.
-7. Chọn **Copy details** để lưu thông tin đăng nhập trên vào một chỗ thuận tiện *(Lưu ý: Bạn sẽ cần thông tin đăng nhập ấy cho phần kiểm tra kết quả sau này*). Chọn **Close**.
-![AddUserGroups](../../../images/2/2_AddUserComplete.png?width=90pc)
-8. Hãy lặp lại các bước trên sao cho phù hợp với **Security-User**.
+#### Create Group
+
+1. Currently, you still don't have any groups. Select Create group to create the groups listed in the table above
+
+
+![AWS Account](/images/6/0001.png?featherlight=false&width=90pc)
+
+2. At the prompt to create a group, enter the names of the groups and the descriptions of the groups and then click Create
+
+![AWS Account](/images/6/0002.png?featherlight=false&width=90pc)
+
+3. Repeat this step for the remaining groups
+
+![AWS Account](/images/6/0003.png?featherlight=false&width=90pc)
+
+#### Add User.
+
+1. Open the AWS SSO Console. Select Users in the left sidebar
+   - Select Add user and provide the necessary information
+
+![AWS Account](/images/5/0001.png?featherlight=false&width=90pc)
+
+2. Complete the information
+
+- **Username** - This Username will be required to log in to the User portal and cannot be changed later. (Example: Super-User)
+- **Password** - Select one of the following options to send the User's password.
+- **Send an email to the user with password setup instructions** - With this option, Amazon Web Services will automatically send the User an email inviting the User to access the AWS SSO User portal.
+- **Generate a one-time password that you can share with the user** - This option provides a URL to the User portal and a password that you can send to the User yourself. You will choose this option in this exercise. Or select **Send an email to this user with password setup instructions**.
+- ***Email address**: enter User's email
+- **Confirm email address**: re-enter User's email
+- For clarity, use the prefix of the User logon name as the First name and the suffix as the Last name. For example, for Super-User, Super will be the First name, while User will be the Last name Display name
+
+![AWS Account](/images/5/0002.png?featherlight=false&width=90pc)
+
+3. Select **Next**.
+
+![AWS Account](/images/5/0003.png?featherlight=false&width=90pc)
+
+4. Select the groups and select **Next**
+
+![AWS Account](/images/5/0004.png?featherlight=false&width=90pc)
+
+5. Select *Add user**
+
+![AWS Account](/images/5/0005.png?featherlight=false&width=90pc)
+
+6. Complete user creation.
+
+![AWS Account](/images/5/0006.png?featherlight=false&width=90pc)
+
+7. If you select **Send an email to this user with password setup instructions.** then perform email verification to log in.
+
+![AWS Account](/images/5/0007.png?featherlight=false&width=90pc)
+
+8. Select **Send**
+
+![AWS Account](/images/5/0008.png?featherlight=false&width=90pc)
+
+9. Execute **Verify**
+
+![AWS Account](/images/5/0009.png?featherlight=false&width=90pc)
+
+10. Perform password configuration. Note: keep password and portal page to log in.
+
+![AWS Account](/images/5/00010.png?featherlight=false&width=90pc)
+
+![AWS Account](/images/5/00011.png?featherlight=false&width=90pc)
+
+![AWS Account](/images/5/00012.png?featherlight=false&width=90pc)

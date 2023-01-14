@@ -1,34 +1,53 @@
 +++
-title = "Thiết lập Organization Unit"
+title = "Setting up the Organization Unit"
 date = 2020
 weight = 2
 chapter = false
 pre = "<b>1.2 </b>"
 +++
 
-Ở bước này, bạn sẽ thực hành thiết lập các Organization Unit (**Security**, **Shared Services**, **Logging** và **Application**) tương ứng với các tài khoản AWS được tạo ở phần trước. Các OU sẽ nằm bên trong Root - nơi chứa tất cả OU và tài khoản AWS.
+In this step, you will practice setting up the Organization Units (**Security**, **Shared Services**, **Logging** and **Application**) corresponding to the AWS accounts created in this section. before. The OUs will be located inside the Root - where all the OUs and AWS accounts are located.
 
-**Nội dung**
-1. [Tạo Organization Unit](#tạo-organization-unit)
-2. [Di chuyển các tài khoản AWS vào Organization Unit tương ứng](#di-chuyển-các-tài-khoản-aws-vào-organization-unit-tương-ứng)
+**Content**
+- [Create Organization Unit](#create-organization-unit)
+- [Move AWS accounts to respective Organization Unit](#move-aws-accounts-to-respective-organization-unit)
 
-#### Tạo Organization Unit
-1. Truy cập vào **AWS Management Comsole** và tìm dịch vụ **AWS Organizations** trong thanh tìm kiếm.
-2. Tick vào **Root**, chọn **Actions**, và chọn **Create new** dưới **Organizational Unit**
-![1.2_CreatOU](../../../images/1/1.2_CreateOU.png?width=90pc)
-3. Tại trang **Create organizational unit in Root**:
-    - Dưới mục **Details**, nhập tên của OU (Ví dụ: Security Unit)
-4. Kiểm tra thông tin và chọn **Create organizational unit**
-5. Lặp lại với các Organization Unit còn lại. 
+#### Create Organization Unit
 
-#### Di chuyển các tài khoản AWS vào Organization Unit tương ứng
-1. Truy cập vào **AWS Management Comsole** và tìm dịch vụ **AWS Organizations** trong thanh tìm kiếm.
-2. Tick vào tài khoản AWS mà bạn muốn di chuyển (Ví dụ: **Logging**), chọn **Actions**, và chọn **Move** dưới **AWS Account**
-![1.2_MoveAccount](../../../images/1/1.2_MoveAccount.png?width=90pc)
-3. Tick vào OU phù hợp (Ví dụ: **Logging Unit**) và chọn **Move AWS account**
-![1.2_CompleteCreate](../../../images/1/1.2_CompleteMove.png?width=90pc)
-4. Lặp lại với các tài khoản AWS và Organization Unit còn lại:
-    - Security Account với Security Unit
-    - Shared Services với Shared Services Unit
-    - Application Account với Application Unit
+1. Go to **AWS Management Comsole** and find the **AWS Organizations** service in the search bar.
 
+2. Tick **Root**, select **Actions**, and select **Create new** under **Organizational Unit**
+
+![AWS Account](/images/4/0003.png?featherlight=false&width=90pc)
+
+3. At the **Create organizational unit in Root** page:
+    - Under **Details**, enter the name of the OU (Example: Logging Unit)
+
+![AWS Account](/images/4/0004.png?featherlight=false&width=90pc)
+
+4. Check the information and select **Create organizational unit**
+
+![AWS Account](/images/4/0005.png?featherlight=false&width=90pc)
+
+5. Repeat with the remaining Organization Units.
+
+![AWS Account](/images/4/0006.png?featherlight=false&width=90pc)
+
+#### Move AWS accounts to respective Organization Unit
+
+1. Go to **AWS Management Comsole** and find the **AWS Organizations** service in the search bar.
+
+2. Tick the AWS account you want to move (Example: **Logging**), select **Actions**, and select **Move** under **AWS Account**
+
+
+![AWS Account](/images/4/0007.png?featherlight=false&width=90pc)
+
+3. Tick the appropriate OU (Example: **Logging Unit**) and select **Move AWS account**
+
+
+![AWS Account](/images/4/0008.png?featherlight=false&width=90pc)
+
+4. Repeat for the remaining AWS and Organization Unit accounts:
+    - Security Account with Security Unit
+    - Shared Services with Shared Services Unit
+    - Application Account with Application Unit

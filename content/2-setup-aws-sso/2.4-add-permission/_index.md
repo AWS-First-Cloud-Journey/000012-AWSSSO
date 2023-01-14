@@ -1,27 +1,57 @@
 +++
-title = "Gán quyền"
+title = "Assign permissions"
 date = 2021
 weight = 4
 chapter = false
 pre = "<b>2.4 </b>"
 +++
 
-#### Gán quyền truy cập cho Users và Groups
 
-Bạn cần thiết lập các tài khoản AWS vào các SSO group với chức năng công việc như sau:
+#### Assign access rights to Users and Groups
+
+You need to set up AWS accounts in SSO groups with the following job functionality:
+
 
 |                      Accounts                      |                                   Groups                                   | Job function policy |
 |:--------------------------------------------------:|:--------------------------------------------------------------------------:|:-------------------:|
 | Management Account, shared-services, logging,security  | AWS-Shared-Services-Admin; AWS-Security-Admin; AWS-Logging-Admin             | AdministratorAccess |
 | Management Account, shared-services, logging, security | AWS-Shared-Services-Read-Only; AWS-Security-Read-Only; AWS-Logging-Read-Only | SecurityAudit       |
 
-1. Mở **AWS SSO Console**. Chọn **AWS accounts** ở thanh bên trái.
-2. Trong tab **AWS organization**, trong danh sách tài khoản AWS, chọn một hoặc nhiều tài khoản mà bạn muốn chỉ định quyền truy cập. (Ví dụ: Management Account, shared-services, logging, và security). Sau đó, chọn **Assign users**.
-![Assign access to users or groups](../../../images/2/2_AssignUser.png?width=90pc) 
-3. Tại trang **Select users or groups**, chọn tab Group và chọn các group thích hợp (Ví dụ: AWS-Shared-Services-Admin; AWS-Security-Admin; AWS-Logging-Admin ), và chọn **Next: Permission sets**. 
+1. Open the AWS SSO Console. Select AWS accounts in the left sidebar.
 
-4. Tại trang **Select permission sets**, bạn sẽ gán quyền **AdministatorAccess**  truy cập cho các tài khoản AWS và group đã chọn. 
-5. Chọn **Finish** để bắt đầu quá trình cấu hình tài khoản AWS.
-6. Lặp lại các bước trên để gán tổ hợp nhóm và quyền **SecurityAudit**
+- In the AWS organization tab, in the list of AWS accounts, select one or more accounts to which you want to assign access. (Example: Management Account, shared-services, logging, and security). Then select **Assign users or groups**
 
-Chúc mừng, bạn đã thiết lập AWS SSO thành công. 
+![AWS Account](/images/8/0001.png?featherlight=false&width=90pc)
+
+2. Select the groups and select **Next**
+
+![AWS Account](/images/8/00011.png?featherlight=false&width=90pc)
+
+3. Select **Permission set**
+
+![AWS Account](/images/8/00012.png?featherlight=false&width=90pc)
+
+4. Select **Submit**
+
+![AWS Account](/images/8/00013.png?featherlight=false&width=90pc)
+
+
+5. Same, For **Security Account**
+
+![AWS Account](/images/8/0006.png?featherlight=false&width=90pc)
+
+6. Select the groups and select **Next**
+
+![AWS Account](/images/8/0007.png?featherlight=false&width=90pc)
+
+7. Select **Permission set** and select **Next**
+
+![AWS Account](/images/8/0008.png?featherlight=false&width=90pc)
+
+8. Select **Submit**
+
+![AWS Account](/images/8/0009.png?featherlight=false&width=90pc)
+
+9. Congratulations, you have successfully set up AWS SSO.
+
+![AWS Account](/images/8/00010.png?featherlight=false&width=90pc)

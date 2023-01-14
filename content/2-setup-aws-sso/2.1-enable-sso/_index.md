@@ -1,19 +1,27 @@
 +++
-title = "Kích hoạt AWS SSO"
+title = "Enable AWS SSO"
 date = 2021
 weight = 1
 chapter = false
 pre = "<b>2.1 </b>"
 +++
 
-#### Kích hoạt AWS SSO
-1. Đăng nhập vào **AWS Management Console** bằng thông tin đăng nhập tài khoản master của **AWS Organization**.
-2. Mở **AWS SSO Console**
-3. Chọn **Enable AWS SSO**.
+#### Activate AWS SSO
+1. Log in to **AWS Management Console** using the **AWS Organization** master account credentials.
 
-![Enable AWS SSO](../../../images/2/2_EnableSSO.png?width=90pc)
+![AWS Account](/images/2/0001.png?featherlight=false&width=90pc)
 
-Đăng nhập một lần trên AWS SSO cung cấp cho bạn một kho lưu trữ mặc định nơi bạn có thể lưu trữ User và Group của mình. Nếu bạn chọn lưu trữ chúng trong AWS SSO, tất cả những gì bạn cần làm là:
-- Tạo User và Group.
-- Thêm User làm thành viên Group.
-- Chỉ định các Group với mức truy cập mong muốn vào các tài khoản và ứng dụng AWS.
+2. Open **AWS SSO Console**
+
+![AWS Account](/images/2/0002.png?featherlight=false&width=90pc)
+
+3. Select **Enable AWS SSO**.
+
+![AWS Account](/images/2/0002.png?featherlight=false&width=90pc)
+
+Single Sign On on AWS SSO gives you a default repository where you can store your Users and Groups. If you choose to host them in AWS SSO, all you need to do is:
+- Create a User and Group.
+- Add the User as a Group member.
+- Specify Groups with the desired level of access to AWS accounts and applications.
+
+![AWS Account](/images/2/0003.png?featherlight=false&width=90pc)

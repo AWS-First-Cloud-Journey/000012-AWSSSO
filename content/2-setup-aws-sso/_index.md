@@ -1,15 +1,15 @@
 +++
-title = "Thiết lập AWS SSO"
+title = "Set up AWS SSO"
 date = 2020
 weight = 2
 chapter = false
 pre = "<b>2. </b>"
 +++
 
-Trong phần này, bạn sẽ cấp cho User trong danh mục của mình quyền truy cập SSO vào một hoặc nhiều tài khoản AWS cụ thể trong AWS Organizations. Sau khi đăng nhập, User sẽ chỉ thấy biểu tượng tài khoản AWS (VD: Logging) mà họ đã được chỉ định từ trong cổng thông tin User (*User portal*) của họ. Khi họ nhấp vào biểu tượng, họ có thể chọn IAM Role nào họ muốn sử dụng khi đăng nhập vào AWS Console cho tài khoản AWS đó.
+In this section, you will grant Users in your directory SSO access to one or more specific AWS accounts in AWS Organizations. Once logged in, the User will only see the AWS account icon (Example: Logging) that they have been assigned from within their User portal (*User portal*). When they click on the icon, they can choose which IAM Role they want to use when they log into the AWS Console for that AWS account.
 
-**Nội dung:**
-- [1. Kích hoạt AWS SSO](2.1-enable-sso/)
-- [2. Thêm Users và Groups](2.2-add-user-group/)
+**Content:**
+- [first. Enable AWS SSO](2.1-enable-sso/)
+- [2. Add Users and Groups](2.2-add-user-group/)
 - [3. Permission Set](2.3-create-permissionset/)
-- [4. Gán quyền ](2.4-add-permission/)
+- [4. Assign permissions ](2.4-add-permission/)
