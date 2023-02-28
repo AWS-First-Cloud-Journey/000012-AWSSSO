@@ -119,17 +119,17 @@
                 href="/2-setup-aws-sso/2.3-create-permissionset/"
                 />
   </url><url>
-    <loc>/4-clean-up/</loc>
-    <lastmod>2021-06-14T22:33:19+07:00</lastmod>
+    <loc>/1-prerequisite/3-invite-aws-account/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-clean-up/"
+                href="/vi/1-prerequisite/3-invite-aws-account/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-clean-up/"
+                href="/1-prerequisite/3-invite-aws-account/"
                 />
   </url><url>
     <loc>/2-setup-aws-sso/2.4-add-permission/</loc>
@@ -143,6 +143,32 @@
                 rel="alternate"
                 hreflang="en"
                 href="/2-setup-aws-sso/2.4-add-permission/"
+                />
+  </url><url>
+    <loc>/1-prerequisite/4-switch-role/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-prerequisite/4-switch-role/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-prerequisite/4-switch-role/"
+                />
+  </url><url>
+    <loc>/4-clean-up/</loc>
+    <lastmod>2021-06-14T22:33:19+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/4-clean-up/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/4-clean-up/"
                 />
   </url><url>
     <loc>/categories/</loc>

@@ -23,3 +23,5 @@ Các tài khoản được tạo sẽ được phân bố các tài nguyên như
 #### Nội dung
 1. [Tạo AWS Account trong AWS Organization](1-create-aws-account)
 2. [Thiết lập Organization Unit](2-configure-OU)
+3. [Thêm AWS Account vào AWS Organization](2-configure-OU)
+4. [Truy cập qua các acc khác trong Organization](4-switch-role)

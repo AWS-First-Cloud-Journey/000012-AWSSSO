@@ -23,3 +23,5 @@ The created accounts will be allocated the following resources (*Note: you only 
 #### Content
 1. [Create AWS Account in AWS Organization](1-create-aws-account)
 2. [Setting up Organization Unit](2-configure-OU)
+3. [Invite AWS Account to AWS Organization](2-configure-OU)
+4. [Access member account in Organization](4-switch-role)

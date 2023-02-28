@@ -46,3 +46,12 @@ pre = "<b>1.1 </b>"
 
 5. Lặp lại các bước trên với các tài khoản **Security**, **Shared Services**,và **Application**, tùy theo mỗi tài khoản cá nhân hay doanh nghiệp bao có thể tạo số lượng tài khoản có giới hạn.
 
+**Lưu ý**: nếu địa chỉ mail mà bạn dùng để tạo AWS Account đã tồn tại, AWS sẽ phản hồi như sau trong mục request:
+
+- Chọn **Requests**
+
+![AWS Account](/images/10/001.png?featherlight=false&width=90pc)
+
+- Tại mục **Failure reason** lý do là: **EMAIL_ALREADY_EXISTS**
+
+![AWS Account](/images/10/002.png?featherlight=false&width=90pc)

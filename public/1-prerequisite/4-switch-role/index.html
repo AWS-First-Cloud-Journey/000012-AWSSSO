@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="description" content="">
+<meta name="author" content="journeyoftheaverageguy@gmail.com">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>Access member account in Organization :: AWS Single Sign-On for Organization</title>
+
+    
+    <link href="/css/nucleus.css?1677609847" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1677609847" rel="stylesheet">
+    <link href="/css/hybrid.css?1677609847" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1677609847" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1677609847" rel="stylesheet">
+    <link href="/css/auto-complete.css?1677609847" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1677609847" rel="stylesheet">
+    <link href="/css/theme.css?1677609847" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1677609847" rel="stylesheet">
+    
+    <link href="/css/theme-workshop.css?1677609847" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1677609847"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/1-prerequisite/4-switch-role/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="/">
+
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff;}.cls-2{fill:#f90;fill-rule:evenodd;}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09,10.85a4.7,4.7,0,0,0,.19,1.48,7.73,7.73,0,0,0,.54,1.19.77.77,0,0,1,.12.38.64.64,0,0,1-.32.49l-1,.7a.83.83,0,0,1-.44.15.69.69,0,0,1-.49-.23,3.8,3.8,0,0,1-.6-.77q-.25-.42-.51-1a6.14,6.14,0,0,1-4.89,2.3,4.54,4.54,0,0,1-3.32-1.19,4.27,4.27,0,0,1-1.22-3.2A4.28,4.28,0,0,1,3.61,7.75,6.06,6.06,0,0,1,7.69,6.46a12.47,12.47,0,0,1,1.76.13q.92.13,1.91.36V5.73a3.65,3.65,0,0,0-.79-2.66A3.81,3.81,0,0,0,7.86,2.3a7.71,7.71,0,0,0-1.79.22,12.78,12.78,0,0,0-1.79.57,4.55,4.55,0,0,1-.58.22l-.26,0q-.35,0-.35-.52V2a1.09,1.09,0,0,1,.12-.58,1.2,1.2,0,0,1,.47-.35A10.88,10.88,0,0,1,5.77.32,10.19,10.19,0,0,1,8.36,0a6,6,0,0,1,4.35,1.35,5.49,5.49,0,0,1,1.38,4.09ZM7.34,13.38a5.36,5.36,0,0,0,1.72-.31A3.63,3.63,0,0,0,10.63,12,2.62,2.62,0,0,0,11.19,11a5.63,5.63,0,0,0,.16-1.44v-.7a14.35,14.35,0,0,0-1.53-.28,12.37,12.37,0,0,0-1.56-.1,3.84,3.84,0,0,0-2.47.67A2.34,2.34,0,0,0,5,11a2.35,2.35,0,0,0,.61,1.76A2.4,2.4,0,0,0,7.34,13.38Zm13.35,1.8a1,1,0,0,1-.64-.16,1.3,1.3,0,0,1-.35-.65L15.81,1.51a3,3,0,0,1-.15-.67.36.36,0,0,1,.41-.41H17.7a1,1,0,0,1,.65.16,1.4,1.4,0,0,1,.33.65l2.79,11,2.59-11A1.17,1.17,0,0,1,24.39.6a1.1,1.1,0,0,1,.67-.16H26.4a1.1,1.1,0,0,1,.67.16,1.17,1.17,0,0,1,.32.65L30,12.39,32.88,1.25A1.39,1.39,0,0,1,33.22.6a1,1,0,0,1,.65-.16h1.54a.36.36,0,0,1,.41.41,1.36,1.36,0,0,1,0,.26,3.64,3.64,0,0,1-.12.41l-4,12.86a1.3,1.3,0,0,1-.35.65,1,1,0,0,1-.64.16H29.25a1,1,0,0,1-.67-.17,1.26,1.26,0,0,1-.32-.67L25.67,3.64,23.11,14.34a1.26,1.26,0,0,1-.32.67,1,1,0,0,1-.67.17Zm21.36.44a11.28,11.28,0,0,1-2.56-.29,7.44,7.44,0,0,1-1.92-.67,1,1,0,0,1-.61-.93v-.84q0-.52.38-.52a.9.9,0,0,1,.31.06l.42.17a8.77,8.77,0,0,0,1.83.58,9.78,9.78,0,0,0,2,.2,4.48,4.48,0,0,0,2.43-.55,1.76,1.76,0,0,0,.86-1.57,1.61,1.61,0,0,0-.45-1.16A4.29,4.29,0,0,0,43,9.22l-2.41-.76A5.15,5.15,0,0,1,38,6.78a3.94,3.94,0,0,1-.83-2.41,3.7,3.7,0,0,1,.45-1.85,4.47,4.47,0,0,1,1.19-1.37A5.27,5.27,0,0,1,40.51.29,7.4,7.4,0,0,1,42.6,0a8.87,8.87,0,0,1,1.12.07q.57.07,1.08.19t.95.26a4.27,4.27,0,0,1,.7.29,1.59,1.59,0,0,1,.49.41.94.94,0,0,1,.15.55v.79q0,.52-.38.52a1.76,1.76,0,0,1-.64-.2,7.74,7.74,0,0,0-3.2-.64,4.37,4.37,0,0,0-2.21.47,1.6,1.6,0,0,0-.79,1.48,1.58,1.58,0,0,0,.49,1.18,4.94,4.94,0,0,0,1.83.92L44.55,7a5.08,5.08,0,0,1,2.57,1.6A3.76,3.76,0,0,1,47.9,11a4.21,4.21,0,0,1-.44,1.93,4.4,4.4,0,0,1-1.21,1.47,5.43,5.43,0,0,1-1.85.93A8.25,8.25,0,0,1,42.05,15.62Z"></path><path class="cls-2" d="M45.19,23.81C39.72,27.85,31.78,30,25,30A36.64,36.64,0,0,1,.22,20.57c-.51-.46-.06-1.09.56-.74A49.78,49.78,0,0,0,25.53,26.4,49.23,49.23,0,0,0,44.4,22.53C45.32,22.14,46.1,23.14,45.19,23.81Z"></path><path class="cls-2" d="M47.47,21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74,3.13-2.2,8.27-1.57,8.86-.83s-.16,5.89-3.09,8.35c-.45.38-.88.18-.68-.32C46.69,25.8,48.17,22.11,47.47,21.21Z"></path></svg>
+
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1677609847"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1677609847"></script>
+<script type="text/javascript">
+    
+        var baseurl = "";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1677609847"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-prerequisite/" title="Preparation steps" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/1-prerequisite/">
+          <b>1. </b>Preparation steps
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-prerequisite/1-create-aws-account/" title="Create AWS Account in AWS Organizations" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-prerequisite/1-create-aws-account/">
+          <b>1.1 </b>Create AWS Account in AWS Organizations
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-prerequisite/2-configure-ou/" title="Setting up the Organization Unit" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-prerequisite/2-configure-ou/">
+          <b>1.2 </b>Setting up the Organization Unit
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Inviet AWS Account to AWS Organization" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/1-prerequisite/3-invite-aws-account/">
+          <b>1.3 </b>Inviet AWS Account to AWS Organization
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/1-prerequisite/4-switch-role/" title="Access member account in Organization" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/1-prerequisite/4-switch-role/">
+          <b>1.4 </b>Access member account in Organization
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-setup-aws-sso/" title="Set up AWS SSO" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-setup-aws-sso/">
+          <b>2. </b>Set up AWS SSO
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-setup-aws-sso/2.1-enable-sso/" title="Enable AWS SSO" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-setup-aws-sso/2.1-enable-sso/">
+          <b>2.1 </b>Enable AWS SSO
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-setup-aws-sso/2.2-add-user-group/" title="Add Users and Groups" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-setup-aws-sso/2.2-add-user-group/">
+          <b>2.2 </b>Add Users and Groups
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-setup-aws-sso/2.3-create-permissionset/" title="Create Permission Set" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-setup-aws-sso/2.3-create-permissionset/">
+          <b>2.3 </b>Create Permission Set
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-setup-aws-sso/2.4-add-permission/" title="Assign permissions" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-setup-aws-sso/2.4-add-permission/">
+          <b>2.4 </b>Assign permissions
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/3-test-permission/" title="Test" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/3-test-permission/">
+          <b>3. </b>Test
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/4-clean-up/" title="Clean up resources" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/4-clean-up/">
+          <b>4. </b>Clean up resources
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="http://awsstudygroup.com"><i class='fab fa-aws'></i> AWS Study Group - Blog</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://www.facebook.com/groups/660548818043427/"><i class='fab fa-facebook'></i> AWS Study Group - FB Group</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+                    
+                    
+                      <option id="en" value="/1-prerequisite/4-switch-role/" selected>English</option>
+                    
+                  
+              
+                  
+              
+          
+              
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="vi" value="/vi/1-prerequisite/4-switch-role/">Tiếng Việt</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+    
+     <b> Workshop</b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7831772&style=0038&nbdigits=9&type=page&initCount=0" title="Migrate" Alt="web counter"   border="0" /></a>  <br>
+     <b> <a href="https://cloudjourney.awsstudygroup.com/">Cloud Journey</a></b> <br>
+    <img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" Alt="web counter"   border="0"   />
+     
+</left>
+<left>
+    <br>
+    <br>
+        <b> Last Updated </b> <br>
+        <i><font color=orange>28-02-2023</font></i>
+    </left>
+    <left>
+        <br>
+        <br>
+            <b> Team </b> <br>
+            <i> <a href="https://www.linkedin.com/in/jotaguy"  style="color:orange">Gia Hưng </a> <br>
+        </i>
+        </left>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>AWS Single Sign-On</a> > <a href='/1-prerequisite/'>Preparation steps</a> > Access member account in Organization
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Access member account in Organization
+            </h1>
+          
+
+        
+
+
+
+	<p>In this step, you will stand at <strong>management account</strong> to access <strong>member accounts</strong> through <strong>switch role</strong> function</p>
+<p><strong>Content</strong></p>
+<ul>
+<li>
+<p><strong>switch role</strong> to <strong>member accounts</strong> created by <strong>AWS Organization</strong> (step 1.1)</p>
+</li>
+<li>
+<p><strong>switch role</strong> to <strong>member accounts</strong> invited to join <strong>AWS Organization</strong> (step 1.3)</p>
+</li>
+</ul>
+<h4 id="a-switch-role-to-member-accounts-created-by-aws-organization">A) <strong>Switch role</strong> to <strong>member accounts</strong> created by <strong>AWS Organization</strong></h4>
+<ol>
+<li>Login to <strong>management account</strong></li>
+</ol>
+<ul>
+<li>
+<p>Use <strong>IAM User</strong> to login</p>
+</li>
+<li>
+<p>Go to <strong>AWS Management Comsole</strong> and look for <strong>AWS Organizations</strong> service in the search bar.</p>
+</li>
+<li>
+<p>Copy the Account ID (Has 12 numbers &amp; appears below the name of the Account) that you want to access</p>
+</li>
+<li>
+<p>At the right corner, after the name of the Account, select the triangle, Select <strong>Switch role</strong></p>
+</li>
+</ul>
+<p><img src="/images/11/0000'.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ul>
+<li>
+<p><strong>Note</strong>, if you are using <strong>root</strong> account, you will not be able to see <strong>Switch role</strong> function</p>
+</li>
+<li>
+<p>If you are not familiar with creating IAM User (with Admin permission) to serve this lab, please review the article: <a href="https://000002.awsstudygroup.com/1-introduction/">Manage Access with AWS Identity and Access Management (AWS IAM)</a></p>
+</li>
+</ul>
+<ol start="2">
+<li><strong>Switching Roles</strong></li>
+</ol>
+<ul>
+<li>Go to <strong>Account</strong>, paste the account ID you copied in step 1, for example: <code>999999999943</code></li>
+<li>In the <strong>Role</strong> section, enter the <strong>role name</strong> you used when creating the Account (in step 1.1), eg: <code>OrganizationAccountAccessRole</code> (this is the role name recommended by AWS)</li>
+<li>In the <strong>Display Name</strong> section, although this is not mandatory information, it is recommended that you name it for easy identification &amp; avoid confusing access to the environment! In practice there will be many converted accounts. Ex: <code>FCJ-DEV</code></li>
+<li>Print item color: choose the color you like</li>
+<li>Select <strong>Switch roles</strong></li>
+</ul>
+<p><strong>note</strong>: if you need to change <strong>Display Name</strong>, just go back to step 2 and add the name you want</p>
+<p><img src="/images/11/0003.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ul>
+<li>Result:</li>
+</ul>
+<p><img src="/images/11/0004.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p>Congratulations on your successful Switch Role!</p>
+<ul>
+<li>Check if you have permissions on universal services</li>
+</ul>
+<p><img src="/images/11/0004'.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<h4 id="explanation">Explanation:</h4>
+<ul>
+<li>
+<p>You can <strong>access</strong> easily into the account (member account) created from <strong>AWS Organizations</strong> &amp; have full admin permission,because:</p>
+<ul>
+<li>The IAM User you used in step 1 has admin permission.</li>
+<li>While creating a new account with <strong>AWS Organizations</strong>, with your consent - AWS automatically added <strong>AdministratorAccess</strong> permission to the <strong>OrganizationAccountAccessRole</strong> role. Check:</li>
+</ul>
+</li>
+<li>
+<p>You are standing at <strong>member accouunt with Display name: FCJ-Dev</strong>, in the search box, type and select <strong>IAM</strong> service</p>
+</li>
+<li>
+<p>On the right, select <strong>Roles</strong></p>
+</li>
+</ul>
+<p><img src="/images/11/0005.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ul>
+<li>Select Role name: <strong>OrganizationAccountAccessRole</strong></li>
+</ul>
+<p><img src="/images/11/0006.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ul>
+<li>You should see admin permission: <strong>AdministratorAccess</strong> with explanation <strong>Provides full access to AWS services and resources</strong></li>
+</ul>
+<p><img src="/images/11/0007.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<h4 id="extend">Extend:</h4>
+<p>Once you have followed the tutorial: <a href="https://000002.awsstudygroup.com/en/1-introduction/">Administrating Access with AWS Identity and Access Management (AWS IAM)</a> to create an IAM User to log in * *management account** then you give admin permission: <strong>AdministratorAccess</strong> to perform the switch role, so you don&rsquo;t need to add <strong>assume role</strong> permissions ([**explained link**]](<a href="https://000002.awsstudygroup.com/1-introduction/1.3-iam-role/">https://000002.awsstudygroup.com/1-introduction/1.3-iam-role/</a>)) because admin permission already include this permission.</p>
+<p>But in practice to ensure the <strong>least privilege</strong> for the granting of minimal permission, as an administrator, you should only grant <strong>assume role</strong> permission to the user who is switched via the account - representing environment that the team needs.</p>
+<p><strong>Example</strong>: Your <strong>AWS Organizations</strong> has 4 accounts running workload respectively for 3 environments: Dev, Test, Produciton and the 4th acc is <strong>management account</strong> (recommended by AWS: it should not run any Workload, just for consolidated billing)! By the nature of work, Dev Lead needs to move back and forth between Dev and Test environments without logging in with User Name, Password to 2 AWS accounts!</p>
+<p>At this point, switching the role to move between the two environments will be very quick and convenient. So as an administrator - you will give DevLead an IAM User access to <strong>management account</strong> who only has <strong>assume role</strong> permission of Dev and Test environments to perform the switch but no any other rights on the Production environment.</p>
+<h4 id="practice">Practice:</h4>
+<ol start="3">
+<li>Create <strong>User Groups</strong></li>
+</ol>
+<ul>
+<li>Stand at <strong>management account</strong> and do again <a href="https://000002.awsstudygroup.com/2-create-admin-user-and-group/2.1-create-admin-group/">item 2.1 in the article Managing access rights with IAM</a></li>
+<li>In step 4, <strong>User Group Name</strong> enter the Group name (Example: DevGroup)</li>
+<li>Select <strong>Create policy</strong>, a new window appears</li>
+</ul>
+<p><img src="/images/11/0008.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ol start="4">
+<li>Create <strong>Customer managed Policy</strong></li>
+</ol>
+<ul>
+<li>Choose a service: type <strong>STS</strong> -&gt; on the left, select <strong>STS</strong>
+<ul>
+<li><strong>STS</strong> is Security Token Service: is a web service that allows users to send temporary requests and grants limited permissions to IAM users. Token has a default validity of 1 hour</li>
+</ul>
+</li>
+<li>Actions -&gt; Select actions -&gt; type <code>AssumeRole</code> -&gt; in the middle, select <strong>AssumeRole</strong></li>
+<li>Resources -&gt; Specific -&gt; Add ARN
+<ul>
+<li>Account *: enter the member Account ID ( the ID you copied in step 1 above) (eg: <code>999999999943</code>)</li>
+<li>Role name with path *: enter the role name in step 1.1 (eg: <code>OrganizationAccountAccessRole</code>)</li>
+<li>Select <strong>Add</strong></li>
+</ul>
+</li>
+<li>Select <strong>Next: Tags</strong></li>
+</ul>
+<p><img src="/images/11/0009.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ul>
+<li>Select <strong>Next: Review</strong></li>
+<li>Name * : điền policy name (vd:<code>switch_role_999999999943</code>)</li>
+<li>Select <strong>Create policy</strong></li>
+</ul>
+<p><img src="/images/11/00010.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ol start="5">
+<li>Attach the newly created policy to <strong>User Groups</strong></li>
+</ol>
+<ul>
+<li>Back to <strong>Create user group</strong> page</li>
+<li>In the <strong>Attach permissions policies - Optional</strong> section, select the refesh icon</li>
+</ul>
+<p><img src="/images/11/00011.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ul>
+<li>In the search box, enter: <strong>switch_role_999999999943</strong></li>
+<li>Check the box</li>
+<li>Select <strong>Create Group</strong></li>
+</ul>
+<p><img src="/images/11/00012.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ol start="6">
+<li>Create <strong>User</strong></li>
+</ol>
+<ul>
+<li>Do again <a href="https://000002.awsstudygroup.com/2-create-admin-user-and-group/2.2-create-admin-user/">item 2.2 in the article Managing access rights with IAM</a></li>
+<li>In step 2, <strong>User name</strong> enter: <strong>DevLead</strong>,</li>
+<li>In step 3, select <strong>DevGroup</strong></li>
+<li>Complete the rest of the steps and check the newly created IAM User</li>
+</ul>
+<p><img src="/images/11/00013.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p>-&gt; So IAM User: DevLead has been created &amp; has policy name: <strong>switch_role_999999999943</strong> attached via group: DevGroup</p>
+<p><strong>Note</strong>: You see that in the Users or User Groups interface, there is a function that allows you to assign permissions (<strong>Add permissions</strong>), but according to the best pratice:</p>
+<ul>
+<li>You should only assign permissions to User Groups</li>
+<li>After that, add the User in the Group, then the User will automatically have all the permissions that you have given to Groups</li>
+</ul>
+<p>-&gt; This makes it easy to manage permissions at a centralized level in groups, avoiding granting permissions by user and difficult in management because you have to go to each user to watch which permission policy we have ever given.</p>
+<ol start="7">
+<li>Login to the newly created <strong>IAM User</strong></li>
+</ol>
+<p><img src="/images/11/00014.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p>Result:</p>
+<p><img src="/images/11/00015.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ol start="8">
+<li>Perform <strong>switch role</strong> via <strong>member account</strong></li>
+</ol>
+<p><strong>note</strong>: you have just logged in to IAM User but still belong to <strong>management account</strong>, now you start performing <strong>switch role</strong> via <strong>member account</strong>.</p>
+<ul>
+<li>Repeat step 2 above</li>
+</ul>
+<p><img src="/images/11/00016.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p>Congratulations on <strong>switching role</strong> via <strong>member account</strong> (ID: 999999999943) with IAM User DevLead</p>
+<p><img src="/images/11/00017.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p>You can use the <strong>Create an AWS account</strong> function to create an acc for the test environment and do steps 3 to 8 to switch the role through the Test environment with the corresponding Account ID</p>
+<h4 id="b-switch-role-to-member-accounts-invited-to-join-aws-organization">B) <strong>Switch role</strong> to <strong>member accounts</strong> invited to join <strong>AWS Organization</strong></h4>
+<p>When reviewing items:</p>
+<ul>
+<li>1.1 Create an AWS Account in AWS Organizations</li>
+<li>1.3 Invite AWS Account to AWS Organization</li>
+</ul>
+<p>-&gt; You will see the ability to create AWS Account in AWS Organizations (<strong>Create an AWS account</strong>) there is a section to create an IAM role for management account to use to access resources to the member account by <strong>Switch role</strong></p>
+<p>-&gt; But the above is completely absent in the function of invite an AWS Account to an AWS Organization (<strong>Invite an existing AWS account</strong>), so you need to add an IAM Role for the invited AWS Account.</p>
+<p><img src="/images/12/0001.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ol>
+<li>Create Role with admin rights</li>
+</ol>
+<ul>
+<li>
+<p>Use <strong>member account</strong> that you have joined <strong>AWS Organizations</strong> in [1.3]</p>
+</li>
+<li>
+<p>Go to <strong>AWS Management Comsole</strong> and find <strong>IAM</strong> service in the search bar, select <strong>Roles</strong>, select <strong>Create role</strong></p>
+</li>
+</ul>
+<p><img src="/images/12/0003.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ul>
+<li>Select <strong>AWS account</strong></li>
+<li>Select <strong>Another AWS account</strong></li>
+<li>Enter the Account ID of <strong>management account</strong> in the box, eg: <strong>999999999963</strong></li>
+<li>Select Next</li>
+</ul>
+<p><img src="/images/12/0004.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ul>
+<li>In the <strong>Permissions policies</strong> section, enter: <code>AdministratorAccess</code>, press enter</li>
+<li>Check the box AdministratorAccess</li>
+<li>select Next</li>
+</ul>
+<p><img src="/images/12/0005.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ul>
+<li>Role name: enter <code>OrganizationAccountAccessRole</code></li>
+<li>Scroll to the bottom of the page, select <strong>Create role</strong></li>
+</ul>
+<p><img src="/images/12/0006.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ul>
+<li>Check the newly created role, copy the Account ID <strong>member account</strong> (ID: 888800009920) by clicking the square</li>
+</ul>
+<p><img src="/images/12/0007.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ol start="2">
+<li>Implement switch role</li>
+</ol>
+<ul>
+<li>
+<p>Log in to <strong>management account</strong> (like step 1 and 2 in part A)</p>
+</li>
+<li>
+<p>lick triangular bookmark on the corner right side - next to acc name, select <strong>Switch role</strong></p>
+</li>
+</ul>
+<p><img src="/images/12/0008.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ul>
+<li>In the <strong>Account</strong> section, paste the Account ID you copied in step 1, for example: <code>888800009920</code></li>
+<li>In the <strong>Role</strong> field, enter the <strong>role name</strong> you used while creating the Account (create step 1), eg: <code>OrganizationAccountAccessRole</code></li>
+<li>In the <strong>Display Name</strong> section, although this is not mandatory information, it is recommended that you name it for easy identification &amp; avoid accessing the wrong environment! In fact, there will be many Accounts to be switched. Ex: <code>FCJ_Invite_Acc</code></li>
+<li>In the color section: choose the color you like</li>
+<li>Select <strong>Switch Role</strong></li>
+</ul>
+<p><img src="/images/12/0009.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<ul>
+<li>Congratulations, by Switching Role - you have successfully migrated to <strong>member account</strong> already invited to <strong>AWS Organizations</strong></li>
+</ul>
+<p><img src="/images/12/00010.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p><strong>Conclusion</strong>: From step 1.1 to step 1.4, we have seen that the management account will be the admin account in the AWS Organization service and the member accounts will be the permanent member accounts.
+In addition, for the member account to appear in the Organization, we have two ways:</p>
+<ol>
+<li>Create a new acc using the function: Create an AWS account</li>
+<li>Add an existing account using the function: Invite an existing AWS account</li>
+</ol>
+<p>Besides, we can stand from the management account to access the member account via the switch role function and for each of the two ways above, we need different conditions for the switch role to succeed:</p>
+<ol>
+<li>
+<p>With the <strong>Create an AWS account</strong> method, switching the role will be quite simple because during the create of the member account we have allowed AWS to automatically add the role name <strong>OrganizationAccountAccessRole</strong> with <strong>AdministratorAccess</strong> permission. In addition, we need to grant <strong>assume role</strong> permission corresponding to member account ID for IAM User under management account</p>
+</li>
+<li>
+<p>With the <strong>Invite an existing AWS account</strong> method, switching roles will be more difficult! We need to create the role name <strong>OrganizationAccountAccessRole</strong> and assign the <strong>AdministratorAccess</strong> permission to the account ID of the management account
+In addition, we need to grant <strong>assume role</strong> permission corresponding to member account ID for IAM User under management account</p>
+</li>
+</ol>
+<p>However, the switch role is not the only way to access member accounts. In the steps in item 2, you&rsquo;ll discover another way of accessing it through setting up AWS SSO.</p>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/1-prerequisite/3-invite-aws-account/" title="Inviet AWS Account to AWS Organization"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/2-setup-aws-sso/" title="Set up AWS SSO" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1677609847"></script>
+    <script src="/js/perfect-scrollbar.min.js?1677609847"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1677609847"></script>
+    <script src="/js/jquery.sticky.js?1677609847"></script>
+    <script src="/js/featherlight.min.js?1677609847"></script>
+    <script src="/js/highlight.pack.js?1677609847"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1677609847"></script>
+    <script src="/js/learn.js?1677609847"></script>
+    <script src="/js/hugo-learn.js?1677609847"></script>
+
+    <link href="/mermaid/mermaid.css?1677609847" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1677609847"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-158079754-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

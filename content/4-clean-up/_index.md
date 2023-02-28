@@ -1,7 +1,7 @@
 +++
 title = "Clean up resources"
 date = 2021-06-14T22:33:19+07:00
-weight = 4
+weight = 5
 chapter = false
 pre = "<b>4. </b>"
 +++

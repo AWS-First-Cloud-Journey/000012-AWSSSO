@@ -45,3 +45,13 @@ To create multiple AWS accounts with the same email, you can take your email nam
 
 
 5. Repeat the above steps for **Security**, **Shared Services**, and **Application** accounts, depending on each individual or business account, you can create as many accounts as you want. limit.
+
+**Note**: if the email address you used to create your AWS Account already exists, AWS will respond as follows in the **request**:
+
+- Select **Requests**
+
+![AWS Account](/images/10/001.png?featherlight=false&width=90pc)
+
+- In the **Failure reason** section, the reason is: **EMAIL ALREADY EXISTS**
+
+![AWS Account](/images/10/002.png?featherlight=false&width=90pc)
