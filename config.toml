@@ -18,7 +18,7 @@ home = [ "HTML", "RSS", "JSON"]
   
 [Languages]
 [Languages.en]
-title = "SET UP HYBRID DNS WITH ROUTE 53 RESOLVER"
+title = "AWS SINGLE SIGN-ON FOR ORGANIZATION"
 weight = 1
 languageName = "English"
 
@@ -35,7 +35,7 @@ url = "https://www.facebook.com/groups/awsstudygroupfcj"
 weight = 20
 
 [Languages.vi]
-title = "THIẾT LẬP HYBRID DNS VỚI ROUTE 53 RESOLVER"
+title = "AWS SINGLE SIGN-ON CHO ORGANIZATION"
 weight = 2
 languageName = "Tiếng Việt"
 

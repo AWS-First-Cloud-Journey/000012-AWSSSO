@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Enable AWS SSO on SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</title>
+    <title>Enable AWS SSO on AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
     <link>/2-setup-aws-sso/2.1-enable-sso/</link>
-    <description>Recent content in Enable AWS SSO on SET UP HYBRID DNS WITH ROUTE 53 RESOLVER</description>
+    <description>Recent content in Enable AWS SSO on AWS SINGLE SIGN-ON FOR ORGANIZATION</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 01 Jan 1970 07:33:41 +0700</lastBuildDate><atom:link href="/2-setup-aws-sso/2.1-enable-sso/index.xml" rel="self" type="application/rss+xml" />
   </channel>
