@@ -6,43 +6,45 @@ chapter = false
 pre = "<b>3. </b>"
 +++
 
-In this section, you'll try accessing AWS accounts in AWS Organizations through the AWS SSO User. You can then proceed to clean up the resources if you no longer need them.
+#### Accessing AWS Accounts in AWS Organizations through AWS SSO User
 
-#### Check results
-You will try accessing AWS accounts in AWS Organizations through AWS SSO User
-1. Open your browser in incognito mode and go to the **User portal URL** link you saved in the previous section.
+In this section, you will learn how to access AWS accounts within AWS Organizations using the AWS SSO User. If you no longer need these resources, you can follow the steps to clean them up.
 
+#### Checking Results
 
-![AddUserGroups](../../../images/2/2_AddUserComplete.png?width=90pc)
+To access AWS accounts within AWS Organizations through AWS SSO User, follow these steps:
 
-Or store **User portal URL** at **set password**
+1. Open your web browser in incognito mode and navigate to the **User portal URL** link that you saved in the previous section.
 
-![AWS Account](/images/9/0001.png?featherlight=false&width=90pc)
+   ![User Portal URL](../../../images/2/2_AddUserComplete.png?width=90pc)
 
-2. In **User Portal**, enter the saved username and password to login.
+   Alternatively, you can store the **User portal URL** in the **set password** section.
 
-3. If you are accessing the AWWS SSO User for the first time, you will have to change the password first as you set up in the previous section. Enter the new password according to the instructions and select **Set new password**.
+   ![AWS Account](/images/9/0001.png?featherlight=false&width=90pc)
 
-![AWS Account](/images/9/0002.png?featherlight=false&width=90pc)
+2. In the **User Portal**, enter the username and password you saved to log in.
 
-4. You will be able to select the AWS account and access rights set up in the previous section. (For example, the figure below shows the account and the access permissions that Security-User can use. If you log in to Super-User, you will be able to access **AdministratorAccess** for each account)
+3. If this is your first time accessing the AWS SSO User, you'll need to change the password as you set up in the previous section. Follow the instructions to enter a new password and select **Set new password**.
 
-![AWS Account](/images/9/0003.png?featherlight=false&width=90pc)
+   ![AWS Account](/images/9/0002.png?featherlight=false&width=90pc)
 
-![AWS Account](/images/9/0004.png?featherlight=false&width=90pc)
+4. You can now select the AWS account and access rights that were set up in the previous section. For instance, the image below illustrates the account and access permissions that the "Security-User" has. If you log in as "Super-User," you'll have access to **AdministratorAccess** for each account.
 
-5. Select **Management console** to access the **Security** account's AWS console.
+   ![AWS Account](/images/9/0003.png?featherlight=false&width=90pc)
+   ![AWS Account](/images/9/0004.png?featherlight=false&width=90pc)
 
-![AWS Account](/images/9/0004.png?featherlight=false&width=90pc)
+5. Click **Management console** to access the AWS console for the "Security" account.
 
-6. Congratulations, you have successfully accessed your account.
+   ![AWS Account](/images/9/0004.png?featherlight=false&width=90pc)
 
-![AWS Account](/images/9/0005.png?featherlight=false&width=90pc)
+6. Congratulations! You've successfully accessed your account.
 
-7. For **CLI** you can choose **Command line or programmatic access**. Displays SSO configuration instructions.
+   ![AWS Account](/images/9/0005.png?featherlight=false&width=90pc)
 
-![AWS Account](/images/9/0006.png?featherlight=false&width=90pc)
+7. For **CLI** access, you can choose **Command line or programmatic access**, which will display SSO configuration instructions.
 
-8. Open CMD or PowerShell according to the operating system to configure.
+   ![AWS Account](/images/9/0006.png?featherlight=false&width=90pc)
 
-![AWS Account](/images/9/0007.png?featherlight=false&width=90pc)
+8. Depending on your operating system, open either the Command Prompt (CMD) or PowerShell to perform the configuration.
+
+   ![AWS Account](/images/9/0007.png?featherlight=false&width=90pc)

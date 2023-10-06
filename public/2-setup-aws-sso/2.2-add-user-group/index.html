@@ -12,21 +12,21 @@
     <title>Add Users and Groups :: AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1680274106" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680274106" rel="stylesheet">
-    <link href="/css/hybrid.css?1680274106" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680274106" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680274106" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680274106" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680274106" rel="stylesheet">
-    <link href="/css/theme.css?1680274106" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680274106" rel="stylesheet">
+    <link href="/css/nucleus.css?1696615173" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696615173" rel="stylesheet">
+    <link href="/css/hybrid.css?1696615173" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696615173" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696615173" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696615173" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696615173" rel="stylesheet">
+    <link href="/css/theme.css?1696615173" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696615173" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680274106" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696615173" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680274106"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696615173"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680274106"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680274106"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696615173"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696615173"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680274106"></script>
+<script type="text/javascript" src="/js/search.js?1696615173"></script>
 
     
   </div>
@@ -169,13 +169,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Inviet AWS Account to AWS Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Invite AWS Account to AWS Organization" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/3-invite-aws-account/">
-          <b>1.3 </b>Inviet AWS Account to AWS Organization
+          <b>1.3 </b>Invite AWS Account to AWS Organization
           
             <i class="fas fa-check read-icon"></i>
           
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -613,12 +613,12 @@
 
 
 	<h4 id="add-users-and-groups">Add Users and Groups</h4>
-<p>You need to create Users and Groups as shown in the table below. In which, User in column <strong>User logon name</strong> will belong to Groups in column <strong>Group</strong>.</p>
+<p>To proceed, you need to create users and groups as detailed in the table below. Users listed under the <strong>User logon name</strong> column will be assigned to the respective groups listed under the <strong>Group</strong> column.</p>
 <table>
 <thead>
 <tr>
 <th style="text-align:center">User logon name</th>
-<th style="text-align:center">Group</th>
+<th style="text-align:center">Groups</th>
 </tr>
 </thead>
 <tbody>
@@ -632,71 +632,81 @@
 </tr>
 </tbody>
 </table>
-<h4 id="create-group">Create Group</h4>
+<h4 id="create-groups">Create Groups</h4>
 <ol>
-<li>Currently, you still don&rsquo;t have any groups. Select Create group to create the groups listed in the table above</li>
-</ol>
+<li>
+<p>At present, there are no existing groups. Choose &ldquo;Create group&rdquo; to establish the groups mentioned in the table above.</p>
 <p><img src="/images/6/0001.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="2">
-<li>At the prompt to create a group, enter the names of the groups and the descriptions of the groups and then click Create</li>
-</ol>
-<p><img src="/images/6/0002.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="3">
-<li>Repeat this step for the remaining groups</li>
-</ol>
-<p><img src="/images/6/0003.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<h4 id="add-user">Add User.</h4>
-<ol>
-<li>Open the AWS SSO Console. Select Users in the left sidebar
+</li>
+<li>
+<p>Follow these steps to create a group:</p>
 <ul>
-<li>Select Add user and provide the necessary information</li>
+<li>Provide group names and descriptions when prompted.</li>
+<li>Click &ldquo;Create.&rdquo;</li>
 </ul>
+<p><img src="/images/6/0002.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+</li>
+<li>
+<p>Repeat this process for the remaining groups.</p>
+<p><img src="/images/6/0003.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
 </li>
 </ol>
-<p><img src="/images/5/0001.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="2">
-<li>Complete the information</li>
-</ol>
+<h4 id="add-user">Add User</h4>
+<ol>
+<li>
+<p>Open the AWS SSO Console and access the &ldquo;Users&rdquo; section from the left sidebar.</p>
 <ul>
-<li><strong>Username</strong> - This Username will be required to log in to the User portal and cannot be changed later. (Example: Super-User)</li>
-<li><strong>Password</strong> - Select one of the following options to send the User&rsquo;s password.</li>
-<li><strong>Send an email to the user with password setup instructions</strong> - With this option, Amazon Web Services will automatically send the User an email inviting the User to access the AWS SSO User portal.</li>
-<li><strong>Generate a one-time password that you can share with the user</strong> - This option provides a URL to the User portal and a password that you can send to the User yourself. You will choose this option in this exercise. Or select <strong>Send an email to this user with password setup instructions</strong>.</li>
-<li>*<strong>Email address</strong>: enter User&rsquo;s email</li>
-<li><strong>Confirm email address</strong>: re-enter User&rsquo;s email</li>
-<li>For clarity, use the prefix of the User logon name as the First name and the suffix as the Last name. For example, for Super-User, Super will be the First name, while User will be the Last name Display name</li>
+<li>Click on &ldquo;Add user&rdquo; and furnish the required information.</li>
+</ul>
+<p><img src="/images/5/0001.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+</li>
+<li>
+<p>Complete the user information as follows:</p>
+<ul>
+<li><strong>Username:</strong> This will serve as the login ID and cannot be changed later. (Example: Super-User)</li>
+<li><strong>Password:</strong> Choose one of the following methods to deliver the user&rsquo;s password:
+<ul>
+<li>&ldquo;Send an email to the user with password setup instructions&rdquo;: AWS will automatically send an email to the user for accessing the AWS SSO User portal.</li>
+<li>&ldquo;Generate a one-time password that you can share with the user&rdquo;: Provides a URL and password to be sent manually. Choose this option in this exercise, or select the email option.</li>
+</ul>
+</li>
+<li><strong>Email address:</strong> Enter the user&rsquo;s email.</li>
+<li><strong>Confirm email address:</strong> Re-enter the user&rsquo;s email.</li>
+<li>For clarity, utilize the prefix of the user&rsquo;s logon name as the first name and the suffix as the last name. For instance, for &ldquo;Super-User,&rdquo; the first name would be &ldquo;Super&rdquo; and the last name &ldquo;User.&rdquo;</li>
 </ul>
 <p><img src="/images/5/0002.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="3">
-<li>Select <strong>Next</strong>.</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Next</strong>.</p>
 <p><img src="/images/5/0003.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="4">
-<li>Select the groups and select <strong>Next</strong></li>
-</ol>
+</li>
+<li>
+<p>Select the relevant groups and click <strong>Next</strong>.</p>
 <p><img src="/images/5/0004.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="5">
-<li>Select <em>Add user</em>*</li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Add user</strong>.</p>
 <p><img src="/images/5/0005.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="6">
-<li>Complete user creation.</li>
-</ol>
+</li>
+<li>
+<p>Complete the user creation process.</p>
 <p><img src="/images/5/0006.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="7">
-<li>If you select <strong>Send an email to this user with password setup instructions.</strong> then perform email verification to log in.</li>
-</ol>
+</li>
+<li>
+<p>If you chose the &ldquo;Send an email to this user with password setup instructions&rdquo; option, follow the email verification steps for logging in.</p>
 <p><img src="/images/5/0007.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="8">
-<li>Select <strong>Send</strong></li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Send</strong>.</p>
 <p><img src="/images/5/0008.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="9">
-<li>Execute <strong>Verify</strong></li>
-</ol>
+</li>
+<li>
+<p>Execute the <strong>Verify</strong> action.</p>
 <p><img src="/images/5/0009.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="10">
-<li>Perform password configuration. Note: keep password and portal page to log in.</li>
+</li>
+<li>
+<p>Perform the password configuration. Note: Keep the password and portal page details for future logins.</p>
+</li>
 </ol>
 <p><img src="/images/5/00010.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
 <p><img src="/images/5/00011.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
@@ -965,19 +975,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680274106"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680274106"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680274106"></script>
-    <script src="/js/jquery.sticky.js?1680274106"></script>
-    <script src="/js/featherlight.min.js?1680274106"></script>
-    <script src="/js/highlight.pack.js?1680274106"></script>
+    <script src="/js/clipboard.min.js?1696615173"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696615173"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696615173"></script>
+    <script src="/js/jquery.sticky.js?1696615173"></script>
+    <script src="/js/featherlight.min.js?1696615173"></script>
+    <script src="/js/highlight.pack.js?1696615173"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680274106"></script>
-    <script src="/js/learn.js?1680274106"></script>
-    <script src="/js/hugo-learn.js?1680274106"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696615173"></script>
+    <script src="/js/learn.js?1696615173"></script>
+    <script src="/js/hugo-learn.js?1696615173"></script>
 
-    <link href="/mermaid/mermaid.css?1680274106" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680274106"></script>
+    <link href="/mermaid/mermaid.css?1696615173" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696615173"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

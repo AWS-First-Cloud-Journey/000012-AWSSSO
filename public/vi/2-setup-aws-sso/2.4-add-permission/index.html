@@ -12,21 +12,21 @@
     <title>Gán quyền :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1680274106" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680274106" rel="stylesheet">
-    <link href="/css/hybrid.css?1680274106" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680274106" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680274106" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680274106" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680274106" rel="stylesheet">
-    <link href="/css/theme.css?1680274106" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680274106" rel="stylesheet">
+    <link href="/css/nucleus.css?1696615173" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696615173" rel="stylesheet">
+    <link href="/css/hybrid.css?1696615173" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696615173" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696615173" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696615173" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696615173" rel="stylesheet">
+    <link href="/css/theme.css?1696615173" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696615173" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680274106" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696615173" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680274106"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696615173"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680274106"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680274106"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696615173"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696615173"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680274106"></script>
+<script type="text/javascript" src="/js/search.js?1696615173"></script>
 
     
   </div>
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -612,19 +612,19 @@
 
 
 
-	<h4 id="gán-quyền-truy-cập-cho-users-và-groups">Gán quyền truy cập cho Users và Groups</h4>
-<p>Bạn cần thiết lập các tài khoản AWS vào các SSO group với chức năng công việc như sau:</p>
+	<h4 id="gán-quyền-truy-cập-cho-người-dùng-và-nhóm">Gán Quyền Truy Cập cho Người Dùng và Nhóm</h4>
+<p>Để thiết lập các tài khoản AWS cho các nhóm SSO với các chức năng công việc như sau:</p>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Accounts</th>
-<th style="text-align:center">Groups</th>
-<th style="text-align:center">Job function policy</th>
+<th style="text-align:center">Tài Khoản</th>
+<th style="text-align:center">Nhóm</th>
+<th style="text-align:center">Chính Sách Công Việc</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">Management Account, shared-services, logging,security</td>
+<td style="text-align:center">Management Account, shared-services, logging, security</td>
 <td style="text-align:center">AWS-Shared-Services-Admin; AWS-Security-Admin; AWS-Logging-Admin</td>
 <td style="text-align:center">AdministratorAccess</td>
 </tr>
@@ -636,42 +636,44 @@
 </tbody>
 </table>
 <ol>
-<li>Mở AWS SSO Console. Chọn AWS accounts ở thanh bên trái.</li>
-</ol>
-<p>Trong tab AWS organization, trong danh sách tài khoản AWS, chọn một hoặc nhiều tài khoản mà bạn muốn chỉ định quyền truy cập. (Ví dụ: Management Account, shared-services, logging, và security). Sau đó, chọn <strong>Assign users or groups</strong></p>
+<li>
+<p>Mở AWS SSO Console. Chọn <strong>AWS accounts</strong> ở thanh bên trái.</p>
+<p>Trong tab <strong>AWS organization</strong>, trong danh sách tài khoản AWS, chọn một hoặc nhiều tài khoản mà bạn muốn chỉ định quyền truy cập. (Ví dụ: Management Account, shared-services, logging, và security). Sau đó, chọn <strong>Assign users or groups</strong></p>
 <p><img src="/images/8/0001.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="2">
-<li>Chọn các group và chọn <strong>Next</strong></li>
-</ol>
+</li>
+<li>
+<p>Chọn các nhóm và chọn <strong>Next</strong></p>
 <p><img src="/images/8/00011.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="3">
-<li>Chọn <strong>Permission set</strong></li>
-</ol>
+</li>
+<li>
+<p>Chọn <strong>Permission set</strong></p>
 <p><img src="/images/8/00012.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="4">
-<li>Chọn <strong>Submit</strong></li>
-</ol>
+</li>
+<li>
+<p>Chọn <strong>Submit</strong></p>
 <p><img src="/images/8/00013.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="5">
-<li>Tương tự, Đối với tài khoản <strong>Security Account</strong></li>
-</ol>
+</li>
+<li>
+<p>Tương tự, đối với tài khoản <strong>Security Account</strong></p>
 <p><img src="/images/8/0006.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="6">
-<li>Chọn các group và chọn <strong>Next</strong></li>
-</ol>
+</li>
+<li>
+<p>Chọn các nhóm và chọn <strong>Next</strong></p>
 <p><img src="/images/8/0007.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="7">
-<li>Chọn <strong>Permission set</strong> và chọn <strong>Next</strong></li>
-</ol>
+</li>
+<li>
+<p>Chọn <strong>Permission set</strong> và chọn <strong>Next</strong></p>
 <p><img src="/images/8/0008.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="8">
-<li>Chọn <strong>Submit</strong></li>
-</ol>
+</li>
+<li>
+<p>Chọn <strong>Submit</strong></p>
 <p><img src="/images/8/0009.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="9">
-<li>Chúc mừng, bạn đã thiết lập AWS SSO thành công.</li>
-</ol>
+</li>
+<li>
+<p>Chúc mừng, bạn đã thiết lập AWS SSO thành công.</p>
 <p><img src="/images/8/00010.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+</li>
+</ol>
 
 
 
@@ -936,19 +938,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680274106"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680274106"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680274106"></script>
-    <script src="/js/jquery.sticky.js?1680274106"></script>
-    <script src="/js/featherlight.min.js?1680274106"></script>
-    <script src="/js/highlight.pack.js?1680274106"></script>
+    <script src="/js/clipboard.min.js?1696615173"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696615173"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696615173"></script>
+    <script src="/js/jquery.sticky.js?1696615173"></script>
+    <script src="/js/featherlight.min.js?1696615173"></script>
+    <script src="/js/highlight.pack.js?1696615173"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680274106"></script>
-    <script src="/js/learn.js?1680274106"></script>
-    <script src="/js/hugo-learn.js?1680274106"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696615173"></script>
+    <script src="/js/learn.js?1696615173"></script>
+    <script src="/js/hugo-learn.js?1696615173"></script>
 
-    <link href="/mermaid/mermaid.css?1680274106" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680274106"></script>
+    <link href="/mermaid/mermaid.css?1696615173" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696615173"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

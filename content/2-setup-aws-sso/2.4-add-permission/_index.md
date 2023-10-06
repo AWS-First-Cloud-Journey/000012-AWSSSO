@@ -7,51 +7,53 @@ pre = "<b>2.4 </b>"
 +++
 
 
-#### Assign access rights to Users and Groups
+#### Assign Access Rights to Users and Groups
 
-You need to set up AWS accounts in SSO groups with the following job functionality:
+To configure access rights for AWS accounts within SSO groups based on specific job functionalities, follow the steps below:
 
+#### Account and Group Configuration
 
-|                      Accounts                      |                                   Groups                                   | Job function policy |
-|:--------------------------------------------------:|:--------------------------------------------------------------------------:|:-------------------:|
-| Management Account, shared-services, logging,security  | AWS-Shared-Services-Admin; AWS-Security-Admin; AWS-Logging-Admin             | AdministratorAccess |
+| Accounts                                            | Groups                                                                   | Job Function Policy |
+| --------------------------------------------------- | ------------------------------------------------------------------------ | ------------------- |
+| Management Account, shared-services, logging,security | AWS-Shared-Services-Admin; AWS-Security-Admin; AWS-Logging-Admin          | AdministratorAccess |
 | Management Account, shared-services, logging, security | AWS-Shared-Services-Read-Only; AWS-Security-Read-Only; AWS-Logging-Read-Only | SecurityAudit       |
 
-1. Open the AWS SSO Console. Select AWS accounts in the left sidebar.
+#### Instructions
 
-- In the AWS organization tab, in the list of AWS accounts, select one or more accounts to which you want to assign access. (Example: Management Account, shared-services, logging, and security). Then select **Assign users or groups**
+1. Open the AWS SSO Console and navigate to the **AWS accounts** section in the left sidebar.
 
-![AWS Account](/images/8/0001.png?featherlight=false&width=90pc)
+2. In the **AWS organization** tab, locate the list of AWS accounts. Choose one or more accounts to which you want to assign access (e.g., Management Account, shared-services, logging, and security). Then click on **Assign users or groups**.
 
-2. Select the groups and select **Next**
+    ![AWS Account](/images/8/0001.png?featherlight=false&width=90pc)
 
-![AWS Account](/images/8/00011.png?featherlight=false&width=90pc)
+3. Select the relevant groups and click **Next**.
 
-3. Select **Permission set**
+    ![AWS Account](/images/8/00011.png?featherlight=false&width=90pc)
 
-![AWS Account](/images/8/00012.png?featherlight=false&width=90pc)
+4. Choose the desired **Permission set**.
 
-4. Select **Submit**
+    ![AWS Account](/images/8/00012.png?featherlight=false&width=90pc)
 
-![AWS Account](/images/8/00013.png?featherlight=false&width=90pc)
+5. Click **Submit**.
 
+    ![AWS Account](/images/8/00013.png?featherlight=false&width=90pc)
 
-5. Same, For **Security Account**
+6. Repeat the same process for the **Security Account**.
 
-![AWS Account](/images/8/0006.png?featherlight=false&width=90pc)
+    ![AWS Account](/images/8/0006.png?featherlight=false&width=90pc)
 
-6. Select the groups and select **Next**
+7. Select the groups and click **Next**.
 
-![AWS Account](/images/8/0007.png?featherlight=false&width=90pc)
+    ![AWS Account](/images/8/0007.png?featherlight=false&width=90pc)
 
-7. Select **Permission set** and select **Next**
+8. Choose the **Permission set** and click **Next**.
 
-![AWS Account](/images/8/0008.png?featherlight=false&width=90pc)
+    ![AWS Account](/images/8/0008.png?featherlight=false&width=90pc)
 
-8. Select **Submit**
+9. Click **Submit**.
 
-![AWS Account](/images/8/0009.png?featherlight=false&width=90pc)
+    ![AWS Account](/images/8/0009.png?featherlight=false&width=90pc)
 
-9. Congratulations, you have successfully set up AWS SSO.
+10. Congratulations! You have successfully configured AWS SSO access.
 
-![AWS Account](/images/8/00010.png?featherlight=false&width=90pc)
+    ![AWS Account](/images/8/00010.png?featherlight=false&width=90pc)

@@ -12,21 +12,21 @@
     <title>Clean up resources :: AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1680274106" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680274106" rel="stylesheet">
-    <link href="/css/hybrid.css?1680274106" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680274106" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680274106" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680274106" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680274106" rel="stylesheet">
-    <link href="/css/theme.css?1680274106" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680274106" rel="stylesheet">
+    <link href="/css/nucleus.css?1696615173" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696615173" rel="stylesheet">
+    <link href="/css/hybrid.css?1696615173" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696615173" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696615173" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696615173" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696615173" rel="stylesheet">
+    <link href="/css/theme.css?1696615173" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696615173" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680274106" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696615173" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680274106"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696615173"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680274106"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680274106"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696615173"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696615173"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680274106"></script>
+<script type="text/javascript" src="/js/search.js?1696615173"></script>
 
     
   </div>
@@ -169,13 +169,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Inviet AWS Account to AWS Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Invite AWS Account to AWS Organization" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/3-invite-aws-account/">
-          <b>1.3 </b>Inviet AWS Account to AWS Organization
+          <b>1.3 </b>Invite AWS Account to AWS Organization
           
             <i class="fas fa-check read-icon"></i>
           
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -608,58 +608,78 @@
 
 	<h4 id="clean-up-resources">Clean up resources</h4>
 <ol>
-<li>Access to <strong>AWS SSO Mangement Console</strong></li>
-<li><strong>Delete Groups</strong>:
+<li>
+<p>Access the <strong>AWS SSO Management Console</strong>.</p>
+</li>
+<li>
+<p><strong>Delete Groups</strong>:</p>
 <ul>
-<li>Select <strong>Groups</strong>, tick the groups related to this lab, and select <strong>Delete groups</strong>.</li>
-<li>At the prompt <strong>Delete groups</strong>, type DELETE in the box, and select <strong>Delete groups</strong></li>
+<li>Navigate to <strong>Groups</strong>.</li>
+<li>Select the groups associated with this lab.</li>
+<li>Click on <strong>Delete groups</strong>.</li>
+<li>In the <strong>Delete groups</strong> prompt, enter &ldquo;DELETE&rdquo; in the provided box.</li>
+<li>Confirm the deletion by clicking <strong>Delete groups</strong>.</li>
 </ul>
 </li>
-<li><strong>Delete Users</strong>:
+<li>
+<p><strong>Delete Users</strong>:</p>
 <ul>
-<li>Select <strong>Users</strong>, tick the users related to this lab, and select <strong>Delete users</strong>.</li>
-<li>At the <strong>Delete users</strong> prompt, type DELETE in the box, and select <strong>Delete users</strong></li>
+<li>Go to <strong>Users</strong>.</li>
+<li>Check the users related to this lab.</li>
+<li>Click on <strong>Delete users</strong>.</li>
+<li>In the <strong>Delete users</strong> prompt, enter &ldquo;DELETE&rdquo; in the provided box.</li>
+<li>Confirm the deletion by clicking <strong>Delete users</strong>.</li>
 </ul>
 </li>
-<li><strong>Remove Access</strong> at AWS Accounts:
+<li>
+<p><strong>Remove Access</strong> for AWS Accounts:</p>
 <ul>
-<li>Select <strong>AWS Accounts</strong> and click the name of an AWS account.</li>
-<li>Remove access with all account access rights.</li>
-<li>Repeat with the accounts that are assigned access rights to delete.
+<li>Select <strong>AWS Accounts</strong>.</li>
+<li>Click on the name of an AWS account.</li>
+<li>Revoke all account access rights.</li>
+<li>Repeat this step for accounts with assigned access rights that need to be deleted.
 <img src="../../../images/3/3_RemoveAccess.png?width=90pc" alt="RemoveAccess"></li>
 </ul>
 </li>
-<li><strong>Delete Permission Sets</strong>
+<li>
+<p><strong>Delete Permission Sets</strong>:</p>
 <ul>
-<li>Select <strong>AWS accounts</strong>, select the <strong>Permission sets</strong> tab, and select the relevant permission sets</li>
-<li>Press <strong>Delete</strong>. At the prompt, type the name of the permission set in the box and click <strong>Delete</strong>.</li>
+<li>Navigate to <strong>AWS accounts</strong>.</li>
+<li>Go to the <strong>Permission sets</strong> tab.</li>
+<li>Select the relevant permission sets.</li>
+<li>Press <strong>Delete</strong>.</li>
+<li>In the prompt, enter the name of the permission set in the box and click <strong>Delete</strong>.</li>
 </ul>
 </li>
 </ol>
-
-<div class="notices note" ><p>Note: Back up the data in these accounts if you need them in the future because deleting an account means that all resources and data belonging to that account will be permanently deleted.</p>
-</div>
-
+<p>::: tip
+Note: Ensure you back up data from these accounts if you anticipate needing them in the future. Deleting an account results in permanent deletion of all associated resources and data.
+:::</p>
 <ol start="6">
-<li><strong>Delete AWS Accounts</strong>. However, you can keep these accounts for future labs.
+<li><strong>Delete AWS Accounts</strong> (optional for future labs):
 <ul>
-<li>To delete an AWS account, you need to log in to the account as root user
+<li>To delete an AWS account, log in as the root user.
 <ul>
-<li>Visit the AWS console login page at <a href="https://console.aws.amazon.com/">https://console.aws.amazon.com/</a></li>
-<li>When the <strong>Sign in</strong> page appears, choose to log in with <strong>Root user</strong> and enter the email of the account you want to delete. (Example: <a href="mailto:example+lab12Logging@amazon.com.vn">example+lab12Logging@amazon.com.vn</a>)</li>
-<li>Pass Security Check and select <strong>Forgot Password?</strong>
+<li>Visit the AWS console login page at <a href="https://console.aws.amazon.com/">https://console.aws.amazon.com/</a>.</li>
+<li>On the <strong>Sign in</strong> page, choose <strong>Root user</strong> and enter the email of the account you want to delete (e.g., <a href="mailto:example+lab12Logging@amazon.com.vn">example+lab12Logging@amazon.com.vn</a>).</li>
+<li>Complete the Security Check and select <strong>Forgot Password?</strong>
 <img src="../../../images/3/3_ForgotPassword.png?width=90pc" alt="ForgotPassword"></li>
-<li>AWS will send forgot password confirmation email to registered email (for example, if your email is <a href="mailto:example+lab12Logging@amazon.com.vn">example+lab12Logging@amazon.com.vn</a>, AWS email will be sent to <a href="mailto:example@amazon.com.vn">example@amazon.com.vn</a>) . Please change your new password via that email and sign in to your AWS account.</li>
+<li>AWS will send a forgot password confirmation email to the registered email address (e.g., <a href="mailto:example@amazon.com.vn">example@amazon.com.vn</a>). Follow the email instructions to change your password and sign in to your AWS account.</li>
 </ul>
 </li>
-<li>After logging in as root user, select the account name in the upper right corner, select <strong>My Account</strong>, scroll down to the bottom of the page to see the item <strong>Close Account</strong>. Tick ​​all the boxes and select <strong>Close Account</strong></li>
+<li>After logging in as the root user, click on the account name in the upper right corner.
+<ul>
+<li>Select <strong>My Account</strong>.</li>
+<li>Scroll down to find the <strong>Close Account</strong> section.</li>
+<li>Check all the boxes and select <strong>Close Account</strong>.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
-
-<div class="notices info" ><p>When you create a new AWS account in the AWS Organization, the AWS Organization automatically generates a random password for the root user of that account, and you cannot access them. Therefore, you will access the root user of that account by recovering the forgotten password (<em>forgot password</em>)</p>
-</div>
-
+<p>::: tip
+When creating a new AWS account in the AWS Organization, the root user&rsquo;s password is automatically generated and inaccessible. You can access the root user by recovering the forgotten password (<em>forgot password</em>).
+:::</p>
 
 
 
@@ -917,19 +937,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680274106"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680274106"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680274106"></script>
-    <script src="/js/jquery.sticky.js?1680274106"></script>
-    <script src="/js/featherlight.min.js?1680274106"></script>
-    <script src="/js/highlight.pack.js?1680274106"></script>
+    <script src="/js/clipboard.min.js?1696615173"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696615173"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696615173"></script>
+    <script src="/js/jquery.sticky.js?1696615173"></script>
+    <script src="/js/featherlight.min.js?1696615173"></script>
+    <script src="/js/highlight.pack.js?1696615173"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680274106"></script>
-    <script src="/js/learn.js?1680274106"></script>
-    <script src="/js/hugo-learn.js?1680274106"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696615173"></script>
+    <script src="/js/learn.js?1696615173"></script>
+    <script src="/js/hugo-learn.js?1696615173"></script>
 
-    <link href="/mermaid/mermaid.css?1680274106" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680274106"></script>
+    <link href="/mermaid/mermaid.css?1696615173" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696615173"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -6,10 +6,14 @@ chapter = false
 pre = "<b>2. </b>"
 +++
 
-Trong phần này, bạn sẽ cấp cho User trong danh mục của mình quyền truy cập SSO vào một hoặc nhiều tài khoản AWS cụ thể trong AWS Organizations. Sau khi đăng nhập, User sẽ chỉ thấy biểu tượng tài khoản AWS (VD: Logging) mà họ đã được chỉ định từ trong cổng thông tin User (*User portal*) của họ. Khi họ nhấp vào biểu tượng, họ có thể chọn IAM Role nào họ muốn sử dụng khi đăng nhập vào AWS Console cho tài khoản AWS đó.
 
-**Nội dung:**
-- [1. Kích hoạt AWS SSO](2.1-enable-sso/)
-- [2. Thêm Users và Groups](2.2-add-user-group/)
-- [3. Permission Set](2.3-create-permissionset/)
-- [4. Gán quyền ](2.4-add-permission/)
+#### Cấp Quyền Truy Cập AWS SSO vào Tài Khoản AWS qua AWS Organizations
+
+Trong phần này, bạn sẽ cấp quyền truy cập cho người dùng trong danh mục của mình vào hệ thống đăng nhập một lần (Single Sign-On - SSO) vào một hoặc nhiều tài khoản cụ thể trong tổ chức AWS. Sau khi hoàn tất quy trình đăng nhập, người dùng sẽ thấy biểu tượng tương ứng với từng tài khoản AWS mà họ được phân quyền, được hiển thị trong cổng thông tin của người dùng (*User portal*). Bằng cách nhấp vào biểu tượng tương ứng, người dùng có thể lựa chọn vai trò IAM mà họ muốn sử dụng khi truy cập vào AWS Console cho tài khoản AWS tương ứng.
+
+#### Nội dung hướng dẫn:
+
+1. [Kích hoạt AWS SSO](2.1-enable-sso/)
+2. [Thêm Người Dùng và Nhóm](2.2-add-user-group/)
+3. [Cấu Hình Permission Set](2.3-create-permissionset/)
+4. [Gán Quyền Truy Cập](2.4-add-permission/)

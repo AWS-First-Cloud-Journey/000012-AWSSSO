@@ -12,21 +12,21 @@
     <title>Dọn dẹp tài nguyên :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1680274106" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680274106" rel="stylesheet">
-    <link href="/css/hybrid.css?1680274106" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680274106" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680274106" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680274106" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680274106" rel="stylesheet">
-    <link href="/css/theme.css?1680274106" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680274106" rel="stylesheet">
+    <link href="/css/nucleus.css?1696615173" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696615173" rel="stylesheet">
+    <link href="/css/hybrid.css?1696615173" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696615173" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696615173" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696615173" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696615173" rel="stylesheet">
+    <link href="/css/theme.css?1696615173" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696615173" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680274106" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696615173" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680274106"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696615173"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680274106"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680274106"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696615173"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696615173"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680274106"></script>
+<script type="text/javascript" src="/js/search.js?1696615173"></script>
 
     
   </div>
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -608,17 +608,17 @@
 
 	<h4 id="dọn-dẹp-tài-nguyên">Dọn dẹp tài nguyên</h4>
 <ol>
-<li>Truy cập vào <strong>AWS SSO Mangement Console</strong></li>
+<li>Truy cập vào <strong>AWS SSO Management Console</strong></li>
 <li><strong>Xóa Groups</strong>:
 <ul>
 <li>Chọn <strong>Groups</strong>, tick vào các group liên quan tới bài lab này, và chọn <strong>Delete groups</strong>.</li>
-<li>Tại prompt <strong>Delete groups</strong>, gõ DELETE vào ô, và chọn <strong>Delete groups</strong></li>
+<li>Tại prompt <strong>Delete groups</strong>, gõ <code>DELETE</code> vào ô, và chọn <strong>Delete groups</strong></li>
 </ul>
 </li>
 <li><strong>Xóa Users</strong>:
 <ul>
 <li>Chọn <strong>Users</strong>, tick vào các user liên quan tới bài lab này, và chọn <strong>Delete users</strong>.</li>
-<li>Tại prompt <strong>Delete users</strong>, gõ DELETE vào ô, và chọn <strong>Delete users</strong></li>
+<li>Tại prompt <strong>Delete users</strong>, gõ <code>DELETE</code> vào ô, và chọn <strong>Delete users</strong></li>
 </ul>
 </li>
 <li><strong>Xóa quyền truy cập</strong> tại các tài khoản AWS:
@@ -636,12 +636,11 @@
 </ul>
 </li>
 </ol>
-
-<div class="notices note" ><p>Lưu ý: Hãy sao lưu các dữ liệu trong các tài khoản này nếu bạn cần chúng trong tương lai vì xóa tài khoản đồng nghĩa với việc mọi tài nguyên và dữ liệu thuộc tài khoản ấy sẽ bị xóa vĩnh viễn</p>
-</div>
-
+<p>::: note
+<strong>Lưu ý</strong>: Hãy sao lưu các dữ liệu trong các tài khoản này nếu bạn cần chúng trong tương lai vì xóa tài khoản đồng nghĩa với việc mọi tài nguyên và dữ liệu thuộc tài khoản ấy sẽ bị xóa vĩnh viễn
+:::</p>
 <ol start="6">
-<li><strong>Xóa các tải khoản AWS</strong>. Tuy nhiên, Bạn có thể giữ các tài khoản này cho các phần lab tiếp theo.
+<li><strong>Xóa các tài khoản AWS</strong>. Tuy nhiên, Bạn có thể giữ các tài khoản này cho các phần lab tiếp theo.
 <ul>
 <li>Để xóa một tài khoản AWS, bạn cần đăng nhập vào tài khoản bằng root user
 <ul>
@@ -656,10 +655,9 @@
 </ul>
 </li>
 </ol>
-
-<div class="notices info" ><p>Khi bạn tạo mới một tài khoản AWS trong AWS Organization, AWS Organization đã tự động tạo một mật khẩu ngẫu nhiên cho root user của tài khoản ấy, và bạn không thể tiếp cận được với chúng. Do đó, bạn sẽ truy cập vào root user của tài khoản ấy bằng cách lấy lại mật khẩu đã quên (<em>forgot password</em>)</p>
-</div>
-
+<p>::: info
+<strong>Lưu ý</strong>: Khi bạn tạo mới một tài khoản AWS trong AWS Organization, AWS Organization đã tự động tạo một mật khẩu ngẫu nhiên cho root user của tài khoản ấy, và bạn không thể tiếp cận được với chúng. Do đó, bạn sẽ truy cập vào root user của tài khoản ấy bằng cách lấy lại mật khẩu đã quên (<em>forgot password</em>)
+:::</p>
 
 
 
@@ -917,19 +915,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680274106"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680274106"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680274106"></script>
-    <script src="/js/jquery.sticky.js?1680274106"></script>
-    <script src="/js/featherlight.min.js?1680274106"></script>
-    <script src="/js/highlight.pack.js?1680274106"></script>
+    <script src="/js/clipboard.min.js?1696615173"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696615173"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696615173"></script>
+    <script src="/js/jquery.sticky.js?1696615173"></script>
+    <script src="/js/featherlight.min.js?1696615173"></script>
+    <script src="/js/highlight.pack.js?1696615173"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680274106"></script>
-    <script src="/js/learn.js?1680274106"></script>
-    <script src="/js/hugo-learn.js?1680274106"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696615173"></script>
+    <script src="/js/learn.js?1696615173"></script>
+    <script src="/js/hugo-learn.js?1696615173"></script>
 
-    <link href="/mermaid/mermaid.css?1680274106" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680274106"></script>
+    <link href="/mermaid/mermaid.css?1696615173" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696615173"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

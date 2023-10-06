@@ -12,21 +12,21 @@
     <title>Assign permissions :: AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1680274106" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680274106" rel="stylesheet">
-    <link href="/css/hybrid.css?1680274106" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680274106" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680274106" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680274106" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680274106" rel="stylesheet">
-    <link href="/css/theme.css?1680274106" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680274106" rel="stylesheet">
+    <link href="/css/nucleus.css?1696615173" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696615173" rel="stylesheet">
+    <link href="/css/hybrid.css?1696615173" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696615173" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696615173" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696615173" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696615173" rel="stylesheet">
+    <link href="/css/theme.css?1696615173" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696615173" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680274106" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696615173" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680274106"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696615173"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680274106"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680274106"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696615173"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696615173"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680274106"></script>
+<script type="text/javascript" src="/js/search.js?1696615173"></script>
 
     
   </div>
@@ -169,13 +169,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Inviet AWS Account to AWS Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Invite AWS Account to AWS Organization" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/3-invite-aws-account/">
-          <b>1.3 </b>Inviet AWS Account to AWS Organization
+          <b>1.3 </b>Invite AWS Account to AWS Organization
           
             <i class="fas fa-check read-icon"></i>
           
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -612,68 +612,72 @@
 
 
 
-	<h4 id="assign-access-rights-to-users-and-groups">Assign access rights to Users and Groups</h4>
-<p>You need to set up AWS accounts in SSO groups with the following job functionality:</p>
+	<h4 id="assign-access-rights-to-users-and-groups">Assign Access Rights to Users and Groups</h4>
+<p>To configure access rights for AWS accounts within SSO groups based on specific job functionalities, follow the steps below:</p>
+<h4 id="account-and-group-configuration">Account and Group Configuration</h4>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Accounts</th>
-<th style="text-align:center">Groups</th>
-<th style="text-align:center">Job function policy</th>
+<th>Accounts</th>
+<th>Groups</th>
+<th>Job Function Policy</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">Management Account, shared-services, logging,security</td>
-<td style="text-align:center">AWS-Shared-Services-Admin; AWS-Security-Admin; AWS-Logging-Admin</td>
-<td style="text-align:center">AdministratorAccess</td>
+<td>Management Account, shared-services, logging,security</td>
+<td>AWS-Shared-Services-Admin; AWS-Security-Admin; AWS-Logging-Admin</td>
+<td>AdministratorAccess</td>
 </tr>
 <tr>
-<td style="text-align:center">Management Account, shared-services, logging, security</td>
-<td style="text-align:center">AWS-Shared-Services-Read-Only; AWS-Security-Read-Only; AWS-Logging-Read-Only</td>
-<td style="text-align:center">SecurityAudit</td>
+<td>Management Account, shared-services, logging, security</td>
+<td>AWS-Shared-Services-Read-Only; AWS-Security-Read-Only; AWS-Logging-Read-Only</td>
+<td>SecurityAudit</td>
 </tr>
 </tbody>
 </table>
+<h4 id="instructions">Instructions</h4>
 <ol>
-<li>Open the AWS SSO Console. Select AWS accounts in the left sidebar.</li>
-</ol>
-<ul>
-<li>In the AWS organization tab, in the list of AWS accounts, select one or more accounts to which you want to assign access. (Example: Management Account, shared-services, logging, and security). Then select <strong>Assign users or groups</strong></li>
-</ul>
+<li>
+<p>Open the AWS SSO Console and navigate to the <strong>AWS accounts</strong> section in the left sidebar.</p>
+</li>
+<li>
+<p>In the <strong>AWS organization</strong> tab, locate the list of AWS accounts. Choose one or more accounts to which you want to assign access (e.g., Management Account, shared-services, logging, and security). Then click on <strong>Assign users or groups</strong>.</p>
 <p><img src="/images/8/0001.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="2">
-<li>Select the groups and select <strong>Next</strong></li>
-</ol>
+</li>
+<li>
+<p>Select the relevant groups and click <strong>Next</strong>.</p>
 <p><img src="/images/8/00011.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="3">
-<li>Select <strong>Permission set</strong></li>
-</ol>
+</li>
+<li>
+<p>Choose the desired <strong>Permission set</strong>.</p>
 <p><img src="/images/8/00012.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="4">
-<li>Select <strong>Submit</strong></li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Submit</strong>.</p>
 <p><img src="/images/8/00013.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="5">
-<li>Same, For <strong>Security Account</strong></li>
-</ol>
+</li>
+<li>
+<p>Repeat the same process for the <strong>Security Account</strong>.</p>
 <p><img src="/images/8/0006.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="6">
-<li>Select the groups and select <strong>Next</strong></li>
-</ol>
+</li>
+<li>
+<p>Select the groups and click <strong>Next</strong>.</p>
 <p><img src="/images/8/0007.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="7">
-<li>Select <strong>Permission set</strong> and select <strong>Next</strong></li>
-</ol>
+</li>
+<li>
+<p>Choose the <strong>Permission set</strong> and click <strong>Next</strong>.</p>
 <p><img src="/images/8/0008.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="8">
-<li>Select <strong>Submit</strong></li>
-</ol>
+</li>
+<li>
+<p>Click <strong>Submit</strong>.</p>
 <p><img src="/images/8/0009.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="9">
-<li>Congratulations, you have successfully set up AWS SSO.</li>
-</ol>
+</li>
+<li>
+<p>Congratulations! You have successfully configured AWS SSO access.</p>
 <p><img src="/images/8/00010.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+</li>
+</ol>
 
 
 
@@ -938,19 +942,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680274106"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680274106"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680274106"></script>
-    <script src="/js/jquery.sticky.js?1680274106"></script>
-    <script src="/js/featherlight.min.js?1680274106"></script>
-    <script src="/js/highlight.pack.js?1680274106"></script>
+    <script src="/js/clipboard.min.js?1696615173"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696615173"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696615173"></script>
+    <script src="/js/jquery.sticky.js?1696615173"></script>
+    <script src="/js/featherlight.min.js?1696615173"></script>
+    <script src="/js/highlight.pack.js?1696615173"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680274106"></script>
-    <script src="/js/learn.js?1680274106"></script>
-    <script src="/js/hugo-learn.js?1680274106"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696615173"></script>
+    <script src="/js/learn.js?1696615173"></script>
+    <script src="/js/hugo-learn.js?1696615173"></script>
 
-    <link href="/mermaid/mermaid.css?1680274106" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680274106"></script>
+    <link href="/mermaid/mermaid.css?1696615173" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696615173"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

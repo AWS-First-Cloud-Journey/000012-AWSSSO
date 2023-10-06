@@ -7,37 +7,38 @@ pre = "<b>2.3 </b>"
 +++
 
 #### Permission Set
-**Permission Set** defines the access that Users and Groups have to AWS accounts in the AWS Organization. Permission sets are stored in AWS SSO and provided to AWS accounts as IAM roles. You can assign multiple permissions to a User.
 
-1. Open the AWS SSO Console. Select AWS accounts in the left sidebar.
-- Select the **Permissionssets** tab.
-- Select **Create permission set**.
+A **Permission Set** defines the level of access that Users and Groups have within AWS accounts in the AWS Organization. These permission sets are stored in AWS Single Sign-On (SSO) and are provided to AWS accounts as IAM roles. Multiple permissions can be assigned to a single User.
+
+1. To begin, follow these steps:
+   - Open the AWS SSO Console.
+   - Choose "AWS accounts" from the left sidebar.
+   - Navigate to the **Permission sets** tab.
+   - Click on **Create permission set**.
 
 ![AWS Account](/images/7/0001.png?featherlight=false&width=90pc)
 
-2. On the Create new permission set page:
-
-- Select **Permission set type**
+2. On the "Create new permission set" page:
+   - Select the desired **Permission set type**.
 
 ![AWS Account](/images/7/0002.png?featherlight=false&width=90pc)
 
-3. Select **AdministratorAccess** to provide full access to AWS resources and services.
+3. Choose **AdministratorAccess** to grant comprehensive access to AWS resources and services.
 
 ![AWS Account](/images/7/0003.png?featherlight=false&width=90pc)
 
-4. Enter **AdministratorAccess** and select **Next**
+4. Provide the name as **AdministratorAccess** and proceed by selecting **Next**.
 
 ![AWS Account](/images/7/0004.png?featherlight=false&width=90pc)
 
-5. Check and select **Create**
+5. Review your choices and confirm by selecting **Create**.
 
 ![AWS Account](/images/7/0005.png?featherlight=false&width=90pc)
 
-6. Complete creation **Permission set**
+6. This completes the creation of the **Permission set**.
 
 ![AWS Account](/images/7/0006.png?featherlight=false&width=90pc)
 
-7. Repeat the above steps to set the Permission Set with SecurityAudit permission. You will get the result as shown below
+7. To configure the Permission Set with **SecurityAudit** permissions, repeat the above steps. The result will be displayed as shown below:
 
 ![AWS Account](/images/7/0007.png?featherlight=false&width=90pc)
-

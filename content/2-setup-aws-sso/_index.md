@@ -6,10 +6,14 @@ chapter = false
 pre = "<b>2. </b>"
 +++
 
-In this section, you will grant Users in your directory SSO access to one or more specific AWS accounts in AWS Organizations. Once logged in, the User will only see the AWS account icon (Example: Logging) that they have been assigned from within their User portal (*User portal*). When they click on the icon, they can choose which IAM Role they want to use when they log into the AWS Console for that AWS account.
+#### Granting Single Sign-On (SSO) Access to AWS Accounts in AWS Organizations
 
-**Content:**
-- [first. Enable AWS SSO](2.1-enable-sso/)
-- [2. Add Users and Groups](2.2-add-user-group/)
-- [3. Permission Set](2.3-create-permissionset/)
-- [4. Assign permissions ](2.4-add-permission/)
+In this section, you will learn how to provide Single Sign-On (SSO) access to users within your directory for one or multiple specific AWS accounts within AWS Organizations. Once users are logged in, they will only see the AWS account icon (e.g., *Logging*) that has been assigned to them from their user portal.
+
+Upon clicking the respective icon, users can then choose the IAM role they wish to use when accessing the AWS Console for that particular AWS account.
+
+### Contents:
+- [Enable AWS SSO](2.1-enable-sso/)
+- [Add Users and Groups](2.2-add-user-group/)
+- [Permission Set](2.3-create-permissionset/)
+- [Assign Permissions](2.4-add-permission/)

@@ -8,20 +8,25 @@ pre = "<b>1. </b>"
 
 #### Overview
 
-This exercise is part of the Landing Zone practice.
+This exercise is a part of the Landing Zone practice.
 
-To prepare the necessary resources, you will create an AWS Organization, with 4 Organization Units to group the accounts. Create AWS Accounts with names: **Security**, **Shared Services**, **Logging** and **Application** and add the Accounts to each respective OU.
+To set up the required resources, you will establish an AWS Organization with four Organization Units (OUs) for grouping the accounts. Create AWS Accounts with the following names: **Security**, **Shared Services**, **Logging**, and **Application**. Then, assign each account to its respective OU.
 
-The created accounts will be allocated the following resources (*Note: you only refer to this section as it is beyond the scope of the lab*):
-- **Logging Account:** A centralized place for Amazon VPC Flow Logs, CloudTrail logs, and Config logs.
-- **Security Account**: Gather AWS Config, Amazon GuardDuty master, and alerts.
-- **Network/Shared Services Account:** Share a VPC for remote connections to other accounts. The primary AWS Direct Connect is installed with the AWS Transit Gateway to communicate with VPCs in other accounts.
-- **Business Unit accounts:** accounts for Analytics-Prod, and Analytics-non-prod.
+These created accounts will be allocated the following resources (Note: Refer to this section only as it is beyond the scope of the lab):
+
+- **Logging Account:** This serves as a centralized repository for Amazon VPC Flow Logs, CloudTrail logs, and Config logs.
+
+- **Security Account:** Here, you will collect AWS Config data, set up an Amazon GuardDuty master, and configure alerts.
+
+- **Network/Shared Services Account:** This account will host a shared VPC, facilitating remote connections to other accounts. The primary AWS Direct Connect is integrated with the AWS Transit Gateway to establish communication with VPCs in other accounts.
+
+- **Business Unit Accounts:** These accounts cater to Analytics-Prod and Analytics-non-prod needs.
 
 ![Lab Diagram](/images/1/1.png?width=70pc)
 
 #### Content
+
 1. [Create AWS Account in AWS Organization](1-create-aws-account)
 2. [Setting up Organization Unit](2-configure-OU)
 3. [Invite AWS Account to AWS Organization](2-configure-OU)
-4. [Access member account in Organization](4-switch-role)
+4. [Access Member Account in Organization](4-switch-role)

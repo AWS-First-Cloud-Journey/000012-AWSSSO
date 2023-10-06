@@ -6,6 +6,7 @@ chapter = false
 pre = "<b>1.3 </b>"
 +++
 
+
 Ở bước 1.1, bạn đã thực hiện tạo AWS Account mới từ dịch vụ AWS Organization! Vậy nếu như bạn đã có một hoặc nhiều AWS Account với các Workload đang chạy & bạn muốn thêm AWS Account đó vào Organization của bạn để dễ dàng phân bổ tài nguyên, nhóm các accounts (như bước 1.2,) và áp dụng các nguyên tắc quản trị -> thì chức năng **Invite an existing AWS accoun** sẽ hỗ trợ bạn.
 
 1. Thêm AWS Account vào Organizations

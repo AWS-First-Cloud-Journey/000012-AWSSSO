@@ -12,21 +12,21 @@
     <title>Thiết lập AWS SSO :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1680274106" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680274106" rel="stylesheet">
-    <link href="/css/hybrid.css?1680274106" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680274106" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680274106" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680274106" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680274106" rel="stylesheet">
-    <link href="/css/theme.css?1680274106" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680274106" rel="stylesheet">
+    <link href="/css/nucleus.css?1696615173" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696615173" rel="stylesheet">
+    <link href="/css/hybrid.css?1696615173" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696615173" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696615173" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696615173" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696615173" rel="stylesheet">
+    <link href="/css/theme.css?1696615173" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696615173" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680274106" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696615173" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680274106"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696615173"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680274106"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680274106"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696615173"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696615173"></script>
 <script type="text/javascript">
     
         var baseurl = "\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680274106"></script>
+<script type="text/javascript" src="/js/search.js?1696615173"></script>
 
     
   </div>
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -574,7 +574,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -598,14 +606,15 @@
 
 
 
-	<p>Trong phần này, bạn sẽ cấp cho User trong danh mục của mình quyền truy cập SSO vào một hoặc nhiều tài khoản AWS cụ thể trong AWS Organizations. Sau khi đăng nhập, User sẽ chỉ thấy biểu tượng tài khoản AWS (VD: Logging) mà họ đã được chỉ định từ trong cổng thông tin User (<em>User portal</em>) của họ. Khi họ nhấp vào biểu tượng, họ có thể chọn IAM Role nào họ muốn sử dụng khi đăng nhập vào AWS Console cho tài khoản AWS đó.</p>
-<p><strong>Nội dung:</strong></p>
-<ul>
-<li><a href="2.1-enable-sso/">1. Kích hoạt AWS SSO</a></li>
-<li><a href="2.2-add-user-group/">2. Thêm Users và Groups</a></li>
-<li><a href="2.3-create-permissionset/">3. Permission Set</a></li>
-<li><a href="2.4-add-permission/">4. Gán quyền </a></li>
-</ul>
+	<h4 id="cấp-quyền-truy-cập-aws-sso-vào-tài-khoản-aws-qua-aws-organizations">Cấp Quyền Truy Cập AWS SSO vào Tài Khoản AWS qua AWS Organizations</h4>
+<p>Trong phần này, bạn sẽ cấp quyền truy cập cho người dùng trong danh mục của mình vào hệ thống đăng nhập một lần (Single Sign-On - SSO) vào một hoặc nhiều tài khoản cụ thể trong tổ chức AWS. Sau khi hoàn tất quy trình đăng nhập, người dùng sẽ thấy biểu tượng tương ứng với từng tài khoản AWS mà họ được phân quyền, được hiển thị trong cổng thông tin của người dùng (<em>User portal</em>). Bằng cách nhấp vào biểu tượng tương ứng, người dùng có thể lựa chọn vai trò IAM mà họ muốn sử dụng khi truy cập vào AWS Console cho tài khoản AWS tương ứng.</p>
+<h4 id="nội-dung-hướng-dẫn">Nội dung hướng dẫn:</h4>
+<ol>
+<li><a href="2.1-enable-sso/">Kích hoạt AWS SSO</a></li>
+<li><a href="2.2-add-user-group/">Thêm Người Dùng và Nhóm</a></li>
+<li><a href="2.3-create-permissionset/">Cấu Hình Permission Set</a></li>
+<li><a href="2.4-add-permission/">Gán Quyền Truy Cập</a></li>
+</ol>
 
 
 
@@ -866,19 +875,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680274106"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680274106"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680274106"></script>
-    <script src="/js/jquery.sticky.js?1680274106"></script>
-    <script src="/js/featherlight.min.js?1680274106"></script>
-    <script src="/js/highlight.pack.js?1680274106"></script>
+    <script src="/js/clipboard.min.js?1696615173"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696615173"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696615173"></script>
+    <script src="/js/jquery.sticky.js?1696615173"></script>
+    <script src="/js/featherlight.min.js?1696615173"></script>
+    <script src="/js/highlight.pack.js?1696615173"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680274106"></script>
-    <script src="/js/learn.js?1680274106"></script>
-    <script src="/js/hugo-learn.js?1680274106"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696615173"></script>
+    <script src="/js/learn.js?1696615173"></script>
+    <script src="/js/hugo-learn.js?1696615173"></script>
 
-    <link href="/mermaid/mermaid.css?1680274106" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680274106"></script>
+    <link href="/mermaid/mermaid.css?1696615173" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696615173"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

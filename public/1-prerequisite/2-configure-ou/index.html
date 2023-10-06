@@ -12,21 +12,21 @@
     <title>Setting up the Organization Unit :: AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1680274106" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1680274106" rel="stylesheet">
-    <link href="/css/hybrid.css?1680274106" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1680274106" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1680274106" rel="stylesheet">
-    <link href="/css/auto-complete.css?1680274106" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1680274106" rel="stylesheet">
-    <link href="/css/theme.css?1680274106" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1680274106" rel="stylesheet">
+    <link href="/css/nucleus.css?1696615173" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1696615173" rel="stylesheet">
+    <link href="/css/hybrid.css?1696615173" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1696615173" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1696615173" rel="stylesheet">
+    <link href="/css/auto-complete.css?1696615173" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1696615173" rel="stylesheet">
+    <link href="/css/theme.css?1696615173" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1696615173" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1680274106" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1696615173" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1680274106"></script>
+    <script src="/js/jquery-3.3.1.min.js?1696615173"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1680274106"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1680274106"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1696615173"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1696615173"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1680274106"></script>
+<script type="text/javascript" src="/js/search.js?1696615173"></script>
 
     
   </div>
@@ -169,13 +169,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Inviet AWS Account to AWS Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Invite AWS Account to AWS Organization" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/3-invite-aws-account/">
-          <b>1.3 </b>Inviet AWS Account to AWS Organization
+          <b>1.3 </b>Invite AWS Account to AWS Organization
           
             <i class="fas fa-check read-icon"></i>
           
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>31-03-2023</font></i>
+        <i><font color=orange>06-10-2023</font></i>
     </left>
     <left>
         <br>
@@ -612,58 +612,59 @@
 
 
 
-	<p>In this step, you will practice setting up the Organization Units (<strong>Security</strong>, <strong>Shared Services</strong>, <strong>Logging</strong> and <strong>Application</strong>) corresponding to the AWS accounts created in this section. before. The OUs will be located inside the Root - where all the OUs and AWS accounts are located.</p>
-<p><strong>Content</strong></p>
+	<h4 id="setting-up-organization-units">Setting Up Organization Units</h4>
+<p>In this step, you will practice setting up the Organization Units for the AWS accounts created in the previous section. The Organization Units include <strong>Security</strong>, <strong>Shared Services</strong>, <strong>Logging</strong>, and <strong>Application</strong>. These units will be situated within the Root, where all the OUs and AWS accounts are located.</p>
+<h4 id="contents">Contents</h4>
 <ul>
+<li><a href="#setting-up-organization-units">Setting Up Organization Units</a></li>
+<li><a href="#contents">Contents</a></li>
 <li><a href="#create-organization-unit">Create Organization Unit</a></li>
-<li><a href="#move-aws-accounts-to-respective-organization-unit">Move AWS accounts to respective Organization Unit</a></li>
+<li><a href="#move-aws-accounts-to-respective-organization-unit">Move AWS Accounts to Respective Organization Unit</a></li>
 </ul>
 <h4 id="create-organization-unit">Create Organization Unit</h4>
 <ol>
 <li>
-<p>Go to <strong>AWS Management Comsole</strong> and find the <strong>AWS Organizations</strong> service in the search bar.</p>
+<p>Open the <strong>AWS Management Console</strong> and search for the <strong>AWS Organizations</strong> service.</p>
 </li>
 <li>
-<p>Tick <strong>Root</strong>, select <strong>Actions</strong>, and select <strong>Create new</strong> under <strong>Organizational Unit</strong></p>
+<p>Select the <strong>Root</strong>, click on <strong>Actions</strong>, and then choose <strong>Create new</strong> under the <strong>Organizational Unit</strong> section.</p>
+<p><img src="/images/4/0003.png?featherlight=false&amp;width=90pc" alt="Create Organization Unit"></p>
 </li>
-</ol>
-<p><img src="/images/4/0003.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="3">
-<li>At the <strong>Create organizational unit in Root</strong> page:
+<li>
+<p>On the <strong>Create organizational unit in Root</strong> page:</p>
 <ul>
-<li>Under <strong>Details</strong>, enter the name of the OU (Example: Logging Unit)</li>
+<li>In the <strong>Details</strong> section, provide a name for the OU (For example: Logging Unit).</li>
 </ul>
+<p><img src="/images/4/0004.png?featherlight=false&amp;width=90pc" alt="Create OU Details"></p>
+</li>
+<li>
+<p>Review the information and click <strong>Create organizational unit</strong>.</p>
+<p><img src="/images/4/0005.png?featherlight=false&amp;width=90pc" alt="Create OU"></p>
+</li>
+<li>
+<p>Repeat the above steps for the remaining Organization Units.</p>
+<p><img src="/images/4/0006.png?featherlight=false&amp;width=90pc" alt="Create OU"></p>
 </li>
 </ol>
-<p><img src="/images/4/0004.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="4">
-<li>Check the information and select <strong>Create organizational unit</strong></li>
-</ol>
-<p><img src="/images/4/0005.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="5">
-<li>Repeat with the remaining Organization Units.</li>
-</ol>
-<p><img src="/images/4/0006.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<h4 id="move-aws-accounts-to-respective-organization-unit">Move AWS accounts to respective Organization Unit</h4>
+<h4 id="move-aws-accounts-to-respective-organization-unit">Move AWS Accounts to Respective Organization Unit</h4>
 <ol>
 <li>
-<p>Go to <strong>AWS Management Comsole</strong> and find the <strong>AWS Organizations</strong> service in the search bar.</p>
+<p>Go to the <strong>AWS Management Console</strong> and find the <strong>AWS Organizations</strong> service using the search bar.</p>
 </li>
 <li>
-<p>Tick the AWS account you want to move (Example: <strong>Logging</strong>), select <strong>Actions</strong>, and select <strong>Move</strong> under <strong>AWS Account</strong></p>
+<p>Check the AWS account you wish to move (For instance: <strong>Logging</strong>), click on <strong>Actions</strong>, and then select <strong>Move</strong> under <strong>AWS Account</strong>.</p>
+<p><img src="/images/4/0007.png?featherlight=false&amp;width=90pc" alt="Move AWS Account"></p>
 </li>
-</ol>
-<p><img src="/images/4/0007.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="3">
-<li>Tick the appropriate OU (Example: <strong>Logging Unit</strong>) and select <strong>Move AWS account</strong></li>
-</ol>
-<p><img src="/images/4/0008.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="4">
-<li>Repeat for the remaining AWS and Organization Unit accounts:
+<li>
+<p>Tick the appropriate OU (Example: <strong>Logging Unit</strong>) and click <strong>Move AWS account</strong>.</p>
+<p><img src="/images/4/0008.png?featherlight=false&amp;width=90pc" alt="Move to OU"></p>
+</li>
+<li>
+<p>Repeat the above steps for the remaining AWS and Organization Unit accounts:</p>
 <ul>
-<li>Security Account with Security Unit</li>
-<li>Shared Services with Shared Services Unit</li>
-<li>Application Account with Application Unit</li>
+<li>Move the Security Account to the Security Unit</li>
+<li>Move the Shared Services Account to the Shared Services Unit</li>
+<li>Move the Application Account to the Application Unit</li>
 </ul>
 </li>
 </ol>
@@ -918,7 +919,7 @@
 			<a class="nav nav-prev" href="/1-prerequisite/1-create-aws-account/" title="Create AWS Account in AWS Organizations"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/1-prerequisite/3-invite-aws-account/" title="Inviet AWS Account to AWS Organization" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-prerequisite/3-invite-aws-account/" title="Invite AWS Account to AWS Organization" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -928,19 +929,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1680274106"></script>
-    <script src="/js/perfect-scrollbar.min.js?1680274106"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1680274106"></script>
-    <script src="/js/jquery.sticky.js?1680274106"></script>
-    <script src="/js/featherlight.min.js?1680274106"></script>
-    <script src="/js/highlight.pack.js?1680274106"></script>
+    <script src="/js/clipboard.min.js?1696615173"></script>
+    <script src="/js/perfect-scrollbar.min.js?1696615173"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1696615173"></script>
+    <script src="/js/jquery.sticky.js?1696615173"></script>
+    <script src="/js/featherlight.min.js?1696615173"></script>
+    <script src="/js/highlight.pack.js?1696615173"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1680274106"></script>
-    <script src="/js/learn.js?1680274106"></script>
-    <script src="/js/hugo-learn.js?1680274106"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1696615173"></script>
+    <script src="/js/learn.js?1696615173"></script>
+    <script src="/js/hugo-learn.js?1696615173"></script>
 
-    <link href="/mermaid/mermaid.css?1680274106" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1680274106"></script>
+    <link href="/mermaid/mermaid.css?1696615173" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1696615173"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

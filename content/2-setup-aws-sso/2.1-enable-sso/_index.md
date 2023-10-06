@@ -7,21 +7,23 @@ pre = "<b>2.1 </b>"
 +++
 
 #### Activate AWS SSO
-1. Log in to **AWS Management Console** using the **AWS Organization** master account credentials.
 
-![AWS Account](/images/2/0001.png?featherlight=false&width=90pc)
+1. Log in to the **AWS Management Console** using the credentials of the **AWS Organization** master account.
 
-2. Open **AWS SSO Console**
+   ![AWS Account](/images/2/0001.png?featherlight=false&width=90pc)
 
-![AWS Account](/images/2/0002.png?featherlight=false&width=90pc)
+2. Open the **AWS SSO Console**.
 
-3. Select **Enable AWS SSO**.
+   ![AWS Account](/images/2/0002.png?featherlight=false&width=90pc)
 
-![AWS Account](/images/2/0002.png?featherlight=false&width=90pc)
+3. Choose the **Enable AWS SSO** option.
 
-Single Sign On on AWS SSO gives you a default repository where you can store your Users and Groups. If you choose to host them in AWS SSO, all you need to do is:
-- Create a User and Group.
-- Add the User as a Group member.
-- Specify Groups with the desired level of access to AWS accounts and applications.
+   ![AWS Account](/images/2/0002.png?featherlight=false&width=90pc)
 
-![AWS Account](/images/2/0003.png?featherlight=false&width=90pc)
+AWS SSO's Single Sign-On feature provides a default repository for storing Users and Groups. If you opt to host them in AWS SSO, the process involves:
+
+- Creating a User and Group.
+- Adding the User as a Group member.
+- Specifying Groups with the desired level of access to AWS accounts and applications.
+
+   ![AWS Account](/images/2/0003.png?featherlight=false&width=90pc)

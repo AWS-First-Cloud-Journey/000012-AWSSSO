@@ -5,29 +5,29 @@ weight = 1
 chapter = false
 +++
 
+
 # AWS Single Sign-On cho Organization
 
-#### Tổng quan
+Trong bài viết này, chúng ta sẽ tìm hiểu về cách sử dụng dịch vụ AWS Single Sign-On (SSO) để quản lý việc truy cập vào các tài khoản AWS trong tổ chức của bạn một cách hiệu quả. 
 
-Trong bài lab này, bạn sẽ thực hành thiết lập dịch vụ **AWS SSO** để dễ dàng cung cấp và quản lý quyền truy cập tài nguyên tới các tài khoản AWS thuộc **AWS Organization** của bạn.
+#### Tổng quan về AWS Single Sign-On (SSO)
+AWS SSO là một dịch vụ quản lý quyền truy cập được cung cấp bởi Amazon Web Services (AWS). Dịch vụ này cho phép bạn quản lý việc xác thực và ủy quyền người dùng vào các tài khoản AWS một cách thuận tiện. Thay vì phải quản lý nhiều thông tin đăng nhập cho từng tài khoản riêng biệt, bạn có thể sử dụng AWS SSO để tổ chức và kiểm soát việc truy cập này từ một nơi duy nhất.
 
-#### AWS Single Sign-On (SSO)
+#### Cách AWS SSO hoạt động trong AWS Organization
+Một khía cạnh quan trọng của việc sử dụng AWS SSO là tích hợp nó vào AWS Organization của bạn. AWS Organization cho phép bạn quản lý tập trung các tài khoản AWS của mình trong một cơ cấu có tổ chức. Dưới đây là một số thuật ngữ quan trọng:
 
-**AWS SSO** là một dịch vụ cho phép bạn cấp cho người dùng trong danh mục (*directory*) của mình quyền truy cập SSO vào một hoặc nhiều tài khoản AWS trong AWS Organization.
+- **AWS Organization:** Đây là tập hợp các tài khoản AWS được tổ chức lại theo một cách cụ thể, giúp bạn quản lý chúng một cách dễ dàng hơn.
 
-#### AWS Organization
+- **Organizational Unit (OU):** Một phân đơn vị trong AWS Organization, cho phép bạn nhóm các tài khoản lại với nhau. Mỗi OU có thể chứa nhiều OU con khác.
 
-**AWS Organization** là một dịch vụ quản lý tài khoản cho phép bạn quản lý tập trung nhiều tài khoản AWS trong tổ chức của bạn. Với AWS Organization, bạn có thể gộp các AWS Account vào những **Organizational Unit** và tổng hợp chi phí của tất cả các tài khoản AWS lại cho **Management Account**.
+- **Management Account:** Đây là tài khoản quản lý có quyền cao nhất trong AWS Organization. Tài khoản này có thể kiểm soát tất cả các tài khoản khác và chịu trách nhiệm về việc thanh toán chi phí tổng hợp của các tài khoản thành viên.
 
-#### Organizational Unit (OU)
+#### Bước tiếp theo
 
-**Organizational Unit** là một nhóm các tài khoản AWS. Một OU có thể chứa đến 5 tầng OU lồng nhau bên trong nó. Bạn có thể gán các chính sách quản lý cho OU, và chính sách ấy sẽ áp dụng cho tất cả các OU thành viên và tài khoản AWS thành viên.
+- Chúng ta sẽ tiến hành thực hiện các bước chuẩn bị cần thiết trước khi thiết lập AWS SSO trong môi trường của chúng ta. Hãy tiếp tục đọc bài viết Các bước chuẩn bị để bắt đầu.
 
-#### Management Account
+- Nếu bạn đã hoàn thành các bước chuẩn bị, bạn có thể tiếp tục đến phần Thiết lập AWS SSO để làm quen với việc cấu hình dịch vụ AWS SSO.
 
-**Management Account** là tài khoản AWS có quyền cao nhất và có thể kiểm soát tất cả các tài khoản AWS khác trong một AWS Organization. Management account cũng chịu trách nhiệm chi trả chi phí tổng hợp của các tài khoản thành viên.
+- Cuối cùng, sau khi bạn đã thực hiện xong và muốn dọn dẹp tài nguyên, hãy xem phần Kiểm tra kết quả & Dọn dẹp tài nguyên để biết cách làm điều này một cách hiệu quả.
 
-#### Nội dung
-1. [Các bước chuẩn bị](1-prerequisite)
-2. [Thiết lập AWS SSO](2-setup-aws-sso)
-3. [Kiểm tra kết quả & Dọn dẹp tài nguyên](3-clean-up)
+- Chúc bạn thành công trong việc triển khai AWS SSO cho tổ chức của mình!

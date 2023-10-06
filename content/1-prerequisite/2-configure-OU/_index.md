@@ -6,48 +6,50 @@ chapter = false
 pre = "<b>1.2 </b>"
 +++
 
-In this step, you will practice setting up the Organization Units (**Security**, **Shared Services**, **Logging** and **Application**) corresponding to the AWS accounts created in this section. before. The OUs will be located inside the Root - where all the OUs and AWS accounts are located.
+#### Setting Up Organization Units
 
-**Content**
+In this step, you will practice setting up the Organization Units for the AWS accounts created in the previous section. The Organization Units include **Security**, **Shared Services**, **Logging**, and **Application**. These units will be situated within the Root, where all the OUs and AWS accounts are located.
+
+#### Contents
+- [Setting Up Organization Units](#setting-up-organization-units)
+- [Contents](#contents)
 - [Create Organization Unit](#create-organization-unit)
-- [Move AWS accounts to respective Organization Unit](#move-aws-accounts-to-respective-organization-unit)
+- [Move AWS Accounts to Respective Organization Unit](#move-aws-accounts-to-respective-organization-unit)
 
 #### Create Organization Unit
 
-1. Go to **AWS Management Comsole** and find the **AWS Organizations** service in the search bar.
+1. Open the **AWS Management Console** and search for the **AWS Organizations** service.
 
-2. Tick **Root**, select **Actions**, and select **Create new** under **Organizational Unit**
+2. Select the **Root**, click on **Actions**, and then choose **Create new** under the **Organizational Unit** section.
 
-![AWS Account](/images/4/0003.png?featherlight=false&width=90pc)
+   ![Create Organization Unit](/images/4/0003.png?featherlight=false&width=90pc)
 
-3. At the **Create organizational unit in Root** page:
-    - Under **Details**, enter the name of the OU (Example: Logging Unit)
+3. On the **Create organizational unit in Root** page:
+   - In the **Details** section, provide a name for the OU (For example: Logging Unit).
 
-![AWS Account](/images/4/0004.png?featherlight=false&width=90pc)
+   ![Create OU Details](/images/4/0004.png?featherlight=false&width=90pc)
 
-4. Check the information and select **Create organizational unit**
+4. Review the information and click **Create organizational unit**.
 
-![AWS Account](/images/4/0005.png?featherlight=false&width=90pc)
+   ![Create OU](/images/4/0005.png?featherlight=false&width=90pc)
 
-5. Repeat with the remaining Organization Units.
+5. Repeat the above steps for the remaining Organization Units.
 
-![AWS Account](/images/4/0006.png?featherlight=false&width=90pc)
+   ![Create OU](/images/4/0006.png?featherlight=false&width=90pc)
 
-#### Move AWS accounts to respective Organization Unit
+#### Move AWS Accounts to Respective Organization Unit
 
-1. Go to **AWS Management Comsole** and find the **AWS Organizations** service in the search bar.
+1. Go to the **AWS Management Console** and find the **AWS Organizations** service using the search bar.
 
-2. Tick the AWS account you want to move (Example: **Logging**), select **Actions**, and select **Move** under **AWS Account**
+2. Check the AWS account you wish to move (For instance: **Logging**), click on **Actions**, and then select **Move** under **AWS Account**.
 
+   ![Move AWS Account](/images/4/0007.png?featherlight=false&width=90pc)
 
-![AWS Account](/images/4/0007.png?featherlight=false&width=90pc)
+3. Tick the appropriate OU (Example: **Logging Unit**) and click **Move AWS account**.
 
-3. Tick the appropriate OU (Example: **Logging Unit**) and select **Move AWS account**
+   ![Move to OU](/images/4/0008.png?featherlight=false&width=90pc)
 
-
-![AWS Account](/images/4/0008.png?featherlight=false&width=90pc)
-
-4. Repeat for the remaining AWS and Organization Unit accounts:
-    - Security Account with Security Unit
-    - Shared Services with Shared Services Unit
-    - Application Account with Application Unit
+4. Repeat the above steps for the remaining AWS and Organization Unit accounts:
+   - Move the Security Account to the Security Unit
+   - Move the Shared Services Account to the Shared Services Unit
+   - Move the Application Account to the Application Unit
