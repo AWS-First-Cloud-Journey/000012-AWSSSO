@@ -5,30 +5,37 @@ weight = 1
 chapter = false
 +++
 
-# AWS Single Sign-On for Organization
+# AWS Single Sign-On for AWS Organization
 
 #### Overview
 
-In this lab, you will learn how to set up the **AWS SSO** service to efficiently provision and manage resource access to your **AWS Organization** AWS accounts.
+In this guide, you will learn how to set up **AWS Single Sign-On (AWS SSO)** to streamline user access and permissions management across multiple AWS accounts within an **AWS Organization**. By integrating AWS SSO, you can centralize authentication, reduce administrative overhead, and improve security posture for your multi-account environment.
+
+#### Key Concepts
 
 #### AWS Single Sign-On (SSO)
 
-**AWS SSO** is a service that enables you to provide Single Sign-On access to one or more AWS accounts within your AWS Organization for users listed in your directory.
+**AWS Single Sign-On (SSO)** is a cloud-based service that provides centralized access management and Single Sign-On capabilities for AWS accounts and business applications. AWS SSO allows you to assign fine-grained permissions for users and groups by integrating with AWS Identity Center, providing seamless access without the need for multiple credentials.
 
 #### AWS Organization
 
-**AWS Organization** is a service designed for managing multiple AWS accounts within your organization from a central standpoint. With AWS Organization, you can organize AWS Accounts into **Organizational Units** and aggregate the expenses of all AWS accounts into a **Management Account**.
+An **AWS Organization** is a service that lets you centrally manage and govern multiple AWS accounts. AWS Organization allows you to structure your accounts into **Organizational Units (OUs)**, apply Service Control Policies (SCPs) to control permissions, and simplify billing through a single **Management Account**.
 
-#### Organizational Unit (OU)
+### Organizational Unit (OU)
 
-An **Organizational Unit** is a collection of AWS accounts. Each OU can have up to five levels of nested OUs. Management policies assigned to an OU are applied to all its member OUs and AWS accounts.
+An **Organizational Unit (OU)** is a logical grouping of AWS accounts within an AWS Organization. OUs help organize accounts for streamlined management and policy enforcement. OUs can be nested, enabling hierarchical structures that support a complex organization layout.
 
 #### Management Account
 
-The **Management Account** is the AWS account with the highest level of permissions. It possesses the authority to control all other AWS accounts within the AWS Organization. Additionally, the management account bears the responsibility for covering the general costs incurred by its member accounts.
+The **Management Account** is the primary account that manages your entire AWS Organization. This account has the highest level of permissions and is used for setting up organization-wide configurations such as policies, billing consolidation, and centralized access management. All costs incurred by member accounts roll up to the management account for consolidated billing.
 
-#### Content
+#### Guide Contents
 
-1. [Preparatory steps](1-prerequisite)
-2. [AWS SSO Setup](2-setup-aws-sso)
-3. [Check Results & Clean Up Resources](3-clean-up)
+1. [Prerequisites](#1-prerequisites)
+2. [AWS SSO Setup](#2-aws-sso-setup)
+3. [Testing and Validation](#3-testing-and-validation)
+4. [Clean Up Resources](#4-clean-up-resources)
+
+#### Summary
+
+In this guide, we explored how to set up AWS Single Sign-On for AWS Organizations. We configured SSO settings, assigned permissions, tested user access, and cleaned up resources. AWS SSO offers a unified way to control user access and permissions, improving security and management across your AWS accounts.

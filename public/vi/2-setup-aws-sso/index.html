@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Thiết lập AWS SSO :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1704871045" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1704871045" rel="stylesheet">
-    <link href="/css/hybrid.css?1704871045" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1704871045" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1704871045" rel="stylesheet">
-    <link href="/css/auto-complete.css?1704871045" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1704871045" rel="stylesheet">
-    <link href="/css/theme.css?1704871045" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1704871045" rel="stylesheet">
+    <link href="/css/nucleus.css?1727695057" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1727695057" rel="stylesheet">
+    <link href="/css/hybrid.css?1727695057" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1727695057" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1727695057" rel="stylesheet">
+    <link href="/css/auto-complete.css?1727695057" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1727695057" rel="stylesheet">
+    <link href="/css/theme.css?1727695057" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1727695057" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1704871045" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1727695057" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1704871045"></script>
+    <script src="/js/jquery-3.3.1.min.js?1727695057"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1704871045"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1704871045"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1727695057"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1727695057"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1704871045"></script>
+<script type="text/javascript" src="/js/search.js?1727695057"></script>
 
     
   </div>
@@ -233,7 +233,7 @@
   
     
     <li data-nav-id="/vi/2-setup-aws-sso/" title="Thiết lập AWS SSO" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -382,13 +382,13 @@
  
   
     
-    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra " class="dd-item 
+    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra AWS SSO User" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-test-permission/">
-          <b>3. </b>Kiểm tra 
+          <b>3. </b>Kiểm tra AWS SSO User
           
             <i class="fas fa-check read-icon"></i>
           
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>10-01-2023</font></i>
+        <i><font color=orange>30-09-2024</font></i>
     </left>
     <left>
         <br>
@@ -563,7 +563,7 @@
             
           
           
-            <a href='/vi/'>AWS Single Sign-On</a> > Thiết lập AWS SSO
+            <a href='/vi/'>AWS Single Sign-On: Quản lý truy cập trong AWS Organization</a> > Thiết lập AWS SSO
           
         
           
@@ -606,15 +606,19 @@
 
 
 
-	<h4 id="cấp-quyền-truy-cập-aws-sso-vào-tài-khoản-aws-qua-aws-organizations">Cấp Quyền Truy Cập AWS SSO vào Tài Khoản AWS qua AWS Organizations</h4>
-<p>Trong phần này, bạn sẽ cấp quyền truy cập cho người dùng trong danh mục của mình vào hệ thống đăng nhập một lần (Single Sign-On - SSO) vào một hoặc nhiều tài khoản cụ thể trong tổ chức AWS. Sau khi hoàn tất quy trình đăng nhập, người dùng sẽ thấy biểu tượng tương ứng với từng tài khoản AWS mà họ được phân quyền, được hiển thị trong cổng thông tin của người dùng (<em>User portal</em>). Bằng cách nhấp vào biểu tượng tương ứng, người dùng có thể lựa chọn vai trò IAM mà họ muốn sử dụng khi truy cập vào AWS Console cho tài khoản AWS tương ứng.</p>
-<h4 id="nội-dung-hướng-dẫn">Nội dung hướng dẫn:</h4>
+	<h4 id="thiết-lập-aws-sso-và-quản-lý-quyền-truy-cập-tài-khoản-aws">Thiết lập AWS SSO và Quản lý Quyền Truy Cập Tài Khoản AWS</h4>
+<p>Trong bài viết này, bạn sẽ được hướng dẫn chi tiết cách thiết lập AWS Single Sign-On (AWS SSO) để cấp quyền truy cập cho người dùng trong tổ chức của bạn vào các tài khoản AWS. AWS SSO cung cấp một cơ chế tập trung để quản lý quyền truy cập và điều phối đăng nhập cho nhiều tài khoản AWS thuộc một tổ chức, giúp đơn giản hóa việc xác thực và ủy quyền.</p>
+<h4 id="mục-lục">Mục lục</h4>
 <ol>
-<li><a href="2.1-enable-sso/">Kích hoạt AWS SSO</a></li>
-<li><a href="2.2-add-user-group/">Thêm Người Dùng và Nhóm</a></li>
-<li><a href="2.3-create-permissionset/">Cấu Hình Permission Set</a></li>
-<li><a href="2.4-add-permission/">Gán Quyền Truy Cập</a></li>
+<li><a href="/vi/2-setup-aws-sso/#1-kich-hoat-aws-sso">Kích hoạt AWS SSO</a></li>
+<li><a href="/vi/2-setup-aws-sso/#2-them-nguoi-dung-va-nhom">Thêm Người Dùng và Nhóm</a></li>
+<li><a href="/vi/2-setup-aws-sso/#3-cau-hinh-permission-set">Cấu Hình Permission Set</a></li>
+<li><a href="/vi/2-setup-aws-sso/#4-gan-quyen-truy-cap-vao-tai-khoan-aws">Gán Quyền Truy Cập vào Tài Khoản AWS</a></li>
 </ol>
+<hr>
+<h4 id="kết-luận">Kết Luận</h4>
+<p>Bài viết này đã hướng dẫn bạn các bước cơ bản để thiết lập và quản lý quyền truy cập vào các tài khoản AWS thông qua AWS SSO. Việc sử dụng AWS SSO giúp giảm thiểu thời gian quản trị, tăng tính bảo mật và dễ dàng quản lý người dùng cũng như phân quyền trong một môi trường nhiều tài khoản AWS. Hãy thử áp dụng và tinh chỉnh quy trình này để phù hợp với tổ chức của bạn.</p>
+<hr>
 
 
 
@@ -875,19 +879,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1704871045"></script>
-    <script src="/js/jquery.sticky.js?1704871045"></script>
-    <script src="/js/featherlight.min.js?1704871045"></script>
-    <script src="/js/highlight.pack.js?1704871045"></script>
+    <script src="/js/clipboard.min.js?1727695057"></script>
+    <script src="/js/perfect-scrollbar.min.js?1727695057"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1727695057"></script>
+    <script src="/js/jquery.sticky.js?1727695057"></script>
+    <script src="/js/featherlight.min.js?1727695057"></script>
+    <script src="/js/highlight.pack.js?1727695057"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1704871045"></script>
-    <script src="/js/learn.js?1704871045"></script>
-    <script src="/js/hugo-learn.js?1704871045"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1727695057"></script>
+    <script src="/js/learn.js?1727695057"></script>
+    <script src="/js/hugo-learn.js?1727695057"></script>
 
-    <link href="/mermaid/mermaid.css?1704871045" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1704871045"></script>
+    <link href="/mermaid/mermaid.css?1727695057" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1727695057"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

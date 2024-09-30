@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo AWS Account trong AWS Organizations :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1704871045" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1704871045" rel="stylesheet">
-    <link href="/css/hybrid.css?1704871045" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1704871045" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1704871045" rel="stylesheet">
-    <link href="/css/auto-complete.css?1704871045" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1704871045" rel="stylesheet">
-    <link href="/css/theme.css?1704871045" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1704871045" rel="stylesheet">
+    <link href="/css/nucleus.css?1727695056" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1727695056" rel="stylesheet">
+    <link href="/css/hybrid.css?1727695056" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1727695056" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1727695056" rel="stylesheet">
+    <link href="/css/auto-complete.css?1727695056" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1727695056" rel="stylesheet">
+    <link href="/css/theme.css?1727695056" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1727695056" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1704871045" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1727695056" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1704871045"></script>
+    <script src="/js/jquery-3.3.1.min.js?1727695056"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1704871045"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1704871045"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1727695056"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1727695056"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1704871045"></script>
+<script type="text/javascript" src="/js/search.js?1727695056"></script>
 
     
   </div>
@@ -114,7 +114,7 @@
   
     
     <li data-nav-id="/vi/1-prerequisite/1-create-aws-account/" title="Tạo AWS Account trong AWS Organizations" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -382,13 +382,13 @@
  
   
     
-    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra " class="dd-item 
+    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra AWS SSO User" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-test-permission/">
-          <b>3. </b>Kiểm tra 
+          <b>3. </b>Kiểm tra AWS SSO User
           
             <i class="fas fa-check read-icon"></i>
           
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>10-01-2023</font></i>
+        <i><font color=orange>30-09-2024</font></i>
     </left>
     <left>
         <br>
@@ -567,7 +567,7 @@
             
           
           
-            <a href='/vi/'>AWS Single Sign-On</a> > <a href='/vi/1-prerequisite/'>Các bước chuẩn bị</a> > Tạo AWS Account trong AWS Organizations
+            <a href='/vi/'>AWS Single Sign-On: Quản lý truy cập trong AWS Organization</a> > <a href='/vi/1-prerequisite/'>Các bước chuẩn bị</a> > Tạo AWS Account trong AWS Organizations
           
         
           
@@ -613,43 +613,68 @@
 
 
 	<h4 id="tạo-aws-account-trong-aws-organization">Tạo AWS Account trong AWS Organization</h4>
+<h4 id="mục-tiêu">Mục tiêu</h4>
+<p>Hướng dẫn chi tiết cách tạo tài khoản AWS mới trong <strong>AWS Organizations</strong>, bao gồm thiết lập email, cấu hình IAM role, và kiểm tra tính hợp lệ của tài khoản.</p>
+<hr>
+<h4 id="1-truy-cập-vào-aws-organizations">1. Truy cập vào AWS Organizations</h4>
 <ol>
-<li>Truy cập vào <strong>AWS Management Console</strong> và tìm dịch vụ <strong>AWS Organizations</strong> trong thanh tìm kiếm.</li>
+<li>Đăng nhập vào <strong>AWS Management Console</strong>.</li>
+<li>Tìm kiếm và chọn dịch vụ <strong>AWS Organizations</strong> từ thanh tìm kiếm.</li>
 </ol>
-<p><img src="/images/1/0001.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="2">
-<li>Tại <strong>AWS Organizations Console</strong>, chọn <strong>Add an AWS account</strong></li>
+<p><img alt="AWS Organizations Console" src="/images/1/0001.png?featherlight=false&width=90pc"></p>
+<hr>
+<h4 id="2-thêm-tài-khoản-aws-mới">2. Thêm tài khoản AWS mới</h4>
+<ol>
+<li>Trong giao diện <strong>AWS Organizations Console</strong>, chọn <strong>Add an AWS account</strong>.</li>
 </ol>
-<p><img src="/images/1/0003.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="3">
-<li>Chọn <strong>Create an AWS account</strong> và nhập các thông số dưới đây:
+<p><img alt="Add an AWS Account" src="/images/1/0003.png?featherlight=false&width=90pc"></p>
+<hr>
+<h4 id="3-chọn-tạo-tài-khoản-aws-mới">3. Chọn Tạo tài khoản AWS mới</h4>
+<ol>
+<li>Chọn <strong>Create an AWS account</strong>.</li>
+<li>Nhập các thông tin bắt buộc dưới đây:
 <ul>
 <li><strong>AWS account name</strong>: Logging</li>
-<li><strong>Email address of the account&rsquo;s owner</strong>: <a href="mailto:example+lab12Logging@amazon.com.vn">example+lab12Logging@amazon.com.vn</a></li>
+<li><strong>Email address of the account&rsquo;s owner</strong>: <code>example+lab12Logging@amazon.com.vn</code></li>
 </ul>
 </li>
 </ol>
-<p><img src="/images/4/0002.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p><img alt="AWS Account Configuration" src="/images/4/0002.png?featherlight=false&width=90pc"></p>
 
-<div class="notices note" ><p>Để tạo nhiều tài khoản AWS với cùng một email, bạn có thể lấy phần tên email của bạn, thêm dấu <strong>&quot;+&quot;</strong>, và thêm miêu tả phía sau.</p>
+<div class="notices note" ><p><strong>Lưu ý:</strong> Để tạo nhiều tài khoản AWS với cùng một email, bạn có thể sử dụng cú pháp: <code>example+&lt;description&gt;@domain.com</code>. Ví dụ: <code>example+lab12Logging@amazon.com.vn</code>.</p>
 </div>
 
+<hr>
+<h4 id="4-cấu-hình-iam-role">4. Cấu hình IAM Role</h4>
+<ol>
+<li><strong>IAM role name</strong>: Để mặc định là <strong>OrganizationAccountAccessRole</strong>.</li>
+</ol>
+<p>Role này sẽ được sử dụng để truy cập vào tài khoản AWS thành viên bằng phương thức <a href="https://000002.awsstudygroup.com/3-switch-roles/">Chuyển đổi role (Switch Role)</a>.</p>
+<p><img alt="IAM Role Configuration" src="/images/4/0002.png?featherlight=false&width=90pc"></p>
+<hr>
+<h4 id="5-xác-nhận-và-tạo-tài-khoản">5. Xác nhận và tạo tài khoản</h4>
+<ol>
+<li>Kiểm tra lại thông tin đã nhập.</li>
+<li>Chọn <strong>Create AWS account</strong> để tiến hành tạo tài khoản.</li>
+</ol>
+<hr>
+<h4 id="6-lặp-lại-quy-trình-cho-các-tài-khoản-khác">6. Lặp lại quy trình cho các tài khoản khác</h4>
+<ol>
+<li>Tạo thêm các tài khoản tương tự cho các mục đích khác như:
 <ul>
-<li><strong>IAM role name</strong>: giữ mặc định là <strong>OrganizationAccountAccessRole</strong>. Đây sẽ là role name mà bạn sẽ dùng để truy cập vào tải khoản AWS thành viên qua phương pháp <a href="https://000002.awsstudygroup.com/3-switch-roles/">chuyển đổi role</a>.</li>
+<li><strong>Security</strong></li>
+<li><strong>Shared Services</strong></li>
+<li><strong>Application</strong></li>
 </ul>
-<p><img src="/images/4/0002.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="4">
-<li>
-<p>Kiếm tra thông tin và chọn <strong>Create AWS account</strong></p>
-</li>
-<li>
-<p>Lặp lại các bước trên với các tài khoản <strong>Security</strong>, <strong>Shared Services</strong>,và <strong>Application</strong>, tùy theo mỗi tài khoản cá nhân hay doanh nghiệp bao có thể tạo số lượng tài khoản có giới hạn.</p>
 </li>
 </ol>
-<p><strong>Lưu ý</strong>: nếu địa chỉ mail mà bạn dùng để tạo AWS Account đã tồn tại, AWS sẽ phản hồi như sau trong mục request:</p>
-<ul>
-<li>Chọn <strong>Requests</strong></li>
-</ul>
+<p><strong>Lưu ý:</strong> Nếu địa chỉ email bạn sử dụng đã được đăng ký cho một tài khoản AWS khác, bạn sẽ nhận được thông báo lỗi khi thực hiện yêu cầu tạo tài khoản mới.</p>
+<hr>
+<h4 id="7-kiểm-tra-trạng-thái-yêu-cầu">7. Kiểm tra trạng thái yêu cầu</h4>
+<ol>
+<li>Vào mục <strong>Requests</strong> để xem trạng thái của các yêu cầu tạo tài khoản.</li>
+<li>Nếu yêu cầu thành công, bạn sẽ thấy tài khoản mới hiển thị trong danh sách các tài khoản thành viên của <strong>AWS Organizations</strong>.</li>
+</ol>
 
 
 
@@ -908,19 +933,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1704871045"></script>
-    <script src="/js/jquery.sticky.js?1704871045"></script>
-    <script src="/js/featherlight.min.js?1704871045"></script>
-    <script src="/js/highlight.pack.js?1704871045"></script>
+    <script src="/js/clipboard.min.js?1727695056"></script>
+    <script src="/js/perfect-scrollbar.min.js?1727695056"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1727695056"></script>
+    <script src="/js/jquery.sticky.js?1727695056"></script>
+    <script src="/js/featherlight.min.js?1727695056"></script>
+    <script src="/js/highlight.pack.js?1727695056"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1704871045"></script>
-    <script src="/js/learn.js?1704871045"></script>
-    <script src="/js/hugo-learn.js?1704871045"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1727695056"></script>
+    <script src="/js/learn.js?1727695056"></script>
+    <script src="/js/hugo-learn.js?1727695056"></script>
 
-    <link href="/mermaid/mermaid.css?1704871045" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1704871045"></script>
+    <link href="/mermaid/mermaid.css?1727695056" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1727695056"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

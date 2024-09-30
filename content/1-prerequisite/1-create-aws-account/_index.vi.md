@@ -6,35 +6,75 @@ chapter = false
 pre = "<b>1.1 </b>"
 +++
 
-
 #### Tạo AWS Account trong AWS Organization
 
-1. Truy cập vào **AWS Management Console** và tìm dịch vụ **AWS Organizations** trong thanh tìm kiếm.
+#### Mục tiêu
 
-![AWS Account](/images/1/0001.png?featherlight=false&width=90pc)
+Hướng dẫn chi tiết cách tạo tài khoản AWS mới trong **AWS Organizations**, bao gồm thiết lập email, cấu hình IAM role, và kiểm tra tính hợp lệ của tài khoản.
 
-2. Tại **AWS Organizations Console**, chọn **Add an AWS account**
+---
 
-![AWS Account](/images/1/0003.png?featherlight=false&width=90pc)
+#### 1. Truy cập vào AWS Organizations
 
-3. Chọn **Create an AWS account** và nhập các thông số dưới đây:
+1. Đăng nhập vào **AWS Management Console**.
+2. Tìm kiếm và chọn dịch vụ **AWS Organizations** từ thanh tìm kiếm.
+
+![AWS Organizations Console](/images/1/0001.png?featherlight=false&width=90pc)
+
+---
+
+#### 2. Thêm tài khoản AWS mới
+
+1. Trong giao diện **AWS Organizations Console**, chọn **Add an AWS account**.
+
+![Add an AWS Account](/images/1/0003.png?featherlight=false&width=90pc)
+
+---
+
+#### 3. Chọn Tạo tài khoản AWS mới
+
+1. Chọn **Create an AWS account**.
+2. Nhập các thông tin bắt buộc dưới đây:
    - **AWS account name**: Logging
-   - **Email address of the account's owner**: example+lab12Logging@amazon.com.vn
+   - **Email address of the account's owner**: `example+lab12Logging@amazon.com.vn`
 
-![AWS Account](/images/4/0002.png?featherlight=false&width=90pc)
+![AWS Account Configuration](/images/4/0002.png?featherlight=false&width=90pc)
 
 {{% notice note %}}
-Để tạo nhiều tài khoản AWS với cùng một email, bạn có thể lấy phần tên email của bạn, thêm dấu **"+"**, và thêm miêu tả phía sau.
+**Lưu ý:** Để tạo nhiều tài khoản AWS với cùng một email, bạn có thể sử dụng cú pháp: `example+<description>@domain.com`. Ví dụ: `example+lab12Logging@amazon.com.vn`.
 {{% /notice %}}
 
-- **IAM role name**: giữ mặc định là **OrganizationAccountAccessRole**. Đây sẽ là role name mà bạn sẽ dùng để truy cập vào tải khoản AWS thành viên qua phương pháp [chuyển đổi role](https://000002.awsstudygroup.com/3-switch-roles/).
+---
 
-![AWS Account](/images/4/0002.png?featherlight=false&width=90pc)
+#### 4. Cấu hình IAM Role
 
-4. Kiếm tra thông tin và chọn **Create AWS account**
+1. **IAM role name**: Để mặc định là **OrganizationAccountAccessRole**.
 
-5. Lặp lại các bước trên với các tài khoản **Security**, **Shared Services**,và **Application**, tùy theo mỗi tài khoản cá nhân hay doanh nghiệp bao có thể tạo số lượng tài khoản có giới hạn.
+Role này sẽ được sử dụng để truy cập vào tài khoản AWS thành viên bằng phương thức [Chuyển đổi role (Switch Role)](https://000002.awsstudygroup.com/3-switch-roles/).
 
-**Lưu ý**: nếu địa chỉ mail mà bạn dùng để tạo AWS Account đã tồn tại, AWS sẽ phản hồi như sau trong mục request:
+![IAM Role Configuration](/images/4/0002.png?featherlight=false&width=90pc)
 
-- Chọn **Requests**
+---
+
+#### 5. Xác nhận và tạo tài khoản
+
+1. Kiểm tra lại thông tin đã nhập.
+2. Chọn **Create AWS account** để tiến hành tạo tài khoản.
+
+---
+
+#### 6. Lặp lại quy trình cho các tài khoản khác
+
+1. Tạo thêm các tài khoản tương tự cho các mục đích khác như:
+   - **Security**
+   - **Shared Services**
+   - **Application**
+
+**Lưu ý:** Nếu địa chỉ email bạn sử dụng đã được đăng ký cho một tài khoản AWS khác, bạn sẽ nhận được thông báo lỗi khi thực hiện yêu cầu tạo tài khoản mới.
+
+---
+
+#### 7. Kiểm tra trạng thái yêu cầu
+
+1. Vào mục **Requests** để xem trạng thái của các yêu cầu tạo tài khoản.
+2. Nếu yêu cầu thành công, bạn sẽ thấy tài khoản mới hiển thị trong danh sách các tài khoản thành viên của **AWS Organizations**.

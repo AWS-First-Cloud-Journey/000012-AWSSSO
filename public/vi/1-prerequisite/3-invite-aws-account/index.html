@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Thêm AWS Account vào AWS Organization :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1704871045" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1704871045" rel="stylesheet">
-    <link href="/css/hybrid.css?1704871045" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1704871045" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1704871045" rel="stylesheet">
-    <link href="/css/auto-complete.css?1704871045" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1704871045" rel="stylesheet">
-    <link href="/css/theme.css?1704871045" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1704871045" rel="stylesheet">
+    <link href="/css/nucleus.css?1727695056" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1727695056" rel="stylesheet">
+    <link href="/css/hybrid.css?1727695056" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1727695056" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1727695056" rel="stylesheet">
+    <link href="/css/auto-complete.css?1727695056" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1727695056" rel="stylesheet">
+    <link href="/css/theme.css?1727695056" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1727695056" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1704871045" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1727695056" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1704871045"></script>
+    <script src="/js/jquery-3.3.1.min.js?1727695056"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1704871045"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1704871045"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1727695056"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1727695056"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1704871045"></script>
+<script type="text/javascript" src="/js/search.js?1727695056"></script>
 
     
   </div>
@@ -170,7 +170,7 @@
   
     
     <li data-nav-id="/vi/1-prerequisite/3-invite-aws-account/" title="Thêm AWS Account vào AWS Organization" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -382,13 +382,13 @@
  
   
     
-    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra " class="dd-item 
+    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra AWS SSO User" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-test-permission/">
-          <b>3. </b>Kiểm tra 
+          <b>3. </b>Kiểm tra AWS SSO User
           
             <i class="fas fa-check read-icon"></i>
           
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>10-01-2023</font></i>
+        <i><font color=orange>30-09-2024</font></i>
     </left>
     <left>
         <br>
@@ -567,7 +567,7 @@
             
           
           
-            <a href='/vi/'>AWS Single Sign-On</a> > <a href='/vi/1-prerequisite/'>Các bước chuẩn bị</a> > Thêm AWS Account vào AWS Organization
+            <a href='/vi/'>AWS Single Sign-On: Quản lý truy cập trong AWS Organization</a> > <a href='/vi/1-prerequisite/'>Các bước chuẩn bị</a> > Thêm AWS Account vào AWS Organization
           
         
           
@@ -580,7 +580,15 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -604,78 +612,86 @@
 
 
 
-	<p>Ở bước 1.1, bạn đã thực hiện tạo AWS Account mới từ dịch vụ AWS Organization! Vậy nếu như bạn đã có một hoặc nhiều AWS Account với các Workload đang chạy &amp; bạn muốn thêm AWS Account đó vào Organization của bạn để dễ dàng phân bổ tài nguyên, nhóm các accounts (như bước 1.2,) và áp dụng các nguyên tắc quản trị -&gt; thì chức năng <strong>Invite an existing AWS accoun</strong> sẽ hỗ trợ bạn.</p>
+	<h4 id="mục-tiêu">Mục tiêu</h4>
+<p>Ở bước 1.1, bạn đã thực hiện tạo AWS Account mới từ dịch vụ AWS Organizations! Vậy nếu bạn đã có một hoặc nhiều AWS Account với các Workload đang chạy và bạn muốn thêm các AWS Account đó vào Organization của bạn để dễ dàng phân bổ tài nguyên, nhóm các accounts (như bước 1.2,) và áp dụng các nguyên tắc quản trị -&gt; chức năng <strong>Invite an existing AWS account</strong> sẽ hỗ trợ bạn trong trường hợp này.</p>
+<h4 id="hướng-dẫn-chi-tiết">Hướng dẫn chi tiết</h4>
+<h4 id="1-thêm-aws-account-vào-organizations">1. Thêm AWS Account vào Organizations</h4>
 <ol>
-<li>Thêm AWS Account vào Organizations</li>
+<li>
+<p>Truy cập vào <strong>AWS Management Console</strong> và tìm dịch vụ <strong>AWS Organizations</strong> trong thanh tìm kiếm.</p>
+</li>
+<li>
+<p>Tại trang <strong>AWS Organizations</strong>, chọn <strong>Add an AWS account</strong>.</p>
+<p><img alt="AWS Account" src="/images/10/0001.png?featherlight=false&width=90pc"></p>
+</li>
+<li>
+<p>Chọn mục <strong>Invite an existing AWS account</strong>.</p>
+</li>
+<li>
+<p>Trong mục <strong>Email address or account ID of the AWS account to invite</strong>, nhập địa chỉ email hoặc Account ID của AWS Account mà bạn muốn thêm vào Organization (ví dụ: <code>fcj@amazon.com.vn</code> hoặc <code>888800009920</code>).</p>
+</li>
+<li>
+<p>Chọn <strong>Send invitation</strong> để gửi lời mời.</p>
+<p><img alt="AWS Account" src="/images/10/0002.png?featherlight=false&width=90pc"></p>
+</li>
 </ol>
-<ul>
+<h4 id="2-kiểm-tra-lời-mời-tham-gia-vào-organization">2. Kiểm tra lời mời tham gia vào Organization</h4>
+<ol>
 <li>
-<p>Truy cập vào <strong>AWS Management Comsole</strong> và tìm dịch vụ <strong>AWS Organizations</strong> trong thanh tìm kiếm.</p>
+<p>Truy cập lại trang <strong>AWS Organizations</strong>.</p>
 </li>
 <li>
-<p>Chọn <strong>Add an AWS account</strong></p>
+<p>Tại khung bên trái, chọn <strong>Invitations</strong>, bạn sẽ thấy được Account ID mà bạn vừa thêm tại bước 1 xuất hiện tại đây với trạng thái <strong>OPEN</strong>.</p>
+<p><img alt="AWS Account" src="/images/10/0003.png?featherlight=false&width=90pc"></p>
 </li>
-</ul>
-<p><img src="/images/10/0001.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ul>
-<li>
-<p>Chọn mục <strong>Invite an existing AWS account</strong></p>
-</li>
-<li>
-<p>Tại mục <strong>Email address or account ID of the AWS account to invite</strong>, điền địa chỉ mail hoặc Account ID của AWS Account mà bạn muốn thêm vào Organization, ví dụ: <code>fcj@amazon.com.vn</code> hoặc 888800009920</p>
-</li>
-<li>
-<p>Chọn <strong>Send invitation</strong></p>
-</li>
-</ul>
-<p><img src="/images/10/0002.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="2">
-<li>Kiểm tra lời mời tham dự vào Organizations</li>
 </ol>
-<ul>
-<li>Tại khung bên trái, chọn <strong>Invitations</strong>, sẽ thấy được Account ID bạn vừa thêm tại bước 1 - đã xuất hiện ở đây với trạng thái <strong>OPEN</strong></li>
-</ul>
-<p><img src="/images/10/0003.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="3">
-<li>Chấp nhận lời mời tham dự vào Organizations</li>
-</ol>
-<ul>
-<li>Truy cập vào <strong>AWS Management Comsole</strong> của Account bạn vừa thêm tại bước 1, tìm dịch vụ <strong>AWS Organizations</strong> trong thanh tìm kiếm</li>
-</ul>
-<p><img src="/images/10/0004.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ul>
-<li>Tại bên phải màn hình, chọn lời mời <strong>View 1 invitation</strong></li>
-<li>Ngoài ra, dịch vụ AWS Organization không bị tính phí</li>
-</ul>
-<p><img src="/images/10/0005.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<p><strong>Lưu ý</strong>: bạn chỉ có thể nhìn thấy lời mời trên, khi và chỉ khi AWS Account này chưa tham gia vào bất kỳ <strong>AWS Organizations</strong></p>
-<ol start="4">
-<li>Chọn <strong>Accept invitation</strong></li>
-</ol>
-<p><img src="/images/10/0006.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ul>
-<li>Kết quả:</li>
-</ul>
-<p><img src="/images/10/0007.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ul>
-<li>Dù bạn đang ở <strong>Dashboard</strong> nhưng bạn chỉ thấy được thông tin của <strong>Organizations</strong> mà bạn đang tham dự, vì bạn đang là thành viên (member account)</li>
-</ul>
-<ol start="5">
-<li>Kiểm tra <strong>AWS Organizations</strong></li>
-</ol>
-<ul>
-<li>Quay trở lại AWS Account ở bước 1, kiểm tra xem Account vừa được thêm tại bước 4 đã tham gia vào Organizations hay chưa</li>
-</ul>
-<p><img src="/images/10/0008.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ul>
+<h4 id="3-chấp-nhận-lời-mời-tham-gia-vào-organization">3. Chấp nhận lời mời tham gia vào Organization</h4>
+<ol>
 <li>
-<p>Tại đây, bạn có thể nhìn thấy toàn bộ cấu trúc của <strong>Organizations</strong> bao gồm các Organization Unit với các member account &amp; management account.</p>
+<p>Đăng nhập vào <strong>AWS Management Console</strong> của AWS Account mà bạn vừa thêm tại bước 1.</p>
 </li>
 <li>
-<p>Với <strong>management account</strong> sẽ là acc chính để quản lý và truy cập vào các <strong>member account</strong> thông qua chức năng <strong>switch role</strong></p>
+<p>Tìm kiếm và truy cập dịch vụ <strong>AWS Organizations</strong> trong thanh tìm kiếm.</p>
+<p><img alt="AWS Account" src="/images/10/0004.png?featherlight=false&width=90pc"></p>
 </li>
+<li>
+<p>Tại bên phải màn hình, bạn sẽ thấy thông báo <strong>View 1 invitation</strong>, chọn để xem chi tiết lời mời.</p>
+</li>
+<li>
+<p>Nhấn <strong>Accept invitation</strong> để chấp nhận lời mời tham gia vào Organization.</p>
+<p><img alt="AWS Account" src="/images/10/0005.png?featherlight=false&width=90pc"></p>
+</li>
+</ol>
+<p><strong>Lưu ý</strong>: Bạn chỉ có thể nhìn thấy lời mời nếu AWS Account này chưa tham gia vào bất kỳ <strong>AWS Organizations</strong> nào trước đó.</p>
+<h4 id="4-xác-nhận-lời-mời">4. Xác nhận lời mời</h4>
+<ol>
+<li>
+<p>Sau khi chấp nhận lời mời, bạn sẽ nhận được thông báo xác nhận và AWS Account của bạn sẽ được liên kết với <strong>AWS Organizations</strong>.</p>
+<p><img alt="AWS Account" src="/images/10/0006.png?featherlight=false&width=90pc"></p>
+</li>
+<li>
+<p>Dù bạn đang ở <strong>Dashboard</strong>, bạn chỉ có thể nhìn thấy thông tin của <strong>Organization</strong> mà bạn đang tham gia với vai trò là <strong>Member Account</strong> (thành viên).</p>
+<p><img alt="AWS Account" src="/images/10/0007.png?featherlight=false&width=90pc"></p>
+</li>
+</ol>
+<h4 id="5-kiểm-tra-trạng-thái-của-aws-organizations">5. Kiểm tra trạng thái của AWS Organizations</h4>
+<ol>
+<li>
+<p>Truy cập vào AWS Management Console của <strong>Management Account</strong> (tài khoản quản lý chính).</p>
+</li>
+<li>
+<p>Quay lại trang <strong>AWS Organizations</strong> và kiểm tra trạng thái của AWS Account mà bạn đã thêm ở bước trước. Nếu thành công, Account mới sẽ xuất hiện trong danh sách với trạng thái <strong>Active</strong>.</p>
+<p><img alt="AWS Account" src="/images/10/0008.png?featherlight=false&width=90pc"></p>
+</li>
+<li>
+<p>Bạn có thể xem cấu trúc <strong>Organization</strong> hiện tại bao gồm các <strong>Organization Units (OUs)</strong>, <strong>Member Accounts</strong>, và <strong>Management Account</strong>.</p>
+<ul>
+<li><strong>Management Account</strong> là tài khoản chính để quản lý và truy cập vào các <strong>Member Account</strong> thông qua chức năng <strong>Switch Role</strong>.</li>
 </ul>
-<p>Chúc mừng, AWS Account đã được thêm vào với thông tin chi tiết về ngày tham gia</p>
+</li>
+</ol>
+<h4 id="kết-luận">Kết luận</h4>
+<p>Chúc mừng bạn đã thêm thành công một AWS Account vào Organization! Bạn có thể bắt đầu quản lý tài nguyên và áp dụng các nguyên tắc bảo mật và quản trị một cách dễ dàng.</p>
 
 
 
@@ -937,19 +953,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1704871045"></script>
-    <script src="/js/jquery.sticky.js?1704871045"></script>
-    <script src="/js/featherlight.min.js?1704871045"></script>
-    <script src="/js/highlight.pack.js?1704871045"></script>
+    <script src="/js/clipboard.min.js?1727695056"></script>
+    <script src="/js/perfect-scrollbar.min.js?1727695056"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1727695056"></script>
+    <script src="/js/jquery.sticky.js?1727695056"></script>
+    <script src="/js/featherlight.min.js?1727695056"></script>
+    <script src="/js/highlight.pack.js?1727695056"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1704871045"></script>
-    <script src="/js/learn.js?1704871045"></script>
-    <script src="/js/hugo-learn.js?1704871045"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1727695056"></script>
+    <script src="/js/learn.js?1727695056"></script>
+    <script src="/js/hugo-learn.js?1727695056"></script>
 
-    <link href="/mermaid/mermaid.css?1704871045" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1704871045"></script>
+    <link href="/mermaid/mermaid.css?1727695056" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1727695056"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

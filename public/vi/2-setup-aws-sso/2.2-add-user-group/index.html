@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Thêm Users và Groups :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1704871045" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1704871045" rel="stylesheet">
-    <link href="/css/hybrid.css?1704871045" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1704871045" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1704871045" rel="stylesheet">
-    <link href="/css/auto-complete.css?1704871045" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1704871045" rel="stylesheet">
-    <link href="/css/theme.css?1704871045" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1704871045" rel="stylesheet">
+    <link href="/css/nucleus.css?1727695057" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1727695057" rel="stylesheet">
+    <link href="/css/hybrid.css?1727695057" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1727695057" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1727695057" rel="stylesheet">
+    <link href="/css/auto-complete.css?1727695057" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1727695057" rel="stylesheet">
+    <link href="/css/theme.css?1727695057" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1727695057" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1704871045" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1727695057" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1704871045"></script>
+    <script src="/js/jquery-3.3.1.min.js?1727695057"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1704871045"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1704871045"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1727695057"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1727695057"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1704871045"></script>
+<script type="text/javascript" src="/js/search.js?1727695057"></script>
 
     
   </div>
@@ -292,7 +292,7 @@
   
     
     <li data-nav-id="/vi/2-setup-aws-sso/2.2-add-user-group/" title="Thêm Users và Groups" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -382,13 +382,13 @@
  
   
     
-    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra " class="dd-item 
+    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra AWS SSO User" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-test-permission/">
-          <b>3. </b>Kiểm tra 
+          <b>3. </b>Kiểm tra AWS SSO User
           
             <i class="fas fa-check read-icon"></i>
           
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>10-01-2023</font></i>
+        <i><font color=orange>30-09-2024</font></i>
     </left>
     <left>
         <br>
@@ -567,7 +567,7 @@
             
           
           
-            <a href='/vi/'>AWS Single Sign-On</a> > <a href='/vi/2-setup-aws-sso/'>Thiết lập AWS SSO</a> > Thêm Users và Groups
+            <a href='/vi/'>AWS Single Sign-On: Quản lý truy cập trong AWS Organization</a> > <a href='/vi/2-setup-aws-sso/'>Thiết lập AWS SSO</a> > Thêm Users và Groups
           
         
           
@@ -635,76 +635,99 @@
 <h4 id="tạo-group">Tạo Group</h4>
 <ol>
 <li>
-<p>Hiện tại, bạn chưa có group nào. Hãy chọn <strong>Create group</strong> để tạo các group được liệt kê ở bảng phía trên.</p>
-<p><img src="/images/6/0001.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p><strong>Bắt đầu tạo Group</strong>:</p>
+<ul>
+<li>Truy cập vào <strong>AWS SSO Console</strong>.</li>
+<li>Trong thanh bên trái, chọn <strong>Groups</strong>, sau đó nhấn <strong>Create group</strong> để tạo các group được liệt kê trong bảng phía trên.</li>
+</ul>
+<p><img alt="AWS Account" src="/images/6/0001.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
-<p>Tại prompt tạo group, bạn nhập tên và mô tả của các group, sau đó nhấn <strong>Create</strong>.</p>
-<p><img src="/images/6/0002.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p><strong>Điền thông tin cho Group</strong>:</p>
+<ul>
+<li>Tại cửa sổ tạo Group, điền tên và mô tả cho Group (VD: <code>AWS-Security-Admin</code>).</li>
+<li>Nhấn <strong>Create</strong> để hoàn tất.</li>
+</ul>
+<p><img alt="AWS Account" src="/images/6/0002.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
-<p>Lặp lại bước này cho các group khác.</p>
-<p><img src="/images/6/0003.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p><strong>Lặp lại bước trên cho các Group khác</strong>:</p>
+<ul>
+<li>Tạo các Group khác theo danh sách: <code>AWS-Shared-Services-Admin</code>, <code>AWS-Shared-Services-Read-Only</code>, <code>AWS-Security-Read-Only</code>, <code>AWS-Logging-Admin</code>, <code>AWS-Logging-Read-Only</code>.</li>
+</ul>
+<p><img alt="AWS Account" src="/images/6/0003.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 <h4 id="thêm-user">Thêm User</h4>
 <ol>
 <li>
-<p>Mở <strong>AWS SSO Console</strong>. Trong thanh bên trái, chọn <strong>Users</strong>.</p>
+<p><strong>Truy cập AWS SSO Console</strong>:</p>
 <ul>
-<li>Chọn <strong>Add user</strong> và cung cấp các thông tin cần thiết.</li>
+<li>Chọn <strong>Users</strong> từ thanh điều hướng bên trái.</li>
+<li>Nhấn <strong>Add user</strong> và cung cấp thông tin cơ bản cho User.</li>
 </ul>
-<p><img src="/images/5/0001.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p><img alt="AWS Account" src="/images/5/0001.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
-<p>Hoàn thành thông tin sau:</p>
+<p><strong>Điền thông tin người dùng</strong>:</p>
 <ul>
-<li><strong>Username</strong>: Tên User này sẽ được yêu cầu để đăng nhập vào cổng thông tin User và không thể thay đổi sau này (VD: Super-User).</li>
-<li><strong>Password</strong>: Chọn một trong các lựa chọn sau để gửi mật khẩu của User.
+<li><strong>Username</strong>: Đây là tên sẽ được yêu cầu để đăng nhập vào cổng thông tin User (VD: Super-User).</li>
+<li><strong>Password setup</strong>:
 <ul>
-<li><strong>Send an email to the user with password setup instructions</strong>: AWS sẽ tự động gửi email mời User truy cập vào cổng thông tin User AWS SSO.</li>
-<li><strong>Generate a one-time password that you can share with the user</strong>: URL đến cổng thông tin User và mật khẩu sẽ được cung cấp.</li>
+<li>Chọn cách thức gửi mật khẩu cho User:
+<ul>
+<li><strong>Send an email to the user with password setup instructions</strong>: Gửi email chứa hướng dẫn thiết lập mật khẩu.</li>
+<li><strong>Generate a one-time password</strong>: Tạo mật khẩu tạm thời mà bạn có thể chia sẻ với User.</li>
 </ul>
 </li>
-<li>*<strong>Email address</strong>: Nhập email của User.</li>
-<li><strong>Confirm email address</strong>: Nhập lại email của User.</li>
-<li>Để rõ ràng, hãy sử dụng tiền tố của <strong>User logon name</strong> làm <strong>First name</strong> và hậu tố làm <strong>Last name</strong>. Ví dụ: đối với Super-User, &ldquo;Super&rdquo; sẽ là <strong>First name</strong>, trong khi &ldquo;User&rdquo; sẽ là <strong>Last name</strong> Display name.</li>
 </ul>
-<p><img src="/images/5/0002.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+</li>
+<li><strong>Email address</strong>: Nhập email của User.</li>
+<li><strong>Confirm email address</strong>: Xác nhận email.</li>
+</ul>
+<p><img alt="AWS Account" src="/images/5/0002.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
-<p>Chọn <strong>Next</strong>.</p>
-<p><img src="/images/5/0003.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p><strong>Đặt tên hiển thị (Display name)</strong>:</p>
+<ul>
+<li>Để rõ ràng, bạn có thể sử dụng tiền tố của <strong>User logon name</strong> làm <strong>First name</strong> và hậu tố làm <strong>Last name</strong>. Ví dụ: Đối với <code>Super-User</code>, &ldquo;Super&rdquo; sẽ là <strong>First name</strong> và &ldquo;User&rdquo; sẽ là <strong>Last name</strong>.</li>
+</ul>
 </li>
 <li>
-<p>Chọn các group và chọn <strong>Next</strong>.</p>
-<p><img src="/images/5/0004.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p><strong>Chọn Next</strong> để chuyển sang bước tiếp theo.</p>
+<p><img alt="AWS Account" src="/images/5/0003.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
-<p>Chọn <strong>Add user</strong>.</p>
-<p><img src="/images/5/0005.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p><strong>Chọn Group</strong>:</p>
+<ul>
+<li>Ở bước này, bạn chọn các Group mà User sẽ được thêm vào theo bảng đã định nghĩa (VD: <code>AWS-Security-Read-Only</code> cho <code>Security-User</code>).</li>
+</ul>
+<p><img alt="AWS Account" src="/images/5/0004.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
-<p>Hoàn thành tạo user.</p>
-<p><img src="/images/5/0006.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p><strong>Hoàn tất thêm User</strong>:</p>
+<ul>
+<li>Nhấn <strong>Add user</strong> để xác nhận việc thêm User vào các Group đã chọn.</li>
+</ul>
+<p><img alt="AWS Account" src="/images/5/0005.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
-<p>Nếu bạn chọn <strong>Send an email to this user with password setup instructions</strong>, thực hiện xác thực email để đăng nhập.</p>
-<p><img src="/images/5/0007.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p><strong>Gửi thông tin xác thực cho User</strong>:</p>
+<ul>
+<li>Nếu bạn chọn <strong>Send an email to this user with password setup instructions</strong>, AWS sẽ gửi email hướng dẫn cho User. Thực hiện theo hướng dẫn để User có thể đăng nhập và cấu hình mật khẩu lần đầu tiên.</li>
+</ul>
+<p><img alt="AWS Account" src="/images/5/0007.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
-<p>Chọn <strong>Send</strong>.</p>
-<p><img src="/images/5/0008.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p><strong>Hoàn tất thiết lập mật khẩu</strong>:</p>
+<ul>
+<li>Nếu bạn tự thiết lập mật khẩu, User sẽ nhận được đường dẫn đến cổng thông tin và có thể cấu hình mật khẩu ngay khi đăng nhập lần đầu.</li>
+</ul>
+<p><img alt="AWS Account" src="/images/5/00010.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
-<p>Thực hiện <strong>Verify</strong>.</p>
-<p><img src="/images/5/0009.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-</li>
-<li>
-<p>Thực hiện cấu hình mật khẩu. Lưu ý: Giữ mật khẩu và trang portal để đăng nhập.</p>
-<p><img src="/images/5/00010.png?featherlight=false&amp;width=90pc" alt="AWS Account">
-<img src="/images/5/00011.png?featherlight=false&amp;width=90pc" alt="AWS Account">
-<img src="/images/5/00012.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p><strong>Lưu lại thông tin đăng nhập và mật khẩu cho User</strong> để đảm bảo User có thể đăng nhập vào hệ thống mà không gặp trở ngại.</p>
+<p><img alt="AWS Account" src="/images/5/00011.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
 
@@ -971,19 +994,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1704871045"></script>
-    <script src="/js/jquery.sticky.js?1704871045"></script>
-    <script src="/js/featherlight.min.js?1704871045"></script>
-    <script src="/js/highlight.pack.js?1704871045"></script>
+    <script src="/js/clipboard.min.js?1727695057"></script>
+    <script src="/js/perfect-scrollbar.min.js?1727695057"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1727695057"></script>
+    <script src="/js/jquery.sticky.js?1727695057"></script>
+    <script src="/js/featherlight.min.js?1727695057"></script>
+    <script src="/js/highlight.pack.js?1727695057"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1704871045"></script>
-    <script src="/js/learn.js?1704871045"></script>
-    <script src="/js/hugo-learn.js?1704871045"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1727695057"></script>
+    <script src="/js/learn.js?1727695057"></script>
+    <script src="/js/hugo-learn.js?1727695057"></script>
 
-    <link href="/mermaid/mermaid.css?1704871045" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1704871045"></script>
+    <link href="/mermaid/mermaid.css?1727695057" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1727695057"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

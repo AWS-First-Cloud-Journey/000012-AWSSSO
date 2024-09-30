@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Preparation steps :: AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1704871045" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1704871045" rel="stylesheet">
-    <link href="/css/hybrid.css?1704871045" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1704871045" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1704871045" rel="stylesheet">
-    <link href="/css/auto-complete.css?1704871045" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1704871045" rel="stylesheet">
-    <link href="/css/theme.css?1704871045" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1704871045" rel="stylesheet">
+    <link href="/css/nucleus.css?1727695056" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1727695056" rel="stylesheet">
+    <link href="/css/hybrid.css?1727695056" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1727695056" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1727695056" rel="stylesheet">
+    <link href="/css/auto-complete.css?1727695056" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1727695056" rel="stylesheet">
+    <link href="/css/theme.css?1727695056" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1727695056" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1704871045" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1727695056" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1704871045"></script>
+    <script src="/js/jquery-3.3.1.min.js?1727695056"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1704871045"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1704871045"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1727695056"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1727695056"></script>
 <script type="text/javascript">
     
-        var baseurl = "";
+        var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1704871045"></script>
+<script type="text/javascript" src="/js/search.js?1727695056"></script>
 
     
   </div>
@@ -83,7 +83,7 @@
   
     
     <li data-nav-id="/1-prerequisite/" title="Preparation steps" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>10-01-2023</font></i>
+        <i><font color=orange>30-09-2024</font></i>
     </left>
     <left>
         <br>
@@ -606,32 +606,96 @@
 
 
 
-	<h4 id="overview">Overview</h4>
-<p>This exercise is a part of the Landing Zone practice.</p>
-<p>To set up the required resources, you will establish an AWS Organization with four Organization Units (OUs) for grouping the accounts. Create AWS Accounts with the following names: <strong>Security</strong>, <strong>Shared Services</strong>, <strong>Logging</strong>, and <strong>Application</strong>. Then, assign each account to its respective OU.</p>
-<p>These created accounts will be allocated the following resources (Note: Refer to this section only as it is beyond the scope of the lab):</p>
+	<h4 id="preparation-steps-for-aws-landing-zone-deployment">Preparation Steps for AWS Landing Zone Deployment</h4>
+<h4 id="overview">Overview</h4>
+<p>This guide outlines the setup process for creating a Landing Zone using AWS Organizations. It will help you structure your AWS accounts and resources for a well-architected multi-account environment. The primary focus is to create and organize four Organizational Units (OUs), establish core accounts, and implement cross-account communication strategies.</p>
+<p>By the end of this exercise, you will have:</p>
 <ul>
-<li>
-<p><strong>Logging Account:</strong> This serves as a centralized repository for Amazon VPC Flow Logs, CloudTrail logs, and Config logs.</p>
+<li>A functional <strong>AWS Organization</strong> with:
+<ul>
+<li>Four <strong>Organization Units (OUs)</strong>: <strong>Security</strong>, <strong>Shared Services</strong>, <strong>Logging</strong>, and <strong>Application</strong>.</li>
+<li>Each OU will group its designated AWS accounts.</li>
+</ul>
 </li>
-<li>
-<p><strong>Security Account:</strong> Here, you will collect AWS Config data, set up an Amazon GuardDuty master, and configure alerts.</p>
-</li>
-<li>
-<p><strong>Network/Shared Services Account:</strong> This account will host a shared VPC, facilitating remote connections to other accounts. The primary AWS Direct Connect is integrated with the AWS Transit Gateway to establish communication with VPCs in other accounts.</p>
-</li>
-<li>
-<p><strong>Business Unit Accounts:</strong> These accounts cater to Analytics-Prod and Analytics-non-prod needs.</p>
+<li><strong>AWS Accounts</strong> created with the following purposes:
+<ul>
+<li><strong>Security Account</strong> for centralized security management.</li>
+<li><strong>Shared Services Account</strong> for shared networking and management services.</li>
+<li><strong>Logging Account</strong> to consolidate AWS CloudTrail, Config, and VPC Flow Logs.</li>
+<li><strong>Application Account</strong> for specific business unit workloads.</li>
+</ul>
 </li>
 </ul>
-<p><img src="/images/1/1.png?width=70pc" alt="Lab Diagram"></p>
-<h4 id="content">Content</h4>
+<p>These foundational steps will enable governance, security controls, and cost management within your AWS environment.</p>
+<h4 id="target-accounts-and-resources">Target Accounts and Resources</h4>
+<ul>
+<li>
+<p><strong>Logging Account</strong>:</p>
+<ul>
+<li>This serves as a centralized repository for storing Amazon VPC Flow Logs, AWS CloudTrail logs, and AWS Config data.</li>
+</ul>
+</li>
+<li>
+<p><strong>Security Account</strong>:</p>
+<ul>
+<li>Host a <strong>GuardDuty master account</strong>, manage AWS Security Hub, and aggregate security alerts.</li>
+</ul>
+</li>
+<li>
+<p><strong>Shared Services Account</strong>:</p>
+<ul>
+<li>Provision a shared VPC for resource access across accounts.</li>
+<li>Establish AWS Direct Connect, Transit Gateway, and other shared network resources.</li>
+</ul>
+</li>
+<li>
+<p><strong>Application Accounts</strong>:</p>
+<ul>
+<li>Business unit-specific accounts for production and non-production workloads.</li>
+<li>Analytics, Dev/Test, and other application-specific resources.</li>
+</ul>
+</li>
+</ul>
+<h4 id="lab-architecture-diagram">Lab Architecture Diagram</h4>
+<p><img alt="Lab Diagram" src="/images/1/1.png?width=70pc"></p>
+<h4 id="steps-to-implement">Steps to Implement</h4>
 <ol>
-<li><a href="1-create-aws-account">Create AWS Account in AWS Organization</a></li>
-<li><a href="2-configure-OU">Setting up Organization Unit</a></li>
-<li><a href="2-configure-OU">Invite AWS Account to AWS Organization</a></li>
-<li><a href="4-switch-role">Access Member Account in Organization</a></li>
+<li>
+<p><strong><a href="/1-prerequisite/1-create-aws-account/">Create AWS Account in AWS Organization</a></strong>:</p>
+<ul>
+<li>Establish the core accounts (<code>Security</code>, <code>Shared Services</code>, <code>Logging</code>, and <code>Application</code>) under your AWS Organization.</li>
+<li>Use the AWS Management Console or AWS CLI to automate account creation and structure.</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="/1-prerequisite/2-configure-ou/">Setting up Organization Unit</a></strong>:</p>
+<ul>
+<li>Configure Organization Units (OUs) for logical grouping.</li>
+<li>Create policies to enforce specific security or compliance requirements for each OU.</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="/1-prerequisite/3-invite-aws-account/">Invite Existing AWS Accounts to the AWS Organization</a></strong>:</p>
+<ul>
+<li>Link any existing accounts to the AWS Organization using an invite process.</li>
+<li>Validate and assign each account to its corresponding OU.</li>
+</ul>
+</li>
+<li>
+<p><strong><a href="/1-prerequisite/4-switch-role/">Access Member Accounts in the Organization</a></strong>:</p>
+<ul>
+<li>Enable cross-account access using IAM roles.</li>
+<li>Set up <strong>AWS SSO</strong> or <strong>IAM Role Switch</strong> to streamline management and operational tasks across accounts.</li>
+</ul>
+</li>
 </ol>
+<h4 id="important-considerations">Important Considerations</h4>
+<ul>
+<li><strong>Cost Optimization</strong>: Ensure that each account&rsquo;s usage is tracked separately to optimize billing and monitoring.</li>
+<li><strong>Security Posture</strong>: Implement security controls, such as SCPs (Service Control Policies) and centralized logging, to maintain compliance.</li>
+<li><strong>Networking</strong>: Plan for network isolation and interconnectivity using VPC Peering, Transit Gateway, and Direct Connect configurations.</li>
+</ul>
+<p>Refer to the AWS <a href="https://docs.aws.amazon.com/controltower/latest/userguide/landing-zone.html">Landing Zone Documentation</a> for more advanced configurations and best practices.</p>
 
 
 
@@ -889,19 +953,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1704871045"></script>
-    <script src="/js/jquery.sticky.js?1704871045"></script>
-    <script src="/js/featherlight.min.js?1704871045"></script>
-    <script src="/js/highlight.pack.js?1704871045"></script>
+    <script src="/js/clipboard.min.js?1727695056"></script>
+    <script src="/js/perfect-scrollbar.min.js?1727695056"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1727695056"></script>
+    <script src="/js/jquery.sticky.js?1727695056"></script>
+    <script src="/js/featherlight.min.js?1727695056"></script>
+    <script src="/js/highlight.pack.js?1727695056"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1704871045"></script>
-    <script src="/js/learn.js?1704871045"></script>
-    <script src="/js/hugo-learn.js?1704871045"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1727695056"></script>
+    <script src="/js/learn.js?1727695056"></script>
+    <script src="/js/hugo-learn.js?1727695056"></script>
 
-    <link href="/mermaid/mermaid.css?1704871045" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1704871045"></script>
+    <link href="/mermaid/mermaid.css?1727695056" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1727695056"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

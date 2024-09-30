@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>AWS Single Sign-On :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
+    <title>AWS Single Sign-On: Quản lý truy cập trong AWS Organization :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1704871045" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1704871045" rel="stylesheet">
-    <link href="/css/hybrid.css?1704871045" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1704871045" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1704871045" rel="stylesheet">
-    <link href="/css/auto-complete.css?1704871045" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1704871045" rel="stylesheet">
-    <link href="/css/theme.css?1704871045" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1704871045" rel="stylesheet">
+    <link href="/css/nucleus.css?1727695056" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1727695056" rel="stylesheet">
+    <link href="/css/hybrid.css?1727695056" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1727695056" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1727695056" rel="stylesheet">
+    <link href="/css/auto-complete.css?1727695056" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1727695056" rel="stylesheet">
+    <link href="/css/theme.css?1727695056" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1727695056" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1704871045" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1727695056" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1704871045"></script>
+    <script src="/js/jquery-3.3.1.min.js?1727695056"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1704871045"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1704871045"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1727695056"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1727695056"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1704871045"></script>
+<script type="text/javascript" src="/js/search.js?1727695056"></script>
 
     
   </div>
@@ -382,13 +382,13 @@
  
   
     
-    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra " class="dd-item 
+    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra AWS SSO User" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-test-permission/">
-          <b>3. </b>Kiểm tra 
+          <b>3. </b>Kiểm tra AWS SSO User
           
             <i class="fas fa-check read-icon"></i>
           
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>10-01-2023</font></i>
+        <i><font color=orange>30-09-2024</font></i>
     </left>
     <left>
         <br>
@@ -554,38 +554,91 @@
 </span>
 
  
-<h1 id="aws-single-sign-on-cho-organization">AWS Single Sign-On cho Organization</h1>
-<p>Trong bài viết này, chúng ta sẽ tìm hiểu về cách sử dụng dịch vụ AWS Single Sign-On (SSO) để quản lý việc truy cập vào các tài khoản AWS trong tổ chức của bạn một cách hiệu quả.</p>
+<h1 id="aws-single-sign-on-sso-cho-organization">AWS Single Sign-On (SSO) cho Organization</h1>
+<p>Trong bài viết này, chúng ta sẽ khám phá cách sử dụng dịch vụ AWS Single Sign-On (SSO) để quản lý việc truy cập và ủy quyền cho người dùng trong các tài khoản AWS của bạn một cách hiệu quả. Bằng cách tận dụng AWS SSO, bạn có thể quản lý quyền truy cập cho toàn bộ các tài khoản thuộc AWS Organization từ một điểm kiểm soát trung tâm.</p>
 <h4 id="tổng-quan-về-aws-single-sign-on-sso">Tổng quan về AWS Single Sign-On (SSO)</h4>
-<p>AWS SSO là một dịch vụ quản lý quyền truy cập được cung cấp bởi Amazon Web Services (AWS). Dịch vụ này cho phép bạn quản lý việc xác thực và ủy quyền người dùng vào các tài khoản AWS một cách thuận tiện. Thay vì phải quản lý nhiều thông tin đăng nhập cho từng tài khoản riêng biệt, bạn có thể sử dụng AWS SSO để tổ chức và kiểm soát việc truy cập này từ một nơi duy nhất.</p>
+<p>AWS Single Sign-On (AWS SSO) là một dịch vụ cung cấp khả năng quản lý xác thực và ủy quyền truy cập cho người dùng vào các tài khoản AWS, ứng dụng dựa trên đám mây (SaaS), và các ứng dụng tùy chỉnh. Thay vì sử dụng thông tin đăng nhập riêng lẻ cho từng tài khoản hoặc dịch vụ, AWS SSO cho phép bạn định cấu hình và kiểm soát quyền truy cập từ một nơi duy nhất, đảm bảo bảo mật và tuân thủ quy định trong tổ chức.</p>
+<h4 id="các-lợi-ích-chính-của-aws-sso">Các lợi ích chính của AWS SSO:</h4>
+<ul>
+<li><strong>Quản lý tập trung:</strong> Dễ dàng quản lý người dùng và quyền truy cập cho toàn bộ các tài khoản AWS từ một giao diện duy nhất.</li>
+<li><strong>Single Sign-On:</strong> Người dùng chỉ cần đăng nhập một lần để truy cập tất cả các tài nguyên mà họ được cấp quyền.</li>
+<li><strong>Tích hợp với AWS IAM:</strong> Hỗ trợ tích hợp chặt chẽ với AWS Identity and Access Management (IAM) và AWS Organizations để quản lý quyền truy cập một cách chính xác.</li>
+<li><strong>Khả năng mở rộng:</strong> Hỗ trợ tích hợp với các nguồn danh tính doanh nghiệp như Microsoft Active Directory hoặc các IdP (Identity Provider) bên ngoài khác.</li>
+</ul>
 <h4 id="cách-aws-sso-hoạt-động-trong-aws-organization">Cách AWS SSO hoạt động trong AWS Organization</h4>
-<p>Một khía cạnh quan trọng của việc sử dụng AWS SSO là tích hợp nó vào AWS Organization của bạn. AWS Organization cho phép bạn quản lý tập trung các tài khoản AWS của mình trong một cơ cấu có tổ chức. Dưới đây là một số thuật ngữ quan trọng:</p>
+<p>AWS SSO tích hợp chặt chẽ với <strong>AWS Organizations</strong> để giúp quản lý quyền truy cập cho các tài khoản AWS thành viên. Một số thuật ngữ và thành phần quan trọng mà bạn cần hiểu rõ:</p>
 <ul>
 <li>
-<p><strong>AWS Organization:</strong> Đây là tập hợp các tài khoản AWS được tổ chức lại theo một cách cụ thể, giúp bạn quản lý chúng một cách dễ dàng hơn.</p>
+<p><strong>AWS Organization:</strong> Là tập hợp các tài khoản AWS được quản lý tập trung, cho phép bạn quản lý các tài khoản thành viên dưới một cấu trúc có tổ chức.</p>
 </li>
 <li>
-<p><strong>Organizational Unit (OU):</strong> Một phân đơn vị trong AWS Organization, cho phép bạn nhóm các tài khoản lại với nhau. Mỗi OU có thể chứa nhiều OU con khác.</p>
+<p><strong>Organizational Unit (OU):</strong> Một nhóm tài khoản AWS trong AWS Organization. OU giúp bạn phân nhóm tài khoản theo chức năng, môi trường (như Dev, Test, Prod), hoặc theo nhu cầu bảo mật.</p>
 </li>
 <li>
-<p><strong>Management Account:</strong> Đây là tài khoản quản lý có quyền cao nhất trong AWS Organization. Tài khoản này có thể kiểm soát tất cả các tài khoản khác và chịu trách nhiệm về việc thanh toán chi phí tổng hợp của các tài khoản thành viên.</p>
+<p><strong>Management Account:</strong> Tài khoản quản lý có quyền cao nhất trong AWS Organization. Đây là tài khoản duy nhất có quyền cấu hình và thiết lập AWS SSO cho toàn bộ tổ chức.</p>
+</li>
+<li>
+<p><strong>Permission Set:</strong> Các tập hợp quyền được định nghĩa sẵn (tương tự như IAM Policies) được gán cho người dùng hoặc nhóm người dùng để xác định quyền truy cập vào từng tài khoản AWS cụ thể.</p>
+</li>
+<li>
+<p><strong>AWS SSO Directory:</strong> Là nguồn danh tính mặc định để quản lý người dùng và nhóm. Bạn có thể tích hợp AWS SSO với các nguồn danh tính khác như AWS Managed Microsoft AD, AD Connector, hoặc IdP bên thứ ba như Okta, OneLogin.</p>
 </li>
 </ul>
-<h4 id="bước-tiếp-theo">Bước tiếp theo</h4>
+<h4 id="hướng-dẫn-từng-bước-thiết-lập-aws-sso">Hướng dẫn từng bước thiết lập AWS SSO</h4>
+<h4 id="bước-1-kích-hoạt-aws-single-sign-on-cho-organization">Bước 1: Kích hoạt AWS Single Sign-On cho Organization</h4>
+<ol>
+<li>Truy cập vào <a href="https://aws.amazon.com/console/">AWS Management Console</a>.</li>
+<li>Mở <strong>AWS Single Sign-On</strong>.</li>
+<li>Nếu đây là lần đầu bạn sử dụng AWS SSO, chọn <strong>Enable AWS SSO</strong>.</li>
+<li>Chọn <strong>Management Account</strong> và đảm bảo rằng tài khoản này đã được kết nối với AWS Organizations.</li>
+</ol>
+<h4 id="bước-2-cấu-hình-danh-tính-người-dùng">Bước 2: Cấu hình danh tính người dùng</h4>
+<ol>
+<li>Chọn <strong>AWS SSO Settings</strong>.</li>
+<li>Ở mục <strong>Identity Source</strong>, chọn một trong các tùy chọn sau:
 <ul>
-<li>
-<p>Chúng ta sẽ tiến hành thực hiện các bước chuẩn bị cần thiết trước khi thiết lập AWS SSO trong môi trường của chúng ta. Hãy tiếp tục đọc bài viết Các bước chuẩn bị để bắt đầu.</p>
+<li><strong>AWS SSO Directory:</strong> Sử dụng thư mục người dùng mặc định của AWS SSO.</li>
+<li><strong>External Identity Provider (IdP):</strong> Sử dụng IdP bên ngoài như Okta hoặc OneLogin.</li>
+<li><strong>AWS Managed Microsoft AD:</strong> Tích hợp với Active Directory do AWS quản lý.</li>
+</ul>
 </li>
-<li>
-<p>Nếu bạn đã hoàn thành các bước chuẩn bị, bạn có thể tiếp tục đến phần Thiết lập AWS SSO để làm quen với việc cấu hình dịch vụ AWS SSO.</p>
-</li>
-<li>
-<p>Cuối cùng, sau khi bạn đã thực hiện xong và muốn dọn dẹp tài nguyên, hãy xem phần Kiểm tra kết quả &amp; Dọn dẹp tài nguyên để biết cách làm điều này một cách hiệu quả.</p>
-</li>
-<li>
+<li>Cấu hình kết nối theo hướng dẫn từ dịch vụ mà bạn chọn.</li>
+</ol>
+<h4 id="bước-3-tạo-và-gán-permission-sets">Bước 3: Tạo và gán Permission Sets</h4>
+<ol>
+<li>Chọn <strong>AWS Accounts</strong> trong bảng điều khiển AWS SSO.</li>
+<li>Chọn tài khoản AWS bạn muốn quản lý.</li>
+<li>Chọn <strong>Assign Users</strong> và sau đó chọn <strong>Create New Permission Set</strong>.</li>
+<li>Tạo một Permission Set với quyền như <strong>AdministratorAccess</strong> hoặc tùy chỉnh dựa trên yêu cầu bảo mật của tổ chức.</li>
+<li>Gán Permission Set này cho người dùng hoặc nhóm người dùng.</li>
+</ol>
+<h4 id="bước-4-thiết-lập-quyền-truy-cập-vào-tài-khoản-aws">Bước 4: Thiết lập quyền truy cập vào tài khoản AWS</h4>
+<ol>
+<li>Quay lại mục <strong>AWS Accounts</strong>, chọn tài khoản bạn muốn cấp quyền.</li>
+<li>Gán Permission Sets đã tạo ở trên cho các người dùng hoặc nhóm.</li>
+<li>Nhấn <strong>Finish</strong> để hoàn tất quá trình cấu hình quyền truy cập.</li>
+</ol>
+<h4 id="bước-5-kiểm-tra-và-xác-minh-quyền-truy-cập">Bước 5: Kiểm tra và xác minh quyền truy cập</h4>
+<ol>
+<li>Đăng nhập vào AWS SSO User Portal với tài khoản người dùng mà bạn đã cấu hình.</li>
+<li>Kiểm tra danh sách các tài khoản AWS và xác minh quyền truy cập của người dùng.</li>
+<li>Thực hiện một số tác vụ như tạo S3 bucket, chạy Lambda function, hoặc kiểm tra log để đảm bảo các quyền đã được áp dụng đúng.</li>
+</ol>
+<h4 id="kiểm-tra-kết-quả--dọn-dẹp-tài-nguyên">Kiểm tra kết quả &amp; Dọn dẹp tài nguyên</h4>
+<h4 id="kiểm-tra-kết-quả">Kiểm tra kết quả:</h4>
+<ol>
+<li>Đảm bảo rằng người dùng có thể truy cập vào các tài khoản AWS theo quyền hạn đã cấu hình.</li>
+<li>Xác minh rằng việc đăng nhập SSO hoạt động như mong đợi từ giao diện <strong>AWS SSO User Portal</strong>.</li>
+</ol>
+<h4 id="dọn-dẹp-tài-nguyên">Dọn dẹp tài nguyên:</h4>
+<ol>
+<li>Gỡ bỏ các tài khoản thử nghiệm hoặc người dùng không còn cần thiết.</li>
+<li>Xóa các Permission Sets không còn sử dụng.</li>
+<li>Nếu không còn nhu cầu sử dụng AWS SSO, hãy vào <strong>Settings</strong> và chọn <strong>Disable AWS SSO</strong>.</li>
+</ol>
+<h4 id="tổng-kết">Tổng kết</h4>
+<p>AWS Single Sign-On cung cấp một phương thức quản lý truy cập tập trung và bảo mật cho toàn bộ các tài khoản AWS trong tổ chức của bạn. Với việc thiết lập và cấu hình đúng, bạn có thể quản lý việc xác thực và ủy quyền cho hàng ngàn người dùng một cách hiệu quả, giảm thiểu rủi ro bảo mật và tối ưu hóa quy trình quản lý quyền truy cập.</p>
 <p>Chúc bạn thành công trong việc triển khai AWS SSO cho tổ chức của mình!</p>
-</li>
-</ul>
 	
   
         
@@ -833,19 +886,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1704871045"></script>
-    <script src="/js/jquery.sticky.js?1704871045"></script>
-    <script src="/js/featherlight.min.js?1704871045"></script>
-    <script src="/js/highlight.pack.js?1704871045"></script>
+    <script src="/js/clipboard.min.js?1727695056"></script>
+    <script src="/js/perfect-scrollbar.min.js?1727695056"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1727695056"></script>
+    <script src="/js/jquery.sticky.js?1727695056"></script>
+    <script src="/js/featherlight.min.js?1727695056"></script>
+    <script src="/js/highlight.pack.js?1727695056"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1704871045"></script>
-    <script src="/js/learn.js?1704871045"></script>
-    <script src="/js/hugo-learn.js?1704871045"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1727695056"></script>
+    <script src="/js/learn.js?1727695056"></script>
+    <script src="/js/hugo-learn.js?1727695056"></script>
 
-    <link href="/mermaid/mermaid.css?1704871045" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1704871045"></script>
+    <link href="/mermaid/mermaid.css?1727695056" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1727695056"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

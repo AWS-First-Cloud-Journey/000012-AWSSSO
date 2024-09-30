@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo Permission Set :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1704871045" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1704871045" rel="stylesheet">
-    <link href="/css/hybrid.css?1704871045" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1704871045" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1704871045" rel="stylesheet">
-    <link href="/css/auto-complete.css?1704871045" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1704871045" rel="stylesheet">
-    <link href="/css/theme.css?1704871045" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1704871045" rel="stylesheet">
+    <link href="/css/nucleus.css?1727695057" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1727695057" rel="stylesheet">
+    <link href="/css/hybrid.css?1727695057" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1727695057" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1727695057" rel="stylesheet">
+    <link href="/css/auto-complete.css?1727695057" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1727695057" rel="stylesheet">
+    <link href="/css/theme.css?1727695057" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1727695057" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1704871045" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1727695057" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1704871045"></script>
+    <script src="/js/jquery-3.3.1.min.js?1727695057"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1704871045"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1704871045"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1727695057"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1727695057"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1704871045"></script>
+<script type="text/javascript" src="/js/search.js?1727695057"></script>
 
     
   </div>
@@ -320,7 +320,7 @@
   
     
     <li data-nav-id="/vi/2-setup-aws-sso/2.3-create-permissionset/" title="Tạo Permission Set" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -382,13 +382,13 @@
  
   
     
-    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra " class="dd-item 
+    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra AWS SSO User" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-test-permission/">
-          <b>3. </b>Kiểm tra 
+          <b>3. </b>Kiểm tra AWS SSO User
           
             <i class="fas fa-check read-icon"></i>
           
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>10-01-2023</font></i>
+        <i><font color=orange>30-09-2024</font></i>
     </left>
     <left>
         <br>
@@ -567,7 +567,7 @@
             
           
           
-            <a href='/vi/'>AWS Single Sign-On</a> > <a href='/vi/2-setup-aws-sso/'>Thiết lập AWS SSO</a> > Tạo Permission Set
+            <a href='/vi/'>AWS Single Sign-On: Quản lý truy cập trong AWS Organization</a> > <a href='/vi/2-setup-aws-sso/'>Thiết lập AWS SSO</a> > Tạo Permission Set
           
         
           
@@ -612,46 +612,64 @@
 
 
 
-	<h4 id="permission-set">Permission Set</h4>
-<p><strong>Permission Set</strong> xác định khả năng truy cập mà User và Group có đối với các tài khoản AWS trong AWS Organization. Các bộ quyền được lưu trữ trong AWS SSO và được cung cấp cho tài khoản AWS dưới dạng IAM roles. Bạn có thể gán nhiều quyền cho một User.</p>
+	<h4 id="tạo-permission-set">Tạo Permission Set</h4>
+<p><strong>Permission Set</strong> xác định khả năng truy cập mà <strong>Người dùng (User)</strong> và <strong>Nhóm (Group)</strong> có đối với các tài khoản AWS trong <strong>AWS Organization</strong>. Các Permission Set được lưu trữ trong AWS SSO và được cung cấp cho tài khoản AWS dưới dạng IAM roles. Bạn có thể gán nhiều quyền cho một User hoặc Group, giúp đơn giản hóa việc quản lý truy cập trên nhiều tài khoản trong tổ chức của bạn.</p>
+<h4 id="các-bước-thực-hiện">Các bước thực hiện</h4>
+<h4 id="bước-1-mở-aws-sso-console">Bước 1: Mở AWS SSO Console</h4>
 <ol>
-<li>Mở AWS SSO Console.
+<li>Truy cập <strong>AWS SSO Console</strong>.</li>
+<li>Chọn <strong>AWS accounts</strong> ở thanh điều hướng bên trái.</li>
+<li>Chuyển sang tab <strong>Permission Sets</strong>.</li>
+<li>Chọn <strong>Create permission set</strong> để bắt đầu tạo bộ quyền mới.</li>
+</ol>
+<p><img alt="AWS SSO Console" src="/images/7/0001.png?featherlight=false&width=90pc"></p>
+<h4 id="bước-2-chọn-loại-permission-set">Bước 2: Chọn loại Permission Set</h4>
+<ol>
+<li>Tại trang <strong>Create new permission set</strong>, chọn <strong>Permission set type</strong>.</li>
+</ol>
+<p><img alt="Permission Set Type" src="/images/7/0002.png?featherlight=false&width=90pc"></p>
+<h4 id="bước-3-chọn-chính-sách-quyền-cho-permission-set">Bước 3: Chọn chính sách quyền cho Permission Set</h4>
+<ol>
+<li>Chọn <strong>AdministratorAccess</strong> để cung cấp quyền truy cập đầy đủ vào tất cả các tài nguyên và dịch vụ AWS.</li>
+</ol>
+<p><img alt="Chọn Administrator Access" src="/images/7/0003.png?featherlight=false&width=90pc"></p>
+<h4 id="bước-4-đặt-tên-cho-permission-set">Bước 4: Đặt tên cho Permission Set</h4>
+<ol>
+<li>Nhập tên cho Permission Set là <strong>AdministratorAccess</strong>.</li>
+<li>Chọn <strong>Next</strong> để tiếp tục.</li>
+</ol>
+<p><img alt="Đặt tên Permission Set" src="/images/7/0004.png?featherlight=false&width=90pc"></p>
+<h4 id="bước-5-xác-nhận-và-tạo-permission-set">Bước 5: Xác nhận và tạo Permission Set</h4>
+<ol>
+<li>Xem lại thông tin chi tiết của Permission Set vừa thiết lập.</li>
+<li>Chọn <strong>Create</strong> để tạo mới Permission Set này.</li>
+</ol>
+<p><img alt="Xác nhận tạo Permission Set" src="/images/7/0005.png?featherlight=false&width=90pc"></p>
+<h4 id="bước-6-hoàn-thành-tạo-permission-set">Bước 6: Hoàn thành tạo Permission Set</h4>
+<ol>
+<li>Bạn sẽ thấy thông báo thành công khi Permission Set đã được tạo.</li>
+</ol>
+<p><img alt="Hoàn thành tạo Permission Set" src="/images/7/0006.png?featherlight=false&width=90pc"></p>
+<h4 id="bước-7-tạo-thêm-permission-set-với-quyền-khác">Bước 7: Tạo thêm Permission Set với quyền khác</h4>
+<ol>
+<li>Lặp lại các bước trên để thiết lập một Permission Set với quyền <strong>SecurityAudit</strong> nhằm cung cấp quyền chỉ đọc cho tài khoản AWS.</li>
+<li>Sau khi hoàn thành, bạn sẽ có kết quả tương tự như hình dưới đây.</li>
+</ol>
+<p><img alt="Kết quả tạo Permission Set" src="/images/7/0007.png?featherlight=false&width=90pc"></p>
+<h4 id="kết-luận">Kết luận</h4>
 <ul>
-<li>Chọn <em>AWS accounts</em> ở thanh bên trái.</li>
-<li>Chọn tab <strong>Permission Sets</strong>.</li>
-<li>Chọn <strong>Create permission set</strong>.</li>
+<li>Bạn đã hoàn thành việc tạo Permission Set với hai loại quyền khác nhau:
+<ul>
+<li><strong>AdministratorAccess</strong>: Cung cấp quyền quản trị đầy đủ.</li>
+<li><strong>SecurityAudit</strong>: Cung cấp quyền đọc các tài nguyên trong tài khoản để giám sát và kiểm tra bảo mật.</li>
 </ul>
 </li>
-</ol>
-<p><img src="/images/7/0001.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="2">
-<li>Tại trang <em>Create new permission set</em>:
-<ul>
-<li>Chọn <strong>Permission set type</strong>.</li>
 </ul>
-</li>
-</ol>
-<p><img src="/images/7/0002.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="3">
-<li>Chọn <strong>AdministratorAccess</strong> để cung cấp quyền truy cập đầy đủ vào các tài nguyên và dịch vụ AWS.</li>
-</ol>
-<p><img src="/images/7/0003.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="4">
-<li>Nhập <strong>AdministratorAccess</strong> và chọn <strong>Next</strong>.</li>
-</ol>
-<p><img src="/images/7/0004.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="5">
-<li>Kiểm tra và chọn <strong>Create</strong>.</li>
-</ol>
-<p><img src="/images/7/0005.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="6">
-<li>Hoàn thành tạo <strong>Permission set</strong>.</li>
-</ol>
-<p><img src="/images/7/0006.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="7">
-<li>Lặp lại các bước trên để thiết lập Permission Set với quyền <strong>SecurityAudit</strong>. Bạn sẽ có kết quả như hình dưới đây.</li>
-</ol>
-<p><img src="/images/7/0007.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<h4 id="chú-ý">Chú ý</h4>
+<ul>
+<li>Hãy đảm bảo rằng bạn chỉ cung cấp quyền <strong>AdministratorAccess</strong> cho các tài khoản hoặc người dùng cần thiết để tránh rủi ro bảo mật.</li>
+<li>Với các tài khoản hoặc nhóm khác, sử dụng quyền <strong>SecurityAudit</strong> để thực hiện giám sát mà không ảnh hưởng đến cấu hình tài nguyên.</li>
+</ul>
 
 
 
@@ -916,19 +934,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1704871045"></script>
-    <script src="/js/jquery.sticky.js?1704871045"></script>
-    <script src="/js/featherlight.min.js?1704871045"></script>
-    <script src="/js/highlight.pack.js?1704871045"></script>
+    <script src="/js/clipboard.min.js?1727695057"></script>
+    <script src="/js/perfect-scrollbar.min.js?1727695057"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1727695057"></script>
+    <script src="/js/jquery.sticky.js?1727695057"></script>
+    <script src="/js/featherlight.min.js?1727695057"></script>
+    <script src="/js/highlight.pack.js?1727695057"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1704871045"></script>
-    <script src="/js/learn.js?1704871045"></script>
-    <script src="/js/hugo-learn.js?1704871045"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1727695057"></script>
+    <script src="/js/learn.js?1727695057"></script>
+    <script src="/js/hugo-learn.js?1727695057"></script>
 
-    <link href="/mermaid/mermaid.css?1704871045" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1704871045"></script>
+    <link href="/mermaid/mermaid.css?1727695057" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1727695057"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

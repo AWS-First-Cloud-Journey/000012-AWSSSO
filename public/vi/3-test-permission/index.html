@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Kiểm tra  :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
+    <title>Kiểm tra AWS SSO User :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1704871045" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1704871045" rel="stylesheet">
-    <link href="/css/hybrid.css?1704871045" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1704871045" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1704871045" rel="stylesheet">
-    <link href="/css/auto-complete.css?1704871045" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1704871045" rel="stylesheet">
-    <link href="/css/theme.css?1704871045" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1704871045" rel="stylesheet">
+    <link href="/css/nucleus.css?1727695057" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1727695057" rel="stylesheet">
+    <link href="/css/hybrid.css?1727695057" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1727695057" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1727695057" rel="stylesheet">
+    <link href="/css/auto-complete.css?1727695057" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1727695057" rel="stylesheet">
+    <link href="/css/theme.css?1727695057" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1727695057" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1704871045" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1727695057" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1704871045"></script>
+    <script src="/js/jquery-3.3.1.min.js?1727695057"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1704871045"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1704871045"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1727695057"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1727695057"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1704871045"></script>
+<script type="text/javascript" src="/js/search.js?1727695057"></script>
 
     
   </div>
@@ -382,13 +382,13 @@
  
   
     
-    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra " class="dd-item 
-        parent
+    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra AWS SSO User" class="dd-item 
+        
         active
         
         ">
       <a href="/vi/3-test-permission/">
-          <b>3. </b>Kiểm tra 
+          <b>3. </b>Kiểm tra AWS SSO User
           
             <i class="fas fa-check read-icon"></i>
           
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>10-01-2023</font></i>
+        <i><font color=orange>30-09-2024</font></i>
     </left>
     <left>
         <br>
@@ -563,7 +563,7 @@
             
           
           
-            <a href='/vi/'>AWS Single Sign-On</a> > Kiểm tra 
+            <a href='/vi/'>AWS Single Sign-On: Quản lý truy cập trong AWS Organization</a> > Kiểm tra AWS SSO User
           
         
           
@@ -598,7 +598,7 @@
           
             <h1>
               
-              Kiểm tra 
+              Kiểm tra AWS SSO User
             </h1>
           
 
@@ -607,45 +607,54 @@
 
 
 	<h4 id="truy-cập-vào-tài-khoản-aws-trong-aws-organizations-qua-aws-sso-user">Truy cập vào Tài khoản AWS trong AWS Organizations qua AWS SSO User</h4>
-<p>Ở phần này, bạn sẽ thử truy cập vào các tài khoản AWS trong AWS Organizations thông qua AWS SSO User. Sau đó, bạn có thể tiến hành dọn dẹp tài nguyên nếu bạn không cần đến chúng nữa.</p>
+<p>Ở phần này, bạn sẽ học cách truy cập vào các tài khoản AWS trong <strong>AWS Organizations</strong> thông qua <strong>AWS SSO User</strong>. Sau đó, bạn có thể tiến hành dọn dẹp tài nguyên nếu không cần đến chúng nữa.</p>
 <h4 id="kiểm-tra-kết-quả">Kiểm tra kết quả</h4>
-<p>Bạn sẽ thử truy cập vào các tài khoản AWS trong AWS Organizations thông qua AWS SSO User:</p>
+<p>Bạn sẽ thực hiện các bước sau để truy cập vào các tài khoản AWS trong <strong>AWS Organizations</strong> thông qua <strong>AWS SSO User</strong>:</p>
 <ol>
-<li>Mở trình duyệt của bạn trong chế độ ẩn danh và truy cập đường dẫn <strong>User portal URL</strong> bạn đã lưu ở phần trước.</li>
-</ol>
-<p><img src="../../../images/2/2_AddUserComplete.png?width=90pc" alt="AddUserGroups"></p>
-<p>Hoặc, nếu bạn đã lưu trữ <strong>User portal URL</strong> khi <strong>set password</strong>:</p>
-<p><img src="/images/9/0001.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="2">
 <li>
-<p>Trong <strong>User Portal</strong>, nhập tên người dùng và mật khẩu đã lưu để đăng nhập.</p>
+<p><strong>Mở trình duyệt ở chế độ ẩn danh</strong> và truy cập đường dẫn <strong>User portal URL</strong> đã lưu khi bạn thiết lập <strong>AWS SSO</strong> ở phần trước.</p>
+<p><img alt="User Portal" src="../../../images/2/2_AddUserComplete.png?width=90pc"></p>
+<p>Hoặc, nếu bạn đã lưu <strong>User portal URL</strong> khi <strong>cài đặt mật khẩu lần đầu</strong>:</p>
+<p><img alt="User Portal URL" src="/images/9/0001.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
-<p>Nếu bạn truy cập vào AWS SSO User lần đầu tiên, bạn sẽ phải thay đổi mật khẩu đầu tiên như bạn đã thiết lập ở phần trước. Nhập mật khẩu mới theo hướng dẫn và chọn <strong>Set new password</strong>.</p>
+<p>Trong <strong>User Portal</strong>, nhập <strong>tên người dùng</strong> và <strong>mật khẩu</strong> bạn đã lưu để đăng nhập.</p>
+</li>
+<li>
+<p>Nếu đây là lần đầu bạn đăng nhập vào <strong>AWS SSO User</strong>, bạn sẽ cần thay đổi mật khẩu theo yêu cầu. Nhập <strong>mật khẩu mới</strong> theo hướng dẫn và chọn <strong>Set new password</strong>.</p>
+<p><img alt="Set New Password" src="/images/9/0002.png?featherlight=false&width=90pc"></p>
+</li>
+<li>
+<p>Sau khi đăng nhập thành công, bạn sẽ thấy danh sách các tài khoản <strong>AWS</strong> và quyền truy cập tương ứng mà người dùng của bạn có thể sử dụng. Ví dụ, hình dưới đây thể hiện tài khoản và quyền truy cập mà <strong>Security-User</strong> có thể sử dụng. Nếu bạn đăng nhập bằng <strong>Super-User</strong>, bạn sẽ có quyền truy cập <strong>AdministratorAccess</strong> cho mỗi tài khoản.</p>
+<p><img alt="AWS Account Access" src="/images/9/0003.png?featherlight=false&width=90pc"></p>
+<p><img alt="AWS Account Access" src="/images/9/0004.png?featherlight=false&width=90pc"></p>
+</li>
+<li>
+<p>Chọn <strong>Management console</strong> để truy cập bảng điều khiển <strong>AWS Management Console</strong> của tài khoản <strong>Security</strong>.</p>
+<p><img alt="Management Console Access" src="/images/9/0004.png?featherlight=false&width=90pc"></p>
+</li>
+<li>
+<p><strong>Chúc mừng</strong>, bạn đã truy cập thành công vào tài khoản AWS.</p>
+<p><img alt="Successful Login" src="/images/9/0005.png?featherlight=false&width=90pc"></p>
+</li>
+<li>
+<p>Đối với truy cập <strong>CLI</strong>, bạn có thể chọn <strong>Command line or programmatic access</strong>. Thao tác này sẽ hiển thị các hướng dẫn cấu hình <strong>SSO</strong>.</p>
+<p><img alt="Command Line Access" src="/images/9/0006.png?featherlight=false&width=90pc"></p>
+</li>
+<li>
+<p>Mở cửa sổ <strong>dòng lệnh (CMD)</strong> hoặc <strong>PowerShell</strong> theo hệ điều hành mà bạn đang sử dụng để cấu hình các tham số.</p>
+<p><img alt="Command Line Configuration" src="/images/9/0007.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
-<p><img src="/images/9/0002.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="4">
-<li>Bạn sẽ được chọn tài khoản AWS và quyền truy cập đã được thiết lập ở phần trước. Ví dụ: hình dưới thể hiện tài khoản và quyền truy cập mà Security-User có thể sử dụng. Nếu bạn đăng nhập vào Super-User, bạn sẽ có quyền truy cập <strong>AdministratorAccess</strong> cho mỗi tài khoản.</li>
+<h4 id="dọn-dẹp-tài-nguyên-clean-up">Dọn dẹp tài nguyên (Clean Up)</h4>
+<p>Sau khi hoàn thành kiểm tra, nếu bạn không cần các tài khoản hoặc quyền truy cập đã tạo, bạn có thể thực hiện các bước sau để dọn dẹp tài nguyên:</p>
+<ol>
+<li><strong>Xóa người dùng AWS SSO</strong> không còn cần thiết trong <strong>AWS SSO Console</strong>.</li>
+<li><strong>Gỡ bỏ quyền truy cập</strong> trong từng tài khoản AWS nếu không còn sử dụng.</li>
+<li><strong>Kiểm tra và xóa các tài nguyên AWS</strong> khác (nếu có) để đảm bảo không có tài nguyên dư thừa.</li>
 </ol>
-<p><img src="/images/9/0003.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<p><img src="/images/9/0004.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="5">
-<li>Chọn <strong>Management console</strong> để truy cập bảng điều khiển AWS của tài khoản <strong>Security</strong>.</li>
-</ol>
-<p><img src="/images/9/0004.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="6">
-<li>Chúc mừng, bạn đã truy cập thành công vào tài khoản.</li>
-</ol>
-<p><img src="/images/9/0005.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="7">
-<li>Đối với <strong>CLI</strong>, bạn có thể chọn <strong>Command line or programmatic access</strong>. Hiển thị hướng dẫn cấu hình SSO.</li>
-</ol>
-<p><img src="/images/9/0006.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="8">
-<li>Mở cửa sổ dòng lệnh (CMD) hoặc PowerShell theo hệ điều hành để cấu hình.</li>
-</ol>
-<p><img src="/images/9/0007.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<h4 id="kết-luận">Kết luận</h4>
+<p>Trong phần này, bạn đã học cách truy cập vào các tài khoản trong <strong>AWS Organizations</strong> thông qua <strong>AWS SSO User</strong> và kiểm tra quyền truy cập thành công. Nếu bạn cần thêm quyền hạn hoặc gặp lỗi truy cập, hãy xem lại các <strong>policy IAM</strong> và thiết lập <strong>AWS SSO</strong> trong tài liệu AWS chính thức.</p>
 
 
 
@@ -906,19 +915,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1704871045"></script>
-    <script src="/js/jquery.sticky.js?1704871045"></script>
-    <script src="/js/featherlight.min.js?1704871045"></script>
-    <script src="/js/highlight.pack.js?1704871045"></script>
+    <script src="/js/clipboard.min.js?1727695057"></script>
+    <script src="/js/perfect-scrollbar.min.js?1727695057"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1727695057"></script>
+    <script src="/js/jquery.sticky.js?1727695057"></script>
+    <script src="/js/featherlight.min.js?1727695057"></script>
+    <script src="/js/highlight.pack.js?1727695057"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1704871045"></script>
-    <script src="/js/learn.js?1704871045"></script>
-    <script src="/js/hugo-learn.js?1704871045"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1727695057"></script>
+    <script src="/js/learn.js?1727695057"></script>
+    <script src="/js/hugo-learn.js?1727695057"></script>
 
-    <link href="/mermaid/mermaid.css?1704871045" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1704871045"></script>
+    <link href="/mermaid/mermaid.css?1727695057" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1727695057"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

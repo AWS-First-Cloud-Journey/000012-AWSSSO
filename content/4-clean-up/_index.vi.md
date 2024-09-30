@@ -6,37 +6,65 @@ chapter = false
 pre = "<b>4. </b>"
 +++
 
-#### Dọn dẹp tài nguyên
+#### Dọn dẹp tài nguyên sau bài Lab
 
-1. Truy cập vào **AWS SSO Management Console**
-2. **Xóa Groups**:
-   - Chọn **Groups**, tick vào các group liên quan tới bài lab này, và chọn **Delete groups**.
-   - Tại prompt **Delete groups**, gõ `DELETE` vào ô, và chọn **Delete groups**
-3. **Xóa Users**: 
-   - Chọn **Users**, tick vào các user liên quan tới bài lab này, và chọn **Delete users**.
-   - Tại prompt **Delete users**, gõ `DELETE` vào ô, và chọn **Delete users**
-4. **Xóa quyền truy cập** tại các tài khoản AWS:
-   - Chọn **AWS Accounts** và nhấp vào tên của một tài khoản AWS.
-   - Remove access với tất cả các quyền truy cập của tài khoản.
-   - Lặp lại với các tài khoản đang được gán quyền truy cập cần xóa.
-   ![RemoveAccess](../../../images/3/3_RemoveAccess.png?width=90pc)
-5. **Xóa các Permission Sets**
-   - Chọn **AWS accounts**, chọn tab **Permission sets**, và chọn các permission sets liên quan
-   - Nhấn **Delete**. Tại prompt, gõ tên của permission set vào ô trống và nhấn **Delete**.
+#### Mục đích
+Hướng dẫn này giúp bạn dọn dẹp các tài nguyên được tạo trong quá trình thực hiện bài lab để tránh việc phát sinh chi phí không mong muốn và đảm bảo môi trường AWS được duy trì sạch sẽ.
+
+#### Các bước thực hiện
+
+#### 1. Truy cập vào **AWS SSO Management Console**
+- Truy cập vào bảng điều khiển AWS Single Sign-On (SSO) bằng cách truy cập vào đường dẫn sau: [AWS SSO Console](https://console.aws.amazon.com/singlesignon).
+
+#### 2. Xóa các **Groups** đã tạo
+- Truy cập vào mục **Groups**.
+- Chọn các group liên quan tới bài lab bằng cách tick vào checkbox tương ứng.
+- Nhấn vào **Delete groups** để bắt đầu quá trình xóa.
+- Trong hộp thoại **Delete groups**, nhập `DELETE` vào ô xác nhận và nhấn **Delete groups** để hoàn tất.
+
+#### 3. Xóa các **Users** liên quan
+- Truy cập vào mục **Users**.
+- Chọn các user liên quan tới bài lab bằng cách tick vào checkbox tương ứng.
+- Nhấn vào **Delete users** để bắt đầu quá trình xóa.
+- Trong hộp thoại **Delete users**, nhập `DELETE` vào ô xác nhận và nhấn **Delete users** để hoàn tất.
+
+#### 4. Gỡ bỏ quyền truy cập từ các tài khoản AWS
+- Chuyển đến mục **AWS Accounts**.
+- Chọn tên của một tài khoản AWS mà bạn muốn xóa quyền.
+- Tại màn hình quản lý tài khoản, nhấp vào **Remove access** để xóa bỏ tất cả các quyền truy cập của tài khoản.
+- Lặp lại quy trình này cho các tài khoản khác mà bạn muốn gỡ quyền truy cập.
+
+![RemoveAccess](../../../images/3/3_RemoveAccess.png?width=90pc)
+
+#### 5. Xóa các **Permission Sets**
+- Chuyển đến mục **AWS Accounts** và chọn tab **Permission sets**.
+- Chọn các permission sets liên quan đến bài lab này.
+- Nhấn **Delete**.
+- Trong hộp thoại xác nhận, nhập tên của **Permission Set** vào ô trống và nhấn **Delete** để hoàn tất.
 
 ::: note
-**Lưu ý**: Hãy sao lưu các dữ liệu trong các tài khoản này nếu bạn cần chúng trong tương lai vì xóa tài khoản đồng nghĩa với việc mọi tài nguyên và dữ liệu thuộc tài khoản ấy sẽ bị xóa vĩnh viễn
+**Lưu ý**: Hãy sao lưu dữ liệu nếu bạn cần sử dụng chúng trong tương lai. Việc xóa tài khoản sẽ khiến tất cả tài nguyên và dữ liệu thuộc tài khoản đó bị xóa vĩnh viễn và không thể khôi phục.
 :::
 
-6. **Xóa các tài khoản AWS**. Tuy nhiên, Bạn có thể giữ các tài khoản này cho các phần lab tiếp theo.
-   - Để xóa một tài khoản AWS, bạn cần đăng nhập vào tài khoản bằng root user
-       - Truy cập vào trang đăng nhập vào bảng điều khiển AWS tại [https://console.aws.amazon.com/](https://console.aws.amazon.com/)
-       - Khi trang **Sign in** hiện lên, chọn đăng nhập bằng **Root user** và nhập email của tài khoản bạn muốn xóa. (Ví dụ: example+lab12Logging@amazon.com.vn)
-       - Vượt qua Security Check và chọn **Forgot Password?**
-       ![ForgotPassword](../../../images/3/3_ForgotPassword.png?width=90pc)
-       - AWS sẽ gửi email xác nhận quên mật khẩu vào email được đăng ký (ví dụ: nếu email của bạn là example+lab12Logging@amazon.com.vn, thì email của AWS sẽ được gửi về example@amazon.com.vn). Bạn hãy đổi mật khẩu mới qua email đó và đăng nhập vào tài khoản AWS.
-   - Sau khi đăng nhập bằng root user, chọn vào tên tài khoản ở góc trên bên phải, chọn **My Account**, cuộn xuống cuối trang để thấy mục **Close Account**. Tick hết vào các ô và chọn **Close Account**
+#### 6. Xóa các **Tài khoản AWS**
+- Bạn có thể giữ các tài khoản này để sử dụng cho các bài lab tiếp theo. Nếu không, làm theo các bước sau để xóa tài khoản:
+  - Đăng nhập vào tài khoản bằng **Root User**:
+    - Truy cập trang đăng nhập bảng điều khiển AWS tại [https://console.aws.amazon.com/](https://console.aws.amazon.com/).
+    - Chọn đăng nhập bằng **Root user** và nhập email của tài khoản bạn muốn xóa (Ví dụ: `example+lab12Logging@amazon.com.vn`).
+    - Vượt qua Security Check và chọn **Forgot Password?**.
+    
+    ![ForgotPassword](../../../images/3/3_ForgotPassword.png?width=90pc)
+
+  - AWS sẽ gửi email xác nhận việc đặt lại mật khẩu về địa chỉ email đăng ký.
+  - Đặt mật khẩu mới và đăng nhập lại bằng root user.
+  
+- Sau khi đăng nhập, chọn **My Account** từ menu ở góc trên bên phải.
+- Cuộn xuống cuối trang và nhấp vào **Close Account**.
+- Tick chọn các ô xác nhận và nhấn **Close Account** để hoàn tất việc xóa tài khoản.
 
 ::: info
-**Lưu ý**: Khi bạn tạo mới một tài khoản AWS trong AWS Organization, AWS Organization đã tự động tạo một mật khẩu ngẫu nhiên cho root user của tài khoản ấy, và bạn không thể tiếp cận được với chúng. Do đó, bạn sẽ truy cập vào root user của tài khoản ấy bằng cách lấy lại mật khẩu đã quên (*forgot password*)
+**Lưu ý**: Khi bạn tạo mới một tài khoản AWS trong **AWS Organization**, một mật khẩu ngẫu nhiên sẽ được tự động tạo cho root user của tài khoản này. Nếu bạn không có quyền truy cập root user, bạn cần thực hiện quy trình **Forgot Password** để thiết lập lại mật khẩu.
 :::
+
+#### Kết luận
+Hướng dẫn này giúp bạn dọn dẹp tất cả tài nguyên, nhóm, người dùng và tài khoản AWS liên quan đến bài lab. Việc thực hiện quy trình dọn dẹp thường xuyên là rất quan trọng để đảm bảo an ninh và tối ưu chi phí trong môi trường AWS của bạn.

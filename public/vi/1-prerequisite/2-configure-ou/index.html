@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Thiết lập Organization Unit :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1704871045" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1704871045" rel="stylesheet">
-    <link href="/css/hybrid.css?1704871045" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1704871045" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1704871045" rel="stylesheet">
-    <link href="/css/auto-complete.css?1704871045" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1704871045" rel="stylesheet">
-    <link href="/css/theme.css?1704871045" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1704871045" rel="stylesheet">
+    <link href="/css/nucleus.css?1727695056" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1727695056" rel="stylesheet">
+    <link href="/css/hybrid.css?1727695056" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1727695056" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1727695056" rel="stylesheet">
+    <link href="/css/auto-complete.css?1727695056" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1727695056" rel="stylesheet">
+    <link href="/css/theme.css?1727695056" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1727695056" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1704871045" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1727695056" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1704871045"></script>
+    <script src="/js/jquery-3.3.1.min.js?1727695056"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1704871045"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1704871045"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1727695057"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1727695057"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1704871045"></script>
+<script type="text/javascript" src="/js/search.js?1727695057"></script>
 
     
   </div>
@@ -142,7 +142,7 @@
   
     
     <li data-nav-id="/vi/1-prerequisite/2-configure-ou/" title="Thiết lập Organization Unit" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -382,13 +382,13 @@
  
   
     
-    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra " class="dd-item 
+    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra AWS SSO User" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-test-permission/">
-          <b>3. </b>Kiểm tra 
+          <b>3. </b>Kiểm tra AWS SSO User
           
             <i class="fas fa-check read-icon"></i>
           
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>10-01-2023</font></i>
+        <i><font color=orange>30-09-2024</font></i>
     </left>
     <left>
         <br>
@@ -567,7 +567,7 @@
             
           
           
-            <a href='/vi/'>AWS Single Sign-On</a> > <a href='/vi/1-prerequisite/'>Các bước chuẩn bị</a> > Thiết lập Organization Unit
+            <a href='/vi/'>AWS Single Sign-On: Quản lý truy cập trong AWS Organization</a> > <a href='/vi/1-prerequisite/'>Các bước chuẩn bị</a> > Thiết lập Organization Unit
           
         
           
@@ -612,61 +612,70 @@
 
 
 
-	<p>Ở bước này, bạn sẽ thực hành thiết lập các Organization Unit (<strong>Security</strong>, <strong>Shared Services</strong>, <strong>Logging</strong> và <strong>Application</strong>) tương ứng với các tài khoản AWS được tạo ở phần trước. Các OU sẽ nằm bên trong Root - nơi chứa tất cả OU và tài khoản AWS.</p>
-<p><strong>Nội dung</strong></p>
+	<h4 id="thiết-lập-organization-unit-trong-aws-organizations">Thiết lập Organization Unit trong AWS Organizations</h4>
+<p>Ở bước này, bạn sẽ thực hành thiết lập các Organization Unit (<strong>Security</strong>, <strong>Shared Services</strong>, <strong>Logging</strong>, và <strong>Application</strong>) tương ứng với các tài khoản AWS được tạo ở phần trước. Các OU sẽ nằm bên trong <strong>Root</strong> - nơi chứa tất cả OU và tài khoản AWS.</p>
+<h4 id="nội-dung">Nội dung</h4>
 <ul>
-<li><a href="#t%E1%BA%A1o-organization-unit">Tạo Organization Unit</a></li>
-<li><a href="#di-chuy%E1%BB%83n-c%C3%A1c-t%C3%A0i-kho%E1%BA%A3n-aws-v%C3%A0o-organization-unit-t%C6%B0%C6%A1ng-%E1%BB%A9ng">Di chuyển các tài khoản AWS vào Organization Unit tương ứng</a></li>
+<li><a href="/vi/1-prerequisite/2-configure-ou/#thiết-lập-organization-unit-trong-aws-organizations">Thiết lập Organization Unit trong AWS Organizations</a></li>
+<li><a href="/vi/1-prerequisite/2-configure-ou/#nội-dung">Nội dung</a></li>
+<li><a href="/vi/1-prerequisite/2-configure-ou/#tạo-organization-unit">Tạo Organization Unit</a></li>
+<li><a href="/vi/1-prerequisite/2-configure-ou/#di-chuyển-các-tài-khoản-aws-vào-organization-unit-tương-ứng">Di chuyển các tài khoản AWS vào Organization Unit tương ứng</a></li>
+<li><a href="/vi/1-prerequisite/2-configure-ou/#kết-luận">Kết luận</a></li>
 </ul>
 <h4 id="tạo-organization-unit">Tạo Organization Unit</h4>
 <ol>
 <li>
-<p>Truy cập vào <strong>AWS Management Comsole</strong> và tìm dịch vụ <strong>AWS Organizations</strong> trong thanh tìm kiếm.</p>
+<p>Đăng nhập vào <strong>AWS Management Console</strong> và điều hướng đến dịch vụ <strong>AWS Organizations</strong> bằng cách nhập tên dịch vụ vào thanh tìm kiếm.</p>
 </li>
 <li>
-<p>Tick vào <strong>Root</strong>, chọn <strong>Actions</strong>, và chọn <strong>Create new</strong> dưới <strong>Organizational Unit</strong></p>
+<p>Tại cây phân cấp của <strong>AWS Organizations</strong>, chọn <strong>Root</strong>, nhấp vào <strong>Actions</strong>, và chọn <strong>Create new Organizational Unit</strong>.</p>
+<p><img alt="AWS Account" src="/images/4/0003.png?featherlight=false&width=90pc"></p>
 </li>
-</ol>
-<p><img src="/images/4/0003.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="3">
-<li>Tại trang <strong>Create organizational unit in Root</strong>:
+<li>
+<p>Trong trang <strong>Create Organizational Unit in Root</strong>:</p>
 <ul>
-<li>Dưới mục <strong>Details</strong>, nhập tên của OU (Ví dụ: Logging Unit)</li>
+<li>Dưới mục <strong>Details</strong>, nhập tên của Organizational Unit (ví dụ: <strong>Logging Unit</strong>).</li>
 </ul>
+<p><img alt="AWS Account" src="/images/4/0004.png?featherlight=false&width=90pc"></p>
+</li>
+<li>
+<p>Kiểm tra thông tin và chọn <strong>Create organizational unit</strong>.</p>
+<p><img alt="AWS Account" src="/images/4/0005.png?featherlight=false&width=90pc"></p>
+</li>
+<li>
+<p>Lặp lại các bước trên với những Organizational Unit còn lại theo danh sách sau:</p>
+<ul>
+<li><strong>Security Unit</strong></li>
+<li><strong>Shared Services Unit</strong></li>
+<li><strong>Application Unit</strong></li>
+</ul>
+<p><img alt="AWS Account" src="/images/4/0006.png?featherlight=false&width=90pc"></p>
 </li>
 </ol>
-<p><img src="/images/4/0004.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="4">
-<li>Kiểm tra thông tin và chọn <strong>Create organizational unit</strong></li>
-</ol>
-<p><img src="/images/4/0005.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="5">
-<li>Lặp lại với các Organization Unit còn lại.</li>
-</ol>
-<p><img src="/images/4/0006.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
 <h4 id="di-chuyển-các-tài-khoản-aws-vào-organization-unit-tương-ứng">Di chuyển các tài khoản AWS vào Organization Unit tương ứng</h4>
 <ol>
 <li>
-<p>Truy cập vào <strong>AWS Management Comsole</strong> và tìm dịch vụ <strong>AWS Organizations</strong> trong thanh tìm kiếm.</p>
+<p>Đăng nhập vào <strong>AWS Management Console</strong> và điều hướng đến dịch vụ <strong>AWS Organizations</strong> bằng cách nhập tên dịch vụ vào thanh tìm kiếm.</p>
 </li>
 <li>
-<p>Tick vào tài khoản AWS mà bạn muốn di chuyển (Ví dụ: <strong>Logging</strong>), chọn <strong>Actions</strong>, và chọn <strong>Move</strong> dưới <strong>AWS Account</strong></p>
+<p>Tại cây phân cấp của <strong>AWS Organizations</strong>, tick vào tài khoản AWS mà bạn muốn di chuyển (ví dụ: <strong>Logging Account</strong>), chọn <strong>Actions</strong>, và chọn <strong>Move</strong> dưới mục <strong>AWS Account</strong>.</p>
+<p><img alt="AWS Account" src="/images/4/0007.png?featherlight=false&width=90pc"></p>
 </li>
-</ol>
-<p><img src="/images/4/0007.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="3">
-<li>Tick vào OU phù hợp (Ví dụ: <strong>Logging Unit</strong>) và chọn <strong>Move AWS account</strong></li>
-</ol>
-<p><img src="/images/4/0008.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
-<ol start="4">
-<li>Lặp lại với các tài khoản AWS và Organization Unit còn lại:
+<li>
+<p>Chọn OU tương ứng với tài khoản (ví dụ: <strong>Logging Unit</strong>) và nhấp vào <strong>Move AWS account</strong>.</p>
+<p><img alt="AWS Account" src="/images/4/0008.png?featherlight=false&width=90pc"></p>
+</li>
+<li>
+<p>Lặp lại với các tài khoản AWS và Organization Unit còn lại:</p>
 <ul>
-<li>Security Account với Security Unit</li>
-<li>Shared Services với Shared Services Unit</li>
-<li>Application Account với Application Unit</li>
+<li><strong>Security Account</strong> với <strong>Security Unit</strong></li>
+<li><strong>Shared Services Account</strong> với <strong>Shared Services Unit</strong></li>
+<li><strong>Application Account</strong> với <strong>Application Unit</strong></li>
 </ul>
 </li>
 </ol>
+<h4 id="kết-luận">Kết luận</h4>
+<p>Việc phân loại tài khoản AWS vào các Organization Unit giúp tối ưu hóa việc quản lý tài nguyên và kiểm soát chính sách (policy control). Việc này cũng hỗ trợ trong việc áp dụng các quy tắc bảo mật và quy trình kế toán một cách hiệu quả hơn trên toàn bộ <strong>AWS Organization</strong> của bạn.</p>
 
 
 
@@ -928,19 +937,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1704871045"></script>
-    <script src="/js/jquery.sticky.js?1704871045"></script>
-    <script src="/js/featherlight.min.js?1704871045"></script>
-    <script src="/js/highlight.pack.js?1704871045"></script>
+    <script src="/js/clipboard.min.js?1727695057"></script>
+    <script src="/js/perfect-scrollbar.min.js?1727695057"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1727695057"></script>
+    <script src="/js/jquery.sticky.js?1727695057"></script>
+    <script src="/js/featherlight.min.js?1727695057"></script>
+    <script src="/js/highlight.pack.js?1727695057"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1704871045"></script>
-    <script src="/js/learn.js?1704871045"></script>
-    <script src="/js/hugo-learn.js?1704871045"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1727695057"></script>
+    <script src="/js/learn.js?1727695057"></script>
+    <script src="/js/hugo-learn.js?1727695057"></script>
 
-    <link href="/mermaid/mermaid.css?1704871045" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1704871045"></script>
+    <link href="/mermaid/mermaid.css?1727695057" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1727695057"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Gán quyền :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1704871045" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1704871045" rel="stylesheet">
-    <link href="/css/hybrid.css?1704871045" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1704871045" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1704871045" rel="stylesheet">
-    <link href="/css/auto-complete.css?1704871045" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1704871045" rel="stylesheet">
-    <link href="/css/theme.css?1704871045" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1704871045" rel="stylesheet">
+    <link href="/css/nucleus.css?1727695057" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1727695057" rel="stylesheet">
+    <link href="/css/hybrid.css?1727695057" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1727695057" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1727695057" rel="stylesheet">
+    <link href="/css/auto-complete.css?1727695057" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1727695057" rel="stylesheet">
+    <link href="/css/theme.css?1727695057" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1727695057" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1704871045" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1727695057" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1704871045"></script>
+    <script src="/js/jquery-3.3.1.min.js?1727695057"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1704871045"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1704871045"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1727695057"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1727695057"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1704871045"></script>
+<script type="text/javascript" src="/js/search.js?1727695057"></script>
 
     
   </div>
@@ -348,7 +348,7 @@
   
     
     <li data-nav-id="/vi/2-setup-aws-sso/2.4-add-permission/" title="Gán quyền" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -382,13 +382,13 @@
  
   
     
-    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra " class="dd-item 
+    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra AWS SSO User" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-test-permission/">
-          <b>3. </b>Kiểm tra 
+          <b>3. </b>Kiểm tra AWS SSO User
           
             <i class="fas fa-check read-icon"></i>
           
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>10-01-2023</font></i>
+        <i><font color=orange>30-09-2024</font></i>
     </left>
     <left>
         <br>
@@ -567,7 +567,7 @@
             
           
           
-            <a href='/vi/'>AWS Single Sign-On</a> > <a href='/vi/2-setup-aws-sso/'>Thiết lập AWS SSO</a> > Gán quyền
+            <a href='/vi/'>AWS Single Sign-On: Quản lý truy cập trong AWS Organization</a> > <a href='/vi/2-setup-aws-sso/'>Thiết lập AWS SSO</a> > Gán quyền
           
         
           
@@ -613,67 +613,118 @@
 
 
 	<h4 id="gán-quyền-truy-cập-cho-người-dùng-và-nhóm">Gán Quyền Truy Cập cho Người Dùng và Nhóm</h4>
-<p>Để thiết lập các tài khoản AWS cho các nhóm SSO với các chức năng công việc như sau:</p>
+<p>Hướng dẫn này sẽ giúp bạn thiết lập quyền truy cập AWS cho người dùng và nhóm bằng cách sử dụng AWS Single Sign-On (SSO). Hãy làm theo các bước chi tiết dưới đây để đảm bảo rằng người dùng của bạn có các quyền truy cập phù hợp theo chức năng công việc.</p>
+<h4 id="bảng-phân-quyền-truy-cập">Bảng phân quyền truy cập</h4>
 <table>
 <thead>
 <tr>
-<th style="text-align:center">Tài Khoản</th>
-<th style="text-align:center">Nhóm</th>
-<th style="text-align:center">Chính Sách Công Việc</th>
+<th><strong>Tài Khoản</strong></th>
+<th><strong>Nhóm</strong></th>
+<th><strong>Chính Sách Công Việc</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">Management Account, shared-services, logging, security</td>
-<td style="text-align:center">AWS-Shared-Services-Admin; AWS-Security-Admin; AWS-Logging-Admin</td>
-<td style="text-align:center">AdministratorAccess</td>
+<td><code>Management Account</code>, <code>shared-services</code>, <code>logging</code>, <code>security</code></td>
+<td>AWS-Shared-Services-Admin; AWS-Security-Admin; AWS-Logging-Admin</td>
+<td><code>AdministratorAccess</code></td>
 </tr>
 <tr>
-<td style="text-align:center">Management Account, shared-services, logging, security</td>
-<td style="text-align:center">AWS-Shared-Services-Read-Only; AWS-Security-Read-Only; AWS-Logging-Read-Only</td>
-<td style="text-align:center">SecurityAudit</td>
+<td><code>Management Account</code>, <code>shared-services</code>, <code>logging</code>, <code>security</code></td>
+<td>AWS-Shared-Services-Read-Only; AWS-Security-Read-Only; AWS-Logging-Read-Only</td>
+<td><code>SecurityAudit</code></td>
 </tr>
 </tbody>
 </table>
-<ol>
+<h4 id="hướng-dẫn-chi-tiết">Hướng dẫn chi tiết</h4>
+<h4 id="1-mở-aws-sso-console">1. Mở AWS SSO Console</h4>
+<ul>
 <li>
-<p>Mở AWS SSO Console. Chọn <strong>AWS accounts</strong> ở thanh bên trái.</p>
-<p>Trong tab <strong>AWS organization</strong>, trong danh sách tài khoản AWS, chọn một hoặc nhiều tài khoản mà bạn muốn chỉ định quyền truy cập. (Ví dụ: Management Account, shared-services, logging, và security). Sau đó, chọn <strong>Assign users or groups</strong></p>
-<p><img src="/images/8/0001.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p>Điều hướng đến AWS SSO Console.</p>
 </li>
 <li>
-<p>Chọn các nhóm và chọn <strong>Next</strong></p>
-<p><img src="/images/8/00011.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p>Ở thanh điều hướng bên trái, chọn <strong>AWS accounts</strong>.</p>
+<p><img alt="AWS Account" src="/images/8/0001.png?featherlight=false&width=90pc"></p>
 </li>
 <li>
-<p>Chọn <strong>Permission set</strong></p>
-<p><img src="/images/8/00012.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p>Trong tab <strong>AWS organization</strong>, duyệt danh sách các tài khoản AWS hiện có.</p>
 </li>
 <li>
-<p>Chọn <strong>Submit</strong></p>
-<p><img src="/images/8/00013.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p>Chọn một hoặc nhiều tài khoản mà bạn muốn gán quyền truy cập. Ví dụ: <code>Management Account</code>, <code>shared-services</code>, <code>logging</code>, và <code>security</code>.</p>
 </li>
 <li>
-<p>Tương tự, đối với tài khoản <strong>Security Account</strong></p>
-<p><img src="/images/8/0006.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p>Nhấn <strong>Assign users or groups</strong> để tiến hành gán quyền cho các nhóm hoặc người dùng.</p>
+</li>
+</ul>
+<h4 id="2-chọn-nhóm-người-dùng">2. Chọn nhóm người dùng</h4>
+<ul>
+<li>
+<p>Trong danh sách các nhóm, chọn nhóm bạn muốn gán quyền (ví dụ: <code>AWS-Shared-Services-Admin</code>, <code>AWS-Security-Admin</code>, hoặc <code>AWS-Logging-Admin</code>).</p>
 </li>
 <li>
-<p>Chọn các nhóm và chọn <strong>Next</strong></p>
-<p><img src="/images/8/0007.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p>Nhấn <strong>Next</strong>.</p>
+<p><img alt="AWS Account" src="/images/8/00011.png?featherlight=false&width=90pc"></p>
+</li>
+</ul>
+<h4 id="3-chọn-bộ-quyền-permission-set">3. Chọn bộ quyền (Permission Set)</h4>
+<ul>
+<li>
+<p>Chọn <strong>Permission set</strong> tương ứng với nhóm người dùng.</p>
 </li>
 <li>
-<p>Chọn <strong>Permission set</strong> và chọn <strong>Next</strong></p>
-<p><img src="/images/8/0008.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p>Ví dụ: <code>AdministratorAccess</code> cho nhóm <strong>AWS-Shared-Services-Admin</strong> hoặc <code>SecurityAudit</code> cho nhóm <strong>AWS-Security-Read-Only</strong>.</p>
+<p><img alt="AWS Account" src="/images/8/00012.png?featherlight=false&width=90pc"></p>
 </li>
+</ul>
+<h4 id="4-hoàn-tất-gán-quyền">4. Hoàn tất gán quyền</h4>
+<ul>
 <li>
-<p>Chọn <strong>Submit</strong></p>
-<p><img src="/images/8/0009.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p>Nhấn <strong>Submit</strong> để xác nhận gán quyền cho nhóm đã chọn.</p>
+<p><img alt="AWS Account" src="/images/8/00013.png?featherlight=false&width=90pc"></p>
 </li>
+</ul>
+<h4 id="5-lặp-lại-quy-trình-cho-các-tài-khoản-khác">5. Lặp lại quy trình cho các tài khoản khác</h4>
+<ul>
 <li>
-<p>Chúc mừng, bạn đã thiết lập AWS SSO thành công.</p>
-<p><img src="/images/8/00010.png?featherlight=false&amp;width=90pc" alt="AWS Account"></p>
+<p>Đối với các tài khoản khác như <strong>Security Account</strong>, lặp lại quy trình từ bước 1 đến bước 4.</p>
+<p><img alt="AWS Account" src="/images/8/0006.png?featherlight=false&width=90pc"></p>
 </li>
-</ol>
+</ul>
+<h4 id="6-chọn-nhóm-người-dùng">6. Chọn nhóm người dùng</h4>
+<ul>
+<li>
+<p>Chọn nhóm bạn muốn gán quyền cho <strong>Security Account</strong> và nhấn <strong>Next</strong>.</p>
+<p><img alt="AWS Account" src="/images/8/0007.png?featherlight=false&width=90pc"></p>
+</li>
+</ul>
+<h4 id="7-chọn-bộ-quyền-permission-set-cho-tài-khoản-security">7. Chọn bộ quyền (Permission Set) cho tài khoản Security</h4>
+<ul>
+<li>
+<p>Chọn <strong>Permission set</strong> thích hợp và nhấn <strong>Next</strong> để tiếp tục.</p>
+<p><img alt="AWS Account" src="/images/8/0008.png?featherlight=false&width=90pc"></p>
+</li>
+</ul>
+<h4 id="8-hoàn-tất-gán-quyền">8. Hoàn tất gán quyền</h4>
+<ul>
+<li>
+<p>Nhấn <strong>Submit</strong> để xác nhận gán quyền cho nhóm đã chọn.</p>
+<p><img alt="AWS Account" src="/images/8/0009.png?featherlight=false&width=90pc"></p>
+</li>
+</ul>
+<h4 id="9-kết-thúc">9. Kết thúc</h4>
+<ul>
+<li>
+<p>Sau khi hoàn thành, bạn sẽ thấy thông báo xác nhận việc gán quyền thành công.</p>
+<p><img alt="AWS Account" src="/images/8/00010.png?featherlight=false&width=90pc"></p>
+</li>
+</ul>
+<h4 id="lời-kết">Lời kết</h4>
+<p>Chúc mừng, bạn đã thiết lập quyền truy cập AWS SSO thành công cho các nhóm và người dùng! Hãy đảm bảo rằng các chính sách truy cập được kiểm tra định kỳ để phù hợp với các thay đổi trong tổ chức và yêu cầu bảo mật.</p>
+<p><strong>Tài liệu tham khảo:</strong></p>
+<ul>
+<li><a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html">AWS Single Sign-On Documentation</a></li>
+<li><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html">AWS IAM Best Practices</a></li>
+</ul>
 
 
 
@@ -928,7 +979,7 @@
 			<a class="nav nav-prev" href="/vi/2-setup-aws-sso/2.3-create-permissionset/" title="Tạo Permission Set"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/3-test-permission/" title="Kiểm tra " style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/3-test-permission/" title="Kiểm tra AWS SSO User" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -938,19 +989,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1704871045"></script>
-    <script src="/js/jquery.sticky.js?1704871045"></script>
-    <script src="/js/featherlight.min.js?1704871045"></script>
-    <script src="/js/highlight.pack.js?1704871045"></script>
+    <script src="/js/clipboard.min.js?1727695057"></script>
+    <script src="/js/perfect-scrollbar.min.js?1727695057"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1727695057"></script>
+    <script src="/js/jquery.sticky.js?1727695057"></script>
+    <script src="/js/featherlight.min.js?1727695057"></script>
+    <script src="/js/highlight.pack.js?1727695057"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1704871045"></script>
-    <script src="/js/learn.js?1704871045"></script>
-    <script src="/js/hugo-learn.js?1704871045"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1727695057"></script>
+    <script src="/js/learn.js?1727695057"></script>
+    <script src="/js/hugo-learn.js?1727695057"></script>
 
-    <link href="/mermaid/mermaid.css?1704871045" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1704871045"></script>
+    <link href="/mermaid/mermaid.css?1727695057" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1727695057"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

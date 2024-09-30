@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.99.1" />
+    <meta name="generator" content="Hugo 0.133.0">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Dọn dẹp tài nguyên :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1704871045" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1704871045" rel="stylesheet">
-    <link href="/css/hybrid.css?1704871045" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1704871045" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1704871045" rel="stylesheet">
-    <link href="/css/auto-complete.css?1704871045" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1704871045" rel="stylesheet">
-    <link href="/css/theme.css?1704871045" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1704871045" rel="stylesheet">
+    <link href="/css/nucleus.css?1727695057" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1727695057" rel="stylesheet">
+    <link href="/css/hybrid.css?1727695057" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1727695057" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1727695057" rel="stylesheet">
+    <link href="/css/auto-complete.css?1727695057" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1727695057" rel="stylesheet">
+    <link href="/css/theme.css?1727695057" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1727695057" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1704871045" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1727695057" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1704871045"></script>
+    <script src="/js/jquery-3.3.1.min.js?1727695057"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1704871045"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1704871045"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1727695057"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1727695057"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/vi";
+        var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1704871045"></script>
+<script type="text/javascript" src="/js/search.js?1727695057"></script>
 
     
   </div>
@@ -382,13 +382,13 @@
  
   
     
-    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra " class="dd-item 
+    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra AWS SSO User" class="dd-item 
         
         
         
         ">
       <a href="/vi/3-test-permission/">
-          <b>3. </b>Kiểm tra 
+          <b>3. </b>Kiểm tra AWS SSO User
           
             <i class="fas fa-check read-icon"></i>
           
@@ -409,7 +409,7 @@
   
     
     <li data-nav-id="/vi/4-clean-up/" title="Dọn dẹp tài nguyên" class="dd-item 
-        parent
+        
         active
         
         ">
@@ -517,7 +517,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>10-01-2023</font></i>
+        <i><font color=orange>30-09-2024</font></i>
     </left>
     <left>
         <br>
@@ -563,7 +563,7 @@
             
           
           
-            <a href='/vi/'>AWS Single Sign-On</a> > Dọn dẹp tài nguyên
+            <a href='/vi/'>AWS Single Sign-On: Quản lý truy cập trong AWS Organization</a> > Dọn dẹp tài nguyên
           
         
           
@@ -606,58 +606,83 @@
 
 
 
-	<h4 id="dọn-dẹp-tài-nguyên">Dọn dẹp tài nguyên</h4>
-<ol>
-<li>Truy cập vào <strong>AWS SSO Management Console</strong></li>
-<li><strong>Xóa Groups</strong>:
+	<h4 id="dọn-dẹp-tài-nguyên-sau-bài-lab">Dọn dẹp tài nguyên sau bài Lab</h4>
+<h4 id="mục-đích">Mục đích</h4>
+<p>Hướng dẫn này giúp bạn dọn dẹp các tài nguyên được tạo trong quá trình thực hiện bài lab để tránh việc phát sinh chi phí không mong muốn và đảm bảo môi trường AWS được duy trì sạch sẽ.</p>
+<h4 id="các-bước-thực-hiện">Các bước thực hiện</h4>
+<h4 id="1-truy-cập-vào-aws-sso-management-console">1. Truy cập vào <strong>AWS SSO Management Console</strong></h4>
 <ul>
-<li>Chọn <strong>Groups</strong>, tick vào các group liên quan tới bài lab này, và chọn <strong>Delete groups</strong>.</li>
-<li>Tại prompt <strong>Delete groups</strong>, gõ <code>DELETE</code> vào ô, và chọn <strong>Delete groups</strong></li>
+<li>Truy cập vào bảng điều khiển AWS Single Sign-On (SSO) bằng cách truy cập vào đường dẫn sau: <a href="https://console.aws.amazon.com/singlesignon">AWS SSO Console</a>.</li>
 </ul>
-</li>
-<li><strong>Xóa Users</strong>:
+<h4 id="2-xóa-các-groups-đã-tạo">2. Xóa các <strong>Groups</strong> đã tạo</h4>
 <ul>
-<li>Chọn <strong>Users</strong>, tick vào các user liên quan tới bài lab này, và chọn <strong>Delete users</strong>.</li>
-<li>Tại prompt <strong>Delete users</strong>, gõ <code>DELETE</code> vào ô, và chọn <strong>Delete users</strong></li>
+<li>Truy cập vào mục <strong>Groups</strong>.</li>
+<li>Chọn các group liên quan tới bài lab bằng cách tick vào checkbox tương ứng.</li>
+<li>Nhấn vào <strong>Delete groups</strong> để bắt đầu quá trình xóa.</li>
+<li>Trong hộp thoại <strong>Delete groups</strong>, nhập <code>DELETE</code> vào ô xác nhận và nhấn <strong>Delete groups</strong> để hoàn tất.</li>
 </ul>
-</li>
-<li><strong>Xóa quyền truy cập</strong> tại các tài khoản AWS:
+<h4 id="3-xóa-các-users-liên-quan">3. Xóa các <strong>Users</strong> liên quan</h4>
 <ul>
-<li>Chọn <strong>AWS Accounts</strong> và nhấp vào tên của một tài khoản AWS.</li>
-<li>Remove access với tất cả các quyền truy cập của tài khoản.</li>
-<li>Lặp lại với các tài khoản đang được gán quyền truy cập cần xóa.
-<img src="../../../images/3/3_RemoveAccess.png?width=90pc" alt="RemoveAccess"></li>
+<li>Truy cập vào mục <strong>Users</strong>.</li>
+<li>Chọn các user liên quan tới bài lab bằng cách tick vào checkbox tương ứng.</li>
+<li>Nhấn vào <strong>Delete users</strong> để bắt đầu quá trình xóa.</li>
+<li>Trong hộp thoại <strong>Delete users</strong>, nhập <code>DELETE</code> vào ô xác nhận và nhấn <strong>Delete users</strong> để hoàn tất.</li>
 </ul>
-</li>
-<li><strong>Xóa các Permission Sets</strong>
+<h4 id="4-gỡ-bỏ-quyền-truy-cập-từ-các-tài-khoản-aws">4. Gỡ bỏ quyền truy cập từ các tài khoản AWS</h4>
 <ul>
-<li>Chọn <strong>AWS accounts</strong>, chọn tab <strong>Permission sets</strong>, và chọn các permission sets liên quan</li>
-<li>Nhấn <strong>Delete</strong>. Tại prompt, gõ tên của permission set vào ô trống và nhấn <strong>Delete</strong>.</li>
+<li>Chuyển đến mục <strong>AWS Accounts</strong>.</li>
+<li>Chọn tên của một tài khoản AWS mà bạn muốn xóa quyền.</li>
+<li>Tại màn hình quản lý tài khoản, nhấp vào <strong>Remove access</strong> để xóa bỏ tất cả các quyền truy cập của tài khoản.</li>
+<li>Lặp lại quy trình này cho các tài khoản khác mà bạn muốn gỡ quyền truy cập.</li>
 </ul>
-</li>
-</ol>
+<p><img alt="RemoveAccess" src="../../../images/3/3_RemoveAccess.png?width=90pc"></p>
+<h4 id="5-xóa-các-permission-sets">5. Xóa các <strong>Permission Sets</strong></h4>
+<ul>
+<li>Chuyển đến mục <strong>AWS Accounts</strong> và chọn tab <strong>Permission sets</strong>.</li>
+<li>Chọn các permission sets liên quan đến bài lab này.</li>
+<li>Nhấn <strong>Delete</strong>.</li>
+<li>Trong hộp thoại xác nhận, nhập tên của <strong>Permission Set</strong> vào ô trống và nhấn <strong>Delete</strong> để hoàn tất.</li>
+</ul>
 <p>::: note
-<strong>Lưu ý</strong>: Hãy sao lưu các dữ liệu trong các tài khoản này nếu bạn cần chúng trong tương lai vì xóa tài khoản đồng nghĩa với việc mọi tài nguyên và dữ liệu thuộc tài khoản ấy sẽ bị xóa vĩnh viễn
+<strong>Lưu ý</strong>: Hãy sao lưu dữ liệu nếu bạn cần sử dụng chúng trong tương lai. Việc xóa tài khoản sẽ khiến tất cả tài nguyên và dữ liệu thuộc tài khoản đó bị xóa vĩnh viễn và không thể khôi phục.
 :::</p>
-<ol start="6">
-<li><strong>Xóa các tài khoản AWS</strong>. Tuy nhiên, Bạn có thể giữ các tài khoản này cho các phần lab tiếp theo.
+<h4 id="6-xóa-các-tài-khoản-aws">6. Xóa các <strong>Tài khoản AWS</strong></h4>
 <ul>
-<li>Để xóa một tài khoản AWS, bạn cần đăng nhập vào tài khoản bằng root user
+<li>
+<p>Bạn có thể giữ các tài khoản này để sử dụng cho các bài lab tiếp theo. Nếu không, làm theo các bước sau để xóa tài khoản:</p>
 <ul>
-<li>Truy cập vào trang đăng nhập vào bảng điều khiển AWS tại <a href="https://console.aws.amazon.com/">https://console.aws.amazon.com/</a></li>
-<li>Khi trang <strong>Sign in</strong> hiện lên, chọn đăng nhập bằng <strong>Root user</strong> và nhập email của tài khoản bạn muốn xóa. (Ví dụ: <a href="mailto:example+lab12Logging@amazon.com.vn">example+lab12Logging@amazon.com.vn</a>)</li>
-<li>Vượt qua Security Check và chọn <strong>Forgot Password?</strong>
-<img src="../../../images/3/3_ForgotPassword.png?width=90pc" alt="ForgotPassword"></li>
-<li>AWS sẽ gửi email xác nhận quên mật khẩu vào email được đăng ký (ví dụ: nếu email của bạn là <a href="mailto:example+lab12Logging@amazon.com.vn">example+lab12Logging@amazon.com.vn</a>, thì email của AWS sẽ được gửi về <a href="mailto:example@amazon.com.vn">example@amazon.com.vn</a>). Bạn hãy đổi mật khẩu mới qua email đó và đăng nhập vào tài khoản AWS.</li>
+<li>
+<p>Đăng nhập vào tài khoản bằng <strong>Root User</strong>:</p>
+<ul>
+<li>Truy cập trang đăng nhập bảng điều khiển AWS tại <a href="https://console.aws.amazon.com/">https://console.aws.amazon.com/</a>.</li>
+<li>Chọn đăng nhập bằng <strong>Root user</strong> và nhập email của tài khoản bạn muốn xóa (Ví dụ: <code>example+lab12Logging@amazon.com.vn</code>).</li>
+<li>Vượt qua Security Check và chọn <strong>Forgot Password?</strong>.</li>
+</ul>
+<p><img alt="ForgotPassword" src="../../../images/3/3_ForgotPassword.png?width=90pc"></p>
+</li>
+<li>
+<p>AWS sẽ gửi email xác nhận việc đặt lại mật khẩu về địa chỉ email đăng ký.</p>
+</li>
+<li>
+<p>Đặt mật khẩu mới và đăng nhập lại bằng root user.</p>
+</li>
 </ul>
 </li>
-<li>Sau khi đăng nhập bằng root user, chọn vào tên tài khoản ở góc trên bên phải, chọn <strong>My Account</strong>, cuộn xuống cuối trang để thấy mục <strong>Close Account</strong>. Tick hết vào các ô và chọn <strong>Close Account</strong></li>
-</ul>
+<li>
+<p>Sau khi đăng nhập, chọn <strong>My Account</strong> từ menu ở góc trên bên phải.</p>
 </li>
-</ol>
+<li>
+<p>Cuộn xuống cuối trang và nhấp vào <strong>Close Account</strong>.</p>
+</li>
+<li>
+<p>Tick chọn các ô xác nhận và nhấn <strong>Close Account</strong> để hoàn tất việc xóa tài khoản.</p>
+</li>
+</ul>
 <p>::: info
-<strong>Lưu ý</strong>: Khi bạn tạo mới một tài khoản AWS trong AWS Organization, AWS Organization đã tự động tạo một mật khẩu ngẫu nhiên cho root user của tài khoản ấy, và bạn không thể tiếp cận được với chúng. Do đó, bạn sẽ truy cập vào root user của tài khoản ấy bằng cách lấy lại mật khẩu đã quên (<em>forgot password</em>)
+<strong>Lưu ý</strong>: Khi bạn tạo mới một tài khoản AWS trong <strong>AWS Organization</strong>, một mật khẩu ngẫu nhiên sẽ được tự động tạo cho root user của tài khoản này. Nếu bạn không có quyền truy cập root user, bạn cần thực hiện quy trình <strong>Forgot Password</strong> để thiết lập lại mật khẩu.
 :::</p>
+<h4 id="kết-luận">Kết luận</h4>
+<p>Hướng dẫn này giúp bạn dọn dẹp tất cả tài nguyên, nhóm, người dùng và tài khoản AWS liên quan đến bài lab. Việc thực hiện quy trình dọn dẹp thường xuyên là rất quan trọng để đảm bảo an ninh và tối ưu chi phí trong môi trường AWS của bạn.</p>
 
 
 
@@ -902,7 +927,7 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/vi/3-test-permission/" title="Kiểm tra "> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/vi/3-test-permission/" title="Kiểm tra AWS SSO User"> <i class="fa fa-chevron-left"></i></a>
 		
 		
 			<a class="nav nav-next" href="/vi/1-prerequisite/" title="Các bước chuẩn bị" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -915,19 +940,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.min.js?1704871045"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1704871045"></script>
-    <script src="/js/jquery.sticky.js?1704871045"></script>
-    <script src="/js/featherlight.min.js?1704871045"></script>
-    <script src="/js/highlight.pack.js?1704871045"></script>
+    <script src="/js/clipboard.min.js?1727695057"></script>
+    <script src="/js/perfect-scrollbar.min.js?1727695057"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1727695057"></script>
+    <script src="/js/jquery.sticky.js?1727695057"></script>
+    <script src="/js/featherlight.min.js?1727695057"></script>
+    <script src="/js/highlight.pack.js?1727695057"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1704871045"></script>
-    <script src="/js/learn.js?1704871045"></script>
-    <script src="/js/hugo-learn.js?1704871045"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1727695057"></script>
+    <script src="/js/learn.js?1727695057"></script>
+    <script src="/js/hugo-learn.js?1727695057"></script>
 
-    <link href="/mermaid/mermaid.css?1704871045" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1704871045"></script>
+    <link href="/mermaid/mermaid.css?1727695057" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1727695057"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
