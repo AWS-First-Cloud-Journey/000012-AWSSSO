@@ -2,21 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/2-setup-aws-sso/2.1-enable-sso/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-setup-aws-sso/2.1-enable-sso/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-setup-aws-sso/2.1-enable-sso/"
-                />
-  </url><url>
     <loc>/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <lastmod>1970-01-01T00:33:44+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -29,7 +16,7 @@
                 />
   </url><url>
     <loc>/1-prerequisite/1-create-aws-account/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <lastmod>1970-01-01T00:33:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -42,7 +29,7 @@
                 />
   </url><url>
     <loc>/1-prerequisite/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <lastmod>1970-01-01T00:33:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -54,34 +41,21 @@
                 href="/1-prerequisite/"
                 />
   </url><url>
-    <loc>/2-setup-aws-sso/2.2-add-user-group/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <loc>/2-aws-cli-access/</loc>
+    <lastmod>1970-01-01T00:33:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-setup-aws-sso/2.2-add-user-group/"
+                href="/vi/2-aws-cli-access/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-setup-aws-sso/2.2-add-user-group/"
-                />
-  </url><url>
-    <loc>/2-setup-aws-sso/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-setup-aws-sso/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-setup-aws-sso/"
+                href="/2-aws-cli-access/"
                 />
   </url><url>
     <loc>/1-prerequisite/2-configure-ou/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <lastmod>1970-01-01T00:33:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -93,34 +67,8 @@
                 href="/1-prerequisite/2-configure-ou/"
                 />
   </url><url>
-    <loc>/3-test-permission/</loc>
-    <lastmod>2021-06-14T22:33:19+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/3-test-permission/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/3-test-permission/"
-                />
-  </url><url>
-    <loc>/2-setup-aws-sso/2.3-create-permissionset/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="/vi/2-setup-aws-sso/2.3-create-permissionset/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="/2-setup-aws-sso/2.3-create-permissionset/"
-                />
-  </url><url>
     <loc>/1-prerequisite/3-invite-aws-account/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <lastmod>1970-01-01T00:33:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -132,21 +80,21 @@
                 href="/1-prerequisite/3-invite-aws-account/"
                 />
   </url><url>
-    <loc>/2-setup-aws-sso/2.4-add-permission/</loc>
-    <lastmod>1970-01-01T07:33:41+07:00</lastmod>
+    <loc>/3-using-time-based-access-control/</loc>
+    <lastmod>1970-01-01T00:33:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/2-setup-aws-sso/2.4-add-permission/"
+                href="/vi/3-using-time-based-access-control/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/2-setup-aws-sso/2.4-add-permission/"
+                href="/3-using-time-based-access-control/"
                 />
   </url><url>
     <loc>/1-prerequisite/4-switch-role/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <lastmod>1970-01-01T00:33:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -158,17 +106,79 @@
                 href="/1-prerequisite/4-switch-role/"
                 />
   </url><url>
-    <loc>/4-clean-up/</loc>
-    <lastmod>2021-06-14T22:33:19+07:00</lastmod>
+    <loc>/4-using-customer-managed-policies/</loc>
+    <lastmod>1970-01-01T00:33:40+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
-                href="/vi/4-clean-up/"
+                href="/vi/4-using-customer-managed-policies/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="/4-clean-up/"
+                href="/4-using-customer-managed-policies/"
+                />
+  </url><url>
+    <loc>/%CC%805-iam-identity-center-identity-store-apis/</loc>
+    <lastmod>1970-01-01T00:33:40+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/%CC%805-iam-identity-center-identity-store-apis/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/%CC%805-iam-identity-center-identity-store-apis/"
+                />
+  </url><url>
+    <loc>/6-clean-up/</loc>
+    <lastmod>1970-01-01T00:33:44+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/6-clean-up/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/6-clean-up/"
+                />
+  </url><url>
+    <loc>/1-prerequisite/5-provision-permission-sets/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-prerequisite/5-provision-permission-sets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-prerequisite/5-provision-permission-sets/"
+                />
+  </url><url>
+    <loc>/1-prerequisite/6-test/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/1-prerequisite/6-test/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/1-prerequisite/6-test/"
+                />
+  </url><url>
+    <loc>/2-aws-cli-access/2.1-manual/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="/vi/2-aws-cli-access/2.1-manual/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="/2-aws-cli-access/2.1-manual/"
                 />
   </url><url>
     <loc>/categories/</loc>

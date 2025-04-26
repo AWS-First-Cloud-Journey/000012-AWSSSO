@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AWS Single Sign-On: Quản lý truy cập trong AWS Organization on AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
+    <title>Sử dụng AWS IAM Identity Center để quản lý định danh mạnh mẽ on AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
     <link>/vi/</link>
-    <description>Recent content in AWS Single Sign-On: Quản lý truy cập trong AWS Organization on AWS SINGLE SIGN-ON CHO ORGANIZATION</description>
-    <generator>Hugo</generator>
+    <description>Recent content in Sử dụng AWS IAM Identity Center để quản lý định danh mạnh mẽ on AWS SINGLE SIGN-ON CHO ORGANIZATION</description>
+    <generator>Hugo -- gohugo.io</generator>
     <language>vi</language>
     <lastBuildDate></lastBuildDate>
     <atom:link href="/vi/index.xml" rel="self" type="application/rss+xml" />

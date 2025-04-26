@@ -1,64 +1,53 @@
 +++
-title = "Thiết lập Organization Unit"
+title = "Điều kiện tiên quyết cho IAM Identity Center"
 date = 2020
 weight = 2
 chapter = false
 pre = "<b>1.2 </b>"
 +++
 
-#### Thiết lập Organization Unit trong AWS Organizations
+#### Điều kiện tiên quyết cho IAM Identity Center
 
-Ở bước này, bạn sẽ thực hành thiết lập các Organization Unit (**Security**, **Shared Services**, **Logging**, và **Application**) tương ứng với các tài khoản AWS được tạo ở phần trước. Các OU sẽ nằm bên trong **Root** - nơi chứa tất cả OU và tài khoản AWS.
+**ℹ️ Thông tin:** Bạn có thể bỏ qua phần này nếu bạn đã kích hoạt IAM Identity Center trong AWS Account mà bạn đang sử dụng cho Workshop này.
 
-#### Nội dung
-- [Thiết lập Organization Unit trong AWS Organizations](#thiết-lập-organization-unit-trong-aws-organizations)
-- [Nội dung](#nội-dung)
-- [Tạo Organization Unit](#tạo-organization-unit)
-- [Di chuyển các tài khoản AWS vào Organization Unit tương ứng](#di-chuyển-các-tài-khoản-aws-vào-organization-unit-tương-ứng)
-- [Kết luận](#kết-luận)
+#### Yêu cầu cơ bản
 
-#### Tạo Organization Unit
+Trước khi thiết lập IAM Identity Center, bạn cần:
 
-1. Đăng nhập vào **AWS Management Console** và điều hướng đến dịch vụ **AWS Organizations** bằng cách nhập tên dịch vụ vào thanh tìm kiếm.
+1. Có một AWS account với quyền Administrator. Nếu bạn chưa có, hãy tạo một tài khoản ngay bây giờ.
 
-2. Tại cây phân cấp của **AWS Organizations**, chọn **Root**, nhấp vào **Actions**, và chọn **Create new Organizational Unit**.
+2. Thiết lập dịch vụ AWS Organizations và kích hoạt tính năng "All features". Để biết thêm thông tin về cài đặt này, xem "Enabling All Features in Your Organization" trong AWS Organizations User Guide.
 
-    ![AWS Account](/images/4/0003.png?featherlight=false&width=90pc)
+#### Kích hoạt AWS Organizations
 
-3. Trong trang **Create Organizational Unit in Root**:
-    - Dưới mục **Details**, nhập tên của Organizational Unit (ví dụ: **Logging Unit**).
+**ℹ️ Thông tin:** AWS Organizations là dịch vụ quản lý tài khoản cho phép bạn hợp nhất nhiều AWS accounts vào một tổ chức do bạn tạo và quản lý tập trung. Đây là điều kiện tiên quyết để sử dụng IAM Identity Center.
 
-    ![AWS Account](/images/4/0004.png?featherlight=false&width=90pc)
+1. Trong AWS Management Console, ở góc trên bên trái cạnh Services, nhấp vào ô tìm kiếm và nhập "AWS Organizations", sau đó chọn dịch vụ này.
 
-4. Kiểm tra thông tin và chọn **Create organizational unit**.
+2. Nhấp vào **Create Organization**. Theo mặc định, tổ chức được tạo với tất cả các tính năng được kích hoạt.
 
-    ![AWS Account](/images/4/0005.png?featherlight=false&width=90pc)
+![3.4.11](/images/0001/0003.png)
 
-5. Lặp lại các bước trên với những Organizational Unit còn lại theo danh sách sau:
-    - **Security Unit**
-    - **Shared Services Unit**
-    - **Application Unit**
+3. Tổ chức được tạo và trang AWS accounts xuất hiện. Tài khoản duy nhất hiện có là management account của bạn, và hiện đang nằm dưới root organizational unit (OU).
 
-    ![AWS Account](/images/4/0006.png?featherlight=false&width=90pc)
+**💡 Pro Tip:** AWS Organizations cho phép bạn quản lý tập trung nhiều AWS accounts, giúp đơn giản hóa việc quản lý hóa đơn, kiểm soát truy cập và tuân thủ chính sách bảo mật. Bạn nên thiết kế cấu trúc OU phù hợp với mô hình tổ chức của bạn để tối ưu hóa việc quản lý quyền truy cập.
 
-#### Di chuyển các tài khoản AWS vào Organization Unit tương ứng
+#### Kích hoạt IAM Identity Center
 
-1. Đăng nhập vào **AWS Management Console** và điều hướng đến dịch vụ **AWS Organizations** bằng cách nhập tên dịch vụ vào thanh tìm kiếm.
+**ℹ️ Thông tin:** IAM Identity Center (trước đây là AWS SSO) là dịch vụ quản lý định danh và quyền truy cập tập trung cho AWS accounts và ứng dụng cloud. Dịch vụ này giúp đơn giản hóa việc quản lý quyền truy cập và cung cấp trải nghiệm đăng nhập một lần (SSO) cho người dùng.
 
-2. Tại cây phân cấp của **AWS Organizations**, tick vào tài khoản AWS mà bạn muốn di chuyển (ví dụ: **Logging Account**), chọn **Actions**, và chọn **Move** dưới mục **AWS Account**.
+Khi bạn mở IAM Identity Center lần đầu tiên, bạn sẽ được nhắc kích hoạt Identity Center trước khi bắt đầu quản lý nó:
 
-    ![AWS Account](/images/4/0007.png?featherlight=false&width=90pc)
+1. Trong AWS Management Console, nhấp vào **Services** ở góc trên bên trái.
+2. Mở IAM Identity Center console.
+3. Chọn **Enable**.
 
-3. Chọn OU tương ứng với tài khoản (ví dụ: **Logging Unit**) và nhấp vào **Move AWS account**.
+![3.4.11](/images/0001/0004.png)
 
-    ![AWS Account](/images/4/0008.png?featherlight=false&width=90pc)
+**ℹ️ Thông tin:** Sau khi kích hoạt, IAM Identity Center tạo một service-linked role trong tất cả các tài khoản trong tổ chức AWS Organizations. IAM Identity Center cũng tạo cùng một service-linked role trong mọi tài khoản được thêm vào tổ chức của bạn sau này. Role này cho phép IAM Identity Center truy cập vào tài nguyên của mỗi tài khoản thay mặt bạn.
 
-4. Lặp lại với các tài khoản AWS và Organization Unit còn lại:
+#### Quản trị ủy quyền (Delegated Administration)
 
-    - **Security Account** với **Security Unit**
-    - **Shared Services Account** với **Shared Services Unit**
-    - **Application Account** với **Application Unit**
+**🔒 Security Note:** IAM Identity Center cho phép bạn chỉ định một member account khác trong AWS Organization của bạn ngoài Organization Management Account để thực hiện các tác vụ quản trị Identity Center. Việc này giúp tuân thủ nguyên tắc least privilege bằng cách hạn chế quyền truy cập vào Management Account. Trong môi trường sản xuất, bạn nên cấu hình delegated administration để giảm thiểu rủi ro bảo mật liên quan đến việc sử dụng Management Account cho các tác vụ hàng ngày.
 
-#### Kết luận
-
-Việc phân loại tài khoản AWS vào các Organization Unit giúp tối ưu hóa việc quản lý tài nguyên và kiểm soát chính sách (policy control). Việc này cũng hỗ trợ trong việc áp dụng các quy tắc bảo mật và quy trình kế toán một cách hiệu quả hơn trên toàn bộ **AWS Organization** của bạn.
+**💡 Pro Tip:** Khi thiết lập IAM Identity Center, hãy xem xét chiến lược định danh phù hợp với tổ chức của bạn. Bạn có thể chọn sử dụng Identity Center Directory, kết nối với Microsoft Active Directory thông qua AWS Directory Service, hoặc kết nối với nhà cung cấp định danh bên ngoài (IdP) tương thích với SAML 2.0 như Okta, Azure AD, hoặc Google Workspace.

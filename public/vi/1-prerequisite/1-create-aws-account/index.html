@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.133.0">
+    <meta name="generator" content="Hugo 0.123.7">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo AWS Account trong AWS Organizations :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1733747431" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1733747431" rel="stylesheet">
-    <link href="/css/hybrid.css?1733747431" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1733747431" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1733747431" rel="stylesheet">
-    <link href="/css/auto-complete.css?1733747431" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1733747431" rel="stylesheet">
-    <link href="/css/theme.css?1733747431" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1733747431" rel="stylesheet">
+    <link href="/css/nucleus.css?1745669092" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1745669092" rel="stylesheet">
+    <link href="/css/hybrid.css?1745669092" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1745669092" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1745669092" rel="stylesheet">
+    <link href="/css/auto-complete.css?1745669092" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1745669092" rel="stylesheet">
+    <link href="/css/theme.css?1745669092" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1745669092" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1733747431" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1745669092" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1733747431"></script>
+    <script src="/js/jquery-3.3.1.min.js?1745669092"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1733747431"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1733747431"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1745669092"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1745669092"></script>
 <script type="text/javascript">
     
         var baseurl = "\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1733747431"></script>
+<script type="text/javascript" src="/js/search.js?1745669092"></script>
 
     
   </div>
@@ -141,13 +141,13 @@
  
   
     
-    <li data-nav-id="/vi/1-prerequisite/2-configure-ou/" title="Thiết lập Organization Unit" class="dd-item 
+    <li data-nav-id="/vi/1-prerequisite/2-configure-ou/" title="Điều kiện tiên quyết cho IAM Identity Center" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-prerequisite/2-configure-ou/">
-          <b>1.2 </b>Thiết lập Organization Unit
+          <b>1.2 </b>Điều kiện tiên quyết cho IAM Identity Center
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +169,13 @@
  
   
     
-    <li data-nav-id="/vi/1-prerequisite/3-invite-aws-account/" title="Thêm AWS Account vào AWS Organization" class="dd-item 
+    <li data-nav-id="/vi/1-prerequisite/3-invite-aws-account/" title="Tạo User và Groups trong IAM Identity Center" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-prerequisite/3-invite-aws-account/">
-          <b>1.3 </b>Thêm AWS Account vào AWS Organization
+          <b>1.3 </b>Tạo User và Groups trong IAM Identity Center
           
             <i class="fas fa-check read-icon"></i>
           
@@ -197,13 +197,69 @@
  
   
     
-    <li data-nav-id="/vi/1-prerequisite/4-switch-role/" title="Truy cập qua các AWS Account khác trong Organization" class="dd-item 
+    <li data-nav-id="/vi/1-prerequisite/4-switch-role/" title="Tạo Permission Sets" class="dd-item 
         
         
         
         ">
       <a href="/vi/1-prerequisite/4-switch-role/">
-          <b>1.4 </b>Truy cập qua các AWS Account khác trong Organization
+          <b>1.4 </b>Tạo Permission Sets
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-prerequisite/5-provision-permission-sets/" title="Cung cấp Permission Sets" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-prerequisite/5-provision-permission-sets/">
+          <b>1.5 </b>Cung cấp Permission Sets
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/1-prerequisite/6-test/" title="Kiểm tra quyền truy cập" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/1-prerequisite/6-test/">
+          <b> 1.6 </b>Kiểm tra quyền truy cập
           
             <i class="fas fa-check read-icon"></i>
           
@@ -232,13 +288,13 @@
  
   
     
-    <li data-nav-id="/vi/2-setup-aws-sso/" title="Thiết lập AWS SSO" class="dd-item 
+    <li data-nav-id="/vi/2-aws-cli-access/" title="Truy cập AWS CLI" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-setup-aws-sso/">
-          <b>2. </b>Thiết lập AWS SSO
+      <a href="/vi/2-aws-cli-access/">
+          <b> 2. </b>Truy cập AWS CLI
           
             <i class="fas fa-check read-icon"></i>
           
@@ -263,13 +319,13 @@
  
   
     
-    <li data-nav-id="/vi/2-setup-aws-sso/2.1-enable-sso/" title="Kích hoạt AWS SSO" class="dd-item 
+    <li data-nav-id="/vi/2-aws-cli-access/2.1-manual/" title="Làm mới thông tin xác thực thủ công" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-setup-aws-sso/2.1-enable-sso/">
-          <b>2.1 </b>Kích hoạt AWS SSO
+      <a href="/vi/2-aws-cli-access/2.1-manual/">
+          <b> 2.1 </b>Làm mới thông tin xác thực thủ công
           
             <i class="fas fa-check read-icon"></i>
           
@@ -291,69 +347,13 @@
  
   
     
-    <li data-nav-id="/vi/2-setup-aws-sso/2.2-add-user-group/" title="Thêm Users và Groups" class="dd-item 
+    <li data-nav-id="/vi/2-aws-cli-access/2.2-automatic/" title="Làm mới thông tin xác thực tự động" class="dd-item 
         
         
         
         ">
-      <a href="/vi/2-setup-aws-sso/2.2-add-user-group/">
-          <b>2.2 </b>Thêm Users và Groups
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-setup-aws-sso/2.3-create-permissionset/" title="Tạo Permission Set" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-setup-aws-sso/2.3-create-permissionset/">
-          <b>2.3 </b>Tạo Permission Set
-          
-            <i class="fas fa-check read-icon"></i>
-          
-      </a>
-      
-              
-    </li>
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-    <li data-nav-id="/vi/2-setup-aws-sso/2.4-add-permission/" title="Gán quyền" class="dd-item 
-        
-        
-        
-        ">
-      <a href="/vi/2-setup-aws-sso/2.4-add-permission/">
-          <b>2.4 </b>Gán quyền
+      <a href="/vi/2-aws-cli-access/2.2-automatic/">
+          <b> 2.2 </b>Làm mới thông tin xác thực tự động
           
             <i class="fas fa-check read-icon"></i>
           
@@ -382,13 +382,13 @@
  
   
     
-    <li data-nav-id="/vi/3-test-permission/" title="Kiểm tra AWS SSO User" class="dd-item 
+    <li data-nav-id="/vi/3-using-time-based-access-control/" title="Sử dụng Time-based access control" class="dd-item 
         
         
         
         ">
-      <a href="/vi/3-test-permission/">
-          <b>3. </b>Kiểm tra AWS SSO User
+      <a href="/vi/3-using-time-based-access-control/">
+          <b> 3. </b>Sử dụng Time-based access control
           
             <i class="fas fa-check read-icon"></i>
           
@@ -408,13 +408,65 @@
  
   
     
-    <li data-nav-id="/vi/4-clean-up/" title="Dọn dẹp tài nguyên" class="dd-item 
+    <li data-nav-id="/vi/4-using-customer-managed-policies/" title="Customer Managed Policies" class="dd-item 
         
         
         
         ">
-      <a href="/vi/4-clean-up/">
-          <b>4. </b>Dọn dẹp tài nguyên
+      <a href="/vi/4-using-customer-managed-policies/">
+          <b> 4. </b>Customer Managed Policies
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/%CC%805-iam-identity-center-identity-store-apis/" title="IAM Identity Center Identity Store APIs" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/%CC%805-iam-identity-center-identity-store-apis/">
+          <b> 5. </b>IAM Identity Center Identity Store APIs
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/vi/6-clean-up/" title="Dọn dẹp tài nguyên" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/vi/6-clean-up/">
+          <b> 6. </b>Dọn dẹp tài nguyên
           
             <i class="fas fa-check read-icon"></i>
           
@@ -517,7 +569,7 @@
     <br>
     <br>
         <b> Last Updated </b> <br>
-        <i><font color=orange>10-12-2024</font></i>
+        <i><font color=orange>26-04-2025</font></i>
     </left>
     <left>
         <br>
@@ -567,7 +619,7 @@
             
           
           
-            <a href='/vi/'>AWS Single Sign-On: Quản lý truy cập trong AWS Organization</a> > <a href='/vi/1-prerequisite/'>Các bước chuẩn bị</a> > Tạo AWS Account trong AWS Organizations
+            <a href='/vi/'>Sử dụng AWS IAM Identity Center để quản lý định danh mạnh mẽ</a> > <a href='/vi/1-prerequisite/'>Các bước chuẩn bị</a> > Tạo AWS Account trong AWS Organizations
           
         
           
@@ -612,69 +664,36 @@
 
 
 
-	<h4 id="tạo-aws-account-trong-aws-organization">Tạo AWS Account trong AWS Organization</h4>
-<h4 id="mục-tiêu">Mục tiêu</h4>
-<p>Hướng dẫn chi tiết cách tạo tài khoản AWS mới trong <strong>AWS Organizations</strong>, bao gồm thiết lập email, cấu hình IAM role, và kiểm tra tính hợp lệ của tài khoản.</p>
-<hr>
-<h4 id="1-truy-cập-vào-aws-organizations">1. Truy cập vào AWS Organizations</h4>
+	<h4 id="thiết-lập-aws-account">Thiết lập AWS Account</h4>
+<h4 id="lựa-chọn-aws-account-cho-bài-thực-hành">Lựa chọn AWS Account cho bài thực hành</h4>
+<p><strong>ℹ️ Thông tin:</strong> Để thực hiện workshop này, bạn cần một AWS account độc lập chưa tham gia vào AWS Organizations. AWS IAM Identity Center yêu cầu một tài khoản độc lập để thiết lập làm Management Account.</p>
+<h4 id="sử-dụng-aws-account-hiện-có">Sử dụng AWS account hiện có</h4>
+<p><strong>ℹ️ Thông tin:</strong> Nếu bạn đang sử dụng một tài khoản hiện có, dù là tài khoản cá nhân hay tài khoản công ty, hãy đảm bảo bạn hiểu rõ các tác động và chính sách của tổ chức liên quan đến việc cung cấp tài nguyên trong tài khoản này.</p>
+<p><strong>💡 Pro Tip:</strong> Nếu bạn đã có AWS account không thuộc AWS Organizations và đang sử dụng IAM User hoặc IAM Role với quyền Administrator, bạn có thể bỏ qua phần còn lại của nhiệm vụ này và chuyển sang nhiệm vụ tiếp theo.</p>
+<h4 id="tạo-aws-account-mới">Tạo AWS account mới</h4>
+<p>Nếu bạn chưa có AWS account, bạn có thể tạo AWS account của riêng mình <a href="https://portal.aws.amazon.com/billing/signup">tại đây</a>. Một phương thức thanh toán, thường là thẻ tín dụng, sẽ cần thiết để kích hoạt tài khoản cho các bài thực hành này. Quy trình đăng ký bao gồm việc nhận cuộc gọi điện thoại và nhập mã xác minh bằng bàn phím điện thoại.</p>
+<p><strong>⚠️ Warning:</strong> Nếu bạn hiện đang đăng nhập vào AWS Management Console, bạn sẽ cần đăng xuất trước khi <a href="https://portal.aws.amazon.com/billing/signup">nhấp vào đây</a> để tạo AWS account mới.</p>
+<h4 id="chuẩn-bị-iam-user-cho-bài-thực-hành">Chuẩn bị IAM User cho bài thực hành</h4>
+<p><strong>🔒 Security Note:</strong> Việc hạn chế nghiêm ngặt việc sử dụng tài khoản root mặc định đi kèm với mỗi AWS account được coi là best practice theo nguyên tắc least privilege. Nếu bạn có AWS account nhưng không có IAM User hoặc Role để làm việc, hãy làm theo các bước dưới đây để chuẩn bị cho bài thực hành.</p>
 <ol>
-<li>Đăng nhập vào <strong>AWS Management Console</strong>.</li>
-<li>Tìm kiếm và chọn dịch vụ <strong>AWS Organizations</strong> từ thanh tìm kiếm.</li>
+<li>Đăng nhập vào AWS account của bạn với tài khoản root.</li>
+<li>Truy cập AWS IAM console và tạo user mới.</li>
+<li>Nhập tên cho user của bạn (ví dụ: admin) và chọn &ldquo;AWS Management Console access&rdquo;, sau đó nhập mật khẩu mạnh.</li>
+<li>Nhấp vào <strong>Next: Permissions</strong> để tiếp tục bước tiếp theo.</li>
 </ol>
-<p><img alt="AWS Organizations Console" src="/images/1/0001.png?featherlight=false&width=90pc"></p>
-<hr>
-<h4 id="2-thêm-tài-khoản-aws-mới">2. Thêm tài khoản AWS mới</h4>
-<ol>
-<li>Trong giao diện <strong>AWS Organizations Console</strong>, chọn <strong>Add an AWS account</strong>.</li>
+<p><img alt="3.4.11" src="/images/0001/0001.png"></p>
+<ol start="5">
+<li>Nhấp vào <strong>Attach existing policies directly</strong> và chọn <strong>AdministratorAccess</strong>.</li>
 </ol>
-<p><img alt="Add an AWS Account" src="/images/1/0003.png?featherlight=false&width=90pc"></p>
-<hr>
-<h4 id="3-chọn-tạo-tài-khoản-aws-mới">3. Chọn Tạo tài khoản AWS mới</h4>
-<ol>
-<li>Chọn <strong>Create an AWS account</strong>.</li>
-<li>Nhập các thông tin bắt buộc dưới đây:
-<ul>
-<li><strong>AWS account name</strong>: Logging</li>
-<li><strong>Email address of the account&rsquo;s owner</strong>: <code>example+lab12Logging@amazon.com.vn</code></li>
-</ul>
-</li>
+<p><img alt="3.4.11" src="/images/0001/0002.png"></p>
+<ol start="6">
+<li>Nhấp vào <strong>Next: Tags</strong>.</li>
+<li>Nhấp vào <strong>Next: Review</strong>.</li>
+<li>Nhấp vào <strong>Create User</strong>.</li>
+<li>Nhấp vào liên kết <strong>Send email</strong> để nhận đường dẫn đăng nhập duy nhất cho tài khoản của bạn.</li>
 </ol>
-<p><img alt="AWS Account Configuration" src="/images/4/0002.png?featherlight=false&width=90pc"></p>
-
-<div class="notices note" ><p><strong>Lưu ý:</strong> Để tạo nhiều tài khoản AWS với cùng một email, bạn có thể sử dụng cú pháp: <code>example+&lt;description&gt;@domain.com</code>. Ví dụ: <code>example+lab12Logging@amazon.com.vn</code>.</p>
-</div>
-
-<hr>
-<h4 id="4-cấu-hình-iam-role">4. Cấu hình IAM Role</h4>
-<ol>
-<li><strong>IAM role name</strong>: Để mặc định là <strong>OrganizationAccountAccessRole</strong>.</li>
-</ol>
-<p>Role này sẽ được sử dụng để truy cập vào tài khoản AWS thành viên bằng phương thức <a href="https://000002.awsstudygroup.com/3-switch-roles/">Chuyển đổi role (Switch Role)</a>.</p>
-<p><img alt="IAM Role Configuration" src="/images/4/0002.png?featherlight=false&width=90pc"></p>
-<hr>
-<h4 id="5-xác-nhận-và-tạo-tài-khoản">5. Xác nhận và tạo tài khoản</h4>
-<ol>
-<li>Kiểm tra lại thông tin đã nhập.</li>
-<li>Chọn <strong>Create AWS account</strong> để tiến hành tạo tài khoản.</li>
-</ol>
-<hr>
-<h4 id="6-lặp-lại-quy-trình-cho-các-tài-khoản-khác">6. Lặp lại quy trình cho các tài khoản khác</h4>
-<ol>
-<li>Tạo thêm các tài khoản tương tự cho các mục đích khác như:
-<ul>
-<li><strong>Security</strong></li>
-<li><strong>Shared Services</strong></li>
-<li><strong>Application</strong></li>
-</ul>
-</li>
-</ol>
-<p><strong>Lưu ý:</strong> Nếu địa chỉ email bạn sử dụng đã được đăng ký cho một tài khoản AWS khác, bạn sẽ nhận được thông báo lỗi khi thực hiện yêu cầu tạo tài khoản mới.</p>
-<hr>
-<h4 id="7-kiểm-tra-trạng-thái-yêu-cầu">7. Kiểm tra trạng thái yêu cầu</h4>
-<ol>
-<li>Vào mục <strong>Requests</strong> để xem trạng thái của các yêu cầu tạo tài khoản.</li>
-<li>Nếu yêu cầu thành công, bạn sẽ thấy tài khoản mới hiển thị trong danh sách các tài khoản thành viên của <strong>AWS Organizations</strong>.</li>
-</ol>
+<p><strong>💡 Pro Tip:</strong> Khi thiết lập IAM User với quyền Administrator, hãy đảm bảo bạn lưu trữ thông tin đăng nhập một cách an toàn và kích hoạt xác thực đa yếu tố (MFA) để tăng cường bảo mật cho tài khoản của bạn. MFA là một lớp bảo mật bổ sung quan trọng trong mô hình Zero Trust.</p>
+<p><strong>🔒 Security Note:</strong> Trong môi trường sản xuất thực tế, bạn nên áp dụng nguyên tắc least privilege bằng cách chỉ cấp quyền tối thiểu cần thiết cho mỗi IAM User thay vì cấp quyền AdministratorAccess. Tuy nhiên, cho mục đích của workshop này, quyền Administrator là cần thiết để thiết lập AWS IAM Identity Center.</p>
 
 
 
@@ -794,6 +813,38 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -844,19 +895,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -875,6 +913,19 @@
                     
             
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -923,7 +974,7 @@
 			<a class="nav nav-prev" href="/vi/1-prerequisite/" title="Các bước chuẩn bị"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/vi/1-prerequisite/2-configure-ou/" title="Thiết lập Organization Unit" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/vi/1-prerequisite/2-configure-ou/" title="Điều kiện tiên quyết cho IAM Identity Center" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -933,19 +984,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1733747431"></script>
-    <script src="/js/perfect-scrollbar.min.js?1733747431"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1733747431"></script>
-    <script src="/js/jquery.sticky.js?1733747431"></script>
-    <script src="/js/featherlight.min.js?1733747431"></script>
-    <script src="/js/highlight.pack.js?1733747431"></script>
+    <script src="/js/clipboard.min.js?1745669092"></script>
+    <script src="/js/perfect-scrollbar.min.js?1745669092"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1745669092"></script>
+    <script src="/js/jquery.sticky.js?1745669092"></script>
+    <script src="/js/featherlight.min.js?1745669092"></script>
+    <script src="/js/highlight.pack.js?1745669092"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1733747431"></script>
-    <script src="/js/learn.js?1733747431"></script>
-    <script src="/js/hugo-learn.js?1733747431"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1745669092"></script>
+    <script src="/js/learn.js?1745669092"></script>
+    <script src="/js/hugo-learn.js?1745669092"></script>
 
-    <link href="/mermaid/mermaid.css?1733747431" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1733747431"></script>
+    <link href="/mermaid/mermaid.css?1745669092" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1745669092"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

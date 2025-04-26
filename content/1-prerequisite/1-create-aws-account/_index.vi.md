@@ -6,75 +6,44 @@ chapter = false
 pre = "<b>1.1 </b>"
 +++
 
-#### Tạo AWS Account trong AWS Organization
+#### Thiết lập AWS Account
 
-#### Mục tiêu
+#### Lựa chọn AWS Account cho bài thực hành
 
-Hướng dẫn chi tiết cách tạo tài khoản AWS mới trong **AWS Organizations**, bao gồm thiết lập email, cấu hình IAM role, và kiểm tra tính hợp lệ của tài khoản.
+**ℹ️ Thông tin:** Để thực hiện workshop này, bạn cần một AWS account độc lập chưa tham gia vào AWS Organizations. AWS IAM Identity Center yêu cầu một tài khoản độc lập để thiết lập làm Management Account.
 
----
+#### Sử dụng AWS account hiện có
 
-#### 1. Truy cập vào AWS Organizations
+**ℹ️ Thông tin:** Nếu bạn đang sử dụng một tài khoản hiện có, dù là tài khoản cá nhân hay tài khoản công ty, hãy đảm bảo bạn hiểu rõ các tác động và chính sách của tổ chức liên quan đến việc cung cấp tài nguyên trong tài khoản này.
 
-1. Đăng nhập vào **AWS Management Console**.
-2. Tìm kiếm và chọn dịch vụ **AWS Organizations** từ thanh tìm kiếm.
+**💡 Pro Tip:** Nếu bạn đã có AWS account không thuộc AWS Organizations và đang sử dụng IAM User hoặc IAM Role với quyền Administrator, bạn có thể bỏ qua phần còn lại của nhiệm vụ này và chuyển sang nhiệm vụ tiếp theo.
 
-![AWS Organizations Console](/images/1/0001.png?featherlight=false&width=90pc)
+#### Tạo AWS account mới
 
----
+Nếu bạn chưa có AWS account, bạn có thể tạo AWS account của riêng mình [tại đây](https://portal.aws.amazon.com/billing/signup). Một phương thức thanh toán, thường là thẻ tín dụng, sẽ cần thiết để kích hoạt tài khoản cho các bài thực hành này. Quy trình đăng ký bao gồm việc nhận cuộc gọi điện thoại và nhập mã xác minh bằng bàn phím điện thoại.
 
-#### 2. Thêm tài khoản AWS mới
+**⚠️ Warning:** Nếu bạn hiện đang đăng nhập vào AWS Management Console, bạn sẽ cần đăng xuất trước khi [nhấp vào đây](https://portal.aws.amazon.com/billing/signup) để tạo AWS account mới.
 
-1. Trong giao diện **AWS Organizations Console**, chọn **Add an AWS account**.
+#### Chuẩn bị IAM User cho bài thực hành
 
-![Add an AWS Account](/images/1/0003.png?featherlight=false&width=90pc)
+**🔒 Security Note:** Việc hạn chế nghiêm ngặt việc sử dụng tài khoản root mặc định đi kèm với mỗi AWS account được coi là best practice theo nguyên tắc least privilege. Nếu bạn có AWS account nhưng không có IAM User hoặc Role để làm việc, hãy làm theo các bước dưới đây để chuẩn bị cho bài thực hành.
 
----
+1. Đăng nhập vào AWS account của bạn với tài khoản root.
+2. Truy cập AWS IAM console và tạo user mới.
+3. Nhập tên cho user của bạn (ví dụ: admin) và chọn "AWS Management Console access", sau đó nhập mật khẩu mạnh.
+4. Nhấp vào **Next: Permissions** để tiếp tục bước tiếp theo.
 
-#### 3. Chọn Tạo tài khoản AWS mới
+![3.4.11](/images/0001/0001.png)
 
-1. Chọn **Create an AWS account**.
-2. Nhập các thông tin bắt buộc dưới đây:
-   - **AWS account name**: Logging
-   - **Email address of the account's owner**: `example+lab12Logging@amazon.com.vn`
+5. Nhấp vào **Attach existing policies directly** và chọn **AdministratorAccess**.
 
-![AWS Account Configuration](/images/4/0002.png?featherlight=false&width=90pc)
+![3.4.11](/images/0001/0002.png)
 
-{{% notice note %}}
-**Lưu ý:** Để tạo nhiều tài khoản AWS với cùng một email, bạn có thể sử dụng cú pháp: `example+<description>@domain.com`. Ví dụ: `example+lab12Logging@amazon.com.vn`.
-{{% /notice %}}
+6. Nhấp vào **Next: Tags**.
+7. Nhấp vào **Next: Review**.
+8. Nhấp vào **Create User**.
+9. Nhấp vào liên kết **Send email** để nhận đường dẫn đăng nhập duy nhất cho tài khoản của bạn.
 
----
+**💡 Pro Tip:** Khi thiết lập IAM User với quyền Administrator, hãy đảm bảo bạn lưu trữ thông tin đăng nhập một cách an toàn và kích hoạt xác thực đa yếu tố (MFA) để tăng cường bảo mật cho tài khoản của bạn. MFA là một lớp bảo mật bổ sung quan trọng trong mô hình Zero Trust.
 
-#### 4. Cấu hình IAM Role
-
-1. **IAM role name**: Để mặc định là **OrganizationAccountAccessRole**.
-
-Role này sẽ được sử dụng để truy cập vào tài khoản AWS thành viên bằng phương thức [Chuyển đổi role (Switch Role)](https://000002.awsstudygroup.com/3-switch-roles/).
-
-![IAM Role Configuration](/images/4/0002.png?featherlight=false&width=90pc)
-
----
-
-#### 5. Xác nhận và tạo tài khoản
-
-1. Kiểm tra lại thông tin đã nhập.
-2. Chọn **Create AWS account** để tiến hành tạo tài khoản.
-
----
-
-#### 6. Lặp lại quy trình cho các tài khoản khác
-
-1. Tạo thêm các tài khoản tương tự cho các mục đích khác như:
-   - **Security**
-   - **Shared Services**
-   - **Application**
-
-**Lưu ý:** Nếu địa chỉ email bạn sử dụng đã được đăng ký cho một tài khoản AWS khác, bạn sẽ nhận được thông báo lỗi khi thực hiện yêu cầu tạo tài khoản mới.
-
----
-
-#### 7. Kiểm tra trạng thái yêu cầu
-
-1. Vào mục **Requests** để xem trạng thái của các yêu cầu tạo tài khoản.
-2. Nếu yêu cầu thành công, bạn sẽ thấy tài khoản mới hiển thị trong danh sách các tài khoản thành viên của **AWS Organizations**.
+**🔒 Security Note:** Trong môi trường sản xuất thực tế, bạn nên áp dụng nguyên tắc least privilege bằng cách chỉ cấp quyền tối thiểu cần thiết cho mỗi IAM User thay vì cấp quyền AdministratorAccess. Tuy nhiên, cho mục đích của workshop này, quyền Administrator là cần thiết để thiết lập AWS IAM Identity Center.

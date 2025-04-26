@@ -1,80 +1,93 @@
 +++
-title = "Thêm AWS Account vào AWS Organization"
+title = "Tạo User và Groups trong IAM Identity Center"
 date = 2020
 weight = 3
 chapter = false
 pre = "<b>1.3 </b>"
 +++
 
-#### Mục tiêu
+#### Tạo User và Groups trong IAM Identity Center
 
-Ở bước 1.1, bạn đã thực hiện tạo AWS Account mới từ dịch vụ AWS Organizations! Vậy nếu bạn đã có một hoặc nhiều AWS Account với các Workload đang chạy và bạn muốn thêm các AWS Account đó vào Organization của bạn để dễ dàng phân bổ tài nguyên, nhóm các accounts (như bước 1.2,) và áp dụng các nguyên tắc quản trị -> chức năng **Invite an existing AWS account** sẽ hỗ trợ bạn trong trường hợp này.
+**ℹ️ Thông tin:** Phần này hướng dẫn tạo users và groups trong kho danh tính (identity store) tích hợp của IAM Identity Center. Nếu bạn muốn cấu hình External Identity Provider (IdP) làm identity source, hãy tham khảo phần "Sử dụng External IdP với IAM Identity Center" trong mục Extra Credit.
 
-#### Hướng dẫn chi tiết
+#### Chọn nguồn danh tính (identity source)
 
-#### 1. Thêm AWS Account vào Organizations
+**ℹ️ Thông tin:** Việc chọn identity source xác định nơi IAM Identity Center tìm kiếm users và groups cần quyền truy cập SSO. Theo mặc định, IAM Identity Center cung cấp một identity store tích hợp để quản lý nhanh chóng và dễ dàng. Đây là lựa chọn tốt cho các tổ chức nhỏ hoặc môi trường thử nghiệm.
 
-1. Truy cập vào **AWS Management Console** và tìm dịch vụ **AWS Organizations** trong thanh tìm kiếm.
-   
-2. Tại trang **AWS Organizations**, chọn **Add an AWS account**.
+**💡 Pro Tip:** Đối với môi trường doanh nghiệp, bạn có thể kết nối IAM Identity Center với Microsoft Active Directory (thông qua AWS Directory Service) hoặc nhà cung cấp định danh bên ngoài tương thích SAML 2.0 như Okta, Microsoft Entra ID (trước đây là Azure AD), hoặc Google Workspace.
 
-   ![AWS Account](/images/10/0001.png?featherlight=false&width=90pc)
+#### Quản lý danh tính trong IAM Identity Center
 
-3. Chọn mục **Invite an existing AWS account**.
+Users và groups bạn tạo trong IAM Identity Center identity store chỉ có sẵn trong IAM Identity Center. Hãy làm theo quy trình sau để thêm users và groups vào identity store của bạn.
 
-4. Trong mục **Email address or account ID of the AWS account to invite**, nhập địa chỉ email hoặc Account ID của AWS Account mà bạn muốn thêm vào Organization (ví dụ: `fcj@amazon.com.vn` hoặc `888800009920`).
+#### Các bước thực hiện
 
-5. Chọn **Send invitation** để gửi lời mời.
+#### 1. Tạo Groups
 
-   ![AWS Account](/images/10/0002.png?featherlight=false&width=90pc)
+**ℹ️ Thông tin:** Trong workshop này, chúng ta sẽ tạo 2 groups: Administrators và readOnly. Groups giúp tổ chức users theo vai trò và trách nhiệm, đơn giản hóa việc quản lý quyền truy cập.
 
-#### 2. Kiểm tra lời mời tham gia vào Organization
+1. Điều hướng đến IAM Identity Center Console
+2. Chọn **Groups** và nhấp vào **Create Group**
 
-1. Truy cập lại trang **AWS Organizations**.
+![3.4.11](/images/0001/0005.png)
 
-2. Tại khung bên trái, chọn **Invitations**, bạn sẽ thấy được Account ID mà bạn vừa thêm tại bước 1 xuất hiện tại đây với trạng thái **OPEN**.
+3. Trong trang Create group:
+   - Nhập Group Name, ví dụ: **Administrators**
+   - Nhập Description, ví dụ: **Group for administrator users**
+   - Nhấp vào **Create group**
 
-   ![AWS Account](/images/10/0003.png?featherlight=false&width=90pc)
+![3.4.11](/images/0001/0006.png)
 
-#### 3. Chấp nhận lời mời tham gia vào Organization
+4. Một banner màu xanh lá sẽ xuất hiện cho biết group Administrators đã được tạo thành công
+5. Lặp lại các bước 1-3 để tạo group **readOnly**
 
-1. Đăng nhập vào **AWS Management Console** của AWS Account mà bạn vừa thêm tại bước 1.
+![3.4.11](/images/0001/0007.png)
 
-2. Tìm kiếm và truy cập dịch vụ **AWS Organizations** trong thanh tìm kiếm.
+**💡 Pro Tip:** Việc tổ chức users thành các groups giúp quản lý quyền truy cập hiệu quả hơn và dễ dàng áp dụng các chính sách quyền hạn theo vai trò. Khi cấu trúc tổ chức thay đổi, bạn chỉ cần cập nhật thành viên group thay vì phải điều chỉnh quyền cho từng user riêng lẻ.
 
-   ![AWS Account](/images/10/0004.png?featherlight=false&width=90pc)
+**🔒 Security Note:** Tuân thủ nguyên tắc least privilege bằng cách tạo các groups với quyền hạn cụ thể và giới hạn. Điều này giúp giảm thiểu rủi ro bảo mật và đơn giản hóa việc kiểm toán quyền truy cập.
 
-3. Tại bên phải màn hình, bạn sẽ thấy thông báo **View 1 invitation**, chọn để xem chi tiết lời mời.
+#### 2. Tạo Users
 
-4. Nhấn **Accept invitation** để chấp nhận lời mời tham gia vào Organization.
+**ℹ️ Thông tin:** Trong workshop này, chúng ta sẽ tạo hai users: adminUser và readOnlyUser để minh họa các cấp độ quyền truy cập khác nhau.
 
-   ![AWS Account](/images/10/0005.png?featherlight=false&width=90pc)
+1. Điều hướng đến IAM Identity Center Console
+2. Chọn **Users** dưới Workplace pool và nhấp vào **Add User**
 
-**Lưu ý**: Bạn chỉ có thể nhìn thấy lời mời nếu AWS Account này chưa tham gia vào bất kỳ **AWS Organizations** nào trước đó.
+![3.4.11](/images/0001/0008.png)
 
-#### 4. Xác nhận lời mời
+3. Trong trang Add User:
+   - Nhập Username, ví dụ: **adminUser**
+   - Đối với Password, chọn tùy chọn **Generate a one-time password that you can share with the user**
+   - Nhập Email Address, sử dụng định dạng email+admin@domain.com
+   - Xác nhận lại địa chỉ email đã nhập
+   - Nhập First name
+   - Nhập Last name
+   - Để Display name như đã nhập
+   - Nhấp vào **Next** (bạn có thể khám phá các trường tùy chọn)
 
-1. Sau khi chấp nhận lời mời, bạn sẽ nhận được thông báo xác nhận và AWS Account của bạn sẽ được liên kết với **AWS Organizations**.
+![3.4.11](/images/0001/0009.png)
 
-   ![AWS Account](/images/10/0006.png?featherlight=false&width=90pc)
+4. Trong trang Add users to groups - optional:
+   - Chọn group **Administrators**
+   - Nhấp vào **Next**
 
-2. Dù bạn đang ở **Dashboard**, bạn chỉ có thể nhìn thấy thông tin của **Organization** mà bạn đang tham gia với vai trò là **Member Account** (thành viên).
+![3.4.11](/images/0001/00010.png)
 
-   ![AWS Account](/images/10/0007.png?featherlight=false&width=90pc)
+5. Trong trang Review and add user:
+   - Xem lại thông tin đã cung cấp trong các bước trước
+   - Nhấp vào **Add user**
 
-#### 5. Kiểm tra trạng thái của AWS Organizations
+![3.4.11](/images/0001/00011.png)
 
-1. Truy cập vào AWS Management Console của **Management Account** (tài khoản quản lý chính).
+6. Một cửa sổ pop-up sẽ xuất hiện với One-time password. Sao chép thông tin bằng nút Copy và lưu lại để sử dụng sau trong workshop.
 
-2. Quay lại trang **AWS Organizations** và kiểm tra trạng thái của AWS Account mà bạn đã thêm ở bước trước. Nếu thành công, Account mới sẽ xuất hiện trong danh sách với trạng thái **Active**.
+![3.4.11](/images/0001/00012.png)
 
-   ![AWS Account](/images/10/0008.png?featherlight=false&width=90pc)
+**🔒 Security Note:** Mật khẩu một lần (one-time password) chỉ hiển thị một lần và không thể truy xuất lại. Hãy đảm bảo lưu trữ an toàn và chia sẻ với người dùng qua kênh bảo mật. Trong môi trường sản xuất, bạn nên kích hoạt xác thực đa yếu tố (MFA) cho tất cả người dùng để tăng cường bảo mật.
 
-3. Bạn có thể xem cấu trúc **Organization** hiện tại bao gồm các **Organization Units (OUs)**, **Member Accounts**, và **Management Account**.
+**⚠️ Warning:** Làm theo các bước 1-6 để tạo user **readOnlyUser**. Sử dụng một email duy nhất và khác với email của admin user cho readOnlyUser (tương tự như username+readOnly@domain.com) và đảm bảo gán user này vào group readOnly ở Bước 4.
 
-   - **Management Account** là tài khoản chính để quản lý và truy cập vào các **Member Account** thông qua chức năng **Switch Role**.
-   
-#### Kết luận
+**💡 Pro Tip:** IAM Identity Center hỗ trợ quản lý vòng đời người dùng (user lifecycle management) bao gồm tạo mới, cập nhật, vô hiệu hóa và xóa người dùng. Trong môi trường doanh nghiệp, bạn có thể tự động hóa các quy trình này thông qua tích hợp với hệ thống HR hoặc sử dụng AWS APIs.
 
-Chúc mừng bạn đã thêm thành công một AWS Account vào Organization! Bạn có thể bắt đầu quản lý tài nguyên và áp dụng các nguyên tắc bảo mật và quản trị một cách dễ dàng.
-
+Bạn đã tạo thành công hai users và groups mới. Sử dụng IAM Identity Center, những users này sẽ có thể truy cập nhiều AWS accounts trong AWS Organizations với quyền hạn phù hợp dựa trên vai trò của họ.
