@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AWS IAM Identity Center Workshop
 
 A comprehensive hands-on workshop for implementing AWS IAM Identity Center (formerly AWS Single Sign-On) to manage organizational identities across multiple AWS accounts.
