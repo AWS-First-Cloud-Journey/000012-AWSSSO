@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.147.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Làm mới thông tin xác thực thủ công :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1745669092" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745669092" rel="stylesheet">
-    <link href="/css/hybrid.css?1745669092" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745669092" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745669092" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745669092" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745669092" rel="stylesheet">
-    <link href="/css/theme.css?1745669092" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745669092" rel="stylesheet">
+    <link href="/css/nucleus.css?1759648597" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759648597" rel="stylesheet">
+    <link href="/css/hybrid.css?1759648597" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759648597" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759648597" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759648597" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759648597" rel="stylesheet">
+    <link href="/css/theme.css?1759648597" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759648597" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1745669092" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759648597" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745669092"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759648597"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745669092"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745669092"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759648597"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759648597"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745669092"></script>
+<script type="text/javascript" src="/js/search.js?1759648597"></script>
 
     
   </div>
@@ -517,7 +517,7 @@
                   
                     
                     
-                      <option id="en" value="/2-aws-cli-access/2.1-manual/">English</option>
+                      <option id="en" value="//localhost:1313/2-aws-cli-access/2.1-manual/">English</option>
                     
                   
               
@@ -531,7 +531,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/2-aws-cli-access/2.1-manual/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/2-aws-cli-access/2.1-manual/" selected>Tiếng Việt</option>
                     
                   
               
@@ -674,22 +674,44 @@
 <h4 id="quy-trình-cấu-hình-thủ-công">Quy trình cấu hình thủ công</h4>
 <ol>
 <li>Đăng nhập vào AWS Access Portal bằng cách sử dụng URL đăng nhập được cung cấp cho tổ chức của bạn.</li>
+</ol>
+<p><img src="/images/0002/1.png" alt="3.4.11"></p>
+<ol start="2">
 <li>Trong tab <strong>Accounts</strong> hoặc bằng cách chọn biểu tượng AWS account, xác định AWS account mà bạn muốn truy cập.</li>
+</ol>
+<p><img src="/images/0002/2.png" alt="3.4.11"></p>
+<ol start="3">
 <li>Mở rộng account để hiển thị các IAM role có sẵn (ví dụ: AdministratorAccess, readOnly).</li>
+</ol>
+<p><img src="/images/0002/3.png" alt="3.4.11"></p>
+<ol start="4">
 <li>Bên cạnh IAM role mong muốn, chọn <strong>Access keys</strong> để lấy thông tin xác thực tạm thời.</li>
 </ol>
+<p><img src="/images/0002/4.png" alt="3.4.11"></p>
 <p><strong>ℹ️ Thông tin:</strong> AWS Access Portal là giao diện tập trung để quản lý quyền truy cập vào tất cả AWS accounts trong tổ chức của bạn thông qua IAM Identity Center.</p>
-<p><img alt="SSO Access Portal" src="/images/sso-access-portal.png"></p>
 <h4 id="sử-dụng-thông-tin-xác-thực-tạm-thời">Sử dụng thông tin xác thực tạm thời</h4>
 <p>Trong hộp thoại <strong>Get credentials</strong>, bạn có ba tùy chọn để sử dụng thông tin xác thực:</p>
 <p><strong>Tùy chọn 1: Thiết lập biến môi trường AWS</strong></p>
 <ul>
 <li>Chọn hệ điều hành của bạn (MacOS and Linux, Windows, hoặc PowerShell)</li>
 <li>Sao chép các lệnh được cung cấp vào clipboard</li>
-<li>Dán và thực thi các lệnh trong terminal để thiết lập biến môi trường</li>
-<li>Các biến này sẽ ghi đè tất cả cài đặt thông tin xác thực hiện có trong phiên terminal hiện tại</li>
 </ul>
-<p><strong>💡 Pro Tip:</strong> Sử dụng tùy chọn này khi bạn cần nhanh chóng chuyển đổi giữa các vai trò khác nhau trong cùng một phiên làm việc.</p>
+<p><img src="/images/0002/5.png" alt="3.4.11"></p>
+<ul>
+<li>Dán và thực thi các lệnh trong terminal để thiết lập biến môi trường</li>
+</ul>
+<p><img src="/images/0002/6.png" alt="3.4.11"></p>
+<ul>
+<li>Kiểm tra lại xem CLI đã nhận thông tin chưa</li>
+</ul>
+<pre tabindex="0"><code>   aws sts get-caller-identity
+</code></pre><p><img src="/images/0002/8.png" alt="3.4.11"></p>
+<ul>
+<li>Các biến này sẽ ghi đè tất cả cài đặt thông tin xác thực hiện có trong phiên terminal hiện tại, nghĩa là CLI đã được xác thực thành công bằng thông tin tạm thời
+<img src="/images/0002/9.png" alt="3.4.11">
+<img src="/images/0002/10.png" alt="3.4.11">
+<strong>💡 Pro Tip:</strong> Sử dụng tùy chọn này khi bạn cần nhanh chóng chuyển đổi giữa các vai trò khác nhau trong cùng một phiên làm việc.</li>
+</ul>
 <p><strong>Tùy chọn 2: Thêm profile vào tệp AWS credentials</strong></p>
 <ul>
 <li>Sao chép các lệnh được cung cấp</li>
@@ -703,7 +725,6 @@
 <li>Sao chép các giá trị thông tin xác thực riêng lẻ (AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SESSION_TOKEN)</li>
 <li>Tích hợp các giá trị này vào mã ứng dụng của bạn khi sử dụng AWS SDK</li>
 </ul>
-<p><img alt="SSO Credentials" src="/images/sso-credentials.png"></p>
 <p><strong>⚠️ Cảnh báo:</strong> Thông tin xác thực tạm thời có thời hạn giới hạn, thường là 1 giờ. Khi hết hạn, bạn cần lặp lại quy trình để lấy thông tin xác thực mới. Không nên lưu trữ thông tin xác thực tạm thời trong các tệp cấu hình dài hạn hoặc hệ thống kiểm soát phiên bản.</p>
 
 
@@ -998,19 +1019,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745669092"></script>
-    <script src="/js/jquery.sticky.js?1745669092"></script>
-    <script src="/js/featherlight.min.js?1745669092"></script>
-    <script src="/js/highlight.pack.js?1745669092"></script>
+    <script src="/js/clipboard.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759648597"></script>
+    <script src="/js/jquery.sticky.js?1759648597"></script>
+    <script src="/js/featherlight.min.js?1759648597"></script>
+    <script src="/js/highlight.pack.js?1759648597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745669092"></script>
-    <script src="/js/learn.js?1745669092"></script>
-    <script src="/js/hugo-learn.js?1745669092"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759648597"></script>
+    <script src="/js/learn.js?1759648597"></script>
+    <script src="/js/hugo-learn.js?1759648597"></script>
 
-    <link href="/mermaid/mermaid.css?1745669092" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1745669092"></script>
+    <link href="/mermaid/mermaid.css?1759648597" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759648597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

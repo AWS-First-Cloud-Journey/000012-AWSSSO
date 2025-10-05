@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.147.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>IAM Identity Center Identity Store APIs :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1745669092" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745669092" rel="stylesheet">
-    <link href="/css/hybrid.css?1745669092" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745669092" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745669092" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745669092" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745669092" rel="stylesheet">
-    <link href="/css/theme.css?1745669092" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745669092" rel="stylesheet">
+    <link href="/css/nucleus.css?1759643237" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759643237" rel="stylesheet">
+    <link href="/css/hybrid.css?1759643237" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759643237" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759643237" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759643237" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759643237" rel="stylesheet">
+    <link href="/css/theme.css?1759643237" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759643237" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1745669092" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759643237" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745669092"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759643237"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745669092"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745669092"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759643237"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759643237"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745669092"></script>
+<script type="text/javascript" src="/js/search.js?1759643237"></script>
 
     
   </div>
@@ -517,7 +517,7 @@
                   
                     
                     
-                      <option id="en" value="/%CC%805-iam-identity-center-identity-store-apis/">English</option>
+                      <option id="en" value="//localhost:1313/%CC%805-iam-identity-center-identity-store-apis/">English</option>
                     
                   
               
@@ -531,7 +531,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/%CC%805-iam-identity-center-identity-store-apis/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/%CC%805-iam-identity-center-identity-store-apis/" selected>Tiếng Việt</option>
                     
                   
               
@@ -703,14 +703,12 @@
 </ul>
 <blockquote>
 <p><strong>Lưu ý</strong></p>
-<p>Bạn có thể tham khảo tài liệu boto3 để biết chi tiết liên quan đến cú pháp yêu cầu, cú pháp phản hồi và các ngoại lệ cho hoạt động API phương thức create_group.</p>
-</blockquote>
+<p>Bạn có thể tham khảo tài liệu boto3 để biết chi tiết liên quan đến cú pháp yêu cầu, cú pháp phản hồi và các ngoại lệ cho hoạt động API phương thức create_group.</p></blockquote>
 <h4 id="test-setup">Test Setup</h4>
 <p>Trong bước này, bạn sẽ chạy script python identitystore_operations.py và xem tất cả các tùy chọn được hỗ trợ có sẵn trong script.</p>
 <blockquote>
 <p><strong>Lưu ý</strong></p>
-<p>Nếu bạn không sử dụng profile mặc định, hãy đảm bảo cấu hình phiên shell của bạn với các biến môi trường trước khi chạy script.</p>
-</blockquote>
+<p>Nếu bạn không sử dụng profile mặc định, hãy đảm bảo cấu hình phiên shell của bạn với các biến môi trường trước khi chạy script.</p></blockquote>
 <pre tabindex="0"><code>python identitystore_operations.py —h
 </code></pre><p>Bạn sẽ thấy đầu ra như dưới đây:</p>
 <p><strong>Sample Output:</strong></p>
@@ -735,8 +733,7 @@ options:
 <pre tabindex="0"><code>python identitystore_operations.py create_group --identitystoreid d-123456a7890 --groupname AWS_Data_Science --description &#34;My Data Science group&#34;
 </code></pre><blockquote>
 <p><strong>Lưu ý</strong></p>
-<p>Thay thế giá trị identitystoreid &ldquo;d-123456a7890&rdquo; bằng IdentityStore Id của bạn.</p>
-</blockquote>
+<p>Thay thế giá trị identitystoreid &ldquo;d-123456a7890&rdquo; bằng IdentityStore Id của bạn.</p></blockquote>
 <p>Bạn sẽ thấy đầu ra như dưới đây:</p>
 <p><strong>Sample Output:</strong></p>
 <pre tabindex="0"><code>Group:AWS_Data_Science with GroupId:94482488-3041-7026-18f3-be45837cd0e4 created successfully
@@ -744,8 +741,7 @@ options:
 <pre tabindex="0"><code>python identitystore_operations.py create_group --identitystoreid d-123456a7890 --groupname AWS_Applied_Scientists --description &#34;Applied Scientist group&#34;
 </code></pre><blockquote>
 <p><strong>Lưu ý</strong></p>
-<p>Thay thế giá trị identitystoreid &ldquo;d-123456a7890&rdquo; bằng IdentityStore Id của bạn.</p>
-</blockquote>
+<p>Thay thế giá trị identitystoreid &ldquo;d-123456a7890&rdquo; bằng IdentityStore Id của bạn.</p></blockquote>
 <p>Bạn sẽ thấy đầu ra như dưới đây:</p>
 <p><strong>Sample Output:</strong></p>
 <pre tabindex="0"><code>Group:AWS_Applied_Scientists with GroupId:94482488-3041-7026-18f3-be45837cd0e4 created successfully
@@ -766,8 +762,7 @@ options:
 <pre tabindex="0"><code>python identitystore_operations.py create_user --identitystoreid d-123456a7890 --username johndoe --givenname John --familyname Doe --groupname AWS_Data_Science
 </code></pre><blockquote>
 <p><strong>Lưu ý</strong></p>
-<p>Thay thế giá trị identitystoreid &ldquo;d-123456a7890&rdquo; bằng IdentityStore Id của bạn.</p>
-</blockquote>
+<p>Thay thế giá trị identitystoreid &ldquo;d-123456a7890&rdquo; bằng IdentityStore Id của bạn.</p></blockquote>
 <p>Bạn sẽ thấy đầu ra như dưới đây:</p>
 <p><strong>Sample Output:</strong></p>
 <pre tabindex="0"><code>User:johndoe with UserId:94482488-3041-7026-18f3-be45837cd0e4 created successfully
@@ -778,8 +773,7 @@ User:johndoe added to Group:AWS_Data_Science successfully
 <pre tabindex="0"><code>python identitystore_operations.py adduser_to_group --identitystoreid d-123456a7890 --groupname AWS_Applied_Scientists --username johndoe
 </code></pre><blockquote>
 <p><strong>Lưu ý</strong></p>
-<p>Thay thế giá trị identitystoreid &ldquo;d-123456a7890&rdquo; bằng IdentityStore Id của bạn.</p>
-</blockquote>
+<p>Thay thế giá trị identitystoreid &ldquo;d-123456a7890&rdquo; bằng IdentityStore Id của bạn.</p></blockquote>
 <p>Bạn sẽ thấy đầu ra như dưới đây:</p>
 <p><strong>Sample Output:</strong></p>
 <pre tabindex="0"><code>User:johndoe added to Group:AWS_Applied_Scientists successfully
@@ -790,8 +784,7 @@ User:johndoe added to Group:AWS_Data_Science successfully
 <pre tabindex="0"><code>python identitystore_operations.py list_members --identitystoreid d-123456a7890 --groupname AWS_Applied_Scientists 
 </code></pre><blockquote>
 <p><strong>Lưu ý</strong></p>
-<p>Thay thế giá trị identitystoreid &ldquo;d-123456a7890&rdquo; bằng IdentityStore Id của bạn.</p>
-</blockquote>
+<p>Thay thế giá trị identitystoreid &ldquo;d-123456a7890&rdquo; bằng IdentityStore Id của bạn.</p></blockquote>
 <p>Bạn sẽ thấy đầu ra như dưới đây:</p>
 <p><strong>Sample Output:</strong></p>
 <pre tabindex="0"><code>UserName:johndoe,Display Name: John Doe 
@@ -800,8 +793,7 @@ User:johndoe added to Group:AWS_Data_Science successfully
 <pre tabindex="0"><code>python identitystore_operations.py list_membership --identitystoreid d-123456a7890 --username johndoe
 </code></pre><blockquote>
 <p><strong>Lưu ý</strong></p>
-<p>Thay thế giá trị identitystoreid &ldquo;d-123456a7890&rdquo; bằng IdentityStore Id của bạn.</p>
-</blockquote>
+<p>Thay thế giá trị identitystoreid &ldquo;d-123456a7890&rdquo; bằng IdentityStore Id của bạn.</p></blockquote>
 <p>Bạn sẽ thấy đầu ra như dưới đây:</p>
 <p><strong>Sample Output:</strong></p>
 <pre tabindex="0"><code>User :johndoe is a member of the following groups
@@ -1099,19 +1091,19 @@ AWS_Applied_Scientists
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745669092"></script>
-    <script src="/js/jquery.sticky.js?1745669092"></script>
-    <script src="/js/featherlight.min.js?1745669092"></script>
-    <script src="/js/highlight.pack.js?1745669092"></script>
+    <script src="/js/clipboard.min.js?1759643237"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759643237"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759643237"></script>
+    <script src="/js/jquery.sticky.js?1759643237"></script>
+    <script src="/js/featherlight.min.js?1759643237"></script>
+    <script src="/js/highlight.pack.js?1759643237"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745669092"></script>
-    <script src="/js/learn.js?1745669092"></script>
-    <script src="/js/hugo-learn.js?1745669092"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759643237"></script>
+    <script src="/js/learn.js?1759643237"></script>
+    <script src="/js/hugo-learn.js?1759643237"></script>
 
-    <link href="/mermaid/mermaid.css?1745669092" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1745669092"></script>
+    <link href="/mermaid/mermaid.css?1759643237" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759643237"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

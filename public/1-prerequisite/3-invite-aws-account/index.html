@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.147.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Invite AWS Account to AWS Organization :: AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
+    <title>Create Users and Groups in IAM Identity Center :: AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1745669092" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745669092" rel="stylesheet">
-    <link href="/css/hybrid.css?1745669092" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745669092" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745669092" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745669092" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745669092" rel="stylesheet">
-    <link href="/css/theme.css?1745669092" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745669092" rel="stylesheet">
+    <link href="/css/nucleus.css?1759648597" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759648597" rel="stylesheet">
+    <link href="/css/hybrid.css?1759648597" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759648597" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759648597" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759648597" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759648597" rel="stylesheet">
+    <link href="/css/theme.css?1759648597" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759648597" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1745669092" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759648597" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745669092"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759648597"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745669092"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745669092"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759648597"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759648597"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745669092"></script>
+<script type="text/javascript" src="/js/search.js?1759648597"></script>
 
     
   </div>
@@ -141,13 +141,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/2-configure-ou/" title="Setting up the Organization Unit" class="dd-item 
+    <li data-nav-id="/1-prerequisite/2-configure-ou/" title="Prerequisites for IAM Identity Center" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/2-configure-ou/">
-          <b>1.2 </b>Setting up the Organization Unit
+          <b>1.2 </b>Prerequisites for IAM Identity Center
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +169,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Invite AWS Account to AWS Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Create Users and Groups in IAM Identity Center" class="dd-item 
         
         active
         
         ">
       <a href="/1-prerequisite/3-invite-aws-account/">
-          <b>1.3 </b>Invite AWS Account to AWS Organization
+          <b>1.3 </b>Create Users and Groups in IAM Identity Center
           
             <i class="fas fa-check read-icon"></i>
           
@@ -197,13 +197,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/4-switch-role/" title="Access member account in Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/4-switch-role/" title="Create Permission Sets" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/4-switch-role/">
-          <b>1.4 </b>Access member account in Organization
+          <b>1.4 </b>Create Permission Sets
           
             <i class="fas fa-check read-icon"></i>
           
@@ -225,13 +225,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/5-provision-permission-sets/" title="" class="dd-item 
+    <li data-nav-id="/1-prerequisite/5-provision-permission-sets/" title="Provision Permission Sets" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/5-provision-permission-sets/">
-          
+          <b>1.5 </b>Provision Permission Sets
           
             <i class="fas fa-check read-icon"></i>
           
@@ -253,13 +253,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/6-test/" title="" class="dd-item 
+    <li data-nav-id="/1-prerequisite/6-test/" title="Verify Access Permissions" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/6-test/">
-          
+          <b> 1.6 </b>Verify Access Permissions
           
             <i class="fas fa-check read-icon"></i>
           
@@ -319,13 +319,41 @@
  
   
     
-    <li data-nav-id="/2-aws-cli-access/2.1-manual/" title="" class="dd-item 
+    <li data-nav-id="/2-aws-cli-access/2.1-manual/" title="Manually Refresh Credentials" class="dd-item 
         
         
         
         ">
       <a href="/2-aws-cli-access/2.1-manual/">
+          <b> 2.1 </b>Manually Refresh Credentials
           
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-aws-cli-access/2.2-automatic/" title="Automatic Credential Refresh" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-aws-cli-access/2.2-automatic/">
+          <b> 2.2 </b>Automatic Credential Refresh
           
             <i class="fas fa-check read-icon"></i>
           
@@ -489,7 +517,7 @@
                   
                     
                     
-                      <option id="en" value="/1-prerequisite/3-invite-aws-account/" selected>English</option>
+                      <option id="en" value="//localhost:1313/1-prerequisite/3-invite-aws-account/" selected>English</option>
                     
                   
               
@@ -503,7 +531,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/1-prerequisite/3-invite-aws-account/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/1-prerequisite/3-invite-aws-account/">Tiếng Việt</option>
                     
                   
               
@@ -591,7 +619,7 @@
             
           
           
-            <a href='/'>Using AWS IAM Identity Center for Robust Identity Management</a> > <a href='/1-prerequisite/'>Preparation steps</a> > Invite AWS Account to AWS Organization
+            <a href='/'>Using AWS IAM Identity Center for Robust Identity Management</a> > <a href='/1-prerequisite/'>Preparation steps</a> > Create Users and Groups in IAM Identity Center
           
         
           
@@ -609,6 +637,7 @@
     <li>
       <ul>
         <li></li>
+        <li><a href="#steps">Steps</a></li>
       </ul>
     </li>
   </ul>
@@ -628,7 +657,7 @@
           
             <h1>
               
-              Invite AWS Account to AWS Organization
+              Create Users and Groups in IAM Identity Center
             </h1>
           
 
@@ -636,43 +665,102 @@
 
 
 
-	<h4 id="adding-an-aws-account-to-organizations">Adding an AWS Account to Organizations</h4>
-<h4 id="step-1-invite-an-existing-aws-account">Step 1: Invite an Existing AWS Account</h4>
+	<h4 id="create-users-and-groups-in-iam-identity-center">Create Users and Groups in IAM Identity Center</h4>
+<p><strong>ℹ️ Information:</strong> This section guides you through creating users and groups in the built-in identity store of IAM Identity Center.<br>
+If you want to configure an External Identity Provider (IdP) as the identity source, refer to the “Using External IdP with IAM Identity Center” section in <em>Extra Credit</em>.</p>
+<h4 id="choosing-an-identity-source">Choosing an Identity Source</h4>
+<p><strong>ℹ️ Information:</strong> The selected identity source determines where IAM Identity Center retrieves users and groups for SSO access.<br>
+By default, IAM Identity Center provides a built-in identity store for fast and simple user management.<br>
+This is an ideal option for small organizations or testing environments.</p>
+<p><strong>💡 Pro Tip:</strong> For enterprise environments, you can connect IAM Identity Center to <strong>Microsoft Active Directory</strong> (via <strong>AWS Directory Service</strong>) or integrate with external identity providers that support <strong>SAML 2.0</strong>, such as <strong>Okta</strong>, <strong>Microsoft Entra ID</strong> (formerly Azure AD), or <strong>Google Workspace</strong>.</p>
+<h4 id="managing-identities-in-iam-identity-center">Managing Identities in IAM Identity Center</h4>
+<p>Users and groups that you create in the IAM Identity Center’s built-in identity store exist only within IAM Identity Center.<br>
+Follow the steps below to add users and groups to your identity store.</p>
+<hr>
+<h3 id="steps">Steps</h3>
+<h4 id="1-create-groups">1. Create Groups</h4>
+<p><strong>ℹ️ Information:</strong> In this workshop, we will create two groups: <strong>Administrators</strong> and <strong>readOnly</strong>.<br>
+Groups help organize users by their roles and responsibilities, simplifying access management.</p>
 <ol>
-<li>Go to the <strong>AWS Management Console</strong> and search for the <strong>AWS Organizations</strong> service in the search bar.</li>
-<li>Select <strong>Add an AWS account</strong>.
-<img alt="AWS Account" src="/images/10/0001.png?featherlight=false&width=90pc"></li>
-<li>Choose <strong>Invite an existing AWS account</strong>.</li>
-<li>Enter the email address or Account ID of the AWS Account you wish to add to the Organization, e.g., <code>fcj@amazon.com.vn</code> or 888800009920.</li>
-<li>Click on <strong>Send invitation</strong>.
-<img alt="AWS Account" src="/images/10/0002.png?featherlight=false&width=90pc"></li>
+<li>Navigate to the <strong>IAM Identity Center Console</strong></li>
+<li>Select <strong>Groups</strong> and click <strong>Create Group</strong></li>
 </ol>
-<h4 id="step-2-check-your-invitation-to-join-organizations">Step 2: Check Your Invitation to Join Organizations</h4>
+<p><img src="/images/0001/image006.png" alt="3.4.11"></p>
+<ol start="3">
+<li>On the <strong>Create group</strong> page:
+<ul>
+<li>Enter a <strong>Group Name</strong>, for example: <code>Administrators</code></li>
+<li>Enter a <strong>Description</strong>, for example: <code>Group for administrator users</code></li>
+<li>Click <strong>Create group</strong></li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/0001/image07.png" alt="3.4.11"></p>
+<ol start="4">
+<li>A green success banner will appear confirming that the <em>Administrators</em> group was created successfully.</li>
+<li>Repeat steps 1–3 to create the <strong>readOnly</strong> group.</li>
+</ol>
+<p><img src="/images/0001/image08.png" alt="3.4.11"></p>
+<p><strong>💡 Pro Tip:</strong> Organizing users into groups enables more efficient access management and makes it easier to apply role-based permission policies.<br>
+When your organizational structure changes, you only need to update group memberships rather than adjusting individual user permissions.</p>
+<p><strong>🔒 Security Note:</strong> Follow the <strong>principle of least privilege</strong> by creating groups with specific and limited permissions.<br>
+This minimizes security risks and simplifies access audit and compliance.</p>
+<hr>
+<h4 id="2-create-users">2. Create Users</h4>
+<p><strong>ℹ️ Information:</strong> In this workshop, we’ll create two users: <strong>adminUser</strong> and <strong>readOnlyUser</strong>, to demonstrate different access levels.</p>
 <ol>
-<li>In the left pane, select <strong>Invitations</strong>. You will see the Account ID you added in step 1, with the status <strong>OPEN</strong>.
-<img alt="AWS Account" src="/images/10/0003.png?featherlight=false&width=90pc"></li>
+<li>Navigate to the <strong>IAM Identity Center Console</strong></li>
+<li>Under the <strong>Workforce pool</strong>, select <strong>Users</strong>, then click <strong>Add User</strong></li>
 </ol>
-<h4 id="step-3-accept-an-invitation-to-join-organizations">Step 3: Accept an Invitation to Join Organizations</h4>
-<ol>
-<li>Access the <strong>AWS Management Console</strong> of the Account you added in step 1 and find the <strong>AWS Organizations</strong> service in the search bar.
-<img alt="AWS Account" src="/images/10/0004.png?featherlight=false&width=90pc"></li>
-<li>On the right side of the screen, select the invitation <strong>View 1 invitation</strong>.</li>
-<li>Note that the AWS Organization service is free of charge.
-<img alt="AWS Account" src="/images/10/0005.png?featherlight=false&width=90pc"></li>
-<li>Select <strong>Accept invitation</strong>.
-<img alt="AWS Account" src="/images/10/0006.png?featherlight=false&width=90pc"></li>
-<li>Result:
-<img alt="AWS Account" src="/images/10/0007.png?featherlight=false&width=90pc"></li>
-<li>Please note that you will only see this invitation if the AWS Account has not already joined any <strong>AWS Organizations</strong>.</li>
+<p><img src="/images/0001/image09.png" alt="3.4.11"></p>
+<ol start="3">
+<li>On the <strong>Add User</strong> page:
+<ul>
+<li>Enter <strong>Username</strong>, e.g. <code>adminUser</code></li>
+<li>For <strong>Password</strong>, select <strong>Generate a one-time password that you can share with the user</strong></li>
+<li>Enter <strong>Email Address</strong> using a format such as <code>email+admin@domain.com</code></li>
+<li>Confirm the email address</li>
+<li>Enter <strong>First name</strong></li>
+<li>Enter <strong>Last name</strong></li>
+<li>Keep <strong>Display name</strong> as entered</li>
+<li>Click <strong>Next</strong> (you can explore optional fields if desired)</li>
+</ul>
+</li>
 </ol>
-<h4 id="step-4-check-aws-organizations">Step 4: Check AWS Organizations</h4>
-<ol>
-<li>Go back to the AWS Account from step 1 and verify if the Account added in step 3 has joined Organizations.
-<img alt="AWS Account" src="/images/10/0008.png?featherlight=false&width=90pc"></li>
-<li>Here, you can view the entire structure of <strong>Organizations</strong>, including Organization Units with member accounts and management accounts.</li>
-<li>The <strong>management account</strong> will serve as the main account to manage and access <strong>member accounts</strong> through the <strong>switch role</strong> function.</li>
+<p><img src="/images/0001/image10.png" alt="3.4.11"></p>
+<ol start="4">
+<li>On the <strong>Add users to groups (optional)</strong> page:
+<ul>
+<li>Select the <strong>Administrators</strong> group</li>
+<li>Click <strong>Next</strong></li>
+</ul>
+</li>
 </ol>
-<p>Congratulations, the AWS Account has been successfully added with join date details.</p>
+<p><img src="/images/0001/image11.png" alt="3.4.11"></p>
+<ol start="5">
+<li>On the <strong>Review and add user</strong> page:
+<ul>
+<li>Review the information provided in previous steps</li>
+<li>Click <strong>Add user</strong></li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/0001/image12.png" alt="3.4.11"></p>
+<ol start="6">
+<li>A pop-up window will appear displaying the <strong>One-time password</strong>.<br>
+Click <strong>Copy</strong> to save this password for later use in the workshop.</li>
+</ol>
+<p><img src="/images/0001/image013.png" alt="3.4.11"></p>
+<p><strong>🔒 Security Note:</strong> The one-time password is displayed only once and cannot be retrieved later.<br>
+Ensure it is securely stored and shared via a secure channel.<br>
+In production environments, you should enable <strong>Multi-Factor Authentication (MFA)</strong> for all users to enhance security.</p>
+<p><strong>⚠️ Warning:</strong> Repeat steps <strong>1–6</strong> to create the <strong>readOnlyUser</strong>.<br>
+Use a unique email different from the admin user (e.g. <code>username+readonly@domain.com</code>) and make sure to assign this user to the <strong>readOnly</strong> group in Step 4.</p>
+<p><strong>💡 Pro Tip:</strong> IAM Identity Center supports <strong>user lifecycle management</strong>, including creation, updates, deactivation, and deletion.<br>
+In enterprise environments, these processes can be automated via HR system integration or AWS APIs.</p>
+<hr>
+<p>You have successfully created two new users and groups.<br>
+Using IAM Identity Center, these users can now access multiple AWS accounts within your AWS Organization with appropriate permissions based on their roles.</p>
 
 
 
@@ -861,6 +949,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -937,10 +1041,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/1-prerequisite/2-configure-ou/" title="Setting up the Organization Unit"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/1-prerequisite/2-configure-ou/" title="Prerequisites for IAM Identity Center"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/1-prerequisite/4-switch-role/" title="Access member account in Organization" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-prerequisite/4-switch-role/" title="Create Permission Sets" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -950,19 +1054,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745669092"></script>
-    <script src="/js/jquery.sticky.js?1745669092"></script>
-    <script src="/js/featherlight.min.js?1745669092"></script>
-    <script src="/js/highlight.pack.js?1745669092"></script>
+    <script src="/js/clipboard.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759648597"></script>
+    <script src="/js/jquery.sticky.js?1759648597"></script>
+    <script src="/js/featherlight.min.js?1759648597"></script>
+    <script src="/js/highlight.pack.js?1759648597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745669092"></script>
-    <script src="/js/learn.js?1745669092"></script>
-    <script src="/js/hugo-learn.js?1745669092"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759648597"></script>
+    <script src="/js/learn.js?1759648597"></script>
+    <script src="/js/hugo-learn.js?1759648597"></script>
 
-    <link href="/mermaid/mermaid.css?1745669092" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1745669092"></script>
+    <link href="/mermaid/mermaid.css?1759648597" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759648597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

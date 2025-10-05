@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.147.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Sử dụng Time-based access control :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1745669092" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745669092" rel="stylesheet">
-    <link href="/css/hybrid.css?1745669092" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745669092" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745669092" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745669092" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745669092" rel="stylesheet">
-    <link href="/css/theme.css?1745669092" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745669092" rel="stylesheet">
+    <link href="/css/nucleus.css?1759648597" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759648597" rel="stylesheet">
+    <link href="/css/hybrid.css?1759648597" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759648597" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759648597" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759648597" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759648597" rel="stylesheet">
+    <link href="/css/theme.css?1759648597" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759648597" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1745669092" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759648597" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745669092"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759648597"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745669092"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745669092"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759648597"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759648597"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745669092"></script>
+<script type="text/javascript" src="/js/search.js?1759648597"></script>
 
     
   </div>
@@ -517,7 +517,7 @@
                   
                     
                     
-                      <option id="en" value="/3-using-time-based-access-control/">English</option>
+                      <option id="en" value="//localhost:1313/3-using-time-based-access-control/">English</option>
                     
                   
               
@@ -531,7 +531,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/3-using-time-based-access-control/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/3-using-time-based-access-control/" selected>Tiếng Việt</option>
                     
                   
               
@@ -676,17 +676,22 @@
 <li>
 <p>Nhấp vào Permission sets trong menu bên trái dưới mục Multi-account permissions và nhấp vào nút Create permission set.</p>
 </li>
-<li>
-<p>Trong trang Select permission set type:</p>
+</ol>
+<p><img src="/images/0003/1.png" alt="3.4.11"></p>
+<ol start="4">
+<li>Trong trang Select permission set type:
 <ul>
 <li>Chọn radio button Custom permission set và nhấp Next.</li>
 </ul>
 </li>
-<li>
-<p>Trong trang Specify policies:</p>
+</ol>
+<p><img src="/images/0003/2.png" alt="3.4.11"></p>
+<ol start="5">
+<li>Trong trang Specify policies:
 <ul>
 <li>Mở rộng phần Inline Policy, sau đó xóa các dấu ngoặc nhọn hiện có.</li>
 <li>Sao chép và dán chính sách quyền sau vào vùng văn bản:</li>
+<li>Nhấp Next</li>
 </ul>
 </li>
 </ol>
@@ -749,118 +754,105 @@
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    ]
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ol start="6">
-<li>
-<p>Nhấp Next</p>
-</li>
-<li>
-<p>Trong trang Specify permission set details:</p>
+</span></span></code></pre></div><p><img src="/images/0003/3.png" alt="3.4.11">
+6. Trong trang Specify permission set details:</p>
 <ul>
 <li>Cung cấp tên cho permission set, ví dụ: secAuditorTimeBased</li>
-<li>Để các trường còn lại [Description, Session Duration, Relay state và Tags] ở mặc định và nhấp Next</li>
+<li>Description: <strong>Time-based read-only permissons for auditors</strong></li>
+<li>Để các trường còn lại [Session Duration, Relay state và Tags] ở mặc định và nhấp Next
+<img src="/images/0003/5.png" alt="3.4.11"></li>
 </ul>
-</li>
-<li>
-<p>Trong trang Review and create:</p>
+<ol start="7">
+<li>Trong trang Review and create:
 <ul>
 <li>Xem lại các chi tiết đã cung cấp trong các bước trước</li>
 <li>Nhấp vào nút Create</li>
 </ul>
 </li>
+<li>Thông báo màu xanh: Permission set “secAuditorTimeBased” đã được tạo thành công.
+<img src="/images/0003/6.png" alt="3.4.11"></li>
 </ol>
 <h4 id="tạo-group">Tạo Group</h4>
 <p>Hãy tạo Group mới có tên securityAuditors:</p>
 <ol>
-<li>
-<p>Điều hướng đến IAM Identity Center Console</p>
-</li>
-<li>
-<p>Chọn Groups dưới mục Workplace pool và nhấp Create Group.</p>
-</li>
-<li>
-<p>Trong trang Create group:</p>
+<li>Điều hướng đến IAM Identity Center Console</li>
+<li>Chọn Groups dưới mục Workplace pool và nhấp Create Group.
+<img src="/images/0003/7.png" alt="3.4.11"></li>
+<li>Trong trang Create group:
 <ul>
-<li>Cung cấp Group Name là securityAuditors</li>
-<li>Cung cấp Description, ví dụ: Group for security Auditors</li>
-<li>Nhấp Create group</li>
+<li>Cung cấp Group Name là: securityAuditors</li>
+<li>Cung cấp Description, ví dụ: The audit group has read-only access to information and can only monitor events.</li>
+<li>Nhấp Create group
+<img src="/images/0003/8.png" alt="3.4.11"></li>
 </ul>
 </li>
+<li>Nhóm securityAuditors đã tạo thành công.
+<img src="/images/0003/9.png" alt="3.4.11"></li>
 </ol>
 <h4 id="tạo-user-và-thêm-vào-group">Tạo user và thêm vào Group</h4>
 <p>Đối với module này, chúng ta sẽ tạo một user mới: secAuditUser</p>
 <ol>
-<li>
-<p>Điều hướng đến IAM Identity Center Console</p>
-</li>
-<li>
-<p>Chọn Users dưới mục Workplace pool và nhấp Add User.</p>
-</li>
-<li>
-<p>Trong trang Add User:</p>
+<li>Điều hướng đến IAM Identity Center Console</li>
+<li>Chọn Users dưới mục Workplace pool và nhấp Add User.
+<img src="/images/0003/15.png" alt="3.4.11"></li>
+<li>Trong trang Add User:
 <ul>
 <li>Cung cấp Username, ví dụ: secAuditUser</li>
 <li>Đối với Password, chọn radio button Generate a one-time password that you can share with the user</li>
-<li>Cung cấp Email Address, sử dụng định dạng <a href="mailto:email+secaudit@domain.com">email+secaudit@domain.com</a></li>
+<li>Cung cấp Email Address, sử dụng định dạng <a href="mailto:email&#43;secaudit@domain.com">email+secaudit@domain.com</a></li>
 <li>Xác nhận lại địa chỉ email đã cung cấp ở trường trước</li>
 <li>Cung cấp First name là secAudit</li>
 <li>Cung cấp Last name là user</li>
-<li>Để Display name như đã nhập và nhấp Next</li>
+<li>Để Display name như đã nhập và nhấp Next
+<img src="/images/0003/16.png" alt="3.4.11"></li>
 </ul>
 </li>
-<li>
-<p>Trong trang Add users to groups - optional:</p>
+<li>Trong trang Add users to groups - optional:
 <ul>
-<li>Chọn Group SecurityAuditors và nhấp Next</li>
+<li>Chọn Group SecurityAuditors và nhấp Next
+<img src="/images/0003/17.png" alt="3.4.11"></li>
 </ul>
 </li>
-<li>
-<p>Trong trang Review and add user:</p>
+<li>Trong trang Review and add user:
 <ul>
-<li>Xem lại thông tin đã cung cấp trong các bước trước và nhấp Add user</li>
+<li>Xem lại thông tin đã cung cấp trong các bước trước và nhấp Add user
+<img src="/images/0003/18.png" alt="3.4.11"></li>
 </ul>
 </li>
-<li>
-<p>Một cửa sổ pop-up sẽ xuất hiện với One-time password. Sao chép thông tin bằng nút Copy và lưu lại để sử dụng sau trong workshop.</p>
-</li>
+<li>Một cửa sổ pop-up sẽ xuất hiện với One-time password. Sao chép thông tin bằng nút Copy và lưu lại để sử dụng sau trong workshop.
+<img src="/images/0003/19.png" alt="3.4.11"></li>
 </ol>
 <h4 id="gán-permission-set-cho-aws-account">Gán Permission set cho AWS Account</h4>
 <ol>
-<li>
-<p>Điều hướng đến IAM Identity Center Console, chọn AWS accounts dưới mục Multi-account permissions</p>
-</li>
-<li>
-<p>Chọn tài khoản mà bạn muốn người dùng có quyền truy cập.</p>
-</li>
-<li>
-<p>Nhấp Assign users or groups.</p>
-</li>
-<li>
-<p>Trong trang Assign users and Group to AccountName:</p>
+<li>Điều hướng đến IAM Identity Center Console, chọn AWS accounts dưới mục Multi-account permissions</li>
+<li>Chọn tài khoản mà bạn muốn người dùng có quyền truy cập.</li>
+<li>Nhấp Assign users or groups.
+<img src="/images/0003/10.png" alt="3.4.11"></li>
+<li>Trong trang Assign users and Group to AccountName:
 <ul>
-<li>Chọn Groups, chọn securityAuditors và nhấp Next.</li>
+<li>Chọn Groups, chọn securityAuditors và nhấp Next.
+<img src="/images/0003/11.png" alt="3.4.11"></li>
 </ul>
 </li>
-<li>
-<p>Trong trang Select permission sets:</p>
+<li>Trong trang Select permission sets:
 <ul>
-<li>Dưới Permission sets, chọn secAuditorTimeBased và nhấp Next</li>
+<li>Dưới Permission sets, chọn secAuditorTimeBased và nhấp Next
+<img src="/images/0003/12.png" alt="3.4.11"></li>
 </ul>
 </li>
-<li>
-<p>Trong trang Review and submit:</p>
+<li>Trong trang Review and submit:
 <ul>
-<li>Xem lại thông tin và nhấp Submit</li>
+<li>Xem lại thông tin và nhấp Submit
+<img src="/images/0003/13.png" alt="3.4.11"></li>
 </ul>
 </li>
-<li>
-<p>IAM Identity Center sẽ liên kết User group với Permission set và gán nó cho AWS Account được chọn. Bạn sẽ thấy một trang với banner màu xanh lá.</p>
-</li>
+<li>IAM Identity Center sẽ liên kết User group với Permission set và gán nó cho AWS Account được chọn. Bạn sẽ thấy một trang với banner màu xanh lá.
+<img src="/images/0003/014.png" alt="3.4.11"></li>
 </ol>
 <h4 id="xác-minh-quyền-truy-cập">Xác minh quyền truy cập</h4>
 <blockquote>
 <p><strong>Lưu ý</strong>:
-Để có trải nghiệm tốt hơn, bạn nên thực hiện các bước xác minh sau trong chế độ duyệt web riêng tư hoặc trình duyệt web khác</p>
-</blockquote>
+Để có trải nghiệm tốt hơn, bạn nên thực hiện các bước xác minh sau trong chế độ duyệt web riêng tư hoặc trình duyệt web khác</p></blockquote>
 <ol>
 <li>
 <p>Đăng nhập vào AWS access Portal bằng URL User portal đã lưu khi tạo secAuditUser</p>
@@ -887,10 +879,16 @@
 <p>Điều hướng đến IAM Identity Center Console</p>
 </li>
 <li>
-<p>Nhấp vào Permission sets trong menu bên trái và chọn permission set secAuditorTimeBased</p>
+<p>Nhấp vào Permission sets trong menu bên trái và chọn permission set secAuditorTimeBased
+<img src="/images/0003/027.png" alt="3.4.11"></p>
 </li>
 <li>
-<p>Chỉnh sửa inline policy bằng cách nhấp vào nút Edit</p>
+<p>từ màn hình “Select permission set type chọn Custom permission set, nhấn next.
+<img src="/images/0003/28.png" alt="3.4.11"></p>
+</li>
+<li>
+<p>Chỉnh sửa inline policy bằng cách nhấp vào nút Edit
+<img src="/images/0003/29.png" alt="3.4.11"></p>
 </li>
 <li>
 <p>Sao chép và thay thế chính sách quyền bằng đoạn mã dưới đây</p>
@@ -956,7 +954,7 @@
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    ]
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><ol start="5">
+</span></span></code></pre></div><ol start="6">
 <li>
 <p>Lưu các thay đổi vào Permission set và việc này cung cấp lại permission set cho AWS Account</p>
 </li>
@@ -1256,19 +1254,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745669092"></script>
-    <script src="/js/jquery.sticky.js?1745669092"></script>
-    <script src="/js/featherlight.min.js?1745669092"></script>
-    <script src="/js/highlight.pack.js?1745669092"></script>
+    <script src="/js/clipboard.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759648597"></script>
+    <script src="/js/jquery.sticky.js?1759648597"></script>
+    <script src="/js/featherlight.min.js?1759648597"></script>
+    <script src="/js/highlight.pack.js?1759648597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745669092"></script>
-    <script src="/js/learn.js?1745669092"></script>
-    <script src="/js/hugo-learn.js?1745669092"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759648597"></script>
+    <script src="/js/learn.js?1759648597"></script>
+    <script src="/js/hugo-learn.js?1759648597"></script>
 
-    <link href="/mermaid/mermaid.css?1745669092" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1745669092"></script>
+    <link href="/mermaid/mermaid.css?1759648597" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759648597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

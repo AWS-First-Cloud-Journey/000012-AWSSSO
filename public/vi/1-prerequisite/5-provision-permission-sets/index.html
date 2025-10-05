@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.147.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Cung cấp Permission Sets :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1745669092" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745669092" rel="stylesheet">
-    <link href="/css/hybrid.css?1745669092" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745669092" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745669092" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745669092" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745669092" rel="stylesheet">
-    <link href="/css/theme.css?1745669092" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745669092" rel="stylesheet">
+    <link href="/css/nucleus.css?1759645169" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759645169" rel="stylesheet">
+    <link href="/css/hybrid.css?1759645169" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759645169" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759645169" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759645169" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759645169" rel="stylesheet">
+    <link href="/css/theme.css?1759645169" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759645169" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1745669092" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759645169" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745669092"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759645169"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745669092"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745669092"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759645169"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759645169"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745669092"></script>
+<script type="text/javascript" src="/js/search.js?1759645169"></script>
 
     
   </div>
@@ -517,7 +517,7 @@
                   
                     
                     
-                      <option id="en" value="/1-prerequisite/5-provision-permission-sets/">English</option>
+                      <option id="en" value="//localhost:1313/1-prerequisite/5-provision-permission-sets/">English</option>
                     
                   
               
@@ -531,7 +531,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/1-prerequisite/5-provision-permission-sets/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/1-prerequisite/5-provision-permission-sets/" selected>Tiếng Việt</option>
                     
                   
               
@@ -670,7 +670,7 @@
 <ol>
 <li>Điều hướng đến IAM Identity Center Console, chọn <strong>AWS accounts</strong> và chọn một account mà bạn muốn người dùng có quyền truy cập. Nhấp vào <strong>Assign users or groups</strong>.</li>
 </ol>
-<p><img alt="3.4.11" src="/images/0002/0009.png"></p>
+<p><img src="/images/0001/image22.png" alt="3.4.11"></p>
 <ol start="2">
 <li>Trong trang Select users and groups:
 <ul>
@@ -680,16 +680,13 @@
 </ul>
 </li>
 </ol>
-<p><img alt="3.4.11" src="/images/0002/00010.png"></p>
-<ol start="3">
-<li>Trong trang Select permission sets:
+<p><img src="/images/0001/image23.png" alt="3.4.11">
+3. Trong trang Select permission sets:</p>
 <ul>
 <li>Dưới mục Permission sets, chọn <strong>AdministratorAccess</strong></li>
 <li>Nhấp vào <strong>Next</strong></li>
 </ul>
-</li>
-</ol>
-<p><img alt="3.4.11" src="/images/0002/00011.png"></p>
+<p><img src="/images/0001/image24.png" alt="3.4.11"></p>
 <ol start="4">
 <li>Trong trang Review and submit:
 <ul>
@@ -698,13 +695,15 @@
 </ul>
 </li>
 </ol>
-<p><img alt="3.4.11" src="/images/0002/00012.png"></p>
+<p><img src="/images/0001/image25.png" alt="3.4.11"></p>
+<p><strong>ℹ️ Thông tin:</strong> Bạn sẽ thấy một trang xác nhận việc tạo AWS accounts thành công.</p>
+<p><img src="/images/0001/image266.png" alt="3.4.11"></p>
 <p><strong>ℹ️ Thông tin:</strong> IAM Identity Center sẽ liên kết User group với Permission set và gán nó cho (các) AWS Account đã chọn. Bạn sẽ thấy một trang với banner màu xanh lá xác nhận việc cung cấp thành công.</p>
 <h4 id="cung-cấp-permission-set-khác-cho-cùng-một-account">Cung cấp Permission Set khác cho cùng một account</h4>
 <ol>
 <li>Trong IAM Identity Center Console, chọn <strong>AWS accounts</strong> và chọn cùng account mà bạn đã sử dụng ở trên. Nhấp vào <strong>Assign users or groups</strong>.</li>
 </ol>
-<p><img alt="3.4.11" src="/images/0002/00013.png"></p>
+<p><img src="/images/0001/image266.png" alt="3.4.11"></p>
 <ol start="2">
 <li>Trong trang Select users and groups:
 <ul>
@@ -714,7 +713,7 @@
 </ul>
 </li>
 </ol>
-<p><img alt="3.4.11" src="/images/0002/00014.png"></p>
+<p><img src="/images/0001/image27.png" alt="3.4.11"></p>
 <ol start="3">
 <li>Trong trang Select permission sets:
 <ul>
@@ -723,7 +722,7 @@
 </ul>
 </li>
 </ol>
-<p><img alt="3.4.11" src="/images/0002/00015.png"></p>
+<p><img src="/images/0001/image28.png" alt="3.4.11"></p>
 <ol start="4">
 <li>Trong trang Review and submit:
 <ul>
@@ -732,10 +731,9 @@
 </ul>
 </li>
 </ol>
-<p><img alt="3.4.11" src="/images/0002/00016.png"></p>
-<p><img alt="3.4.11" src="/images/0002/00017.png"></p>
+<p><img src="/images/0001/image29.png" alt="3.4.11"></p>
 <p><strong>💡 Pro Tip:</strong> Kiểm tra các roles xuất hiện bên cạnh account nơi bạn đã cung cấp permission sets. Điều này giúp xác nhận rằng các quyền đã được áp dụng đúng cách và IAM Identity Center đã tạo các IAM roles tương ứng trong account đó.</p>
-<p><img alt="3.4.11" src="/images/0002/00018.png"></p>
+<p><img src="/images/0001/image30.png" alt="3.4.11"></p>
 <p><strong>🔒 Security Note:</strong> Việc phân quyền theo nhóm (group-based permissions) giúp quản lý quyền truy cập hiệu quả hơn và dễ dàng duy trì khi tổ chức phát triển. Đây là phương pháp tốt nhất để triển khai mô hình least privilege access và tuân thủ các nguyên tắc Zero Trust. Khi cấu trúc tổ chức thay đổi, bạn chỉ cần cập nhật thành viên group thay vì phải điều chỉnh quyền cho từng user riêng lẻ.</p>
 <p><strong>ℹ️ Thông tin:</strong> Khi permission set được cung cấp, IAM Identity Center tự động tạo và quản lý IAM roles tương ứng trong mỗi AWS account được chỉ định. Điều này giúp đơn giản hóa việc quản lý quyền truy cập trên quy mô lớn và đảm bảo tính nhất quán trong toàn bộ AWS Organization.</p>
 <p>Bạn đã cung cấp thành công Permission Sets cho AWS account. Bây giờ hãy chuyển sang kiểm tra thiết lập.</p>
@@ -1032,19 +1030,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745669092"></script>
-    <script src="/js/jquery.sticky.js?1745669092"></script>
-    <script src="/js/featherlight.min.js?1745669092"></script>
-    <script src="/js/highlight.pack.js?1745669092"></script>
+    <script src="/js/clipboard.min.js?1759645169"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759645169"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759645169"></script>
+    <script src="/js/jquery.sticky.js?1759645169"></script>
+    <script src="/js/featherlight.min.js?1759645169"></script>
+    <script src="/js/highlight.pack.js?1759645169"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745669092"></script>
-    <script src="/js/learn.js?1745669092"></script>
-    <script src="/js/hugo-learn.js?1745669092"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759645169"></script>
+    <script src="/js/learn.js?1759645169"></script>
+    <script src="/js/hugo-learn.js?1759645169"></script>
 
-    <link href="/mermaid/mermaid.css?1745669092" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1745669092"></script>
+    <link href="/mermaid/mermaid.css?1759645169" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759645169"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

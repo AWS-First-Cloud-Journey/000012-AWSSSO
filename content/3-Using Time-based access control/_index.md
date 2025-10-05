@@ -23,14 +23,14 @@ This guide explores the case of providing temporary access to AWS accounts for S
 2. Select the AWS Region recommended by the AWS Team if this is part of an AWS Event. If you're doing this on your own, select the Region where you intend to configure the rules.
 
 3. Click on Permission sets in the left menu under the Multi-account permissions section and click the Create permission set button.
-
+![3.4.11](/images/0003/1.png)
 4. On the Select permission set type page:
    - Select the Custom permission set radio button and click Next.
-
+![3.4.11](/images/0003/2.png)
 5. On the Specify policies page:
    - Expand the Inline Policy section, then delete the existing braces.
    - Copy and paste the following permission policy into the text area:
-
+   - Click Next
 ```json
 {
     "Version": "2012-10-17",
@@ -92,15 +92,21 @@ This guide explores the case of providing temporary access to AWS accounts for S
     ]
 }
 ```
+![3.4.11](/images/0003/3.png)
 
-6. Click Next
-7. On the Specify permission set details page:
-   - Provide a name for the permission set, e.g., secAuditorTimeBased
-   - Leave the remaining fields [Description, Session Duration, Relay state, and Tags] as default and click Next
+6. On the **Specify permission set details** page:
+   - Provide a name for the permission set, for example: `secAuditorTimeBased`
+   - Description: `Time-based read-only permissions for auditors`
+   - Leave the remaining fields [Session Duration, Relay state, and Tags] at their default values
+   - Click **Next**
+![3.4.11](/images/0003/5.png)
 
-8. On the Review and create page:
+7. On the **Review and create** page:
    - Review the details provided in the previous steps
-   - Click the Create button
+   - Click the **Create** button
+8. A green confirmation banner will appear: **Permission set "secAuditorTimeBased" has been successfully created.**
+![3.4.11](/images/0003/6.png)
+
 
 **🔒 Security Note**: The time-based condition in this policy uses the global condition key `aws:CurrentTime` that evaluates against the current date and time. The dates in the policy should be in ISO 8601 format with UTC timezone.
 
@@ -110,11 +116,15 @@ Let's create a new Group named securityAuditors:
 
 1. Navigate to the IAM Identity Center Console
 2. Select Groups under the Workplace pool section and click Create Group.
-
+![3.4.11](/images/0003/7.png)
 3. On the Create group page:
    - Provide Group Name: securityAuditors
    - Provide Description, e.g., Group for security Auditors
    - Click Create group
+![3.4.11](/images/0003/8.png)
+
+4. The **securityAuditors** group has been successfully created.
+![3.4.11](/images/0003/9.png)
 
 #### Creating a User and Adding to the Group
 
@@ -122,7 +132,7 @@ For this module, we'll create a new user: secAuditUser
 
 1. Navigate to the IAM Identity Center Console
 2. Select Users under the Workplace pool section and click Add User.
-
+![3.4.11](/images/0003/15.png)
 3. On the Add User page:
    - Provide Username, e.g., secAuditUser
    - For Password, select the Generate a one-time password that you can share with the user radio button
@@ -131,15 +141,15 @@ For this module, we'll create a new user: secAuditUser
    - Provide First name: secAudit
    - Provide Last name: user
    - Leave Display name as entered and click Next
-
+![3.4.11](/images/0003/16.png)
 4. On the Add users to groups - optional page:
    - Select the SecurityAuditors Group and click Next
-
+![3.4.11](/images/0003/17.png)
 5. On the Review and add user page:
    - Review the information provided in the previous steps and click Add user
-
+![3.4.11](/images/0003/18.png)
 6. A pop-up window will appear with a One-time password. Copy the information using the Copy button and save it for later use in the workshop.
-
+![3.4.11](/images/0003/19.png)
 **💡 Pro Tip**: When working with temporary access, it's a good practice to create functional groups that reflect job roles or responsibilities rather than creating groups for individuals. This approach simplifies access management as people transition between roles.
 
 #### Assigning Permission Set to AWS Account
@@ -147,18 +157,18 @@ For this module, we'll create a new user: secAuditUser
 1. Navigate to the IAM Identity Center Console, select AWS accounts under the Multi-account permissions section
 2. Select the account you want users to have access to
 3. Click Assign users or groups
-
+![3.4.11](/images/0003/10.png)
 4. On the Assign users and Group to AccountName page:
    - Select Groups, select securityAuditors and click Next
-
+![3.4.11](/images/0003/11.png)
 5. On the Select permission sets page:
    - Under Permission sets, select secAuditorTimeBased and click Next
-
+![3.4.11](/images/0003/12.png)
 6. On the Review and submit page:
    - Review the information and click Submit
-
+![3.4.11](/images/0003/13.png)
 7. IAM Identity Center will associate the User group with the Permission set and assign it to the selected AWS Account. You'll see a page with a green banner.
-
+![3.4.11](/images/0003/14.png)
 #### Verifying Access
 
 > **Note**:
@@ -180,10 +190,13 @@ To simulate access control for Security Auditors, let's update the Permission se
 
 1. Navigate to the IAM Identity Center Console
 2. Click on Permission sets in the left menu and select the secAuditorTimeBased permission set
+![3.4.11](/images/0003/027.png)
+3. On the **Select permission set type** screen, select **Custom permission set** and click **Next**.  
+![3.4.11](/images/0003/28.png)
 
-3. Edit the inline policy by clicking the Edit button
-
-4. Copy and replace the permission policy with the code below
+4. Edit the inline policy by clicking the Edit button
+![3.4.11](/images/0003/29.png)
+5. Copy and replace the permission policy with the code below
 
    The only change in the policy is the date/time values occurring in the past "2022-07-04T00:00:00Z" "2022-07-04T23:59:59Z"
 
@@ -249,9 +262,9 @@ To simulate access control for Security Auditors, let's update the Permission se
 }
 ```
 
-5. Save the changes to the Permission set, which provisions the permission set again to the AWS Account
+6. Save the changes to the Permission set, which provisions the permission set again to the AWS Account
 
-6. Log back into the AWS access portal by following the steps and verify access to EC2 instances. You'll see that secAuditUser no longer has permission to list EC2 instances.
+7. Log back into the AWS access portal by following the steps and verify access to EC2 instances. You'll see that secAuditUser no longer has permission to list EC2 instances.
 
 **⚠️ Warning**: When using time-based access control, be aware of timezone differences. AWS uses UTC for time-based conditions, so adjust your dates and times accordingly to avoid unexpected access denials.
 

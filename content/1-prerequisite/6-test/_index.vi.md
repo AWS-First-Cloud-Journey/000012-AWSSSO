@@ -15,33 +15,33 @@ pre = "<b> 1.6 </b>"
 1. Tải xuống [Template](https://static.us-east-1.prod.workshops.aws/public/3fac600e-c0e3-4410-9a4f-8ca05b549ec7/static/iam-identitycenter-validation.yml)
 2. Điều hướng đến [CloudFormation console](https://console.aws.amazon.com/cloudformation/)
 3. Nhấp vào **Create stack**, chọn **With new resources (standard)**
+
+![3.4.11](/images/0001/image31.png)
+
 4. Trong trang Create stack:
    - Chọn **Template is ready** cho Prepare template
    - Chọn **Upload a template file** cho Template source
    - Nhấp vào **Choose file** và chọn tệp đã tải xuống ở bước 1
 
-
-![3.4.11](/images/0003/0001.png)
-
+![3.4.11](/images/0001/image32.png)
 
 5. Trong trang Specify stack details:
    - Đặt tên stack của bạn, ví dụ: **iam-identitycenter-validation-setup**
    - Để giá trị tham số **LatestAmiId** ở mặc định và nhấp **Next**
 
-![3.4.11](/images/0003/0002.png)
+![3.4.11](/images/0001/image33.png)
 
 6. Để mọi thứ ở mặc định trong trang Configure stack options. Cuộn xuống dưới và nhấp **Next**
 
-![3.4.11](/images/0003/0003.png)
+![3.4.11](/images/0001/image34.png)
 
 7. Trong trang Review, cuộn xuống dưới và nhấp **Submit**
 
-![3.4.11](/images/0003/0004.png)
+![3.4.11](/images/0001/image35.png)
 
 **ℹ️ Thông tin:** Việc triển khai CloudFormation Stack sẽ mất khoảng 5 phút để hoàn thành. Bạn có thể xác nhận rằng việc triển khai đã hoàn tất bằng cách xác thực trạng thái là **CREATE_COMPLETE**.
 
-
-![3.4.11](/images/0003/0005.png)
+![3.4.11](/images/0001/image36.png)
 
 
 #### Xác thực quyền truy cập

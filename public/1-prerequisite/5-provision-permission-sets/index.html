@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.147.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title> :: AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
+    <title>Provision Permission Sets :: AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1745669092" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745669092" rel="stylesheet">
-    <link href="/css/hybrid.css?1745669092" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745669092" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745669092" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745669092" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745669092" rel="stylesheet">
-    <link href="/css/theme.css?1745669092" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745669092" rel="stylesheet">
+    <link href="/css/nucleus.css?1759648597" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759648597" rel="stylesheet">
+    <link href="/css/hybrid.css?1759648597" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759648597" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759648597" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759648597" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759648597" rel="stylesheet">
+    <link href="/css/theme.css?1759648597" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759648597" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1745669092" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759648597" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745669092"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759648597"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745669092"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745669092"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759648597"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759648597"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745669092"></script>
+<script type="text/javascript" src="/js/search.js?1759648597"></script>
 
     
   </div>
@@ -141,13 +141,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/2-configure-ou/" title="Setting up the Organization Unit" class="dd-item 
+    <li data-nav-id="/1-prerequisite/2-configure-ou/" title="Prerequisites for IAM Identity Center" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/2-configure-ou/">
-          <b>1.2 </b>Setting up the Organization Unit
+          <b>1.2 </b>Prerequisites for IAM Identity Center
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +169,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Invite AWS Account to AWS Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Create Users and Groups in IAM Identity Center" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/3-invite-aws-account/">
-          <b>1.3 </b>Invite AWS Account to AWS Organization
+          <b>1.3 </b>Create Users and Groups in IAM Identity Center
           
             <i class="fas fa-check read-icon"></i>
           
@@ -197,13 +197,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/4-switch-role/" title="Access member account in Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/4-switch-role/" title="Create Permission Sets" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/4-switch-role/">
-          <b>1.4 </b>Access member account in Organization
+          <b>1.4 </b>Create Permission Sets
           
             <i class="fas fa-check read-icon"></i>
           
@@ -225,13 +225,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/5-provision-permission-sets/" title="" class="dd-item 
+    <li data-nav-id="/1-prerequisite/5-provision-permission-sets/" title="Provision Permission Sets" class="dd-item 
         
         active
         
         ">
       <a href="/1-prerequisite/5-provision-permission-sets/">
-          
+          <b>1.5 </b>Provision Permission Sets
           
             <i class="fas fa-check read-icon"></i>
           
@@ -253,13 +253,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/6-test/" title="" class="dd-item 
+    <li data-nav-id="/1-prerequisite/6-test/" title="Verify Access Permissions" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/6-test/">
-          
+          <b> 1.6 </b>Verify Access Permissions
           
             <i class="fas fa-check read-icon"></i>
           
@@ -319,13 +319,41 @@
  
   
     
-    <li data-nav-id="/2-aws-cli-access/2.1-manual/" title="" class="dd-item 
+    <li data-nav-id="/2-aws-cli-access/2.1-manual/" title="Manually Refresh Credentials" class="dd-item 
         
         
         
         ">
       <a href="/2-aws-cli-access/2.1-manual/">
+          <b> 2.1 </b>Manually Refresh Credentials
           
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-aws-cli-access/2.2-automatic/" title="Automatic Credential Refresh" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-aws-cli-access/2.2-automatic/">
+          <b> 2.2 </b>Automatic Credential Refresh
           
             <i class="fas fa-check read-icon"></i>
           
@@ -489,7 +517,7 @@
                   
                     
                     
-                      <option id="en" value="/1-prerequisite/5-provision-permission-sets/" selected>English</option>
+                      <option id="en" value="//localhost:1313/1-prerequisite/5-provision-permission-sets/" selected>English</option>
                     
                   
               
@@ -503,7 +531,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/1-prerequisite/5-provision-permission-sets/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/1-prerequisite/5-provision-permission-sets/">Tiếng Việt</option>
                     
                   
               
@@ -591,7 +619,7 @@
             
           
           
-            <a href='/'>Using AWS IAM Identity Center for Robust Identity Management</a> > <a href='/1-prerequisite/'>Preparation steps</a> > 
+            <a href='/'>Using AWS IAM Identity Center for Robust Identity Management</a> > <a href='/1-prerequisite/'>Preparation steps</a> > Provision Permission Sets
           
         
           
@@ -604,7 +632,16 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+        <li><a href="#steps">Steps</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -620,7 +657,7 @@
           
             <h1>
               
-              
+              Provision Permission Sets
             </h1>
           
 
@@ -628,7 +665,96 @@
 
 
 
-	
+	<h4 id="provision-permission-sets">Provision Permission Sets</h4>
+<p><strong>ℹ️ Information:</strong> By default, when you create a permission set, it is not yet provisioned (not applied to any AWS account).<br>
+To activate a permission set within an AWS account, you need to grant IAM Identity Center access to users or groups in that account and then assign the permission set to those users or groups.</p>
+<hr>
+<h3 id="steps">Steps</h3>
+<ol>
+<li>Navigate to the <strong>IAM Identity Center Console</strong>, select <strong>AWS accounts</strong>, and choose the account where you want users to have access.<br>
+Click <strong>Assign users or groups</strong>.</li>
+</ol>
+<p><img src="/images/0001/image22.png" alt="3.4.11"></p>
+<ol start="2">
+<li>On the <strong>Select users and groups</strong> page:
+<ul>
+<li>Choose the <strong>Groups</strong> tab</li>
+<li>Select the <strong>Administrators</strong> group</li>
+<li>Click <strong>Next</strong></li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/0001/image23.png" alt="3.4.11"></p>
+<ol start="3">
+<li>On the <strong>Select permission sets</strong> page:
+<ul>
+<li>Under <em>Permission sets</em>, select <strong>AdministratorAccess</strong></li>
+<li>Click <strong>Next</strong></li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/0001/image24.png" alt="3.4.11"></p>
+<ol start="4">
+<li>On the <strong>Review and submit</strong> page:
+<ul>
+<li>Review the information you provided</li>
+<li>Click <strong>Submit</strong></li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/0001/image25.png" alt="3.4.11"></p>
+<p><strong>ℹ️ Information:</strong> You will see a confirmation page indicating that the AWS account assignment has been successfully created.</p>
+<p><img src="/images/0001/image266.png" alt="3.4.11"></p>
+<p><strong>ℹ️ Information:</strong> IAM Identity Center links the user group with the permission set and assigns it to the selected AWS account(s).<br>
+You will see a page with a green banner confirming that the provisioning process completed successfully.</p>
+<hr>
+<h4 id="provision-another-permission-set-for-the-same-account">Provision Another Permission Set for the Same Account</h4>
+<ol>
+<li>In the <strong>IAM Identity Center Console</strong>, go to <strong>AWS accounts</strong> and select the same account used earlier.<br>
+Click <strong>Assign users or groups</strong>.</li>
+</ol>
+<p><img src="/images/0001/image266.png" alt="3.4.11"></p>
+<ol start="2">
+<li>On the <strong>Select users and groups</strong> page:
+<ul>
+<li>Choose the <strong>Groups</strong> tab</li>
+<li>Select the <strong>readOnly</strong> group</li>
+<li>Click <strong>Next</strong></li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/0001/image27.png" alt="3.4.11"></p>
+<ol start="3">
+<li>On the <strong>Select permission sets</strong> page:
+<ul>
+<li>Under <em>Permission sets</em>, select <strong>readOnly</strong></li>
+<li>Click <strong>Next</strong></li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/0001/image28.png" alt="3.4.11"></p>
+<ol start="4">
+<li>On the <strong>Review and submit</strong> page:
+<ul>
+<li>Review your selections</li>
+<li>Click <strong>Submit</strong></li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/0001/image29.png" alt="3.4.11"></p>
+<hr>
+<p><strong>💡 Pro Tip:</strong> Check the IAM roles that appear under the AWS account where you provisioned the permission sets.<br>
+This confirms that the permissions have been applied correctly and IAM Identity Center successfully created the corresponding IAM roles within that account.</p>
+<p><img src="/images/0001/image30.png" alt="3.4.11"></p>
+<p><strong>🔒 Security Note:</strong> Group-based permission assignments make access management more efficient and easier to maintain as your organization grows.<br>
+This is the best practice for implementing <strong>least privilege access</strong> and following <strong>Zero Trust</strong> principles.<br>
+When your organization’s structure changes, you only need to update group memberships rather than adjusting permissions for each individual user.</p>
+<p><strong>ℹ️ Information:</strong> Once a permission set is provisioned, IAM Identity Center automatically creates and manages the corresponding IAM roles in each assigned AWS account.<br>
+This greatly simplifies large-scale access management and ensures consistency across your entire AWS Organization.</p>
+<hr>
+<p>You have successfully provisioned Permission Sets for your AWS account.<br>
+Next, let’s move on to verifying the configuration.</p>
+
 
 
 
@@ -816,6 +942,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -892,10 +1034,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/1-prerequisite/4-switch-role/" title="Access member account in Organization"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/1-prerequisite/4-switch-role/" title="Create Permission Sets"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/1-prerequisite/6-test/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-prerequisite/6-test/" title="Verify Access Permissions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -905,19 +1047,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745669092"></script>
-    <script src="/js/jquery.sticky.js?1745669092"></script>
-    <script src="/js/featherlight.min.js?1745669092"></script>
-    <script src="/js/highlight.pack.js?1745669092"></script>
+    <script src="/js/clipboard.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759648597"></script>
+    <script src="/js/jquery.sticky.js?1759648597"></script>
+    <script src="/js/featherlight.min.js?1759648597"></script>
+    <script src="/js/highlight.pack.js?1759648597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745669092"></script>
-    <script src="/js/learn.js?1745669092"></script>
-    <script src="/js/hugo-learn.js?1745669092"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759648597"></script>
+    <script src="/js/learn.js?1759648597"></script>
+    <script src="/js/hugo-learn.js?1759648597"></script>
 
-    <link href="/mermaid/mermaid.css?1745669092" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1745669092"></script>
+    <link href="/mermaid/mermaid.css?1759648597" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759648597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

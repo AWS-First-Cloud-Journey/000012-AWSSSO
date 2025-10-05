@@ -1,6 +1,6 @@
 +++
 title = "Điều kiện tiên quyết cho IAM Identity Center"
-date = 2020
+date = 2025
 weight = 2
 chapter = false
 pre = "<b>1.2 </b>"
@@ -26,7 +26,7 @@ Trước khi thiết lập IAM Identity Center, bạn cần:
 
 2. Nhấp vào **Create Organization**. Theo mặc định, tổ chức được tạo với tất cả các tính năng được kích hoạt.
 
-![3.4.11](/images/0001/0003.png)
+![3.4.11](/images/0001/image05.png)
 
 3. Tổ chức được tạo và trang AWS accounts xuất hiện. Tài khoản duy nhất hiện có là management account của bạn, và hiện đang nằm dưới root organizational unit (OU).
 
@@ -51,3 +51,8 @@ Khi bạn mở IAM Identity Center lần đầu tiên, bạn sẽ được nhắ
 **🔒 Security Note:** IAM Identity Center cho phép bạn chỉ định một member account khác trong AWS Organization của bạn ngoài Organization Management Account để thực hiện các tác vụ quản trị Identity Center. Việc này giúp tuân thủ nguyên tắc least privilege bằng cách hạn chế quyền truy cập vào Management Account. Trong môi trường sản xuất, bạn nên cấu hình delegated administration để giảm thiểu rủi ro bảo mật liên quan đến việc sử dụng Management Account cho các tác vụ hàng ngày.
 
 **💡 Pro Tip:** Khi thiết lập IAM Identity Center, hãy xem xét chiến lược định danh phù hợp với tổ chức của bạn. Bạn có thể chọn sử dụng Identity Center Directory, kết nối với Microsoft Active Directory thông qua AWS Directory Service, hoặc kết nối với nhà cung cấp định danh bên ngoài (IdP) tương thích với SAML 2.0 như Okta, Azure AD, hoặc Google Workspace.
+
+
+
+
+

@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.147.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Access member account in Organization :: AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
+    <title>Create Permission Sets :: AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1745669092" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745669092" rel="stylesheet">
-    <link href="/css/hybrid.css?1745669092" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745669092" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745669092" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745669092" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745669092" rel="stylesheet">
-    <link href="/css/theme.css?1745669092" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745669092" rel="stylesheet">
+    <link href="/css/nucleus.css?1759648597" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759648597" rel="stylesheet">
+    <link href="/css/hybrid.css?1759648597" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759648597" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759648597" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759648597" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759648597" rel="stylesheet">
+    <link href="/css/theme.css?1759648597" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759648597" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1745669092" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759648597" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745669092"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759648597"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745669092"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745669092"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759648597"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759648597"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745669092"></script>
+<script type="text/javascript" src="/js/search.js?1759648597"></script>
 
     
   </div>
@@ -141,13 +141,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/2-configure-ou/" title="Setting up the Organization Unit" class="dd-item 
+    <li data-nav-id="/1-prerequisite/2-configure-ou/" title="Prerequisites for IAM Identity Center" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/2-configure-ou/">
-          <b>1.2 </b>Setting up the Organization Unit
+          <b>1.2 </b>Prerequisites for IAM Identity Center
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +169,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Invite AWS Account to AWS Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Create Users and Groups in IAM Identity Center" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/3-invite-aws-account/">
-          <b>1.3 </b>Invite AWS Account to AWS Organization
+          <b>1.3 </b>Create Users and Groups in IAM Identity Center
           
             <i class="fas fa-check read-icon"></i>
           
@@ -197,13 +197,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/4-switch-role/" title="Access member account in Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/4-switch-role/" title="Create Permission Sets" class="dd-item 
         
         active
         
         ">
       <a href="/1-prerequisite/4-switch-role/">
-          <b>1.4 </b>Access member account in Organization
+          <b>1.4 </b>Create Permission Sets
           
             <i class="fas fa-check read-icon"></i>
           
@@ -225,13 +225,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/5-provision-permission-sets/" title="" class="dd-item 
+    <li data-nav-id="/1-prerequisite/5-provision-permission-sets/" title="Provision Permission Sets" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/5-provision-permission-sets/">
-          
+          <b>1.5 </b>Provision Permission Sets
           
             <i class="fas fa-check read-icon"></i>
           
@@ -253,13 +253,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/6-test/" title="" class="dd-item 
+    <li data-nav-id="/1-prerequisite/6-test/" title="Verify Access Permissions" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/6-test/">
-          
+          <b> 1.6 </b>Verify Access Permissions
           
             <i class="fas fa-check read-icon"></i>
           
@@ -319,13 +319,41 @@
  
   
     
-    <li data-nav-id="/2-aws-cli-access/2.1-manual/" title="" class="dd-item 
+    <li data-nav-id="/2-aws-cli-access/2.1-manual/" title="Manually Refresh Credentials" class="dd-item 
         
         
         
         ">
       <a href="/2-aws-cli-access/2.1-manual/">
+          <b> 2.1 </b>Manually Refresh Credentials
           
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-aws-cli-access/2.2-automatic/" title="Automatic Credential Refresh" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-aws-cli-access/2.2-automatic/">
+          <b> 2.2 </b>Automatic Credential Refresh
           
             <i class="fas fa-check read-icon"></i>
           
@@ -489,7 +517,7 @@
                   
                     
                     
-                      <option id="en" value="/1-prerequisite/4-switch-role/" selected>English</option>
+                      <option id="en" value="//localhost:1313/1-prerequisite/4-switch-role/" selected>English</option>
                     
                   
               
@@ -503,7 +531,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/1-prerequisite/4-switch-role/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/1-prerequisite/4-switch-role/">Tiếng Việt</option>
                     
                   
               
@@ -591,7 +619,7 @@
             
           
           
-            <a href='/'>Using AWS IAM Identity Center for Robust Identity Management</a> > <a href='/1-prerequisite/'>Preparation steps</a> > Access member account in Organization
+            <a href='/'>Using AWS IAM Identity Center for Robust Identity Management</a> > <a href='/1-prerequisite/'>Preparation steps</a> > Create Permission Sets
           
         
           
@@ -609,6 +637,7 @@
     <li>
       <ul>
         <li></li>
+        <li><a href="#steps">Steps</a></li>
       </ul>
     </li>
   </ul>
@@ -628,7 +657,7 @@
           
             <h1>
               
-              Access member account in Organization
+              Create Permission Sets
             </h1>
           
 
@@ -636,284 +665,102 @@
 
 
 
-	<h4 id="switching-roles-for-accessing-member-accounts-in-aws-organization">Switching Roles for Accessing Member Accounts in AWS Organization</h4>
-<p>In this step, you will use the <strong>Switch Role</strong> function to access <strong>member accounts</strong> from your <strong>management account</strong>.</p>
-<h4 id="content">Content</h4>
-<ul>
-<li><strong>Switch Role</strong> to <strong>Member Accounts</strong> Created by AWS Organization (Step 1.1)</li>
-<li><strong>Switch Role</strong> to <strong>Member Accounts</strong> Invited to Join AWS Organization (Step 1.3)</li>
-</ul>
-<h4 id="a-switch-role-to-member-accounts-created-by-aws-organization">A) Switch Role to Member Accounts Created by AWS Organization</h4>
+	<h4 id="create-permission-sets">Create Permission Sets</h4>
+<p><strong>ℹ️ Information:</strong> Permission sets are a mechanism for defining centralized permissions within IAM Identity Center, allowing you to consistently apply access rights across all AWS accounts in your organization.<br>
+Each permission set is deployed as an IAM role in every assigned AWS account.</p>
+<hr>
+<h3 id="steps">Steps</h3>
+<p>In this workshop, we will create two permission sets — <strong>AdministratorAccess</strong> and <strong>readOnly</strong> — to illustrate different access levels.</p>
 <ol>
 <li>
-<p>Log in to your <strong>management account</strong>:</p>
-<ul>
-<li>Use an <strong>IAM User</strong> to log in.</li>
-<li>Go to the <strong>AWS Management Console</strong> and search for the <strong>AWS Organizations</strong> service in the search bar.</li>
-<li>Copy the Account ID (a 12-digit number located below the account name) of the account you wish to access.</li>
-<li>In the top right corner, next to the account name, click the triangle and select <strong>Switch role</strong>.</li>
-</ul>
-<p><img alt="AWS Account" src="/images/11/0000.png?featherlight=false&width=90pc"></p>
-<ul>
-<li>Note: If you are using a <strong>root</strong> account, you won&rsquo;t see the <strong>Switch role</strong> function.</li>
-<li>If you&rsquo;re unfamiliar with creating an IAM User (with Admin permission) for this lab, review the article: <a href="https://000002.awsstudygroup.com/1-introduction/">Manage Access with AWS Identity and Access Management (AWS IAM)</a>.</li>
-</ul>
+<p>Navigate to the <strong>IAM Identity Center Console</strong>.</p>
 </li>
 <li>
-<p><strong>Switching Roles</strong>:</p>
-<ul>
-<li>Go to <strong>Account</strong> and paste the Account ID you copied in Step 1 (e.g., <code>999999999943</code>).</li>
-<li>In the <strong>Role</strong> section, enter the role name you used when creating the account in Step 1.1 (e.g., <code>OrganizationAccountAccessRole</code>, recommended by AWS).</li>
-<li>Optionally, give a <strong>Display Name</strong> for easy identification.</li>
-<li>Choose a color for the role&rsquo;s item.</li>
-<li>Select <strong>Switch roles</strong>.</li>
-</ul>
-<p><img alt="AWS Account" src="/images/11/0003.png?featherlight=false&width=90pc"></p>
-<ul>
-<li>Result:</li>
-</ul>
-<p><img alt="AWS Account" src="/images/11/0004.png?featherlight=false&width=90pc"></p>
-<p>Congratulations on successfully switching roles!</p>
-<ul>
-<li>Verify if you have permissions for universal services:</li>
-</ul>
-<p><img alt="AWS Account" src="/images/11/0004.png?featherlight=false&width=90pc"></p>
+<p>Select the AWS Region recommended by the AWS Team if this is part of an AWS event.<br>
+If you are performing this on your own, choose a Region geographically close to you to optimize latency.</p>
+</li>
+<li>
+<p>Click <strong>Permission sets</strong> in the left menu under <em>Multi-account permissions</em> and then click <strong>Create permission set</strong>.</p>
 </li>
 </ol>
-<h4 id="explanation">Explanation:</h4>
-<ul>
-<li>
-<p>You can easily access the <strong>member account</strong> created through <strong>AWS Organizations</strong> and have full admin permissions because:</p>
-<ul>
-<li>The IAM User used in Step 1 has admin permissions.</li>
-<li>When creating a new account via <strong>AWS Organizations</strong>, AWS automatically adds the <strong>AdministratorAccess</strong> permission to the <strong>OrganizationAccountAccessRole</strong> role. Check:</li>
-</ul>
-</li>
-<li>
-<p>You are now in the <strong>member account</strong> with the Display Name: FCJ-Dev. In the search box, type and select the <strong>IAM</strong> service.</p>
-</li>
-<li>
-<p>On the right, select <strong>Roles</strong>.</p>
-<p><img alt="AWS Account" src="/images/11/0005.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Choose the Role name: <strong>OrganizationAccountAccessRole</strong>.</p>
-<p><img alt="AWS Account" src="/images/11/0006.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>You should see the admin permission: <strong>AdministratorAccess</strong> with the explanation: <strong>Provides full access to AWS services and resources</strong>.</p>
-<p><img alt="AWS Account" src="/images/11/0007.png?featherlight=false&width=90pc"></p>
-</li>
-</ul>
-<h4 id="extension">Extension:</h4>
-<p>After following the tutorial: <a href="https://000002.awsstudygroup.com/en/1-introduction/">Administrating Access with AWS Identity and Access Management (AWS IAM)</a> to create an IAM User for logging into the <strong>management account</strong>, and assigning admin permission (<strong>AdministratorAccess</strong>) to perform the switch role, there&rsquo;s no need to add <strong>assume role</strong> permissions (<a href="https://000002.awsstudygroup.com/1-introduction/1.3-iam-role/">explained here</a>) since admin permission already encompasses this capability.</p>
-<p>However, for the principle of <strong>least privilege</strong>, consider granting <strong>assume role</strong> permission only to users who need to switch between accounts. For instance, in an AWS Organization with accounts for Dev, Test, and Production environments, provide the Dev Lead IAM User access to the <strong>management account</strong> with only <strong>assume role</strong> permissions for Dev and Test environments. This ensures convenience while maintaining security.</p>
-<h4 id="practice">Practice:</h4>
-<ol start="3">
-<li>Creating <strong>User Groups</strong>:</li>
-</ol>
-<ul>
-<li>
-<p>Within the <strong>management account</strong>, follow <a href="https://000002.awsstudygroup.com/2-create-admin-user-and-group/2.1-create-admin-group/">item 2.1 in the article Managing Access Rights with IAM</a>.</p>
-</li>
-<li>
-<p>In Step 4, enter a <strong>User Group Name</strong> (e.g., DevGroup).</p>
-</li>
-<li>
-<p>Select <strong>Create policy</strong>, a new window will appear.</p>
-<p><img alt="AWS Account" src="/images/11/0008.png?featherlight=false&width=90pc"></p>
-</li>
-</ul>
+<p><img src="/images/0001/image14.png" alt="3.4.11"></p>
 <ol start="4">
-<li>Creating a <strong>Customer Managed Policy</strong>:</li>
+<li>On the <strong>Select permission set type</strong> page:
+<ul>
+<li>Under <em>Permission set type</em>, select <strong>Predefined permission set</strong></li>
+<li>Under <em>Policy for predefined permission set</em>, choose the AWS managed policy <strong>AdministratorAccess</strong>, then click <strong>Next</strong></li>
+</ul>
+</li>
 </ol>
-<ul>
-<li>
-<p>Choose a service: type <strong>STS</strong>, then select <strong>STS</strong> from the options.</p>
-</li>
-<li>
-<p>Actions -&gt; Select actions -&gt; type <code>AssumeRole</code> -&gt; in the middle, select <strong>AssumeRole</strong>.</p>
-</li>
-<li>
-<p>Resources -&gt; Specific -&gt; Add ARN</p>
-<ul>
-<li>Account *: enter the member Account ID (the ID copied in Step 1 above, e.g., <code>999999999943</code>).</li>
-<li>Role name with path *: enter the role name from Step 1.1 (e.g., <code>OrganizationAccountAccessRole</code>).</li>
-<li>Select <strong>Add</strong>.</li>
-</ul>
-</li>
-<li>
-<p>Select <strong>Next: Tags</strong>.</p>
-<p><img alt="AWS Account" src="/images/11/0009.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Select <strong>Next: Review</strong>.</p>
-</li>
-<li>
-<p>Name *: enter a policy name (e.g., <code>switch_role_999999999943</code>).</p>
-</li>
-<li>
-<p>Select <strong>Create policy</strong>.</p>
-<p><img alt="AWS Account" src="/images/11/00010.png?featherlight=false&width=90pc"></p>
-</li>
-</ul>
+<p><img src="/images/0001/image15.png" alt="3.4.11"></p>
 <ol start="5">
-<li>Attaching the Policy to <strong>User Groups</strong>:</li>
-</ol>
+<li>On the <strong>Specify permission set details</strong> page:
 <ul>
-<li>
-<p>Go back to the <strong>Create user group</strong> page.</p>
-</li>
-<li>
-<p>In the <strong>Attach permissions policies - Optional</strong> section, click the refresh icon.</p>
-<p><img alt="AWS Account" src="/images/11/00011.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>In the search box, enter: <strong>switch_role_999999999943</strong>.</p>
-</li>
-<li>
-<p>Check the box.</p>
-</li>
-<li>
-<p>Select <strong>Create Group</strong>.</p>
-<p><img alt="AWS Account" src="/images/11/00012.png?featherlight=false&width=90pc"></p>
-</li>
+<li>Enter <strong>Permission set name:</strong> <code>AdministratorAccess</code></li>
+<li>Keep all default values</li>
+<li>Click <strong>Next</strong></li>
 </ul>
+</li>
+</ol>
+<p><img src="/images/0001/image16.png" alt="3.4.11"></p>
 <ol start="6">
-<li>Creating a <strong>User</strong>:</li>
-</ol>
+<li>On the <strong>Review and create</strong> page:
 <ul>
-<li>
-<p>Follow <a href="https://000002.awsstudygroup.com/2-create-admin-user-and-group/2.2-create-admin-user/">item 2.2 in the article Managing Access Rights with IAM</a>.</p>
-</li>
-<li>
-<p>In Step 2, enter the <strong>User name</strong> as <strong>DevLead</strong>.</p>
-</li>
-<li>
-<p>In Step 3, select the <strong>DevGroup</strong>.</p>
-</li>
-<li>
-<p>Complete the remaining steps and confirm the creation of the new IAM User.</p>
-<p><img alt="AWS Account" src="/images/11/00013.png?featherlight=false&width=90pc"></p>
-<p>Now, the IAM User <strong>DevLead</strong> has been created and assigned the policy <strong>switch_role_999999999943</strong> via the group <strong>DevGroup</strong>.</p>
-<p><strong>Note</strong>: While the Users and User Groups interface allows you to assign permissions directly, it&rsquo;s best practice to assign permissions to User Groups first, and then add Users to Groups. This centralized approach simplifies permission management.</p>
-</li>
+<li>Review your selections</li>
+<li>Click <strong>Create</strong></li>
 </ul>
-<ol start="7">
-<li>
-<p>Logging in with the newly created <strong>IAM User</strong>:</p>
-<p><img alt="AWS Account" src="/images/11/00014.png?featherlight=false&width=90pc"></p>
-<p>Result:</p>
-<p><img alt="AWS Account" src="/images/11/00015.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Performing <strong>Switch Role</strong> via <strong>Member Account</strong>:</p>
-<p>Note: You&rsquo;ve logged into the <strong>IAM User</strong> but are still in the <strong>management account</strong>. Now, you&rsquo;ll initiate the <strong>Switch Role</strong> to access the <strong>member account</strong>.</p>
-<ul>
-<li>Repeat the steps from Step 2.</li>
-</ul>
-<p><img alt="AWS Account" src="/images/11/00016.png?featherlight=false&width=90pc"></p>
-<p>Congratulations on successfully switching roles via the <strong>member account</strong> (ID: 999999999943) with the IAM User DevLead.</p>
-<p><img alt="AWS Account" src="/images/11/00017.png?featherlight=false&width=90pc"></p>
-<p>You can use the <strong>Create an AWS account</strong> function to create an account for the test environment and follow Steps 3 to 8 to perform the switch role for the Test environment with the corresponding Account ID.</p>
 </li>
 </ol>
-<h4 id="b-switch-role-to-member-accounts-invited-to-join-aws-organization">B) Switch Role to Member Accounts Invited to Join AWS Organization</h4>
-<p>When reviewing the following items:</p>
-<ul>
-<li>1.1 Create an AWS Account in AWS Organizations</li>
-<li>1.3 Invite AWS Account to AWS Organization</li>
-</ul>
-<p>You&rsquo;ll notice the ability to create an AWS Account in AWS Organizations (<strong>Create an AWS account</strong>) includes a section to create an IAM role for the management account to access member account resources via <strong>Switch Role</strong>.</p>
-<p>However, this functionality is missing in the process of inviting an AWS Account to an AWS Organization (<strong>Invite an existing AWS account</strong>). Therefore, you need to manually add an IAM Role for the invited AWS Account.</p>
-<p><img alt="AWS Account" src="/images/12/0001.png?featherlight=false&width=90pc"></p>
+<p><img src="/images/0001/image17.png" alt="3.4.11"></p>
+<p><strong>ℹ️ Information:</strong> After the permission set is created, you will see a confirmation page.<br>
+IAM Identity Center automatically creates a corresponding IAM role in each AWS account when you assign this permission set to users or groups.</p>
+<p><img src="/images/0001/image18.png" alt="3.4.11"></p>
+<hr>
+<h4 id="create-a-permission-set-for-read-only-access">Create a Permission Set for Read-Only Access</h4>
+<p>Similarly, let’s create another permission set for read-only access:</p>
 <ol>
-<li>Creating a Role with Admin Rights:</li>
-</ol>
+<li>On the <strong>Select permission set type</strong> page:
 <ul>
-<li>
-<p>Use a <strong>member account</strong> that has been added to the <strong>AWS Organization</strong> in [1.3].</p>
+<li>Under <em>Permission set type</em>, select <strong>Predefined permission set</strong></li>
+</ul>
 </li>
-<li>
-<p>Go to the <strong>AWS Management Console</strong>, search for the <strong>IAM</strong> service, select <strong>Roles</strong>, and click <strong>Create role</strong>.</p>
-<p><img alt="AWS Account" src="/images/12/0003.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Select <strong>AWS account</strong>, then <strong>Another AWS account</strong>.</p>
-</li>
-<li>
-<p>Enter the Account ID of the <strong>management account</strong> in the provided field (e.g., <code>999999999963</code>).</p>
-</li>
-<li>
-<p>Click Next.</p>
-<p><img alt="AWS Account" src="/images/12/0004.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>In the <strong>Permissions policies</strong> section, enter <code>AdministratorAccess</code> and check the corresponding box.</p>
-</li>
-<li>
-<p>Click Next.</p>
-<p><img alt="AWS Account" src="/images/12/0005.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Provide a Role name (e.g., <code>OrganizationAccountAccessRole</code>).</p>
-</li>
-<li>
-<p>Scroll down and click <strong>Create role</strong>.</p>
-<p><img alt="AWS Account" src="/images/12/0006.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Copy the Account ID of the <strong>member account</strong> (e.g., <code>888800009920</code>) by clicking the square.</p>
-<p><img alt="AWS Account" src="/images/12/0007.png?featherlight=false&width=90pc"></p>
-</li>
+</ol>
+<p><img src="/images/0001/image19.png" alt="3.4.11"></p>
+<ul>
+<li>Under <em>Policy for predefined permission set</em>, choose the AWS managed policy <strong>ViewOnlyAccess</strong>, then click <strong>Next</strong></li>
 </ul>
 <ol start="2">
-<li>Initiating Switch Role:</li>
-</ol>
+<li>On the <strong>Specify permission set details</strong> page:
 <ul>
-<li>
-<p>Log in to your <strong>management account</strong> (similar to Steps 1 and 2 in Part A).</p>
-</li>
-<li>
-<p>Click the triangular bookmark in the top right corner, next to the account name, and select <strong>Switch role</strong>.</p>
-<p><img alt="AWS Account" src="/images/12/0008.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>In the <strong>Account</strong> field, paste the copied Account ID from Step 1 (e.g., <code>888800009920</code>).</p>
-</li>
-<li>
-<p>In the <strong>Role</strong> field, enter the role name created in Step 1 (e.g., <code>OrganizationAccountAccessRole</code>).</p>
-</li>
-<li>
-<p>Optionally, provide a <strong>Display Name</strong> for easy identification.</p>
-</li>
-<li>
-<p>Choose a color for the role&rsquo;s item.</p>
-</li>
-<li>
-<p>Select <strong>Switch Role</strong>.</p>
-<p><img alt="AWS Account" src="/images/12/0009.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Congratulations! You have successfully switched roles and accessed the <strong>member account</strong> that was invited to join <strong>AWS Organizations</strong>.</p>
-<p><img alt="AWS Account" src="/images/12/00010.png?featherlight=false&width=90pc"></p>
-</li>
+<li>Under <em>Permission set name</em>, enter <strong>readOnly</strong></li>
+<li>Keep all other fields (<em>Description</em>, <em>Session Duration</em>, <em>Relay state</em>, and <em>Tags</em>) as default</li>
+<li>Click <strong>Next</strong></li>
 </ul>
-<p><strong>Conclusion</strong>: From Step 1.1 to Step 1.4, it&rsquo;s clear that the <strong>management account</strong> serves as the admin account in the AWS Organization service, while <strong>member accounts</strong> are permanent member accounts. To add <strong>member accounts</strong> to the Organization, there are two approaches:</p>
-<ol>
-<li>Create a new account using the <strong>Create an AWS account</strong> function.</li>
-<li>Invite an existing account using the <strong>Invite an existing AWS account</strong> function.</li>
-</ol>
-<p>Additionally, you can switch roles to access <strong>member accounts</strong> using the <strong>Switch Role</strong> function. Depending on the approach chosen, the conditions for successful role switching differ:</p>
-<ol>
-<li>
-<p>With the <strong>Create an AWS account</strong> method, switching roles is relatively simple since <strong>AdministratorAccess</strong> permission is automatically granted to the <strong>OrganizationAccountAccessRole</strong> during account creation via <strong>AWS Organizations</strong>. Furthermore, <strong>assume role</strong> permissions corresponding to the member account ID need to be granted to the IAM User in the management account.</p>
-</li>
-<li>
-<p>With the <strong>Invite an existing AWS account</strong> method, switching roles requires more steps. You need to manually create the <strong>OrganizationAccountAccessRole</strong> and assign <strong>AdministratorAccess</strong> permissions to the management account&rsquo;s account ID. Additionally, <strong>assume role</strong> permissions corresponding to the member account ID should be granted to the IAM User in the management account.</p>
 </li>
 </ol>
-<p>Remember that switching roles isn&rsquo;t the only method for accessing member accounts. In the steps outlined in item 2, you&rsquo;ll explore another approach using AWS SSO (Single Sign-On).</p>
+<p><img src="/images/0001/image20.png" alt="3.4.11"></p>
+<ol start="3">
+<li>On the <strong>Review and create</strong> page:
+<ul>
+<li>Review your selections</li>
+<li>Click <strong>Create</strong></li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/0001/image21.png" alt="3.4.11"></p>
+<p><strong>ℹ️ Information:</strong> After the permission set is created, you will see a confirmation page.<br>
+IAM Identity Center automatically creates a corresponding IAM role in each AWS account when you assign this permission set to users or groups.</p>
+<p><img src="/images/0001/image211.png" alt="3.4.11"></p>
+<hr>
+<p><strong>💡 Pro Tip:</strong> In addition to predefined permission sets, you can create <strong>custom permission sets</strong> by combining multiple AWS managed policies or defining <strong>customer-managed policies</strong> using JSON.<br>
+This allows you to implement fine-grained permissions following the <strong>principle of least privilege</strong>, tailored to your organization’s specific needs.</p>
+<p><strong>🔒 Security Note:</strong> Permission sets in IAM Identity Center support advanced security features such as <strong>session duration limits</strong>, <strong>access requirements</strong>, and <strong>integration with AWS CloudTrail</strong> for activity logging.<br>
+In production environments, consider setting shorter session durations and enforcing <strong>Multi-Factor Authentication (MFA)</strong> for permission sets with elevated privileges.</p>
+<p><strong>ℹ️ Information:</strong> IAM Identity Center automatically manages the lifecycle of IAM roles created from permission sets, including updating roles when you modify the permission set configuration.<br>
+This simplifies access management at scale and ensures consistency across your entire AWS Organization.</p>
+<hr>
+<p>You have successfully created two new Permission Sets.<br>
+Next, let’s proceed to granting access to users and groups.</p>
 
 
 
@@ -1102,6 +949,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1178,10 +1041,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/1-prerequisite/3-invite-aws-account/" title="Invite AWS Account to AWS Organization"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/1-prerequisite/3-invite-aws-account/" title="Create Users and Groups in IAM Identity Center"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/1-prerequisite/5-provision-permission-sets/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-prerequisite/5-provision-permission-sets/" title="Provision Permission Sets" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1191,19 +1054,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745669092"></script>
-    <script src="/js/jquery.sticky.js?1745669092"></script>
-    <script src="/js/featherlight.min.js?1745669092"></script>
-    <script src="/js/highlight.pack.js?1745669092"></script>
+    <script src="/js/clipboard.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759648597"></script>
+    <script src="/js/jquery.sticky.js?1759648597"></script>
+    <script src="/js/featherlight.min.js?1759648597"></script>
+    <script src="/js/highlight.pack.js?1759648597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745669092"></script>
-    <script src="/js/learn.js?1745669092"></script>
-    <script src="/js/hugo-learn.js?1745669092"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759648597"></script>
+    <script src="/js/learn.js?1759648597"></script>
+    <script src="/js/hugo-learn.js?1759648597"></script>
 
-    <link href="/mermaid/mermaid.css?1745669092" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1745669092"></script>
+    <link href="/mermaid/mermaid.css?1759648597" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759648597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

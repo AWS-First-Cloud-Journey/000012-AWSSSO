@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.147.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Điều kiện tiên quyết cho IAM Identity Center :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1745669092" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745669092" rel="stylesheet">
-    <link href="/css/hybrid.css?1745669092" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745669092" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745669092" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745669092" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745669092" rel="stylesheet">
-    <link href="/css/theme.css?1745669092" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745669092" rel="stylesheet">
+    <link href="/css/nucleus.css?1759645169" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759645169" rel="stylesheet">
+    <link href="/css/hybrid.css?1759645169" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759645169" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759645169" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759645169" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759645169" rel="stylesheet">
+    <link href="/css/theme.css?1759645169" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759645169" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1745669092" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759645169" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745669092"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759645169"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745669092"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745669092"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759645169"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759645169"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745669092"></script>
+<script type="text/javascript" src="/js/search.js?1759645169"></script>
 
     
   </div>
@@ -517,7 +517,7 @@
                   
                     
                     
-                      <option id="en" value="/1-prerequisite/2-configure-ou/">English</option>
+                      <option id="en" value="//localhost:1313/1-prerequisite/2-configure-ou/">English</option>
                     
                   
               
@@ -531,7 +531,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/1-prerequisite/2-configure-ou/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/1-prerequisite/2-configure-ou/" selected>Tiếng Việt</option>
                     
                   
               
@@ -686,7 +686,7 @@
 <p>Nhấp vào <strong>Create Organization</strong>. Theo mặc định, tổ chức được tạo với tất cả các tính năng được kích hoạt.</p>
 </li>
 </ol>
-<p><img alt="3.4.11" src="/images/0001/0003.png"></p>
+<p><img src="/images/0001/image05.png" alt="3.4.11"></p>
 <ol start="3">
 <li>Tổ chức được tạo và trang AWS accounts xuất hiện. Tài khoản duy nhất hiện có là management account của bạn, và hiện đang nằm dưới root organizational unit (OU).</li>
 </ol>
@@ -699,7 +699,7 @@
 <li>Mở IAM Identity Center console.</li>
 <li>Chọn <strong>Enable</strong>.</li>
 </ol>
-<p><img alt="3.4.11" src="/images/0001/0004.png"></p>
+<p><img src="/images/0001/0004.png" alt="3.4.11"></p>
 <p><strong>ℹ️ Thông tin:</strong> Sau khi kích hoạt, IAM Identity Center tạo một service-linked role trong tất cả các tài khoản trong tổ chức AWS Organizations. IAM Identity Center cũng tạo cùng một service-linked role trong mọi tài khoản được thêm vào tổ chức của bạn sau này. Role này cho phép IAM Identity Center truy cập vào tài nguyên của mỗi tài khoản thay mặt bạn.</p>
 <h4 id="quản-trị-ủy-quyền-delegated-administration">Quản trị ủy quyền (Delegated Administration)</h4>
 <p><strong>🔒 Security Note:</strong> IAM Identity Center cho phép bạn chỉ định một member account khác trong AWS Organization của bạn ngoài Organization Management Account để thực hiện các tác vụ quản trị Identity Center. Việc này giúp tuân thủ nguyên tắc least privilege bằng cách hạn chế quyền truy cập vào Management Account. Trong môi trường sản xuất, bạn nên cấu hình delegated administration để giảm thiểu rủi ro bảo mật liên quan đến việc sử dụng Management Account cho các tác vụ hàng ngày.</p>
@@ -997,19 +997,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745669092"></script>
-    <script src="/js/jquery.sticky.js?1745669092"></script>
-    <script src="/js/featherlight.min.js?1745669092"></script>
-    <script src="/js/highlight.pack.js?1745669092"></script>
+    <script src="/js/clipboard.min.js?1759645169"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759645169"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759645169"></script>
+    <script src="/js/jquery.sticky.js?1759645169"></script>
+    <script src="/js/featherlight.min.js?1759645169"></script>
+    <script src="/js/highlight.pack.js?1759645169"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745669092"></script>
-    <script src="/js/learn.js?1745669092"></script>
-    <script src="/js/hugo-learn.js?1745669092"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759645169"></script>
+    <script src="/js/learn.js?1759645169"></script>
+    <script src="/js/hugo-learn.js?1759645169"></script>
 
-    <link href="/mermaid/mermaid.css?1745669092" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1745669092"></script>
+    <link href="/mermaid/mermaid.css?1759645169" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759645169"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

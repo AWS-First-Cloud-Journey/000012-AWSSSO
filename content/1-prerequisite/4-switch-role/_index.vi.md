@@ -1,6 +1,6 @@
 +++
 title = "Tạo Permission Sets"
-date = 2020
+date = 2025
 weight = 4
 chapter = false
 pre = "<b>1.4 </b>"
@@ -19,25 +19,25 @@ Trong workshop này, chúng ta sẽ tạo hai permission sets: AdministratorAcce
 
 3. Nhấp vào **Permission sets** ở menu bên trái dưới mục Multi-account permissions và nhấp vào nút **Create permission set**
 
-![3.4.11](/images/0002/0001.png)
+![3.4.11](/images/0001/image14.png)
 
 4. Trên trang Select permission set type:
    - Dưới mục Permission set type, chọn **Predefined permission set**
    - Dưới mục Policy for predefined permission set, chọn AWS managed policy **AdministratorAccess** sau đó nhấp vào **Next**
 
-![3.4.11](/images/0002/0002.png)
+![3.4.11](/images/0001/image15.png)
 
-5. Trên trang Specify permission set details, giữ tất cả các giá trị mặc định và nhấp vào **Next**
+5. Trên trang Specify permission set details, nhập Permission set name: **AdministratorAccess** giữ tất cả các giá trị mặc định và nhấp vào **Next**
 
-![3.4.11](/images/0002/0003.png)
+![3.4.11](/images/0001/image16.png)
 
 6. Trên trang Review and create, xem lại các lựa chọn bạn đã thực hiện, sau đó nhấp vào **Create**
 
-![3.4.11](/images/0002/0004.png)
+![3.4.11](/images/0001/image17.png)
 
 **ℹ️ Thông tin:** Sau khi permission set được tạo, bạn sẽ thấy một trang xác nhận việc tạo permission set thành công. IAM Identity Center sẽ tự động tạo IAM role tương ứng trong mỗi AWS account khi bạn gán permission set này cho users hoặc groups.
 
-![3.4.11](/images/0002/0005.png)
+![3.4.11](/images/0001/image18.png)
 
 #### Tạo Permission Set cho quyền truy cập chỉ đọc
 
@@ -46,7 +46,7 @@ Tương tự, hãy tạo một permission set khác cho quyền truy cập chỉ
 1. Trên trang Select permission set type:
    - Dưới mục Permission set type, chọn **Predefined permission set**
 
-![3.4.11](/images/0002/0006.png)
+![3.4.11](/images/0001/image19.png)
 
    - Dưới mục Policy for predefined permission set, chọn AWS managed policy **ViewOnlyAccess** sau đó nhấp vào **Next**
 
@@ -55,11 +55,15 @@ Tương tự, hãy tạo một permission set khác cho quyền truy cập chỉ
    - Để các trường còn lại [Description, Session Duration, Relay state và Tags] ở giá trị mặc định
    - Nhấp vào **Next**
 
-![3.4.11](/images/0002/0007.png)
+![3.4.11](/images/0001/image20.png)
 
 3. Trên trang Review and create, xem lại các lựa chọn bạn đã thực hiện, sau đó nhấp vào **Create**
 
-![3.4.11](/images/0002/0008.png)
+![3.4.11](/images/0001/image21.png)
+
+**ℹ️ Thông tin:** Sau khi permission set được tạo, bạn sẽ thấy một trang xác nhận việc tạo permission set thành công. IAM Identity Center sẽ tự động tạo IAM role tương ứng trong mỗi AWS account khi bạn gán permission set này cho users hoặc groups.
+
+![3.4.11](/images/0001/image211.png)
 
 **💡 Pro Tip:** Ngoài các predefined permission sets, bạn có thể tạo custom permission sets bằng cách kết hợp nhiều AWS managed policies hoặc tạo customer managed policies với JSON. Điều này cho phép bạn triển khai các quyền hạn chi tiết theo nguyên tắc least privilege, phù hợp với yêu cầu cụ thể của tổ chức.
 

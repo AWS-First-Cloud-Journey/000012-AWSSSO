@@ -1,46 +1,112 @@
 +++
-title = "Invite AWS Account to AWS Organization"
-date = 2020
+title = "Create Users and Groups in IAM Identity Center"
+date = 2025
 weight = 3
 chapter = false
 pre = "<b>1.3 </b>"
 +++
 
-#### Adding an AWS Account to Organizations
+#### Create Users and Groups in IAM Identity Center
 
-#### Step 1: Invite an Existing AWS Account
+**ℹ️ Information:** This section guides you through creating users and groups in the built-in identity store of IAM Identity Center.  
+If you want to configure an External Identity Provider (IdP) as the identity source, refer to the “Using External IdP with IAM Identity Center” section in *Extra Credit*.
 
-1. Go to the **AWS Management Console** and search for the **AWS Organizations** service in the search bar.
-2. Select **Add an AWS account**.
-   ![AWS Account](/images/10/0001.png?featherlight=false&width=90pc)
-3. Choose **Invite an existing AWS account**.
-4. Enter the email address or Account ID of the AWS Account you wish to add to the Organization, e.g., `fcj@amazon.com.vn` or 888800009920.
-5. Click on **Send invitation**.
-   ![AWS Account](/images/10/0002.png?featherlight=false&width=90pc)
+#### Choosing an Identity Source
 
-#### Step 2: Check Your Invitation to Join Organizations
+**ℹ️ Information:** The selected identity source determines where IAM Identity Center retrieves users and groups for SSO access.  
+By default, IAM Identity Center provides a built-in identity store for fast and simple user management.  
+This is an ideal option for small organizations or testing environments.
 
-1. In the left pane, select **Invitations**. You will see the Account ID you added in step 1, with the status **OPEN**.
-   ![AWS Account](/images/10/0003.png?featherlight=false&width=90pc)
+**💡 Pro Tip:** For enterprise environments, you can connect IAM Identity Center to **Microsoft Active Directory** (via **AWS Directory Service**) or integrate with external identity providers that support **SAML 2.0**, such as **Okta**, **Microsoft Entra ID** (formerly Azure AD), or **Google Workspace**.
 
-#### Step 3: Accept an Invitation to Join Organizations
+#### Managing Identities in IAM Identity Center
 
-1. Access the **AWS Management Console** of the Account you added in step 1 and find the **AWS Organizations** service in the search bar.
-   ![AWS Account](/images/10/0004.png?featherlight=false&width=90pc)
-2. On the right side of the screen, select the invitation **View 1 invitation**.
-3. Note that the AWS Organization service is free of charge.
-   ![AWS Account](/images/10/0005.png?featherlight=false&width=90pc)
-4. Select **Accept invitation**.
-   ![AWS Account](/images/10/0006.png?featherlight=false&width=90pc)
-5. Result:
-   ![AWS Account](/images/10/0007.png?featherlight=false&width=90pc)
-6. Please note that you will only see this invitation if the AWS Account has not already joined any **AWS Organizations**.
+Users and groups that you create in the IAM Identity Center’s built-in identity store exist only within IAM Identity Center.  
+Follow the steps below to add users and groups to your identity store.
 
-#### Step 4: Check AWS Organizations
+---
 
-1. Go back to the AWS Account from step 1 and verify if the Account added in step 3 has joined Organizations.
-   ![AWS Account](/images/10/0008.png?featherlight=false&width=90pc)
-2. Here, you can view the entire structure of **Organizations**, including Organization Units with member accounts and management accounts.
-3. The **management account** will serve as the main account to manage and access **member accounts** through the **switch role** function.
+### Steps
 
-Congratulations, the AWS Account has been successfully added with join date details.
+#### 1. Create Groups
+
+**ℹ️ Information:** In this workshop, we will create two groups: **Administrators** and **readOnly**.  
+Groups help organize users by their roles and responsibilities, simplifying access management.
+
+1. Navigate to the **IAM Identity Center Console**  
+2. Select **Groups** and click **Create Group**  
+
+![3.4.11](/images/0001/image006.png)
+
+3. On the **Create group** page:  
+   - Enter a **Group Name**, for example: `Administrators`  
+   - Enter a **Description**, for example: `Group for administrator users`  
+   - Click **Create group**  
+
+![3.4.11](/images/0001/image07.png)
+
+4. A green success banner will appear confirming that the *Administrators* group was created successfully.  
+5. Repeat steps 1–3 to create the **readOnly** group.  
+
+![3.4.11](/images/0001/image08.png)
+
+**💡 Pro Tip:** Organizing users into groups enables more efficient access management and makes it easier to apply role-based permission policies.  
+When your organizational structure changes, you only need to update group memberships rather than adjusting individual user permissions.
+
+**🔒 Security Note:** Follow the **principle of least privilege** by creating groups with specific and limited permissions.  
+This minimizes security risks and simplifies access audit and compliance.
+
+---
+
+#### 2. Create Users
+
+**ℹ️ Information:** In this workshop, we’ll create two users: **adminUser** and **readOnlyUser**, to demonstrate different access levels.
+
+1. Navigate to the **IAM Identity Center Console**  
+2. Under the **Workforce pool**, select **Users**, then click **Add User**  
+
+![3.4.11](/images/0001/image09.png)
+
+3. On the **Add User** page:  
+   - Enter **Username**, e.g. `adminUser`  
+   - For **Password**, select **Generate a one-time password that you can share with the user**  
+   - Enter **Email Address** using a format such as `email+admin@domain.com`  
+   - Confirm the email address  
+   - Enter **First name**  
+   - Enter **Last name**  
+   - Keep **Display name** as entered  
+   - Click **Next** (you can explore optional fields if desired)  
+
+![3.4.11](/images/0001/image10.png)
+
+4. On the **Add users to groups (optional)** page:  
+   - Select the **Administrators** group  
+   - Click **Next**  
+
+![3.4.11](/images/0001/image11.png)
+
+5. On the **Review and add user** page:  
+   - Review the information provided in previous steps  
+   - Click **Add user**  
+
+![3.4.11](/images/0001/image12.png)
+
+6. A pop-up window will appear displaying the **One-time password**.  
+   Click **Copy** to save this password for later use in the workshop.  
+
+![3.4.11](/images/0001/image013.png)
+
+**🔒 Security Note:** The one-time password is displayed only once and cannot be retrieved later.  
+Ensure it is securely stored and shared via a secure channel.  
+In production environments, you should enable **Multi-Factor Authentication (MFA)** for all users to enhance security.
+
+**⚠️ Warning:** Repeat steps **1–6** to create the **readOnlyUser**.  
+Use a unique email different from the admin user (e.g. `username+readonly@domain.com`) and make sure to assign this user to the **readOnly** group in Step 4.
+
+**💡 Pro Tip:** IAM Identity Center supports **user lifecycle management**, including creation, updates, deactivation, and deletion.  
+In enterprise environments, these processes can be automated via HR system integration or AWS APIs.
+
+---
+
+You have successfully created two new users and groups.  
+Using IAM Identity Center, these users can now access multiple AWS accounts within your AWS Organization with appropriate permissions based on their roles.

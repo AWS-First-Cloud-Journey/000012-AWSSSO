@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.147.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Tạo AWS Account trong AWS Organizations :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1745669092" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745669092" rel="stylesheet">
-    <link href="/css/hybrid.css?1745669092" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745669092" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745669092" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745669092" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745669092" rel="stylesheet">
-    <link href="/css/theme.css?1745669092" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745669092" rel="stylesheet">
+    <link href="/css/nucleus.css?1759644431" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759644431" rel="stylesheet">
+    <link href="/css/hybrid.css?1759644431" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759644431" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759644431" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759644431" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759644431" rel="stylesheet">
+    <link href="/css/theme.css?1759644431" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759644431" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1745669092" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759644431" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745669092"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759644431"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745669092"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745669092"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759644431"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759644431"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745669092"></script>
+<script type="text/javascript" src="/js/search.js?1759644431"></script>
 
     
   </div>
@@ -517,7 +517,7 @@
                   
                     
                     
-                      <option id="en" value="/1-prerequisite/1-create-aws-account/">English</option>
+                      <option id="en" value="//localhost:1313/1-prerequisite/1-create-aws-account/">English</option>
                     
                   
               
@@ -531,7 +531,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/1-prerequisite/1-create-aws-account/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/1-prerequisite/1-create-aws-account/" selected>Tiếng Việt</option>
                     
                   
               
@@ -639,6 +639,7 @@
         <li></li>
       </ul>
     </li>
+    <li><a href="#tạo-user-trong-aws-iam">Tạo User trong AWS IAM</a></li>
   </ul>
 </nav>
     </div>
@@ -666,34 +667,62 @@
 
 	<h4 id="thiết-lập-aws-account">Thiết lập AWS Account</h4>
 <h4 id="lựa-chọn-aws-account-cho-bài-thực-hành">Lựa chọn AWS Account cho bài thực hành</h4>
-<p><strong>ℹ️ Thông tin:</strong> Để thực hiện workshop này, bạn cần một AWS account độc lập chưa tham gia vào AWS Organizations. AWS IAM Identity Center yêu cầu một tài khoản độc lập để thiết lập làm Management Account.</p>
+<p><strong>ℹ️ Thông tin:</strong> Để thực hiện workshop này, bạn cần một AWS account độc lập chưa tham gia vào AWS Organizations. AWS IAM Identity Center (trước đây là AWS Single Sign-On) yêu cầu một tài khoản độc lập để thiết lập làm Management Account.</p>
 <h4 id="sử-dụng-aws-account-hiện-có">Sử dụng AWS account hiện có</h4>
 <p><strong>ℹ️ Thông tin:</strong> Nếu bạn đang sử dụng một tài khoản hiện có, dù là tài khoản cá nhân hay tài khoản công ty, hãy đảm bảo bạn hiểu rõ các tác động và chính sách của tổ chức liên quan đến việc cung cấp tài nguyên trong tài khoản này.</p>
 <p><strong>💡 Pro Tip:</strong> Nếu bạn đã có AWS account không thuộc AWS Organizations và đang sử dụng IAM User hoặc IAM Role với quyền Administrator, bạn có thể bỏ qua phần còn lại của nhiệm vụ này và chuyển sang nhiệm vụ tiếp theo.</p>
+<p><strong>ℹ️ Thông tin 2025:</strong> AWS IAM Identity Center hiện hỗ trợ tích hợp với Amazon Q Developer, Amazon QuickSight, và các dịch vụ AWS hiện đại khác. Dịch vụ hoàn toàn miễn phí, bạn chỉ trả phí cho các tài nguyên AWS cơ bản bên dưới.</p>
 <h4 id="tạo-aws-account-mới">Tạo AWS account mới</h4>
 <p>Nếu bạn chưa có AWS account, bạn có thể tạo AWS account của riêng mình <a href="https://portal.aws.amazon.com/billing/signup">tại đây</a>. Một phương thức thanh toán, thường là thẻ tín dụng, sẽ cần thiết để kích hoạt tài khoản cho các bài thực hành này. Quy trình đăng ký bao gồm việc nhận cuộc gọi điện thoại và nhập mã xác minh bằng bàn phím điện thoại.</p>
 <p><strong>⚠️ Warning:</strong> Nếu bạn hiện đang đăng nhập vào AWS Management Console, bạn sẽ cần đăng xuất trước khi <a href="https://portal.aws.amazon.com/billing/signup">nhấp vào đây</a> để tạo AWS account mới.</p>
 <h4 id="chuẩn-bị-iam-user-cho-bài-thực-hành">Chuẩn bị IAM User cho bài thực hành</h4>
 <p><strong>🔒 Security Note:</strong> Việc hạn chế nghiêm ngặt việc sử dụng tài khoản root mặc định đi kèm với mỗi AWS account được coi là best practice theo nguyên tắc least privilege. Nếu bạn có AWS account nhưng không có IAM User hoặc Role để làm việc, hãy làm theo các bước dưới đây để chuẩn bị cho bài thực hành.</p>
 <ol>
-<li>Đăng nhập vào AWS account của bạn với tài khoản root.</li>
-<li>Truy cập AWS IAM console và tạo user mới.</li>
-<li>Nhập tên cho user của bạn (ví dụ: admin) và chọn &ldquo;AWS Management Console access&rdquo;, sau đó nhập mật khẩu mạnh.</li>
-<li>Nhấp vào <strong>Next: Permissions</strong> để tiếp tục bước tiếp theo.</li>
+<li>Đăng nhập vào AWS account của bạn</li>
 </ol>
-<p><img alt="3.4.11" src="/images/0001/0001.png"></p>
-<ol start="5">
-<li>Nhấp vào <strong>Attach existing policies directly</strong> và chọn <strong>AdministratorAccess</strong>.</li>
+<h2 id="tạo-user-trong-aws-iam">Tạo User trong AWS IAM</h2>
+<ul>
+<li>Vào <strong>IAM → Users → Create user</strong>
+<img src="/images/0001/image02.png" alt="3.4.11"></li>
+</ul>
+<ol start="2">
+<li>Điền thông tin như hình bên dưới:</li>
 </ol>
-<p><img alt="3.4.11" src="/images/0001/0002.png"></p>
-<ol start="6">
-<li>Nhấp vào <strong>Next: Tags</strong>.</li>
-<li>Nhấp vào <strong>Next: Review</strong>.</li>
-<li>Nhấp vào <strong>Create User</strong>.</li>
-<li>Nhấp vào liên kết <strong>Send email</strong> để nhận đường dẫn đăng nhập duy nhất cho tài khoản của bạn.</li>
+<ul>
+<li><strong>User name</strong>: Đặt tên dễ nhớ, ví dụ <code>adminUser</code>.</li>
+<li><strong>Are you providing console access to a person?</strong> → Chọn
+<ul>
+<li>Chọn <em>I want to create an IAM user</em> (tạo user IAM truyền thống).</li>
+</ul>
+</li>
+<li><strong>Console password</strong>:
+<ul>
+<li>Chọn <em>Custom password</em> để tự đặt mật khẩu.</li>
+</ul>
+</li>
+<li>Nhấn <strong>Next</strong> để qua bước phân quyền.<br>
+<img src="/images/0001/image01.png" alt="3.4.11"></li>
+</ul>
+<ol start="3">
+<li>Gán quyền cho User</li>
+</ol>
+<ul>
+<li>Ở ô tìm kiếm, gõ <strong>AdministratorAccess</strong>.</li>
+<li>Chọn <strong>AdministratorAccess</strong> (policy do AWS quản lý sẵn).
+<ul>
+<li>Policy này cấp toàn quyền quản trị cho user, thích hợp khi bạn cần user có quyền cao nhất (giống tài khoản admin).</li>
+</ul>
+</li>
+<li>Nhấn <strong>Attach policies</strong> để gán quyền cho user.
+<img src="/images/0001/image03.png" alt="3.4.11"></li>
+</ul>
+<ol start="4">
+<li>Tiếp tục nhấn <strong>Create user</strong> để hoàn thành.
+<img src="/images/0001/image04.png" alt="3.4.11">
+⚠️ Lưu ý: Nếu không muốn user có toàn quyền, bạn có thể chọn các policy hạn chế hơn (ví dụ chỉ cho phép S3, EC2&hellip;).</li>
 </ol>
 <p><strong>💡 Pro Tip:</strong> Khi thiết lập IAM User với quyền Administrator, hãy đảm bảo bạn lưu trữ thông tin đăng nhập một cách an toàn và kích hoạt xác thực đa yếu tố (MFA) để tăng cường bảo mật cho tài khoản của bạn. MFA là một lớp bảo mật bổ sung quan trọng trong mô hình Zero Trust.</p>
-<p><strong>🔒 Security Note:</strong> Trong môi trường sản xuất thực tế, bạn nên áp dụng nguyên tắc least privilege bằng cách chỉ cấp quyền tối thiểu cần thiết cho mỗi IAM User thay vì cấp quyền AdministratorAccess. Tuy nhiên, cho mục đích của workshop này, quyền Administrator là cần thiết để thiết lập AWS IAM Identity Center.</p>
+<p><strong>🔒 Security Note:</strong> Trong môi trường sản xuất thực tế, bạn nên áp dụng nguyên tắc least privilege bằng cách chỉ cấp quyền tối thiểu cần thiết cho mỗi IAM User thay vì cấp quyền AdministratorAccess. AWS IAM Identity Center hỗ trợ triển khai chiến lược Zero Trust với các tính năng như Attribute-Based Access Control (ABAC), tích hợp Identity Providers (Microsoft Entra ID, Okta), và quản lý session tự động. Tuy nhiên, cho mục đích của workshop này, quyền Administrator là cần thiết để thiết lập AWS IAM Identity Center.</p>
 
 
 
@@ -984,19 +1013,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745669092"></script>
-    <script src="/js/jquery.sticky.js?1745669092"></script>
-    <script src="/js/featherlight.min.js?1745669092"></script>
-    <script src="/js/highlight.pack.js?1745669092"></script>
+    <script src="/js/clipboard.min.js?1759644431"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759644431"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759644431"></script>
+    <script src="/js/jquery.sticky.js?1759644431"></script>
+    <script src="/js/featherlight.min.js?1759644431"></script>
+    <script src="/js/highlight.pack.js?1759644431"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745669092"></script>
-    <script src="/js/learn.js?1745669092"></script>
-    <script src="/js/hugo-learn.js?1745669092"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759644431"></script>
+    <script src="/js/learn.js?1759644431"></script>
+    <script src="/js/hugo-learn.js?1759644431"></script>
 
-    <link href="/mermaid/mermaid.css?1745669092" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1745669092"></script>
+    <link href="/mermaid/mermaid.css?1759644431" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759644431"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

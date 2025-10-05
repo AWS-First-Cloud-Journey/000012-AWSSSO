@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.147.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Customer Managed Policies :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1745669092" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745669092" rel="stylesheet">
-    <link href="/css/hybrid.css?1745669092" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745669092" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745669092" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745669092" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745669092" rel="stylesheet">
-    <link href="/css/theme.css?1745669092" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745669092" rel="stylesheet">
+    <link href="/css/nucleus.css?1759648597" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759648597" rel="stylesheet">
+    <link href="/css/hybrid.css?1759648597" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759648597" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759648597" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759648597" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759648597" rel="stylesheet">
+    <link href="/css/theme.css?1759648597" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759648597" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1745669092" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759648597" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745669092"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759648597"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745669092"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745669092"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759648597"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759648597"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745669092"></script>
+<script type="text/javascript" src="/js/search.js?1759648597"></script>
 
     
   </div>
@@ -517,7 +517,7 @@
                   
                     
                     
-                      <option id="en" value="/4-using-customer-managed-policies/">English</option>
+                      <option id="en" value="//localhost:1313/4-using-customer-managed-policies/">English</option>
                     
                   
               
@@ -531,7 +531,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/4-using-customer-managed-policies/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/4-using-customer-managed-policies/" selected>Tiếng Việt</option>
                     
                   
               
@@ -666,14 +666,15 @@
 <p>Việc hỗ trợ Customer Managed Policies (CMP) với permission set giải quyết các yêu cầu này. Trong module này, bạn sẽ đi qua một kịch bản nơi CMPs có thể được sử dụng để giải quyết các yêu cầu cụ thể.</p>
 <blockquote>
 <p><strong>Lưu ý</strong></p>
-<p>Trước khi gán permission set với các chính sách IAM, bạn phải chuẩn bị member account của mình. Tên của chính sách IAM trong member account phải khớp phân biệt chữ hoa chữ thường với tên của chính sách trong management account. IAM Identity Center không thể gán permission set nếu chính sách không tồn tại trong member account. Quyền mà chính sách cấp không nhất thiết phải khớp chính xác giữa các tài khoản.</p>
-</blockquote>
+<p>Trước khi gán permission set với các chính sách IAM, bạn phải chuẩn bị member account của mình. Tên của chính sách IAM trong member account phải khớp phân biệt chữ hoa chữ thường với tên của chính sách trong management account. IAM Identity Center không thể gán permission set nếu chính sách không tồn tại trong member account. Quyền mà chính sách cấp không nhất thiết phải khớp chính xác giữa các tài khoản.</p></blockquote>
 <h4 id="kịch-bản">Kịch bản</h4>
 <p>Xem xét một kịch bản mà nhóm vận hành (operator group) cần được cấp quyền truy cập vào các member accounts khác nhau và quyền truy cập của họ vào các tài khoản nên được giới hạn trong các AWS CloudWatch log groups trong các tài khoản đó. Yêu cầu này có thể được giải quyết bằng Customer Managed Policies (CMPs) nơi một chính sách operatorAccess có thể được tạo trong mỗi AWS account, với các chính sách và quyền truy cập/cấp phép thực tế chỉ cho phép thực hiện các hoạt động CloudWatch đối với các log groups của tài khoản được chỉ định. Sau đó, bạn có thể tạo permission sets gắn với CMP operatorAccess cho phép các hoạt động CloudWatch đối với log group của các tài khoản được chỉ định. Trong phần còn lại của module này, bạn sẽ thực hiện các bước tạo CMP, tạo permission set bằng cách gắn CMP đã tạo và cuối cùng là cung cấp permission set cho AWS account.</p>
 <h4 id="tạo-customer-managed-iam-policy">Tạo Customer Managed IAM Policy</h4>
 <ol>
-<li>Theo [link này] để tạo IAM policy</li>
-<li>Chọn tab JSON và sao chép và dán đoạn chính sách sau vào khu vực văn bản</li>
+<li>Tạo IAM policy
+<img src="/images/0004/1.png" alt="3.4.11"></li>
+<li>Chọn tab JSON và sao chép và dán đoạn chính sách sau vào khu vực văn bản
+<img src="/images/0004/2.png" alt="3.4.11"></li>
 <li>Thay thế <code>&lt;account-id&gt;</code> bằng ID tài khoản cho tài khoản mà chính sách này được tạo</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
@@ -703,11 +704,14 @@
 <li>Nhấp Next: Review.</li>
 <li>Trên trang Create Policy, cung cấp:
 <ul>
-<li>Tên của policy là <code>operatorAccess</code></li>
-<li>Cung cấp mô tả</li>
-<li>Nhấp Create Policy</li>
+<li>Tên của policy là <code>operatorAccess</code>
+-Description – optional: <code>Policy that grants operator access to CloudWatch log groups</code></li>
+<li>Nhấp Create Policy
+<img src="/images/0004/3.png" alt="3.4.11"></li>
 </ul>
 </li>
+<li>Thông báo “operatorAccess” đã được tạo thành công.
+<img src="/images/0004/4.png" alt="3.4.11"></li>
 </ol>
 <h4 id="tạo-permission-set-với-customer-managed-policy">Tạo permission Set với Customer Managed policy</h4>
 <ol>
@@ -718,13 +722,15 @@
 <p>Chọn AWS Region được đề xuất bởi AWS Team nếu đây là một phần của AWS Event hoặc Region mà bạn dự định cấu hình quy tắc, nếu bạn đang chạy điều này một mình</p>
 </li>
 <li>
-<p>Nhấp vào Permission sets trong menu bên trái và nhấp vào nút Create permission set</p>
+<p>Nhấp vào Permission sets trong menu bên trái và nhấp vào nút Create permission set
+<img src="/images/0004/5.png" alt="3.4.11"></p>
 </li>
 <li>
 <p>Trong trang Select permission set type:</p>
 <ul>
 <li>Chọn radio button Custom permission set</li>
-<li>Nhấp Next</li>
+<li>Nhấp Next
+<img src="/images/0004/6.png" alt="3.4.11"></li>
 </ul>
 </li>
 <li>
@@ -733,7 +739,8 @@
 <li>Mở rộng tùy chọn &ldquo;Customer managed Policies&rdquo;</li>
 <li>Nhấp vào &ldquo;Attach policies&rdquo;</li>
 <li>Trong hộp văn bản hiển thị &ldquo;Enter Policy name(s)&rdquo;, nhập &ldquo;operatorAccess&rdquo;. Tên này phải khớp với tên của policy mà bạn đã tạo trong phần Create Customer Managed IAM policy.</li>
-<li>Nhấp Next</li>
+<li>Nhấp Next
+<img src="/images/0004/7.png" alt="3.4.11"></li>
 </ul>
 </li>
 <li>
@@ -741,111 +748,112 @@
 <ul>
 <li>Cung cấp tên cho permission set, ví dụ: operatorAccessPermissionSet</li>
 <li>Để các trường còn lại [Description, Session Duration, Relay state và Tags] ở mặc định</li>
-<li>Nhấp Next</li>
+<li>Nhấp Next
+<img src="/images/0004/8.png" alt="3.4.11"></li>
 </ul>
 </li>
 <li>
 <p>Trong trang Review and create:</p>
 <ul>
 <li>Xem lại các chi tiết đã cung cấp trong các bước trước</li>
-<li>Nhấp vào nút Create</li>
+<li>Nhấp vào nút Create
+<img src="/images/0004/9.png" alt="3.4.11"></li>
 </ul>
+</li>
+<li>
+<p>Thông báo Permission set có tên là operatorAccessPermissionSet đã được tạo thành công trong AWS IAM Identity Center
+<img src="/images/0004/10.png" alt="3.4.11"></p>
 </li>
 </ol>
 <h4 id="tạo-group">Tạo Group</h4>
 <p>Hãy tạo Group mới có tên operations:</p>
 <ol>
 <li>Điều hướng đến IAM Identity Center Console</li>
-<li>Chọn Groups dưới mục Workplace pool và nhấp Create Group.</li>
+<li>Chọn Groups dưới mục Workplace pool và nhấp Create Group.
+<img src="/images/0004/11.png" alt="3.4.11"></li>
 <li>Trong trang Create group:
 <ul>
 <li>Cung cấp Group Name là operations</li>
 <li>Cung cấp Description, ví dụ: Group for cloud operations</li>
-<li>Nhấp Create group</li>
+<li>Nhấp Create group
+<img src="/images/0004/12.png" alt="3.4.11"></li>
 </ul>
 </li>
+<li>Group có tên là operations đã được tạo thành công trong AWS IAM Identity Center.
+<img src="/images/0004/13.png" alt="3.4.11"></li>
 </ol>
 <h4 id="tạo-user-và-thêm-vào-group">Tạo user và thêm vào Group</h4>
 <p>Đối với module này, chúng ta sẽ tạo một user mới: operationsUser</p>
 <ol>
-<li>
-<p>Điều hướng đến IAM Identity Center Console</p>
-</li>
-<li>
-<p>Chọn Users dưới mục Workplace pool và nhấp Create User.</p>
-</li>
-<li>
-<p>Trong trang Create User:</p>
+<li>Điều hướng đến IAM Identity Center Console</li>
+<li>Chọn Users dưới mục Workplace pool và nhấp Create User.
+<img src="/images/0004/14.png" alt="3.4.11"></li>
+<li>Trong trang Create User:
 <ul>
 <li>Cung cấp Username, ví dụ: operationsUser</li>
 <li>Đối với Password, chọn radio button Generate a one-time password that you can share with the user</li>
-<li>Cung cấp Email Address, sử dụng định dạng <a href="mailto:email+operations@domain.com">email+operations@domain.com</a>, ví dụ: <a href="mailto:example+operations@amazon.com">example+operations@amazon.com</a></li>
+<li>Cung cấp Email Address, sử dụng định dạng <a href="mailto:email&#43;operations@domain.com">email+operations@domain.com</a>, ví dụ: <a href="mailto:example&#43;operations@amazon.com">example+operations@amazon.com</a></li>
 <li>Xác nhận lại địa chỉ email đã cung cấp ở trường trước</li>
 <li>Cung cấp First name là operations</li>
 <li>Cung cấp Last name là user</li>
 <li>Để Display name như đã nhập</li>
-<li>Nhấp Next</li>
+<li>Nhấp Next
+<img src="/images/0004/15.png" alt="3.4.11"></li>
 </ul>
 </li>
-<li>
-<p>Trong trang Add users to groups - optional:</p>
+<li>Trong trang Add users to groups - optional:
 <ul>
 <li>Chọn Group Operations</li>
-<li>Nhấp Next</li>
+<li>Nhấp Next
+<img src="/images/0004/16.png" alt="3.4.11"></li>
 </ul>
 </li>
-<li>
-<p>Trong trang Review and add user:</p>
+<li>Trong trang Review and add user:
 <ul>
 <li>Xem lại thông tin đã cung cấp trong các bước trước</li>
-<li>Nhấp Add user</li>
+<li>Nhấp Add user
+<img src="/images/0004/17.png" alt="3.4.11"></li>
 </ul>
 </li>
-<li>
-<p>Một cửa sổ pop-up sẽ xuất hiện với One-time password. Sao chép thông tin bằng nút Copy và lưu lại cho bước xác thực. Lưu ý User portal URL, Username và Password</p>
-</li>
+<li>Một cửa sổ pop-up sẽ xuất hiện với One-time password. Sao chép thông tin bằng nút Copy và lưu lại cho bước xác thực. Lưu ý User portal URL, Username và Password
+<img src="/images/0004/18.png" alt="3.4.11"></li>
+<li>Thông báo màu xanh có tên operationsUser đã được tạo thành công trong IAM Identity Center.
+<img src="/images/0004/19.png" alt="3.4.11"></li>
 </ol>
 <h4 id="gán-permission-set-cho-aws-account">Gán Permission set cho AWS Account</h4>
 <ol>
-<li>
-<p>Điều hướng đến IAM Identity Center Console, chọn AWS accounts</p>
-</li>
-<li>
-<p>Chọn tài khoản mà bạn muốn người dùng có quyền truy cập.</p>
-</li>
-<li>
-<p>Nhấp Assign users or groups.</p>
-</li>
-<li>
-<p>Trong trang Assign users and Group to AccountName:</p>
+<li>Điều hướng đến IAM Identity Center Console, chọn AWS accounts</li>
+<li>Chọn tài khoản mà bạn muốn người dùng có quyền truy cập.</li>
+<li>Nhấp Assign users or groups.
+<img src="/images/0004/20.png" alt="3.4.11"></li>
+<li>Trong trang Assign users and Group to AccountName:
 <ul>
 <li>Chọn nhóm operations</li>
-<li>Nhấp Next</li>
+<li>Nhấp Next
+<img src="/images/0004/21.png" alt="3.4.11"></li>
 </ul>
 </li>
-<li>
-<p>Trong trang Select permission sets:</p>
+<li>Trong trang Select permission sets:
 <ul>
 <li>Dưới Permission sets, chọn operatorAccessPermissionSet</li>
-<li>Nhấp Next</li>
+<li>Nhấp Next
+<img src="/images/0004/22.png" alt="3.4.11"></li>
 </ul>
 </li>
-<li>
-<p>Trong trang Review and submit:</p>
+<li>Trong trang Review and submit:
 <ul>
 <li>Xem lại thông tin</li>
-<li>Nhấp Submit</li>
+<li>Nhấp Submit
+<img src="/images/0004/23.png" alt="3.4.11"></li>
 </ul>
 </li>
-<li>
-<p>IAM Identity Center sẽ liên kết User group với Permission set và gán nó cho AWS Account được chọn. Bạn sẽ thấy một trang với banner màu xanh lá.</p>
-</li>
+<li>IAM Identity Center sẽ liên kết User group với Permission set và gán nó cho AWS Account được chọn. Bạn sẽ thấy một trang với banner màu xanh lá.
+<img src="/images/0004/24.png" alt="3.4.11"></li>
 </ol>
 <h4 id="xác-minh-quyền-truy-cập">Xác minh quyền truy cập</h4>
 <blockquote>
 <p><strong>Lưu ý</strong>:
-Để có trải nghiệm tốt hơn, bạn nên thực hiện các bước xác minh sau trong chế độ duyệt web riêng tư hoặc trình duyệt web khác</p>
-</blockquote>
+Để có trải nghiệm tốt hơn, bạn nên thực hiện các bước xác minh sau trong chế độ duyệt web riêng tư hoặc trình duyệt web khác</p></blockquote>
 <ol>
 <li>
 <p>Đăng nhập vào AWS Portal bằng User portal URL đã lưu khi tạo operationsUser</p>
@@ -1159,19 +1167,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745669092"></script>
-    <script src="/js/jquery.sticky.js?1745669092"></script>
-    <script src="/js/featherlight.min.js?1745669092"></script>
-    <script src="/js/highlight.pack.js?1745669092"></script>
+    <script src="/js/clipboard.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759648597"></script>
+    <script src="/js/jquery.sticky.js?1759648597"></script>
+    <script src="/js/featherlight.min.js?1759648597"></script>
+    <script src="/js/highlight.pack.js?1759648597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745669092"></script>
-    <script src="/js/learn.js?1745669092"></script>
-    <script src="/js/hugo-learn.js?1745669092"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759648597"></script>
+    <script src="/js/learn.js?1759648597"></script>
+    <script src="/js/hugo-learn.js?1759648597"></script>
 
-    <link href="/mermaid/mermaid.css?1745669092" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1745669092"></script>
+    <link href="/mermaid/mermaid.css?1759648597" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759648597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

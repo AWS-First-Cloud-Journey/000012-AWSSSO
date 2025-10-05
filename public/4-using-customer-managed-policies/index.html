@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.147.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Customer Managed Policies :: AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1745669092" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745669092" rel="stylesheet">
-    <link href="/css/hybrid.css?1745669092" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745669092" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745669092" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745669092" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745669092" rel="stylesheet">
-    <link href="/css/theme.css?1745669092" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745669092" rel="stylesheet">
+    <link href="/css/nucleus.css?1759648597" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759648597" rel="stylesheet">
+    <link href="/css/hybrid.css?1759648597" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759648597" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759648597" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759648597" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759648597" rel="stylesheet">
+    <link href="/css/theme.css?1759648597" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759648597" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1745669092" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759648597" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745669092"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759648597"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745669092"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745669092"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759648597"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759648597"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745669092"></script>
+<script type="text/javascript" src="/js/search.js?1759648597"></script>
 
     
   </div>
@@ -141,13 +141,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/2-configure-ou/" title="Setting up the Organization Unit" class="dd-item 
+    <li data-nav-id="/1-prerequisite/2-configure-ou/" title="Prerequisites for IAM Identity Center" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/2-configure-ou/">
-          <b>1.2 </b>Setting up the Organization Unit
+          <b>1.2 </b>Prerequisites for IAM Identity Center
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +169,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Invite AWS Account to AWS Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Create Users and Groups in IAM Identity Center" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/3-invite-aws-account/">
-          <b>1.3 </b>Invite AWS Account to AWS Organization
+          <b>1.3 </b>Create Users and Groups in IAM Identity Center
           
             <i class="fas fa-check read-icon"></i>
           
@@ -197,13 +197,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/4-switch-role/" title="Access member account in Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/4-switch-role/" title="Create Permission Sets" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/4-switch-role/">
-          <b>1.4 </b>Access member account in Organization
+          <b>1.4 </b>Create Permission Sets
           
             <i class="fas fa-check read-icon"></i>
           
@@ -225,13 +225,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/5-provision-permission-sets/" title="" class="dd-item 
+    <li data-nav-id="/1-prerequisite/5-provision-permission-sets/" title="Provision Permission Sets" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/5-provision-permission-sets/">
-          
+          <b>1.5 </b>Provision Permission Sets
           
             <i class="fas fa-check read-icon"></i>
           
@@ -253,13 +253,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/6-test/" title="" class="dd-item 
+    <li data-nav-id="/1-prerequisite/6-test/" title="Verify Access Permissions" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/6-test/">
-          
+          <b> 1.6 </b>Verify Access Permissions
           
             <i class="fas fa-check read-icon"></i>
           
@@ -319,13 +319,41 @@
  
   
     
-    <li data-nav-id="/2-aws-cli-access/2.1-manual/" title="" class="dd-item 
+    <li data-nav-id="/2-aws-cli-access/2.1-manual/" title="Manually Refresh Credentials" class="dd-item 
         
         
         
         ">
       <a href="/2-aws-cli-access/2.1-manual/">
+          <b> 2.1 </b>Manually Refresh Credentials
           
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-aws-cli-access/2.2-automatic/" title="Automatic Credential Refresh" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-aws-cli-access/2.2-automatic/">
+          <b> 2.2 </b>Automatic Credential Refresh
           
             <i class="fas fa-check read-icon"></i>
           
@@ -489,7 +517,7 @@
                   
                     
                     
-                      <option id="en" value="/4-using-customer-managed-policies/" selected>English</option>
+                      <option id="en" value="//localhost:1313/4-using-customer-managed-policies/" selected>English</option>
                     
                   
               
@@ -503,7 +531,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/4-using-customer-managed-policies/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/4-using-customer-managed-policies/">Tiếng Việt</option>
                     
                   
               
@@ -642,8 +670,10 @@
 <p>Consider a scenario where an operator group needs access to different member accounts, and their access to those accounts should be limited to specific AWS CloudWatch log groups within those accounts. This requirement can be addressed with Customer Managed Policies (CMPs) where an <code>operatorAccess</code> policy can be created in each AWS account, with the actual policies and permissions/authorizations only allowing CloudWatch operations to be performed on the specified account&rsquo;s log groups. You can then create permission sets attached to the <code>operatorAccess</code> CMP that permit CloudWatch operations on the specified accounts&rsquo; log groups.</p>
 <h4 id="creating-a-customer-managed-iam-policy">Creating a Customer Managed IAM Policy</h4>
 <ol>
-<li>Navigate to the IAM console to create an IAM policy</li>
-<li>Select the JSON tab and copy and paste the following policy into the text area</li>
+<li>Navigate to the IAM console to create an IAM policy
+<img src="/images/0004/1.png" alt="3.4.11"></li>
+<li>Select the JSON tab and copy and paste the following policy into the text area
+<img src="/images/0004/2.png" alt="3.4.11"></li>
 <li>Replace <code>&lt;account-id&gt;</code> with the account ID for the account this policy is being created in</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
@@ -669,14 +699,24 @@
 </span></span><span style="display:flex;"><span>    ]
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><ol start="4">
-<li>Click Next: Tags (Tags are optional)</li>
-<li>Click Next: Review</li>
-<li>On the Create Policy page, provide:
+<li>
+<p>Click <strong>Next: Tags</strong> (Tags are optional)</p>
+</li>
+<li>
+<p>Click <strong>Next: Review</strong></p>
+</li>
+<li>
+<p>On the <strong>Create Policy</strong> page, provide the following:</p>
 <ul>
-<li>Policy name: <code>operatorAccess</code></li>
-<li>Description (optional but recommended)</li>
-<li>Click Create Policy</li>
+<li><strong>Policy Name</strong>: <code>operatorAccess</code></li>
+<li><strong>Description</strong> – optional: <code>Policy that grants operator access to CloudWatch log groups</code></li>
+<li>Click <strong>Create Policy</strong>
+<img src="/images/0004/3.png" alt="3.4.11"></li>
 </ul>
+</li>
+<li>
+<p>A confirmation message appears: <strong>“operatorAccess” has been successfully created.</strong>
+<img src="/images/0004/4.png" alt="3.4.11"></p>
 </li>
 </ol>
 <p><strong>🔒 Security Note</strong>: When creating policies, always follow the principle of least privilege by granting only the permissions necessary to perform the required tasks.</p>
@@ -689,137 +729,173 @@
 <p>Select the AWS Region recommended by the AWS Team if this is part of an AWS Event, or the Region you intend to configure the rules if you&rsquo;re running this on your own</p>
 </li>
 <li>
-<p>Click on Permission sets in the left menu and click the Create permission set button</p>
+<p>Click on <strong>Permission sets</strong> in the left-hand menu and then click the <strong>Create permission set</strong> button<br>
+<img src="/images/0004/5.png" alt="3.4.11"></p>
 </li>
 <li>
-<p>On the Select permission set type page:</p>
+<p>On the <strong>Select permission set type</strong> page:</p>
 <ul>
-<li>Select the Custom permission set radio button</li>
-<li>Click Next</li>
+<li>Select the radio button <strong>Custom permission set</strong></li>
+<li>Click <strong>Next</strong>
+<img src="/images/0004/6.png" alt="3.4.11"></li>
 </ul>
 </li>
 <li>
-<p>On the Specify policies page:</p>
+<p>On the <strong>Specify policies</strong> page:</p>
 <ul>
-<li>Expand the &ldquo;Customer managed Policies&rdquo; option</li>
-<li>Click &ldquo;Attach policies&rdquo;</li>
-<li>In the text box that displays &ldquo;Enter Policy name(s)&rdquo;, enter &ldquo;operatorAccess&rdquo;. This name must match the name of the policy you created in the Create Customer Managed IAM policy section.</li>
-<li>Click Next</li>
+<li>Expand the <strong>Customer managed policies</strong> section</li>
+<li>Click <strong>Attach policies</strong></li>
+<li>In the textbox labeled <strong>Enter Policy name(s)</strong>, enter <code>operatorAccess</code>
+<blockquote>
+<p>This name must exactly match the name of the policy you created earlier in the <strong>Create Customer Managed IAM policy</strong> step.</p></blockquote>
+</li>
+<li>Click <strong>Next</strong>
+<img src="/images/0004/7.png" alt="3.4.11"></li>
 </ul>
 </li>
 <li>
-<p>On the Specify permission set details page:</p>
+<p>On the <strong>Specify permission set details</strong> page:</p>
 <ul>
-<li>Provide a name for the permission set, e.g., operatorAccessPermissionSet</li>
+<li>Provide a name for the permission set, e.g., <code>operatorAccessPermissionSet</code></li>
 <li>Leave the remaining fields [Description, Session Duration, Relay state, and Tags] as default</li>
-<li>Click Next</li>
+<li>Click <strong>Next</strong>
+<img src="/images/0004/8.png" alt="3.4.11"></li>
 </ul>
 </li>
 <li>
-<p>On the Review and create page:</p>
+<p>On the <strong>Review and create</strong> page:</p>
 <ul>
 <li>Review the details provided in the previous steps</li>
-<li>Click the Create button</li>
+<li>Click the <strong>Create</strong> button
+<img src="/images/0004/9.png" alt="3.4.11"></li>
 </ul>
+</li>
+<li>
+<p>A confirmation message appears stating that the permission set named <strong>operatorAccessPermissionSet</strong> has been successfully created in AWS IAM Identity Center.<br>
+<img src="/images/0004/10.png" alt="3.4.11"></p>
 </li>
 </ol>
 <p><strong>💡 Pro Tip</strong>: Create a standard naming convention for your permission sets that indicates their purpose and level of access. This makes it easier to manage permissions at scale.</p>
 <h4 id="creating-a-group">Creating a Group</h4>
-<p>Let&rsquo;s create a new Group named operations:</p>
+<p>Create a new group named <strong>operations</strong>:</p>
 <ol>
-<li>Navigate to the IAM Identity Center Console</li>
-<li>Select Groups under the Workplace pool section and click Create Group</li>
-<li>On the Create group page:
+<li>
+<p>Navigate to the <strong>IAM Identity Center Console</strong></p>
+</li>
+<li>
+<p>Select <strong>Groups</strong> under <strong>Workforce pool</strong> and click <strong>Create Group</strong><br>
+<img src="/images/0004/11.png" alt="3.4.11"></p>
+</li>
+<li>
+<p>On the <strong>Create group</strong> page:</p>
 <ul>
-<li>Provide Group Name: operations</li>
-<li>Provide Description, e.g., Group for cloud operations</li>
-<li>Click Create group</li>
+<li>Provide <strong>Group Name</strong>: <code>operations</code></li>
+<li>Provide <strong>Description</strong>, for example: <code>Group for cloud operations</code></li>
+<li>Click <strong>Create group</strong>
+<img src="/images/0004/12.png" alt="3.4.11"></li>
 </ul>
+</li>
+<li>
+<p>A group named <code>operations</code> has been successfully created in AWS IAM Identity Center.<br>
+<img src="/images/0004/13.png" alt="3.4.11"></p>
 </li>
 </ol>
-<h4 id="creating-a-user-and-adding-to-the-group">Creating a User and Adding to the Group</h4>
-<p>For this module, we&rsquo;ll create a new user: operationsUser</p>
+<h4 id="create-user-and-add-to-group">Create user and add to group</h4>
+<p>For this module, we will create a new user: <code>operationsUser</code></p>
 <ol>
 <li>
-<p>Navigate to the IAM Identity Center Console</p>
+<p>Navigate to the <strong>IAM Identity Center Console</strong></p>
 </li>
 <li>
-<p>Select Users under the Workplace pool section and click Create User</p>
+<p>Select <strong>Users</strong> under <strong>Workforce pool</strong> and click <strong>Create User</strong><br>
+<img src="/images/0004/14.png" alt="3.4.11"></p>
 </li>
 <li>
-<p>On the Create User page:</p>
+<p>On the <strong>Create User</strong> page:</p>
 <ul>
-<li>Provide Username, e.g., operationsUser</li>
-<li>For Password, select the Generate a one-time password that you can share with the user radio button</li>
-<li>Provide Email Address, using the format <a href="mailto:email+operations@domain.com">email+operations@domain.com</a>, e.g., <a href="mailto:example+operations@amazon.com">example+operations@amazon.com</a></li>
-<li>Confirm the email address provided in the previous field</li>
-<li>Provide First name: operations</li>
-<li>Provide Last name: user</li>
-<li>Leave Display name as entered</li>
-<li>Click Next</li>
+<li>Provide <strong>Username</strong>, e.g., <code>operationsUser</code></li>
+<li>For <strong>Password</strong>, choose the radio button <strong>Generate a one-time password that you can share with the user</strong></li>
+<li>Provide <strong>Email Address</strong> in the format: <code>email+operations@domain.com</code>, e.g., <code>example+operations@amazon.com</code></li>
+<li>Confirm the email address</li>
+<li>Provide <strong>First name</strong>: <code>operations</code></li>
+<li>Provide <strong>Last name</strong>: <code>user</code></li>
+<li>Keep the <strong>Display name</strong> as entered</li>
+<li>Click <strong>Next</strong>
+<img src="/images/0004/15.png" alt="3.4.11"></li>
 </ul>
 </li>
 <li>
-<p>On the Add users to groups - optional page:</p>
+<p>On the <strong>Add users to groups – optional</strong> page:</p>
 <ul>
-<li>Select the Operations Group</li>
-<li>Click Next</li>
+<li>Select the <strong>operations</strong> group</li>
+<li>Click <strong>Next</strong>
+<img src="/images/0004/16.png" alt="3.4.11"></li>
 </ul>
 </li>
 <li>
-<p>On the Review and add user page:</p>
+<p>On the <strong>Review and add user</strong> page:</p>
 <ul>
-<li>Review the information provided in the previous steps</li>
-<li>Click Add user</li>
+<li>Review the information provided in previous steps</li>
+<li>Click <strong>Add user</strong>
+<img src="/images/0004/17.png" alt="3.4.11"></li>
 </ul>
 </li>
 <li>
-<p>A pop-up window will appear with a One-time password. Copy the information using the Copy button and save it for the verification step. Note the User portal URL, Username, and Password</p>
+<p>A pop-up window will appear with the <strong>One-time password</strong>. Use the <strong>Copy</strong> button to save this information for authentication later.<br>
+Take note of the <strong>User portal URL</strong>, <strong>Username</strong>, and <strong>Password</strong>
+<img src="/images/0004/18.png" alt="3.4.11"></p>
+</li>
+<li>
+<p>A green banner confirms that the user <code>operationsUser</code> has been successfully created in IAM Identity Center.<br>
+<img src="/images/0004/19.png" alt="3.4.11"></p>
 </li>
 </ol>
-<p><strong>ℹ️ Information</strong>: IAM Identity Center manages user identities separately from IAM users, providing a single place to create and manage user identities for your entire AWS organization.</p>
-<h4 id="assigning-permission-sets-to-aws-accounts">Assigning Permission Sets to AWS Accounts</h4>
+<h4 id="assign-permission-set-to-aws-account">Assign Permission Set to AWS Account</h4>
 <ol>
 <li>
-<p>Navigate to the IAM Identity Center Console, select AWS accounts</p>
+<p>Navigate to the <strong>IAM Identity Center Console</strong>, and select <strong>AWS accounts</strong></p>
 </li>
 <li>
-<p>Select the account you want users to have access to</p>
+<p>Choose the account to which you want the user to have access</p>
 </li>
 <li>
-<p>Click Assign users or groups</p>
+<p>Click <strong>Assign users or groups</strong><br>
+<img src="/images/0004/20.png" alt="3.4.11"></p>
 </li>
 <li>
-<p>On the Assign users and Group to AccountName page:</p>
+<p>On the <strong>Assign users and groups to AccountName</strong> page:</p>
 <ul>
-<li>Select the operations group</li>
-<li>Click Next</li>
+<li>Select the <strong>operations</strong> group</li>
+<li>Click <strong>Next</strong>
+<img src="/images/0004/21.png" alt="3.4.11"></li>
 </ul>
 </li>
 <li>
-<p>On the Select permission sets page:</p>
+<p>On the <strong>Select permission sets</strong> page:</p>
 <ul>
-<li>Under Permission sets, select operatorAccessPermissionSet</li>
-<li>Click Next</li>
+<li>Under <strong>Permission sets</strong>, select <code>operatorAccessPermissionSet</code></li>
+<li>Click <strong>Next</strong>
+<img src="/images/0004/22.png" alt="3.4.11"></li>
 </ul>
 </li>
 <li>
-<p>On the Review and submit page:</p>
+<p>On the <strong>Review and submit</strong> page:</p>
 <ul>
 <li>Review the information</li>
-<li>Click Submit</li>
+<li>Click <strong>Submit</strong>
+<img src="/images/0004/23.png" alt="3.4.11"></li>
 </ul>
 </li>
 <li>
-<p>IAM Identity Center will associate the User group with the Permission set and assign it to the selected AWS Account. You&rsquo;ll see a page with a green banner.</p>
+<p>IAM Identity Center will link the <strong>User group</strong> with the <strong>Permission set</strong> and assign it to the selected AWS account. You will see a page with a green confirmation banner.<br>
+<img src="/images/0004/24.png" alt="3.4.11"></p>
 </li>
 </ol>
 <p><strong>💡 Pro Tip</strong>: IAM Identity Center allows you to assign multiple permission sets to the same user or group, giving you flexibility in how you structure your access control.</p>
 <h4 id="verifying-access">Verifying Access</h4>
 <blockquote>
 <p><strong>Note</strong>:
-For a better experience, you should perform the following verification steps in private browsing mode or a different web browser</p>
-</blockquote>
+For a better experience, you should perform the following verification steps in private browsing mode or a different web browser</p></blockquote>
 <ol>
 <li>
 <p>Log in to the AWS Portal using the User portal URL saved when creating operationsUser</p>
@@ -1025,6 +1101,22 @@ For a better experience, you should perform the following verification steps in 
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -1118,19 +1210,19 @@ For a better experience, you should perform the following verification steps in 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745669092"></script>
-    <script src="/js/jquery.sticky.js?1745669092"></script>
-    <script src="/js/featherlight.min.js?1745669092"></script>
-    <script src="/js/highlight.pack.js?1745669092"></script>
+    <script src="/js/clipboard.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759648597"></script>
+    <script src="/js/jquery.sticky.js?1759648597"></script>
+    <script src="/js/featherlight.min.js?1759648597"></script>
+    <script src="/js/highlight.pack.js?1759648597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745669092"></script>
-    <script src="/js/learn.js?1745669092"></script>
-    <script src="/js/hugo-learn.js?1745669092"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759648597"></script>
+    <script src="/js/learn.js?1759648597"></script>
+    <script src="/js/hugo-learn.js?1759648597"></script>
 
-    <link href="/mermaid/mermaid.css?1745669092" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1745669092"></script>
+    <link href="/mermaid/mermaid.css?1759648597" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759648597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

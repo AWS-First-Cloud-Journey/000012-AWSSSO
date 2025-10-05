@@ -1,6 +1,6 @@
 +++
 title = "Tạo User và Groups trong IAM Identity Center"
-date = 2020
+date = 2025
 weight = 3
 chapter = false
 pre = "<b>1.3 </b>"
@@ -29,19 +29,18 @@ Users và groups bạn tạo trong IAM Identity Center identity store chỉ có 
 1. Điều hướng đến IAM Identity Center Console
 2. Chọn **Groups** và nhấp vào **Create Group**
 
-![3.4.11](/images/0001/0005.png)
-
+![3.4.11](/images/0001/image006.png)
 3. Trong trang Create group:
    - Nhập Group Name, ví dụ: **Administrators**
    - Nhập Description, ví dụ: **Group for administrator users**
    - Nhấp vào **Create group**
 
-![3.4.11](/images/0001/0006.png)
+![3.4.11](/images/0001/image07.png)
 
 4. Một banner màu xanh lá sẽ xuất hiện cho biết group Administrators đã được tạo thành công
 5. Lặp lại các bước 1-3 để tạo group **readOnly**
 
-![3.4.11](/images/0001/0007.png)
+![3.4.11](/images/0001/image08.png)
 
 **💡 Pro Tip:** Việc tổ chức users thành các groups giúp quản lý quyền truy cập hiệu quả hơn và dễ dàng áp dụng các chính sách quyền hạn theo vai trò. Khi cấu trúc tổ chức thay đổi, bạn chỉ cần cập nhật thành viên group thay vì phải điều chỉnh quyền cho từng user riêng lẻ.
 
@@ -54,7 +53,7 @@ Users và groups bạn tạo trong IAM Identity Center identity store chỉ có 
 1. Điều hướng đến IAM Identity Center Console
 2. Chọn **Users** dưới Workplace pool và nhấp vào **Add User**
 
-![3.4.11](/images/0001/0008.png)
+![3.4.11](/images/0001/image09.png)
 
 3. Trong trang Add User:
    - Nhập Username, ví dụ: **adminUser**
@@ -66,23 +65,23 @@ Users và groups bạn tạo trong IAM Identity Center identity store chỉ có 
    - Để Display name như đã nhập
    - Nhấp vào **Next** (bạn có thể khám phá các trường tùy chọn)
 
-![3.4.11](/images/0001/0009.png)
+![3.4.11](/images/0001/image10.png)
 
 4. Trong trang Add users to groups - optional:
    - Chọn group **Administrators**
    - Nhấp vào **Next**
 
-![3.4.11](/images/0001/00010.png)
+![3.4.11](/images/0001/image11.png)
 
 5. Trong trang Review and add user:
    - Xem lại thông tin đã cung cấp trong các bước trước
    - Nhấp vào **Add user**
 
-![3.4.11](/images/0001/00011.png)
+![3.4.11](/images/0001/image12.png)
 
 6. Một cửa sổ pop-up sẽ xuất hiện với One-time password. Sao chép thông tin bằng nút Copy và lưu lại để sử dụng sau trong workshop.
 
-![3.4.11](/images/0001/00012.png)
+![3.4.11](/images/0001/image013.png)
 
 **🔒 Security Note:** Mật khẩu một lần (one-time password) chỉ hiển thị một lần và không thể truy xuất lại. Hãy đảm bảo lưu trữ an toàn và chia sẻ với người dùng qua kênh bảo mật. Trong môi trường sản xuất, bạn nên kích hoạt xác thực đa yếu tố (MFA) cho tất cả người dùng để tăng cường bảo mật.
 

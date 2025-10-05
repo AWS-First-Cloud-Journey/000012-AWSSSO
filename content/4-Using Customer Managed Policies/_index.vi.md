@@ -1,6 +1,6 @@
 +++
 title = "Customer Managed Policies"
-date = 2020
+date = 2025
 weight = 4
 chapter = false
 pre = "<b> 4. </b>"
@@ -24,8 +24,10 @@ Xem xét một kịch bản mà nhóm vận hành (operator group) cần đượ
 
 #### Tạo Customer Managed IAM Policy
 
-1. Theo [link này] để tạo IAM policy
+1. Tạo IAM policy
+![3.4.11](/images/0004/1.png)
 2. Chọn tab JSON và sao chép và dán đoạn chính sách sau vào khu vực văn bản
+![3.4.11](/images/0004/2.png)
 3. Thay thế `<account-id>` bằng ID tài khoản cho tài khoản mà chính sách này được tạo
 ```json
 {
@@ -56,34 +58,39 @@ Xem xét một kịch bản mà nhóm vận hành (operator group) cần đượ
 5. Nhấp Next: Review.
 6. Trên trang Create Policy, cung cấp:
    - Tên của policy là `operatorAccess`
-   - Cung cấp mô tả
+   -Description – optional: `Policy that grants operator access to CloudWatch log groups`
    - Nhấp Create Policy
-
+![3.4.11](/images/0004/3.png)
+7. Thông báo “operatorAccess” đã được tạo thành công.
+![3.4.11](/images/0004/4.png)
 #### Tạo permission Set với Customer Managed policy
 
 1. Điều hướng đến IAM Identity Center Console
 2. Chọn AWS Region được đề xuất bởi AWS Team nếu đây là một phần của AWS Event hoặc Region mà bạn dự định cấu hình quy tắc, nếu bạn đang chạy điều này một mình
 
 3. Nhấp vào Permission sets trong menu bên trái và nhấp vào nút Create permission set
-
+![3.4.11](/images/0004/5.png)
 4. Trong trang Select permission set type:
    - Chọn radio button Custom permission set
    - Nhấp Next
-
+![3.4.11](/images/0004/6.png)
 5. Trong trang Specify policies:
    - Mở rộng tùy chọn "Customer managed Policies"
    - Nhấp vào "Attach policies"
    - Trong hộp văn bản hiển thị "Enter Policy name(s)", nhập "operatorAccess". Tên này phải khớp với tên của policy mà bạn đã tạo trong phần Create Customer Managed IAM policy.
    - Nhấp Next
-
+![3.4.11](/images/0004/7.png)
 6. Trong trang Specify permission set details:
    - Cung cấp tên cho permission set, ví dụ: operatorAccessPermissionSet
    - Để các trường còn lại [Description, Session Duration, Relay state và Tags] ở mặc định
    - Nhấp Next
-
+![3.4.11](/images/0004/8.png)
 7. Trong trang Review and create:
    - Xem lại các chi tiết đã cung cấp trong các bước trước
    - Nhấp vào nút Create
+![3.4.11](/images/0004/9.png)
+8. Thông báo Permission set có tên là operatorAccessPermissionSet đã được tạo thành công trong AWS IAM Identity Center
+![3.4.11](/images/0004/10.png)
 
 #### Tạo Group
 
@@ -91,18 +98,21 @@ Hãy tạo Group mới có tên operations:
 
 1. Điều hướng đến IAM Identity Center Console
 2. Chọn Groups dưới mục Workplace pool và nhấp Create Group.
+![3.4.11](/images/0004/11.png)
 3. Trong trang Create group:
    - Cung cấp Group Name là operations
    - Cung cấp Description, ví dụ: Group for cloud operations
    - Nhấp Create group
+![3.4.11](/images/0004/12.png)
+4. Group có tên là operations đã được tạo thành công trong AWS IAM Identity Center.
+![3.4.11](/images/0004/13.png)
 
 #### Tạo user và thêm vào Group
-
 Đối với module này, chúng ta sẽ tạo một user mới: operationsUser
 
 1. Điều hướng đến IAM Identity Center Console
 2. Chọn Users dưới mục Workplace pool và nhấp Create User.
-
+![3.4.11](/images/0004/14.png)
 3. Trong trang Create User:
    - Cung cấp Username, ví dụ: operationsUser
    - Đối với Password, chọn radio button Generate a one-time password that you can share with the user
@@ -112,37 +122,39 @@ Hãy tạo Group mới có tên operations:
    - Cung cấp Last name là user
    - Để Display name như đã nhập
    - Nhấp Next
-
+![3.4.11](/images/0004/15.png)
 4. Trong trang Add users to groups - optional:
    - Chọn Group Operations
    - Nhấp Next
-
+![3.4.11](/images/0004/16.png)
 5. Trong trang Review and add user:
    - Xem lại thông tin đã cung cấp trong các bước trước
    - Nhấp Add user
-
+![3.4.11](/images/0004/17.png)
 6. Một cửa sổ pop-up sẽ xuất hiện với One-time password. Sao chép thông tin bằng nút Copy và lưu lại cho bước xác thực. Lưu ý User portal URL, Username và Password
-
+![3.4.11](/images/0004/18.png)
+7. Thông báo màu xanh có tên operationsUser đã được tạo thành công trong IAM Identity Center.
+![3.4.11](/images/0004/19.png)
 #### Gán Permission set cho AWS Account
 
 1. Điều hướng đến IAM Identity Center Console, chọn AWS accounts
 2. Chọn tài khoản mà bạn muốn người dùng có quyền truy cập.
 3. Nhấp Assign users or groups.
-
+![3.4.11](/images/0004/20.png)
 4. Trong trang Assign users and Group to AccountName:
    - Chọn nhóm operations
    - Nhấp Next
-
+![3.4.11](/images/0004/21.png)
 5. Trong trang Select permission sets:
    - Dưới Permission sets, chọn operatorAccessPermissionSet
    - Nhấp Next
-
+![3.4.11](/images/0004/22.png)
 6. Trong trang Review and submit:
    - Xem lại thông tin
    - Nhấp Submit
-
+![3.4.11](/images/0004/23.png)
 7. IAM Identity Center sẽ liên kết User group với Permission set và gán nó cho AWS Account được chọn. Bạn sẽ thấy một trang với banner màu xanh lá.
-
+![3.4.11](/images/0004/24.png)
 #### Xác minh quyền truy cập
 
 > **Lưu ý**:

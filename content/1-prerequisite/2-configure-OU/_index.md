@@ -1,55 +1,53 @@
 +++
-title = "Setting up the Organization Unit"
+title = "Prerequisites for IAM Identity Center"
 date = 2020
 weight = 2
 chapter = false
 pre = "<b>1.2 </b>"
 +++
 
-#### Setting Up Organization Units
+#### Prerequisites for IAM Identity Center
 
-In this step, you will practice setting up the Organization Units for the AWS accounts created in the previous section. The Organization Units include **Security**, **Shared Services**, **Logging**, and **Application**. These units will be situated within the Root, where all the OUs and AWS accounts are located.
+**ℹ️ Information:** You can skip this section if you have already activated IAM Identity Center in the AWS Account you are using for this workshop.
 
-#### Contents
-- [Setting Up Organization Units](#setting-up-organization-units)
-- [Contents](#contents)
-- [Create Organization Unit](#create-organization-unit)
-- [Move AWS Accounts to Respective Organization Unit](#move-aws-accounts-to-respective-organization-unit)
+#### Basic Requirements
 
-#### Create Organization Unit
+Before setting up IAM Identity Center, you need:
 
-1. Open the **AWS Management Console** and search for the **AWS Organizations** service.
+1. An AWS account with Administrator permissions. If you don’t have one, create an account now.
 
-2. Select the **Root**, click on **Actions**, and then choose **Create new** under the **Organizational Unit** section.
+2. Set up AWS Organizations and enable the **All features** mode. For more details on this configuration, see “Enabling All Features in Your Organization” in the AWS Organizations User Guide.
 
-   ![Create Organization Unit](/images/4/0003.png?featherlight=false&width=90pc)
+#### Enabling AWS Organizations
 
-3. On the **Create organizational unit in Root** page:
-   - In the **Details** section, provide a name for the OU (For example: Logging Unit).
+**ℹ️ Information:** AWS Organizations is an account management service that allows you to consolidate multiple AWS accounts into a single organization that you create and centrally manage. This is a prerequisite for using IAM Identity Center.
 
-   ![Create OU Details](/images/4/0004.png?featherlight=false&width=90pc)
+1. In the AWS Management Console, at the top left corner next to **Services**, click the search box, type **AWS Organizations**, and select the service.
 
-4. Review the information and click **Create organizational unit**.
+2. Click **Create Organization**. By default, the organization is created with all features enabled.
 
-   ![Create OU](/images/4/0005.png?featherlight=false&width=90pc)
+![3.4.11](/images/0001/image05.png)
 
-5. Repeat the above steps for the remaining Organization Units.
+3. The organization is created, and the AWS accounts page appears. The only account currently available is your management account, which is located under the root organizational unit (OU).
 
-   ![Create OU](/images/4/0006.png?featherlight=false&width=90pc)
+**💡 Pro Tip:** AWS Organizations allows you to centrally manage multiple AWS accounts, simplifying billing, access control, and compliance with security policies. You should design an OU structure that aligns with your organization’s model to optimize access management.
 
-#### Move AWS Accounts to Respective Organization Unit
+#### Enabling IAM Identity Center
 
-1. Go to the **AWS Management Console** and find the **AWS Organizations** service using the search bar.
+**ℹ️ Information:** IAM Identity Center (formerly AWS SSO) is a centralized identity and access management service for AWS accounts and cloud applications. It simplifies access control and provides a single sign-on (SSO) experience for users.
 
-2. Check the AWS account you wish to move (For instance: **Logging**), click on **Actions**, and then select **Move** under **AWS Account**.
+When you open IAM Identity Center for the first time, you’ll be prompted to enable the service before managing it:
 
-   ![Move AWS Account](/images/4/0007.png?featherlight=false&width=90pc)
+1. In the AWS Management Console, click **Services** in the upper-left corner.  
+2. Open the **IAM Identity Center** console.  
+3. Choose **Enable**.  
 
-3. Tick the appropriate OU (Example: **Logging Unit**) and click **Move AWS account**.
+![3.4.11](/images/0001/0004.png)
 
-   ![Move to OU](/images/4/0008.png?featherlight=false&width=90pc)
+**ℹ️ Information:** After activation, IAM Identity Center creates a service-linked role in all accounts within your AWS Organization. It also automatically creates the same service-linked role in any new accounts that are added to your organization later. This role allows IAM Identity Center to access each account’s resources on your behalf.
 
-4. Repeat the above steps for the remaining AWS and Organization Unit accounts:
-   - Move the Security Account to the Security Unit
-   - Move the Shared Services Account to the Shared Services Unit
-   - Move the Application Account to the Application Unit
+#### Delegated Administration
+
+**🔒 Security Note:** IAM Identity Center allows you to designate another member account within your AWS Organization — other than the Organization Management Account — to perform administrative tasks for Identity Center. This supports the **principle of least privilege** by reducing direct access to the Management Account. In production environments, you should configure delegated administration to minimize security risks associated with using the Management Account for day-to-day operations.
+
+**💡 Pro Tip:** When setting up IAM Identity Center, consider an identity strategy that best fits your organization. You can choose to use the **Identity Center Directory**, connect to **Microsoft Active Directory** via **AWS Directory Service**, or integrate with an external identity provider (IdP) that supports **SAML 2.0** such as **Okta**, **Azure AD**, or **Google Workspace**.

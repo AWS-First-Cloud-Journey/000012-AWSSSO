@@ -24,7 +24,9 @@ Consider a scenario where an operator group needs access to different member acc
 #### Creating a Customer Managed IAM Policy
 
 1. Navigate to the IAM console to create an IAM policy
+![3.4.11](/images/0004/1.png)
 2. Select the JSON tab and copy and paste the following policy into the text area
+![3.4.11](/images/0004/2.png)
 3. Replace `<account-id>` with the account ID for the account this policy is being created in
 
 ```json
@@ -51,13 +53,18 @@ Consider a scenario where an operator group needs access to different member acc
     ]
 }
 ```
+4. Click **Next: Tags** (Tags are optional)  
+5. Click **Next: Review**
 
-4. Click Next: Tags (Tags are optional)
-5. Click Next: Review
-6. On the Create Policy page, provide:
-   - Policy name: `operatorAccess`
-   - Description (optional but recommended)
-   - Click Create Policy
+6. On the **Create Policy** page, provide the following:
+   - **Policy Name**: `operatorAccess`
+   - **Description** – optional: `Policy that grants operator access to CloudWatch log groups`
+   - Click **Create Policy**
+![3.4.11](/images/0004/3.png)
+
+7. A confirmation message appears: **“operatorAccess” has been successfully created.**
+![3.4.11](/images/0004/4.png)
+
 
 **🔒 Security Note**: When creating policies, always follow the principle of least privilege by granting only the permissions necessary to perform the required tasks.
 
@@ -65,89 +72,116 @@ Consider a scenario where an operator group needs access to different member acc
 
 1. Navigate to the IAM Identity Center Console
 2. Select the AWS Region recommended by the AWS Team if this is part of an AWS Event, or the Region you intend to configure the rules if you're running this on your own
+3. Click on **Permission sets** in the left-hand menu and then click the **Create permission set** button  
+![3.4.11](/images/0004/5.png)
 
-3. Click on Permission sets in the left menu and click the Create permission set button
+4. On the **Select permission set type** page:
+   - Select the radio button **Custom permission set**
+   - Click **Next**
+![3.4.11](/images/0004/6.png)
 
-4. On the Select permission set type page:
-   - Select the Custom permission set radio button
-   - Click Next
+5. On the **Specify policies** page:
+   - Expand the **Customer managed policies** section
+   - Click **Attach policies**
+   - In the textbox labeled **Enter Policy name(s)**, enter `operatorAccess`  
+     > This name must exactly match the name of the policy you created earlier in the **Create Customer Managed IAM policy** step.
+   - Click **Next**
+![3.4.11](/images/0004/7.png)
 
-5. On the Specify policies page:
-   - Expand the "Customer managed Policies" option
-   - Click "Attach policies"
-   - In the text box that displays "Enter Policy name(s)", enter "operatorAccess". This name must match the name of the policy you created in the Create Customer Managed IAM policy section.
-   - Click Next
-
-6. On the Specify permission set details page:
-   - Provide a name for the permission set, e.g., operatorAccessPermissionSet
+6. On the **Specify permission set details** page:
+   - Provide a name for the permission set, e.g., `operatorAccessPermissionSet`
    - Leave the remaining fields [Description, Session Duration, Relay state, and Tags] as default
-   - Click Next
+   - Click **Next**
+![3.4.11](/images/0004/8.png)
 
-7. On the Review and create page:
+7. On the **Review and create** page:
    - Review the details provided in the previous steps
-   - Click the Create button
+   - Click the **Create** button
+![3.4.11](/images/0004/9.png)
+
+8. A confirmation message appears stating that the permission set named **operatorAccessPermissionSet** has been successfully created in AWS IAM Identity Center.  
+![3.4.11](/images/0004/10.png)
+
 
 **💡 Pro Tip**: Create a standard naming convention for your permission sets that indicates their purpose and level of access. This makes it easier to manage permissions at scale.
 
 #### Creating a Group
 
-Let's create a new Group named operations:
+Create a new group named **operations**:
 
-1. Navigate to the IAM Identity Center Console
-2. Select Groups under the Workplace pool section and click Create Group
-3. On the Create group page:
-   - Provide Group Name: operations
-   - Provide Description, e.g., Group for cloud operations
-   - Click Create group
+1. Navigate to the **IAM Identity Center Console**  
+2. Select **Groups** under **Workforce pool** and click **Create Group**  
+![3.4.11](/images/0004/11.png)
 
-#### Creating a User and Adding to the Group
+3. On the **Create group** page:
+   - Provide **Group Name**: `operations`
+   - Provide **Description**, for example: `Group for cloud operations`
+   - Click **Create group**
+![3.4.11](/images/0004/12.png)
 
-For this module, we'll create a new user: operationsUser
+4. A group named `operations` has been successfully created in AWS IAM Identity Center.  
+![3.4.11](/images/0004/13.png)
 
-1. Navigate to the IAM Identity Center Console
-2. Select Users under the Workplace pool section and click Create User
+#### Create user and add to group
 
-3. On the Create User page:
-   - Provide Username, e.g., operationsUser
-   - For Password, select the Generate a one-time password that you can share with the user radio button
-   - Provide Email Address, using the format email+operations@domain.com, e.g., example+operations@amazon.com
-   - Confirm the email address provided in the previous field
-   - Provide First name: operations
-   - Provide Last name: user
-   - Leave Display name as entered
-   - Click Next
+For this module, we will create a new user: `operationsUser`
 
-4. On the Add users to groups - optional page:
-   - Select the Operations Group
-   - Click Next
+1. Navigate to the **IAM Identity Center Console**  
+2. Select **Users** under **Workforce pool** and click **Create User**  
+![3.4.11](/images/0004/14.png)
 
-5. On the Review and add user page:
-   - Review the information provided in the previous steps
-   - Click Add user
+3. On the **Create User** page:
+   - Provide **Username**, e.g., `operationsUser`
+   - For **Password**, choose the radio button **Generate a one-time password that you can share with the user**
+   - Provide **Email Address** in the format: `email+operations@domain.com`, e.g., `example+operations@amazon.com`
+   - Confirm the email address
+   - Provide **First name**: `operations`
+   - Provide **Last name**: `user`
+   - Keep the **Display name** as entered
+   - Click **Next**
+![3.4.11](/images/0004/15.png)
 
-6. A pop-up window will appear with a One-time password. Copy the information using the Copy button and save it for the verification step. Note the User portal URL, Username, and Password
+4. On the **Add users to groups – optional** page:
+   - Select the **operations** group
+   - Click **Next**
+![3.4.11](/images/0004/16.png)
 
-**ℹ️ Information**: IAM Identity Center manages user identities separately from IAM users, providing a single place to create and manage user identities for your entire AWS organization.
+5. On the **Review and add user** page:
+   - Review the information provided in previous steps
+   - Click **Add user**
+![3.4.11](/images/0004/17.png)
 
-#### Assigning Permission Sets to AWS Accounts
+6. A pop-up window will appear with the **One-time password**. Use the **Copy** button to save this information for authentication later.  
+   Take note of the **User portal URL**, **Username**, and **Password**
+![3.4.11](/images/0004/18.png)
 
-1. Navigate to the IAM Identity Center Console, select AWS accounts
-2. Select the account you want users to have access to
-3. Click Assign users or groups
+7. A green banner confirms that the user `operationsUser` has been successfully created in IAM Identity Center.  
+![3.4.11](/images/0004/19.png)
 
-4. On the Assign users and Group to AccountName page:
-   - Select the operations group
-   - Click Next
+#### Assign Permission Set to AWS Account
 
-5. On the Select permission sets page:
-   - Under Permission sets, select operatorAccessPermissionSet
-   - Click Next
+1. Navigate to the **IAM Identity Center Console**, and select **AWS accounts**  
+2. Choose the account to which you want the user to have access  
+3. Click **Assign users or groups**  
+![3.4.11](/images/0004/20.png)
 
-6. On the Review and submit page:
+4. On the **Assign users and groups to AccountName** page:
+   - Select the **operations** group
+   - Click **Next**
+![3.4.11](/images/0004/21.png)
+
+5. On the **Select permission sets** page:
+   - Under **Permission sets**, select `operatorAccessPermissionSet`
+   - Click **Next**
+![3.4.11](/images/0004/22.png)
+
+6. On the **Review and submit** page:
    - Review the information
-   - Click Submit
+   - Click **Submit**
+![3.4.11](/images/0004/23.png)
 
-7. IAM Identity Center will associate the User group with the Permission set and assign it to the selected AWS Account. You'll see a page with a green banner.
+7. IAM Identity Center will link the **User group** with the **Permission set** and assign it to the selected AWS account. You will see a page with a green confirmation banner.  
+![3.4.11](/images/0004/24.png)
 
 **💡 Pro Tip**: IAM Identity Center allows you to assign multiple permission sets to the same user or group, giving you flexibility in how you structure your access control.
 

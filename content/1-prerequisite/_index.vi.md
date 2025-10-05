@@ -1,6 +1,6 @@
 +++
 title = "Các bước chuẩn bị"
-date = 2020
+date = 2025
 weight = 1
 chapter = false
 pre = "<b>1. </b>"
@@ -8,7 +8,7 @@ pre = "<b>1. </b>"
 
 #### Bắt đầu
 
-Trong phần chuẩn bị này, chúng ta sẽ tìm hiểu các điều kiện tiên quyết để thiết lập **AWS IAM Identity Center**.
+Trong phần chuẩn bị này, chúng ta sẽ tìm hiểu các điều kiện tiên quyết để thiết lập **AWS IAM Identity Center** (trước đây là AWS Single Sign-On).
 
 #### Thiết lập AWS Account
 
@@ -24,10 +24,10 @@ Trong phần chuẩn bị này, chúng ta sẽ tìm hiểu các điều kiện t
 
 2. **Kích hoạt AWS IAM Identity Center**
    
-   **💡 Pro Tip:** AWS IAM Identity Center (trước đây là AWS SSO) cung cấp khả năng quản lý tập trung quyền truy cập vào nhiều AWS accounts và ứng dụng cloud. Sử dụng Identity Center giúp giảm thiểu việc quản lý nhiều IAM users và credentials riêng biệt.
+   **💡 Pro Tip:** AWS IAM Identity Center (trước đây là AWS SSO) cung cấp khả năng quản lý tập trung quyền truy cập vào nhiều AWS accounts và ứng dụng cloud. Sử dụng Identity Center giúp giảm thiểu việc quản lý nhiều IAM users và credentials riêng biệt. Dịch vụ này hoàn toàn miễn phí, bạn chỉ trả phí cho các tài nguyên AWS cơ bản bên dưới.
 
 3. **Chuẩn bị cấu trúc tổ chức**
    
    **ℹ️ Thông tin:** Trước khi triển khai, bạn nên lập kế hoạch cho cấu trúc Organizational Units (OUs) phù hợp với mô hình tổ chức của bạn để tối ưu hóa việc quản lý quyền truy cập.
 
-**🔒 Security Note:** Việc thiết lập đúng cách AWS IAM Identity Center là nền tảng quan trọng để đảm bảo mô hình bảo mật mạnh mẽ theo nguyên tắc least privilege trong môi trường AWS của bạn. Identity Center hỗ trợ triển khai chiến lược Zero Trust bằng cách tập trung hóa quản lý định danh và quyền truy cập.
+**🔒 Security Note:** Việc thiết lập đúng cách AWS IAM Identity Center là nền tảng quan trọng để đảm bảo mô hình bảo mật mạnh mẽ theo nguyên tắc least privilege trong môi trường AWS của bạn. Identity Center hỗ trợ triển khai chiến lược Zero Trust bằng cách tập trung hóa quản lý định danh và quyền truy cập, đồng thời tích hợp với các dịch vụ AWS hiện đại như Amazon Q Developer và Amazon QuickSight.

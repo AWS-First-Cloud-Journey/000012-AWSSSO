@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.147.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Create AWS Account in AWS Organizations :: AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1745669092" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745669092" rel="stylesheet">
-    <link href="/css/hybrid.css?1745669092" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745669092" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745669092" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745669092" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745669092" rel="stylesheet">
-    <link href="/css/theme.css?1745669092" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745669092" rel="stylesheet">
+    <link href="/css/nucleus.css?1759648597" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759648597" rel="stylesheet">
+    <link href="/css/hybrid.css?1759648597" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759648597" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759648597" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759648597" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759648597" rel="stylesheet">
+    <link href="/css/theme.css?1759648597" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759648597" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1745669092" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759648597" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745669092"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759648597"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745669092"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745669092"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759648597"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759648597"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745669092"></script>
+<script type="text/javascript" src="/js/search.js?1759648597"></script>
 
     
   </div>
@@ -141,13 +141,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/2-configure-ou/" title="Setting up the Organization Unit" class="dd-item 
+    <li data-nav-id="/1-prerequisite/2-configure-ou/" title="Prerequisites for IAM Identity Center" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/2-configure-ou/">
-          <b>1.2 </b>Setting up the Organization Unit
+          <b>1.2 </b>Prerequisites for IAM Identity Center
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +169,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Invite AWS Account to AWS Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Create Users and Groups in IAM Identity Center" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/3-invite-aws-account/">
-          <b>1.3 </b>Invite AWS Account to AWS Organization
+          <b>1.3 </b>Create Users and Groups in IAM Identity Center
           
             <i class="fas fa-check read-icon"></i>
           
@@ -197,13 +197,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/4-switch-role/" title="Access member account in Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/4-switch-role/" title="Create Permission Sets" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/4-switch-role/">
-          <b>1.4 </b>Access member account in Organization
+          <b>1.4 </b>Create Permission Sets
           
             <i class="fas fa-check read-icon"></i>
           
@@ -225,13 +225,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/5-provision-permission-sets/" title="" class="dd-item 
+    <li data-nav-id="/1-prerequisite/5-provision-permission-sets/" title="Provision Permission Sets" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/5-provision-permission-sets/">
-          
+          <b>1.5 </b>Provision Permission Sets
           
             <i class="fas fa-check read-icon"></i>
           
@@ -253,13 +253,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/6-test/" title="" class="dd-item 
+    <li data-nav-id="/1-prerequisite/6-test/" title="Verify Access Permissions" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/6-test/">
-          
+          <b> 1.6 </b>Verify Access Permissions
           
             <i class="fas fa-check read-icon"></i>
           
@@ -319,13 +319,41 @@
  
   
     
-    <li data-nav-id="/2-aws-cli-access/2.1-manual/" title="" class="dd-item 
+    <li data-nav-id="/2-aws-cli-access/2.1-manual/" title="Manually Refresh Credentials" class="dd-item 
         
         
         
         ">
       <a href="/2-aws-cli-access/2.1-manual/">
+          <b> 2.1 </b>Manually Refresh Credentials
           
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-aws-cli-access/2.2-automatic/" title="Automatic Credential Refresh" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-aws-cli-access/2.2-automatic/">
+          <b> 2.2 </b>Automatic Credential Refresh
           
             <i class="fas fa-check read-icon"></i>
           
@@ -489,7 +517,7 @@
                   
                     
                     
-                      <option id="en" value="/1-prerequisite/1-create-aws-account/" selected>English</option>
+                      <option id="en" value="//localhost:1313/1-prerequisite/1-create-aws-account/" selected>English</option>
                     
                   
               
@@ -503,7 +531,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/1-prerequisite/1-create-aws-account/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/1-prerequisite/1-create-aws-account/">Tiếng Việt</option>
                     
                   
               
@@ -611,6 +639,7 @@
         <li></li>
       </ul>
     </li>
+    <li><a href="#create-a-user-in-aws-iam">Create a User in AWS IAM</a></li>
   </ul>
 </nav>
     </div>
@@ -636,53 +665,64 @@
 
 
 
-	<h4 id="creating-aws-accounts-in-aws-organization">Creating AWS Accounts in AWS Organization</h4>
-<p>In this step, you will practice creating AWS accounts for <strong>Security</strong>, <strong>Shared Services</strong>, <strong>Logging</strong>, and <strong>Application</strong> within the AWS Organization service. AWS accounts created within the AWS Organization can only be accessed using the IAM Role or root user information.</p>
-<h4 id="contents">Contents</h4>
-<ul>
-<li><a href="/1-prerequisite/1-create-aws-account/#creating-aws-accounts-in-aws-organization">Creating AWS Accounts in AWS Organization</a></li>
-<li><a href="/1-prerequisite/1-create-aws-account/#contents">Contents</a></li>
-<li><a href="/1-prerequisite/1-create-aws-account/#create-aws-account-in-aws-organization">Create AWS Account in AWS Organization</a></li>
-</ul>
-<h4 id="create-aws-account-in-aws-organization">Create AWS Account in AWS Organization</h4>
+	<h4 id="setting-up-aws-account">Setting up AWS Account</h4>
+<h4 id="choosing-aws-account-for-the-workshop">Choosing AWS Account for the Workshop</h4>
+<p><strong>ℹ️ Information:</strong> To perform this workshop, you need a standalone AWS account that is <strong>not</strong> part of AWS Organizations. AWS IAM Identity Center (formerly AWS Single Sign-On) requires an independent account to be configured as the Management Account.</p>
+<h4 id="using-an-existing-aws-account">Using an Existing AWS Account</h4>
+<p><strong>ℹ️ Information:</strong> If you are using an existing account — whether a personal or company account — make sure you clearly understand the impacts and organizational policies related to resource provisioning in that account.</p>
+<p><strong>💡 Pro Tip:</strong> If you already have an AWS account that is not part of AWS Organizations and are using an IAM User or IAM Role with Administrator privileges, you can skip the rest of this task and move on to the next one.</p>
+<p><strong>ℹ️ Information 2025:</strong> AWS IAM Identity Center now supports integration with Amazon Q Developer, Amazon QuickSight, and other modern AWS services. The service itself is completely free; you only pay for the underlying AWS resources you use.</p>
+<h4 id="creating-a-new-aws-account">Creating a New AWS Account</h4>
+<p>If you don’t have an AWS account yet, you can create your own <a href="https://portal.aws.amazon.com/billing/signup">here</a>. A payment method, usually a credit card, is required to activate the account for these hands-on exercises. The registration process includes a phone call where you’ll need to enter a verification code using your phone keypad.</p>
+<p><strong>⚠️ Warning:</strong> If you are currently signed in to the AWS Management Console, you must sign out before <a href="https://portal.aws.amazon.com/billing/signup">clicking here</a> to create a new AWS account.</p>
+<h4 id="preparing-an-iam-user-for-the-workshop">Preparing an IAM User for the Workshop</h4>
+<p><strong>🔒 Security Note:</strong> Strictly limiting the use of the default root account that comes with every AWS account is considered best practice under the principle of least privilege. If you have an AWS account but no IAM User or Role to work with, follow the steps below to prepare for the workshop.</p>
 <ol>
-<li>
-<p>Go to the <strong>AWS Management Console</strong> and search for the <strong>AWS Organizations</strong> service.</p>
-<p><img alt="AWS Organizations" src="/images/1/0001.png?featherlight=false&width=90pc">
-<img alt="AWS Organizations" src="/images/1/0002.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>In the <strong>AWS Organizations Console</strong>, click on <strong>Add an AWS account</strong>.</p>
-<p><img alt="Add AWS Account" src="/images/1/0003.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Select <strong>Create an AWS account</strong> and provide the following details:</p>
-<ul>
-<li><strong>AWS account name</strong>: Logging</li>
-<li><strong>Email address of the account&rsquo;s owner</strong>: <a href="mailto:example+lab12Logging@amazon.com.vn">example+lab12Logging@amazon.com.vn</a></li>
-</ul>
-<p><img alt="Create AWS Account" src="/images/4/0002.png?featherlight=false&width=90pc"></p>
-<blockquote>
-<p><strong>Note</strong>: To create multiple AWS accounts with the same email, you can modify your email by adding a <strong>&quot;+&quot;</strong> followed by a description.</p>
-</blockquote>
-<ul>
-<li><strong>IAM role name</strong>: Leave the default as <strong>OrganizationAccountAccessRole</strong>. This role name will be used to access your AWS member account through the [role switch] method.</li>
-</ul>
-<p><img alt="IAM Role" src="/images/4/0002.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Review the provided information and then select <strong>Create AWS account</strong>.</p>
-<p><img alt="Create AWS Account" src="/images/4/0002.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Repeat the above steps to create accounts for <strong>Security</strong>, <strong>Shared Services</strong>, and <strong>Application</strong>. Depending on individual or business requirements, you can create as many accounts as needed.</p>
-<blockquote>
-<p><strong>Note</strong>: If the email address used to create your AWS Account already exists, AWS will respond with the reason &ldquo;EMAIL ALREADY EXISTS&rdquo; in the <strong>Failure reason</strong> section under <strong>Requests</strong>.</p>
-</blockquote>
-<p><img alt="Requests" src="/images/10/001.png?featherlight=false&width=90pc">
-<img alt="Failure Reason" src="/images/10/002.png?featherlight=false&width=90pc"></p>
-</li>
+<li>Sign in to your AWS account</li>
 </ol>
+<h2 id="create-a-user-in-aws-iam">Create a User in AWS IAM</h2>
+<ul>
+<li>Go to <strong>IAM → Users → Create user</strong>
+<img src="/images/0001/image02.png" alt="3.4.11"></li>
+</ul>
+<ol start="2">
+<li>Enter information as shown below:</li>
+</ol>
+<ul>
+<li><strong>User name</strong>: Choose an easy-to-remember name, e.g. <code>adminUser</code>.</li>
+<li><strong>Are you providing console access to a person?</strong> → Select
+<ul>
+<li>Choose <em>I want to create an IAM user</em> (create a traditional IAM user).</li>
+</ul>
+</li>
+<li><strong>Console password</strong>:
+<ul>
+<li>Choose <em>Custom password</em> to set your own password.</li>
+</ul>
+</li>
+<li>Click <strong>Next</strong> to proceed to the permissions step.<br>
+<img src="/images/0001/image01.png" alt="3.4.11"></li>
+</ul>
+<ol start="3">
+<li>Assign Permissions to the User</li>
+</ol>
+<ul>
+<li>In the search box, type <strong>AdministratorAccess</strong>.</li>
+<li>Select <strong>AdministratorAccess</strong> (an AWS managed policy).
+<ul>
+<li>This policy grants full administrative access, suitable when you need the user to have the highest privileges (similar to an admin account).</li>
+</ul>
+</li>
+<li>Click <strong>Attach policies</strong> to grant the permissions.
+<img src="/images/0001/image03.png" alt="3.4.11"></li>
+</ul>
+<ol start="4">
+<li>Click <strong>Create user</strong> to finish.
+<img src="/images/0001/image04.png" alt="3.4.11"></li>
+</ol>
+<p>⚠️ Note: If you do not want the user to have full admin rights, you can choose more restrictive policies (e.g., only for S3, EC2, etc.).</p>
+<p><strong>💡 Pro Tip:</strong> When setting up an IAM User with Administrator privileges, make sure to store your credentials securely and enable Multi-Factor Authentication (MFA) to enhance the security of your account. MFA is an important additional security layer in a Zero Trust model.</p>
+<p><strong>🔒 Security Note:</strong> In a real production environment, you should apply the principle of least privilege by granting only the minimum permissions necessary for each IAM User instead of AdministratorAccess. AWS IAM Identity Center supports implementing a Zero Trust strategy with features such as Attribute-Based Access Control (ABAC), integration with Identity Providers (Microsoft Entra ID, Okta), and automatic session management. However, for the purpose of this workshop, Administrator privileges are required to configure AWS IAM Identity Center.</p>
 
 
 
@@ -868,6 +908,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -947,7 +1003,7 @@
 			<a class="nav nav-prev" href="/1-prerequisite/" title="Preparation steps"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/1-prerequisite/2-configure-ou/" title="Setting up the Organization Unit" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-prerequisite/2-configure-ou/" title="Prerequisites for IAM Identity Center" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -957,19 +1013,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745669092"></script>
-    <script src="/js/jquery.sticky.js?1745669092"></script>
-    <script src="/js/featherlight.min.js?1745669092"></script>
-    <script src="/js/highlight.pack.js?1745669092"></script>
+    <script src="/js/clipboard.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759648597"></script>
+    <script src="/js/jquery.sticky.js?1759648597"></script>
+    <script src="/js/featherlight.min.js?1759648597"></script>
+    <script src="/js/highlight.pack.js?1759648597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745669092"></script>
-    <script src="/js/learn.js?1745669092"></script>
-    <script src="/js/hugo-learn.js?1745669092"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759648597"></script>
+    <script src="/js/learn.js?1759648597"></script>
+    <script src="/js/hugo-learn.js?1759648597"></script>
 
-    <link href="/mermaid/mermaid.css?1745669092" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1745669092"></script>
+    <link href="/mermaid/mermaid.css?1759648597" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759648597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

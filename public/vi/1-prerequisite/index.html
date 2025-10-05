@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="vi" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.147.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
@@ -12,21 +12,21 @@
     <title>Các bước chuẩn bị :: AWS SINGLE SIGN-ON CHO ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1745669092" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745669092" rel="stylesheet">
-    <link href="/css/hybrid.css?1745669092" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745669092" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745669092" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745669092" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745669092" rel="stylesheet">
-    <link href="/css/theme.css?1745669092" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745669092" rel="stylesheet">
+    <link href="/css/nucleus.css?1759648597" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759648597" rel="stylesheet">
+    <link href="/css/hybrid.css?1759648597" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759648597" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759648597" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759648597" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759648597" rel="stylesheet">
+    <link href="/css/theme.css?1759648597" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759648597" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1745669092" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759648597" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745669092"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759648597"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745669092"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745669092"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759648597"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759648597"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/\/vi";
+        var baseurl = "\/\/localhost:1313\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745669092"></script>
+<script type="text/javascript" src="/js/search.js?1759648597"></script>
 
     
   </div>
@@ -517,7 +517,7 @@
                   
                     
                     
-                      <option id="en" value="/1-prerequisite/">English</option>
+                      <option id="en" value="//localhost:1313/1-prerequisite/">English</option>
                     
                   
               
@@ -531,7 +531,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/1-prerequisite/" selected>Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/1-prerequisite/" selected>Tiếng Việt</option>
                     
                   
               
@@ -659,7 +659,7 @@
 
 
 	<h4 id="bắt-đầu">Bắt đầu</h4>
-<p>Trong phần chuẩn bị này, chúng ta sẽ tìm hiểu các điều kiện tiên quyết để thiết lập <strong>AWS IAM Identity Center</strong>.</p>
+<p>Trong phần chuẩn bị này, chúng ta sẽ tìm hiểu các điều kiện tiên quyết để thiết lập <strong>AWS IAM Identity Center</strong> (trước đây là AWS Single Sign-On).</p>
 <h4 id="thiết-lập-aws-account">Thiết lập AWS Account</h4>
 <p><strong>ℹ️ Thông tin:</strong> Để bắt đầu, bạn cần một AWS account chưa tham gia vào AWS Organizations. AWS IAM Identity Center yêu cầu một tài khoản độc lập để thiết lập làm Management Account.</p>
 <h4 id="điều-kiện-tiên-quyết-cho-identity-center">Điều kiện tiên quyết cho Identity Center</h4>
@@ -671,14 +671,14 @@
 </li>
 <li>
 <p><strong>Kích hoạt AWS IAM Identity Center</strong></p>
-<p><strong>💡 Pro Tip:</strong> AWS IAM Identity Center (trước đây là AWS SSO) cung cấp khả năng quản lý tập trung quyền truy cập vào nhiều AWS accounts và ứng dụng cloud. Sử dụng Identity Center giúp giảm thiểu việc quản lý nhiều IAM users và credentials riêng biệt.</p>
+<p><strong>💡 Pro Tip:</strong> AWS IAM Identity Center (trước đây là AWS SSO) cung cấp khả năng quản lý tập trung quyền truy cập vào nhiều AWS accounts và ứng dụng cloud. Sử dụng Identity Center giúp giảm thiểu việc quản lý nhiều IAM users và credentials riêng biệt. Dịch vụ này hoàn toàn miễn phí, bạn chỉ trả phí cho các tài nguyên AWS cơ bản bên dưới.</p>
 </li>
 <li>
 <p><strong>Chuẩn bị cấu trúc tổ chức</strong></p>
 <p><strong>ℹ️ Thông tin:</strong> Trước khi triển khai, bạn nên lập kế hoạch cho cấu trúc Organizational Units (OUs) phù hợp với mô hình tổ chức của bạn để tối ưu hóa việc quản lý quyền truy cập.</p>
 </li>
 </ol>
-<p><strong>🔒 Security Note:</strong> Việc thiết lập đúng cách AWS IAM Identity Center là nền tảng quan trọng để đảm bảo mô hình bảo mật mạnh mẽ theo nguyên tắc least privilege trong môi trường AWS của bạn. Identity Center hỗ trợ triển khai chiến lược Zero Trust bằng cách tập trung hóa quản lý định danh và quyền truy cập.</p>
+<p><strong>🔒 Security Note:</strong> Việc thiết lập đúng cách AWS IAM Identity Center là nền tảng quan trọng để đảm bảo mô hình bảo mật mạnh mẽ theo nguyên tắc least privilege trong môi trường AWS của bạn. Identity Center hỗ trợ triển khai chiến lược Zero Trust bằng cách tập trung hóa quản lý định danh và quyền truy cập, đồng thời tích hợp với các dịch vụ AWS hiện đại như Amazon Q Developer và Amazon QuickSight.</p>
 
 
 
@@ -968,19 +968,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745669092"></script>
-    <script src="/js/jquery.sticky.js?1745669092"></script>
-    <script src="/js/featherlight.min.js?1745669092"></script>
-    <script src="/js/highlight.pack.js?1745669092"></script>
+    <script src="/js/clipboard.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759648597"></script>
+    <script src="/js/jquery.sticky.js?1759648597"></script>
+    <script src="/js/featherlight.min.js?1759648597"></script>
+    <script src="/js/highlight.pack.js?1759648597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745669092"></script>
-    <script src="/js/learn.js?1745669092"></script>
-    <script src="/js/hugo-learn.js?1745669092"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759648597"></script>
+    <script src="/js/learn.js?1759648597"></script>
+    <script src="/js/hugo-learn.js?1759648597"></script>
 
-    <link href="/mermaid/mermaid.css?1745669092" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1745669092"></script>
+    <link href="/mermaid/mermaid.css?1759648597" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759648597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html lang="en" class="js csstransforms3d">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.123.7">
+    <meta name="generator" content="Hugo 0.147.8">
     <meta name="description" content="">
 <meta name="author" content="journeyoftheaverageguy@gmail.com">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Setting up the Organization Unit :: AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
+    <title>Prerequisites for IAM Identity Center :: AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
 
     
-    <link href="/css/nucleus.css?1745669092" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1745669092" rel="stylesheet">
-    <link href="/css/hybrid.css?1745669092" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1745669092" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1745669092" rel="stylesheet">
-    <link href="/css/auto-complete.css?1745669092" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1745669092" rel="stylesheet">
-    <link href="/css/theme.css?1745669092" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1745669092" rel="stylesheet">
+    <link href="/css/nucleus.css?1759648597" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1759648597" rel="stylesheet">
+    <link href="/css/hybrid.css?1759648597" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1759648597" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1759648597" rel="stylesheet">
+    <link href="/css/auto-complete.css?1759648597" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1759648597" rel="stylesheet">
+    <link href="/css/theme.css?1759648597" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1759648597" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1745669092" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1759648597" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1745669092"></script>
+    <script src="/js/jquery-3.3.1.min.js?1759648597"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1745669092"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1745669092"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1759648597"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1759648597"></script>
 <script type="text/javascript">
     
-        var baseurl = "\/";
+        var baseurl = "\/\/localhost:1313\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1745669092"></script>
+<script type="text/javascript" src="/js/search.js?1759648597"></script>
 
     
   </div>
@@ -141,13 +141,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/2-configure-ou/" title="Setting up the Organization Unit" class="dd-item 
+    <li data-nav-id="/1-prerequisite/2-configure-ou/" title="Prerequisites for IAM Identity Center" class="dd-item 
         
         active
         
         ">
       <a href="/1-prerequisite/2-configure-ou/">
-          <b>1.2 </b>Setting up the Organization Unit
+          <b>1.2 </b>Prerequisites for IAM Identity Center
           
             <i class="fas fa-check read-icon"></i>
           
@@ -169,13 +169,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Invite AWS Account to AWS Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/3-invite-aws-account/" title="Create Users and Groups in IAM Identity Center" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/3-invite-aws-account/">
-          <b>1.3 </b>Invite AWS Account to AWS Organization
+          <b>1.3 </b>Create Users and Groups in IAM Identity Center
           
             <i class="fas fa-check read-icon"></i>
           
@@ -197,13 +197,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/4-switch-role/" title="Access member account in Organization" class="dd-item 
+    <li data-nav-id="/1-prerequisite/4-switch-role/" title="Create Permission Sets" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/4-switch-role/">
-          <b>1.4 </b>Access member account in Organization
+          <b>1.4 </b>Create Permission Sets
           
             <i class="fas fa-check read-icon"></i>
           
@@ -225,13 +225,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/5-provision-permission-sets/" title="" class="dd-item 
+    <li data-nav-id="/1-prerequisite/5-provision-permission-sets/" title="Provision Permission Sets" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/5-provision-permission-sets/">
-          
+          <b>1.5 </b>Provision Permission Sets
           
             <i class="fas fa-check read-icon"></i>
           
@@ -253,13 +253,13 @@
  
   
     
-    <li data-nav-id="/1-prerequisite/6-test/" title="" class="dd-item 
+    <li data-nav-id="/1-prerequisite/6-test/" title="Verify Access Permissions" class="dd-item 
         
         
         
         ">
       <a href="/1-prerequisite/6-test/">
-          
+          <b> 1.6 </b>Verify Access Permissions
           
             <i class="fas fa-check read-icon"></i>
           
@@ -319,13 +319,41 @@
  
   
     
-    <li data-nav-id="/2-aws-cli-access/2.1-manual/" title="" class="dd-item 
+    <li data-nav-id="/2-aws-cli-access/2.1-manual/" title="Manually Refresh Credentials" class="dd-item 
         
         
         
         ">
       <a href="/2-aws-cli-access/2.1-manual/">
+          <b> 2.1 </b>Manually Refresh Credentials
           
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/2-aws-cli-access/2.2-automatic/" title="Automatic Credential Refresh" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/2-aws-cli-access/2.2-automatic/">
+          <b> 2.2 </b>Automatic Credential Refresh
           
             <i class="fas fa-check read-icon"></i>
           
@@ -489,7 +517,7 @@
                   
                     
                     
-                      <option id="en" value="/1-prerequisite/2-configure-ou/" selected>English</option>
+                      <option id="en" value="//localhost:1313/1-prerequisite/2-configure-ou/" selected>English</option>
                     
                   
               
@@ -503,7 +531,7 @@
                   
                     
                     
-                      <option id="vi" value="/vi/1-prerequisite/2-configure-ou/">Tiếng Việt</option>
+                      <option id="vi" value="//localhost:1313/vi/1-prerequisite/2-configure-ou/">Tiếng Việt</option>
                     
                   
               
@@ -591,7 +619,7 @@
             
           
           
-            <a href='/'>Using AWS IAM Identity Center for Robust Identity Management</a> > <a href='/1-prerequisite/'>Preparation steps</a> > Setting up the Organization Unit
+            <a href='/'>Using AWS IAM Identity Center for Robust Identity Management</a> > <a href='/1-prerequisite/'>Preparation steps</a> > Prerequisites for IAM Identity Center
           
         
           
@@ -628,7 +656,7 @@
           
             <h1>
               
-              Setting up the Organization Unit
+              Prerequisites for IAM Identity Center
             </h1>
           
 
@@ -636,62 +664,46 @@
 
 
 
-	<h4 id="setting-up-organization-units">Setting Up Organization Units</h4>
-<p>In this step, you will practice setting up the Organization Units for the AWS accounts created in the previous section. The Organization Units include <strong>Security</strong>, <strong>Shared Services</strong>, <strong>Logging</strong>, and <strong>Application</strong>. These units will be situated within the Root, where all the OUs and AWS accounts are located.</p>
-<h4 id="contents">Contents</h4>
-<ul>
-<li><a href="/1-prerequisite/2-configure-ou/#setting-up-organization-units">Setting Up Organization Units</a></li>
-<li><a href="/1-prerequisite/2-configure-ou/#contents">Contents</a></li>
-<li><a href="/1-prerequisite/2-configure-ou/#create-organization-unit">Create Organization Unit</a></li>
-<li><a href="/1-prerequisite/2-configure-ou/#move-aws-accounts-to-respective-organization-unit">Move AWS Accounts to Respective Organization Unit</a></li>
-</ul>
-<h4 id="create-organization-unit">Create Organization Unit</h4>
+	<h4 id="prerequisites-for-iam-identity-center">Prerequisites for IAM Identity Center</h4>
+<p><strong>ℹ️ Information:</strong> You can skip this section if you have already activated IAM Identity Center in the AWS Account you are using for this workshop.</p>
+<h4 id="basic-requirements">Basic Requirements</h4>
+<p>Before setting up IAM Identity Center, you need:</p>
 <ol>
 <li>
-<p>Open the <strong>AWS Management Console</strong> and search for the <strong>AWS Organizations</strong> service.</p>
+<p>An AWS account with Administrator permissions. If you don’t have one, create an account now.</p>
 </li>
 <li>
-<p>Select the <strong>Root</strong>, click on <strong>Actions</strong>, and then choose <strong>Create new</strong> under the <strong>Organizational Unit</strong> section.</p>
-<p><img alt="Create Organization Unit" src="/images/4/0003.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>On the <strong>Create organizational unit in Root</strong> page:</p>
-<ul>
-<li>In the <strong>Details</strong> section, provide a name for the OU (For example: Logging Unit).</li>
-</ul>
-<p><img alt="Create OU Details" src="/images/4/0004.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Review the information and click <strong>Create organizational unit</strong>.</p>
-<p><img alt="Create OU" src="/images/4/0005.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Repeat the above steps for the remaining Organization Units.</p>
-<p><img alt="Create OU" src="/images/4/0006.png?featherlight=false&width=90pc"></p>
+<p>Set up AWS Organizations and enable the <strong>All features</strong> mode. For more details on this configuration, see “Enabling All Features in Your Organization” in the AWS Organizations User Guide.</p>
 </li>
 </ol>
-<h4 id="move-aws-accounts-to-respective-organization-unit">Move AWS Accounts to Respective Organization Unit</h4>
+<h4 id="enabling-aws-organizations">Enabling AWS Organizations</h4>
+<p><strong>ℹ️ Information:</strong> AWS Organizations is an account management service that allows you to consolidate multiple AWS accounts into a single organization that you create and centrally manage. This is a prerequisite for using IAM Identity Center.</p>
 <ol>
 <li>
-<p>Go to the <strong>AWS Management Console</strong> and find the <strong>AWS Organizations</strong> service using the search bar.</p>
+<p>In the AWS Management Console, at the top left corner next to <strong>Services</strong>, click the search box, type <strong>AWS Organizations</strong>, and select the service.</p>
 </li>
 <li>
-<p>Check the AWS account you wish to move (For instance: <strong>Logging</strong>), click on <strong>Actions</strong>, and then select <strong>Move</strong> under <strong>AWS Account</strong>.</p>
-<p><img alt="Move AWS Account" src="/images/4/0007.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Tick the appropriate OU (Example: <strong>Logging Unit</strong>) and click <strong>Move AWS account</strong>.</p>
-<p><img alt="Move to OU" src="/images/4/0008.png?featherlight=false&width=90pc"></p>
-</li>
-<li>
-<p>Repeat the above steps for the remaining AWS and Organization Unit accounts:</p>
-<ul>
-<li>Move the Security Account to the Security Unit</li>
-<li>Move the Shared Services Account to the Shared Services Unit</li>
-<li>Move the Application Account to the Application Unit</li>
-</ul>
+<p>Click <strong>Create Organization</strong>. By default, the organization is created with all features enabled.</p>
 </li>
 </ol>
+<p><img src="/images/0001/image05.png" alt="3.4.11"></p>
+<ol start="3">
+<li>The organization is created, and the AWS accounts page appears. The only account currently available is your management account, which is located under the root organizational unit (OU).</li>
+</ol>
+<p><strong>💡 Pro Tip:</strong> AWS Organizations allows you to centrally manage multiple AWS accounts, simplifying billing, access control, and compliance with security policies. You should design an OU structure that aligns with your organization’s model to optimize access management.</p>
+<h4 id="enabling-iam-identity-center">Enabling IAM Identity Center</h4>
+<p><strong>ℹ️ Information:</strong> IAM Identity Center (formerly AWS SSO) is a centralized identity and access management service for AWS accounts and cloud applications. It simplifies access control and provides a single sign-on (SSO) experience for users.</p>
+<p>When you open IAM Identity Center for the first time, you’ll be prompted to enable the service before managing it:</p>
+<ol>
+<li>In the AWS Management Console, click <strong>Services</strong> in the upper-left corner.</li>
+<li>Open the <strong>IAM Identity Center</strong> console.</li>
+<li>Choose <strong>Enable</strong>.</li>
+</ol>
+<p><img src="/images/0001/0004.png" alt="3.4.11"></p>
+<p><strong>ℹ️ Information:</strong> After activation, IAM Identity Center creates a service-linked role in all accounts within your AWS Organization. It also automatically creates the same service-linked role in any new accounts that are added to your organization later. This role allows IAM Identity Center to access each account’s resources on your behalf.</p>
+<h4 id="delegated-administration">Delegated Administration</h4>
+<p><strong>🔒 Security Note:</strong> IAM Identity Center allows you to designate another member account within your AWS Organization — other than the Organization Management Account — to perform administrative tasks for Identity Center. This supports the <strong>principle of least privilege</strong> by reducing direct access to the Management Account. In production environments, you should configure delegated administration to minimize security risks associated with using the Management Account for day-to-day operations.</p>
+<p><strong>💡 Pro Tip:</strong> When setting up IAM Identity Center, consider an identity strategy that best fits your organization. You can choose to use the <strong>Identity Center Directory</strong>, connect to <strong>Microsoft Active Directory</strong> via <strong>AWS Directory Service</strong>, or integrate with an external identity provider (IdP) that supports <strong>SAML 2.0</strong> such as <strong>Okta</strong>, <strong>Azure AD</strong>, or <strong>Google Workspace</strong>.</p>
 
 
 
@@ -880,6 +892,22 @@
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
             
         
                     
@@ -959,7 +987,7 @@
 			<a class="nav nav-prev" href="/1-prerequisite/1-create-aws-account/" title="Create AWS Account in AWS Organizations"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/1-prerequisite/3-invite-aws-account/" title="Invite AWS Account to AWS Organization" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/1-prerequisite/3-invite-aws-account/" title="Create Users and Groups in IAM Identity Center" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -969,19 +997,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.min.js?1745669092"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1745669092"></script>
-    <script src="/js/jquery.sticky.js?1745669092"></script>
-    <script src="/js/featherlight.min.js?1745669092"></script>
-    <script src="/js/highlight.pack.js?1745669092"></script>
+    <script src="/js/clipboard.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.min.js?1759648597"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1759648597"></script>
+    <script src="/js/jquery.sticky.js?1759648597"></script>
+    <script src="/js/featherlight.min.js?1759648597"></script>
+    <script src="/js/highlight.pack.js?1759648597"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1745669092"></script>
-    <script src="/js/learn.js?1745669092"></script>
-    <script src="/js/hugo-learn.js?1745669092"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1759648597"></script>
+    <script src="/js/learn.js?1759648597"></script>
+    <script src="/js/hugo-learn.js?1759648597"></script>
 
-    <link href="/mermaid/mermaid.css?1745669092" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1745669092"></script>
+    <link href="/mermaid/mermaid.css?1759648597" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1759648597"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

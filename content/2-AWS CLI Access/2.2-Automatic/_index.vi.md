@@ -1,6 +1,6 @@
 +++
 title = "Làm mới thông tin xác thực tự động"
-date = 2020
+date = 2025
 weight = 2
 chapter = false
 pre = "<b> 2.2 </b>"
@@ -94,6 +94,10 @@ Thử dừng EC2 instance với hồ sơ readOnlyUser:
    ```bash
    aws ec2 stop-instances --instance-ids [instance-id] --profile readOnlyUser
    ```
+
+![3.4.11](/images/0002/12.png)
+
+
 
 **⚠️ Cảnh báo:** Lệnh này sẽ thất bại vì readOnlyUser không có quyền thực hiện thao tác dừng EC2. Điều này minh họa việc cấu hình phân quyền đang hoạt động chính xác, đảm bảo người dùng chỉ có thể thực hiện các hành động phù hợp với vai trò của họ.
 

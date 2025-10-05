@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Invite AWS Account to AWS Organization on AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
-    <link>/1-prerequisite/3-invite-aws-account/</link>
-    <description>Recent content in Invite AWS Account to AWS Organization on AWS SINGLE SIGN-ON FOR ORGANIZATION</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Create Users and Groups in IAM Identity Center on AWS SINGLE SIGN-ON FOR ORGANIZATION</title>
+    <link>//localhost:1313/1-prerequisite/3-invite-aws-account/</link>
+    <description>Recent content in Create Users and Groups in IAM Identity Center on AWS SINGLE SIGN-ON FOR ORGANIZATION</description>
+    <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="/1-prerequisite/3-invite-aws-account/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/1-prerequisite/3-invite-aws-account/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
