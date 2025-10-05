@@ -2,6 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>//localhost:1313/1-prerequisite/1-create-aws-account/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/1-prerequisite/1-create-aws-account/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/1-prerequisite/1-create-aws-account/"
+                />
+  </url><url>
+    <loc>//localhost:1313/2-aws-cli-access/2.1-manual/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-aws-cli-access/2.1-manual/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-aws-cli-access/2.1-manual/"
+                />
+  </url><url>
     <loc>//localhost:1313/</loc>
     <lastmod>1970-01-01T07:33:44+07:00</lastmod>
     <xhtml:link
@@ -15,19 +41,6 @@
                 href="//localhost:1313/"
                 />
   </url><url>
-    <loc>//localhost:1313/1-prerequisite/1-create-aws-account/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/1-prerequisite/1-create-aws-account/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/1-prerequisite/1-create-aws-account/"
-                />
-  </url><url>
     <loc>//localhost:1313/1-prerequisite/</loc>
     <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
@@ -39,6 +52,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/1-prerequisite/"
+                />
+  </url><url>
+    <loc>//localhost:1313/2-aws-cli-access/2.2-automatic/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-aws-cli-access/2.2-automatic/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-aws-cli-access/2.2-automatic/"
                 />
   </url><url>
     <loc>//localhost:1313/2-aws-cli-access/</loc>
@@ -68,7 +94,7 @@
                 />
   </url><url>
     <loc>//localhost:1313/1-prerequisite/3-invite-aws-account/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -94,7 +120,7 @@
                 />
   </url><url>
     <loc>//localhost:1313/1-prerequisite/4-switch-role/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -117,6 +143,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/4-using-customer-managed-policies/"
+                />
+  </url><url>
+    <loc>//localhost:1313/1-prerequisite/5-provision-permission-sets/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/1-prerequisite/5-provision-permission-sets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/1-prerequisite/5-provision-permission-sets/"
                 />
   </url><url>
     <loc>//localhost:1313/%CC%805-iam-identity-center-identity-store-apis/</loc>
@@ -145,19 +184,8 @@
                 href="//localhost:1313/6-clean-up/"
                 />
   </url><url>
-    <loc>//localhost:1313/1-prerequisite/5-provision-permission-sets/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/1-prerequisite/5-provision-permission-sets/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/1-prerequisite/5-provision-permission-sets/"
-                />
-  </url><url>
     <loc>//localhost:1313/1-prerequisite/6-test/</loc>
+    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="vi"
@@ -167,18 +195,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="//localhost:1313/1-prerequisite/6-test/"
-                />
-  </url><url>
-    <loc>//localhost:1313/2-aws-cli-access/2.1-manual/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="vi"
-                href="//localhost:1313/vi/2-aws-cli-access/2.1-manual/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="//localhost:1313/2-aws-cli-access/2.1-manual/"
                 />
   </url><url>
     <loc>//localhost:1313/categories/</loc>

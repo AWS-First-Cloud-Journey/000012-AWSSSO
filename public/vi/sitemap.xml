@@ -54,11 +54,8 @@
                 href="//localhost:1313/vi/"
                 />
   </url><url>
-    <loc>//localhost:1313/vi/2-aws-cli-access/2.2-automatic/</loc>
-    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
-  </url><url>
     <loc>//localhost:1313/vi/1-prerequisite/2-configure-ou/</loc>
-    <lastmod>1970-01-01T07:33:40+07:00</lastmod>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -68,6 +65,19 @@
                 rel="alternate"
                 hreflang="vi"
                 href="//localhost:1313/vi/1-prerequisite/2-configure-ou/"
+                />
+  </url><url>
+    <loc>//localhost:1313/vi/2-aws-cli-access/2.2-automatic/</loc>
+    <lastmod>1970-01-01T07:33:45+07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="//localhost:1313/2-aws-cli-access/2.2-automatic/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="vi"
+                href="//localhost:1313/vi/2-aws-cli-access/2.2-automatic/"
                 />
   </url><url>
     <loc>//localhost:1313/vi/2-aws-cli-access/</loc>
