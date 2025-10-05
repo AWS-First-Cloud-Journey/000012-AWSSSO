@@ -19,8 +19,8 @@ pre = "<b> 2.1 </b>"
 
 1. Đăng nhập vào AWS Access Portal bằng cách sử dụng URL đăng nhập được cung cấp cho tổ chức của bạn.
 
-![3.4.11](/000012-AWSSSO/images/0002/1.png)
 
+![3.4.11](/000012-AWSSSO/images/0002/1.png)
 
 2. Trong tab **Accounts** hoặc bằng cách chọn biểu tượng AWS account, xác định AWS account mà bạn muốn truy cập.
 
